@@ -1,0 +1,86 @@
+// by @Starfelll
+
+$Model "Head" "Head.dmx" {
+
+    eyeball r "ValveBiped.Bip01_Head1" -1.250000 -2.610001 71.830002  "biker_manager_eyeball_r" 1.05 4 "brown_pupil" 0.55
+	eyeball l "ValveBiped.Bip01_Head1" 1.250000 -2.600001 71.830002  "biker_manager_eyeball_l" 1.05 -4 "brown_pupil" 0.55
+
+    dmxeyelid  upper "Head.dmx" lowerer "f01" -0.22 neutral "f00"  0.03 raiser "f02"  0.29 righteyeball "r" lefteyeball "l"
+    dmxeyelid  lower "Head.dmx" lowerer "f03" -0.34 neutral "f00" -0.2 raiser "f04" -0.04 righteyeball "r" lefteyeball "l"
+
+    mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
+
+    noautodmxrules
+
+    $Include "../QCIs/survivors_facerules.qci"
+
+    flexcontroller eyes range -30 30 eyes_updown
+    flexcontroller eyes range -30 30 eyes_rightleft
+}
+
+$BodyGroup "Body"
+{
+    studio "Body.dmx"
+}
+
+$CDMaterials models\survivors\biker
+$CDMaterials models\survivors
+$CDMaterials ""
+
+// $TextureGroup "skinfamilies"
+
+// $AmbientBoost
+// $MostlyOpaque
+$Opaque
+
+$SurfaceProp "flesh"
+$IllumPosition -2.397 0.123 38.156
+
+$EyePosition 0 0 70
+$MaxEyeDeflection 30
+$ForcePhonemeCrossFade
+
+$IKAutoPlayLock "rfoot" 1 0.1
+$IKAutoPlayLock "lfoot" 1 0.1
+
+$Include "../QCIs/DefineBones.qci"
+$Include "../QCIs/BoneMerge.qci"
+$attathements
+$Include "../QCIs/JiggleBones.qci"
+// $ProceduralBones ".vrd"
+
+
+$IKChain "rhand" "ValveBiped.Bip01_R_Hand" knee 0.707 0.707 0
+$IKChain "lhand" "ValveBiped.Bip01_L_Hand" knee 0.707 0.707 0
+$IKChain "rfoot" "ValveBiped.Bip01_R_Foot" knee 0.707 -0.707 0
+$IKChain "lfoot" "ValveBiped.Bip01_L_Foot" knee 0.707 -0.707 0
+$IKChain "ikclip" "ValveBiped.weapon_bone_Clip" knee 0.707 -0.707 0
+
+$PoseParameter "body_pitch" -90 90 loop 360
+$PoseParameter "body_yaw" -90 90 loop 360
+$PoseParameter "head_pitch" -90 90 loop 360
+$PoseParameter "head_yaw" -90 90 loop 360
+// $PoseParameter "move_y" -1 1 loop 0
+// $PoseParameter "move_x" -1 1 loop 0
+
+$HBoxSet "L4D"
+$HBox 3 "ValveBiped.Bip01_Pelvis" -6.3 -4.725 -4.725 6.3 4.725 4.725
+$HBox 6 "ValveBiped.Bip01_L_Thigh" 5.25 -3.57 -2.9925 19.949999 2.73 2.2575
+$HBox 6 "ValveBiped.Bip01_L_Calf" 0.525 -2.1 -2.625 20.474998 3.15 2.625
+$HBox 6 "ValveBiped.Bip01_L_Toe0" -3.675 -0.525 -1.4175 1.575 1.575 2.5725
+$HBox 7 "ValveBiped.Bip01_R_Thigh" 5.25 -3.57 -2.9925 19.949999 2.73 2.2575
+$HBox 7 "ValveBiped.Bip01_R_Calf" 0.525 -2.1 -2.625 20.474998 3.15 2.625
+$HBox 7 "ValveBiped.Bip01_R_Toe0" -3.675 -0.525 -1.4175 1.575 1.575 2.5725
+$HBox 3 "ValveBiped.Bip01_Spine1" -5.25 -4.4625 -6.3 5.25 6.5625 6.3
+$HBox 2 "ValveBiped.Bip01_Spine2" -3.15 -3.57 -6.825 12.599999 6.929999 6.825
+$HBox 1 "ValveBiped.Bip01_Neck1" 0 -2.625 -2.3625 4.2 2.625 2.3625
+$HBox 1 "ValveBiped.Bip01_Head1" -0.84 -4.2 -3.2025 7.559999 4.2 2.5725
+$HBox 4 "ValveBiped.Bip01_L_UpperArm" 0 -2.205 -2.1 11.549999 1.995 2.1
+$HBox 4 "ValveBiped.Bip01_L_Forearm" 0.525 -1.8375 -1.8375 12.075 1.8375 1.8375
+$HBox 4 "ValveBiped.Bip01_L_Hand" 1.113 -1.512 -2.52 5.838 0.588 1.365
+$HBox 5 "ValveBiped.Bip01_R_UpperArm" 0 -2.205 -2.1 11.549999 1.995 2.1
+$HBox 5 "ValveBiped.Bip01_R_Forearm" 0.525 -1.8375 -1.8375 12.075 1.8375 1.8375
+$HBox 5 "ValveBiped.Bip01_R_Hand" 1.113 -1.512 -2.52 5.838 0.588 1.365
+$SkipBoneInBBox
+
+$animations $survivor$ $anims_set$ starfelll

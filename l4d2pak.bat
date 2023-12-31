@@ -1,0 +1,1 @@
+python %~dp0/pak/l4d2pak.py %*

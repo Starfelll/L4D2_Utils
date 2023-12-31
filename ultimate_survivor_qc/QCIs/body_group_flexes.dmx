@@ -1,0 +1,17 @@
+<!-- dmx encoding keyvalues2 1 format model 1 -->
+"DmElement"
+{
+	"id" "elementid" "12345678-1234-1234-1234-012345678910"
+	"name" "string" "root"
+	"combinationOperator" "DmeCombinationOperator"
+	{
+		"id" "elementid" "01234567-8910-1112-1314-151617181920"
+		"name" "string" "combinationOperator"
+		"controls" "element_array" []
+		"controlValues" "vector3_array" []
+		"controlValuesLagged" "vector3_array" []
+		"usesLaggedValues" "bool" "0"
+		"dominators" "element_array" []
+		"targets" "element_array" []
+	}
+}

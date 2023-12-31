@@ -1,0 +1,166 @@
+// by @Starfelll
+
+$pushd "../Export"
+
+$Animation a_reference anims/$ref_variant$_reference.dmx scale $ref_scale$
+
+$DefineMacro animations survivor anims_set starfelll \\
+    $Include ../QCIs/DeclareSequences/$survivor$.qci \\
+    $Sequence reference "a_reference" \\
+    $Sequence "proportions" { \\
+        "anims/reference.dmx" \\
+        subtract reference 0 \\
+        autoplay \\
+        predelta \\
+    } \\
+    // $IncludeModel survivors/anims_$survivor$.mdl \\
+    $IncludeModel survivors/anim_$anims_set$.mdl \\
+    // $IncludeModel survivors/gestures_$survivor$.mdl \\
+    $IncludeModel survivors/gestures_$anims_set$.mdl \\
+\\
+
+
+$DefineMacro seq_survivor survivor \\
+    $Sequence $survivor$ { \\
+        "a_reference" \\
+        ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0 \\
+        ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1 \\
+        ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 2 \\
+        ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 3 \\
+        ikrule "ikclip" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 4 \\
+    } \\
+\\
+
+$DefineMacro seq_ragdoll \\
+    $Sequence "ragdoll" { \\
+        "a_reference" \\
+        activity "ACT_DIERAGDOLL" 1 \\
+        ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0 \\
+        ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1 \\
+        ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 2 \\
+        ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 3 \\
+        ikrule "ikclip" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 4 \\
+    } \\
+\\
+
+$Include "../QCIs/Attathments.qci"
+$Include "../QCIs/KeyValues.qci"
+
+/*
+    Nick	  gambler     1.0
+    Ellis	  mechanic    0.955
+    Rochelle  producer    0.888
+    Coach	  coach       1.05
+
+    Bill	  namvet
+    Louis	  manager     1.05
+    Francis	  biker       1.05
+    Zoey	  teenangst
+*/
+
+/* CRC32
+88C2DD03 *survivor_biker.dx90.vtx
+904763B8 *survivor_biker.mdl
+63C74378 *survivor_biker.phy
+A2F3B355 *survivor_biker.vvd
+37D5E368 *survivor_biker_light.ani
+AFA4CB8A *survivor_biker_light.dx90.vtx
+317F8FB8 *survivor_biker_light.mdl
+F1257D28 *survivor_biker_light.phy
+35D83509 *survivor_biker_light.vvd
+9140C457 *survivor_coach.dx90.vtx
+520C9E3C *survivor_coach.mdl
+9683D547 *survivor_coach.phy
+D1BE3D81 *survivor_coach.vvd
+6C96ACE6 *survivor_gambler.dx90.vtx
+21A71C72 *survivor_gambler.mdl
+DAA8E226 *survivor_gambler.phy
+4490746C *survivor_gambler.vvd
+020AAC41 *survivor_manager.dx90.vtx
+70111265 *survivor_manager.mdl
+DC493392 *survivor_manager.phy
+DBFF8EF8 *survivor_manager.vvd
+88C259E4 *survivor_mechanic.dx90.vtx
+0F89E120 *survivor_mechanic.mdl
+8DE348E4 *survivor_mechanic.phy
+92A85AD1 *survivor_mechanic.vvd
+13C7ED62 *survivor_namvet.dx90.vtx
+125077F5 *survivor_namvet.mdl
+5D9881C3 *survivor_namvet.phy
+DF073902 *survivor_namvet.vvd
+2C3050E2 *survivor_producer.dx90.vtx
+56EA05E0 *survivor_producer.mdl
+AF75682D *survivor_producer.phy
+85A356C9 *survivor_producer.vvd
+E7CA3A3F *survivor_teenangst.dx90.vtx
+6FD357A6 *survivor_teenangst.mdl
+A5A57E37 *survivor_teenangst.phy
+9B8303B0 *survivor_teenangst.vvd
+E6C64B04 *survivor_teenangst_light.ani
+36D9BD3B *survivor_teenangst_light.dx90.vtx
+838933E0 *survivor_teenangst_light.mdl
+0D55BCE9 *survivor_teenangst_light.phy
+5AECE422 *survivor_teenangst_light.vvd
+B077C07A *anim_biker.ani
+6D516102 *anim_biker.mdl
+99DC573C *anim_coach.ani
+424C691F *anim_coach.mdl
+9E871CAF *anim_gambler.ani
+1B4085AB *anim_gambler.mdl
+07FB7BD7 *anim_gestures.ani
+D07CA7A5 *anim_gestures.mdl
+6016B69C *anim_mechanic.ani
+04C3311B *anim_mechanic.mdl
+80AB4863 *anim_namvet.ani
+A3152B6B *anim_namvet.mdl
+3A384521 *anim_producer.ani
+7D95F7EC *anim_producer.mdl
+B8BFEAC2 *anim_teenangst.ani
+C5E93D4C *anim_teenangst.mdl
+4A994688 *gestures_biker.ani
+8B730EDB *gestures_biker.mdl
+E864B949 *gestures_coach.ani
+40CBA69F *gestures_coach.mdl
+445B23C2 *gestures_gambler.ani
+54067C42 *gestures_gambler.mdl
+4B8C4335 *gestures_mechanic.ani
+C106C76A *gestures_mechanic.mdl
+C55EF4EA *gestures_namvet.ani
+13A80BB6 *gestures_namvet.mdl
+B262ABF5 *gestures_producer.ani
+D7215B0C *gestures_producer.mdl
+5B1B2909 *gestures_teenangst.ani
+DB7B14BE *gestures_teenangst.mdl
+
+B077C07A *anim_biker.ani
+6D516102 *anim_biker.mdl
+99DC573C *anim_coach.ani
+424C691F *anim_coach.mdl
+9E871CAF *anim_gambler.ani
+1B4085AB *anim_gambler.mdl
+07FB7BD7 *anim_gestures.ani
+D07CA7A5 *anim_gestures.mdl
+6016B69C *anim_mechanic.ani
+04C3311B *anim_mechanic.mdl
+80AB4863 *anim_namvet.ani
+A3152B6B *anim_namvet.mdl
+3A384521 *anim_producer.ani
+7D95F7EC *anim_producer.mdl
+B8BFEAC2 *anim_teenangst.ani
+C5E93D4C *anim_teenangst.mdl
+4A994688 *gestures_biker.ani
+8B730EDB *gestures_biker.mdl
+E864B949 *gestures_coach.ani
+40CBA69F *gestures_coach.mdl
+445B23C2 *gestures_gambler.ani
+54067C42 *gestures_gambler.mdl
+4B8C4335 *gestures_mechanic.ani
+C106C76A *gestures_mechanic.mdl
+C55EF4EA *gestures_namvet.ani
+13A80BB6 *gestures_namvet.mdl
+B262ABF5 *gestures_producer.ani
+D7215B0C *gestures_producer.mdl
+5B1B2909 *gestures_teenangst.ani
+DB7B14BE *gestures_teenangst.mdl
+
+*/
