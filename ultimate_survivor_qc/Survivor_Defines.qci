@@ -1,0 +1,249 @@
+// by @Starfelll
+
+$pushd "../Export"
+
+$DefineVariable spb_scale 0.70
+$DefineVariable include_model_root spb/$spb_scale$x
+
+
+// $scale $spb_scale$
+// $Animation a_reference anims/$ref_variant$_reference.dmx {
+//     scale $ref_scale$
+//     frame 0 0
+// }
+// $scale 1.0
+
+$Animation a_reference body.dmx {
+    $reference_pos
+    frame 0 0
+    scale $spb_scale$
+}
+
+$Animation a_proportions "body.dmx" {
+    presubtract "a_reference" 0
+    frame 0 0
+    origin 0 0 0
+}
+
+$DefineMacro animations survivor anims_set include_model_root spb_scale starfelll \\
+    $Sequence Reference "a_reference" \\
+    $Sequence "Proportions" "a_proportions" autoplay predelta \\
+    // $IncludeModel $include_model_root$/anims_$survivor$.mdl \\
+    $IncludeModel $include_model_root$/anim_$anims_set$.mdl \\
+    // $IncludeModel survivors/gestures_$survivor$.mdl \\
+    $IncludeModel $include_model_root$/gestures_$anims_set$.mdl \\
+\\
+
+$DefineMacro seq_survivor survivor \\
+    $Sequence $survivor$ { \\
+        "a_reference" \\
+        ikrule "rhand" release \\
+        ikrule "lhand" release \\
+        ikrule "rfoot" release \\
+        ikrule "lfoot" release \\
+        ikrule "ikclip" release \\
+    } \\
+\\
+
+$DefineMacro seq_ragdoll \\
+    $Sequence "ragdoll" { \\
+        "a_reference" \\
+        activity "ACT_DIERAGDOLL" 1 \\
+        ikrule "rhand" release \\
+        ikrule "lhand" release \\
+        ikrule "rfoot" release \\
+        ikrule "lfoot" release \\
+        ikrule "ikclip" release \\
+    } \\
+\\
+
+
+//$unlockdefinebones
+$definebone "ValveBiped.Bip01_Pelvis" "" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Thigh" "ValveBiped.Bip01_Pelvis" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_L_Thigh" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_L_Calf" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Toe0" "ValveBiped.Bip01_L_Foot" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Thigh" "ValveBiped.Bip01_Pelvis" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Calf" "ValveBiped.Bip01_R_Thigh" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Foot" "ValveBiped.Bip01_R_Calf" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Toe0" "ValveBiped.Bip01_R_Foot" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Spine" "ValveBiped.Bip01_Pelvis" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_Spine" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_Spine1" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Spine4" "ValveBiped.Bip01_Spine2" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Neck1" "ValveBiped.Bip01_Spine4" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_Neck1" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_UpperArm" "ValveBiped.Bip01_L_Clavicle" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_L_UpperArm" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_L_Forearm" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger4" "ValveBiped.Bip01_L_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger41" "ValveBiped.Bip01_L_Finger4" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger42" "ValveBiped.Bip01_L_Finger41" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger3" "ValveBiped.Bip01_L_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger31" "ValveBiped.Bip01_L_Finger3" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger32" "ValveBiped.Bip01_L_Finger31" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger2" "ValveBiped.Bip01_L_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger21" "ValveBiped.Bip01_L_Finger2" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger22" "ValveBiped.Bip01_L_Finger21" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger1" "ValveBiped.Bip01_L_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger11" "ValveBiped.Bip01_L_Finger1" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger12" "ValveBiped.Bip01_L_Finger11" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger0" "ValveBiped.Bip01_L_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger01" "ValveBiped.Bip01_L_Finger0" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger02" "ValveBiped.Bip01_L_Finger01" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_UpperArm" "ValveBiped.Bip01_R_Clavicle" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_UpperArm" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_R_Forearm" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger4" "ValveBiped.Bip01_R_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger41" "ValveBiped.Bip01_R_Finger4" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger42" "ValveBiped.Bip01_R_Finger41" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger3" "ValveBiped.Bip01_R_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger31" "ValveBiped.Bip01_R_Finger3" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger32" "ValveBiped.Bip01_R_Finger31" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger2" "ValveBiped.Bip01_R_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger21" "ValveBiped.Bip01_R_Finger2" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger22" "ValveBiped.Bip01_R_Finger21" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger1" "ValveBiped.Bip01_R_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger11" "ValveBiped.Bip01_R_Finger1" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger12" "ValveBiped.Bip01_R_Finger11" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger0" "ValveBiped.Bip01_R_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger01" "ValveBiped.Bip01_R_Finger0" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger02" "ValveBiped.Bip01_R_Finger01" unlocked 0 0 0 0 0 0
+
+$definebone "ValveBiped.L_weapon_bone" "ValveBiped.Bip01_L_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone_Clip2" "ValveBiped.Bip01_L_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone" "ValveBiped.Bip01_R_Hand" unlocked 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bolt_l" "ValveBiped.Bip01_L_Hand" unlocked 0 0 0 0 0 0
+
+$DefineBone "ValveBiped.weapon_bone_Clip" "ValveBiped.weapon_bone" locked 0.000004 0 10.000004 0.000003 0.000002 0
+$DefineBone "ValveBiped.weapon_bone_extra" "ValveBiped.weapon_bone" locked 0.018898 0.665158 9.395884 0.000003 0.000002 0
+$DefineBone "ValveBiped.weapon_bone_Clip2_Bullets" "ValveBiped.weapon_bone_Clip2" locked 0.116951 4.311603 0.061861 -0.000027 0.000011 0.000595
+$DefineBone "ValveBiped.weapon_bone_Clip_Bullets" "ValveBiped.weapon_bone_Clip" locked 0 1 0.000008 0.000003 0.000002 0
+$DefineBone "ValveBiped.weapon_bolt" "ValveBiped.weapon_bone" locked 0 0 0 0.000003 0.000002 0
+$DefineBone "ValveBiped.weapon_bolt_opposite" "ValveBiped.weapon_bone" locked 0 0 0 0.000003 0.000002 0
+$DefineBone "ValveBiped.weapon_charger" "ValveBiped.weapon_bone" locked 0 0 0 0.000003 0.000002 0
+
+$Include "../QCIs/Attathments.qci"
+$Include "../QCIs/KeyValues.qci"
+
+/*
+    Nick	  gambler     1.0
+    Ellis	  mechanic    0.955
+    Rochelle  producer    0.888
+    Coach	  coach       1.05
+
+    Bill	  namvet
+    Louis	  manager     1.05
+    Francis	  biker       1.05
+    Zoey	  teenangst
+*/
+
+/* CRC32
+88C2DD03 *survivor_biker.dx90.vtx
+904763B8 *survivor_biker.mdl
+63C74378 *survivor_biker.phy
+A2F3B355 *survivor_biker.vvd
+37D5E368 *survivor_biker_light.ani
+AFA4CB8A *survivor_biker_light.dx90.vtx
+317F8FB8 *survivor_biker_light.mdl
+F1257D28 *survivor_biker_light.phy
+35D83509 *survivor_biker_light.vvd
+9140C457 *survivor_coach.dx90.vtx
+520C9E3C *survivor_coach.mdl
+9683D547 *survivor_coach.phy
+D1BE3D81 *survivor_coach.vvd
+6C96ACE6 *survivor_gambler.dx90.vtx
+21A71C72 *survivor_gambler.mdl
+DAA8E226 *survivor_gambler.phy
+4490746C *survivor_gambler.vvd
+020AAC41 *survivor_manager.dx90.vtx
+70111265 *survivor_manager.mdl
+DC493392 *survivor_manager.phy
+DBFF8EF8 *survivor_manager.vvd
+88C259E4 *survivor_mechanic.dx90.vtx
+0F89E120 *survivor_mechanic.mdl
+8DE348E4 *survivor_mechanic.phy
+92A85AD1 *survivor_mechanic.vvd
+13C7ED62 *survivor_namvet.dx90.vtx
+125077F5 *survivor_namvet.mdl
+5D9881C3 *survivor_namvet.phy
+DF073902 *survivor_namvet.vvd
+2C3050E2 *survivor_producer.dx90.vtx
+56EA05E0 *survivor_producer.mdl
+AF75682D *survivor_producer.phy
+85A356C9 *survivor_producer.vvd
+E7CA3A3F *survivor_teenangst.dx90.vtx
+6FD357A6 *survivor_teenangst.mdl
+A5A57E37 *survivor_teenangst.phy
+9B8303B0 *survivor_teenangst.vvd
+E6C64B04 *survivor_teenangst_light.ani
+36D9BD3B *survivor_teenangst_light.dx90.vtx
+838933E0 *survivor_teenangst_light.mdl
+0D55BCE9 *survivor_teenangst_light.phy
+5AECE422 *survivor_teenangst_light.vvd
+B077C07A *anim_biker.ani
+6D516102 *anim_biker.mdl
+99DC573C *anim_coach.ani
+424C691F *anim_coach.mdl
+9E871CAF *anim_gambler.ani
+1B4085AB *anim_gambler.mdl
+07FB7BD7 *anim_gestures.ani
+D07CA7A5 *anim_gestures.mdl
+6016B69C *anim_mechanic.ani
+04C3311B *anim_mechanic.mdl
+80AB4863 *anim_namvet.ani
+A3152B6B *anim_namvet.mdl
+3A384521 *anim_producer.ani
+7D95F7EC *anim_producer.mdl
+B8BFEAC2 *anim_teenangst.ani
+C5E93D4C *anim_teenangst.mdl
+4A994688 *gestures_biker.ani
+8B730EDB *gestures_biker.mdl
+E864B949 *gestures_coach.ani
+40CBA69F *gestures_coach.mdl
+445B23C2 *gestures_gambler.ani
+54067C42 *gestures_gambler.mdl
+4B8C4335 *gestures_mechanic.ani
+C106C76A *gestures_mechanic.mdl
+C55EF4EA *gestures_namvet.ani
+13A80BB6 *gestures_namvet.mdl
+B262ABF5 *gestures_producer.ani
+D7215B0C *gestures_producer.mdl
+5B1B2909 *gestures_teenangst.ani
+DB7B14BE *gestures_teenangst.mdl
+
+B077C07A *anim_biker.ani
+6D516102 *anim_biker.mdl
+99DC573C *anim_coach.ani
+424C691F *anim_coach.mdl
+9E871CAF *anim_gambler.ani
+1B4085AB *anim_gambler.mdl
+07FB7BD7 *anim_gestures.ani
+D07CA7A5 *anim_gestures.mdl
+6016B69C *anim_mechanic.ani
+04C3311B *anim_mechanic.mdl
+80AB4863 *anim_namvet.ani
+A3152B6B *anim_namvet.mdl
+3A384521 *anim_producer.ani
+7D95F7EC *anim_producer.mdl
+B8BFEAC2 *anim_teenangst.ani
+C5E93D4C *anim_teenangst.mdl
+4A994688 *gestures_biker.ani
+8B730EDB *gestures_biker.mdl
+E864B949 *gestures_coach.ani
+40CBA69F *gestures_coach.mdl
+445B23C2 *gestures_gambler.ani
+54067C42 *gestures_gambler.mdl
+4B8C4335 *gestures_mechanic.ani
+C106C76A *gestures_mechanic.mdl
+C55EF4EA *gestures_namvet.ani
+13A80BB6 *gestures_namvet.mdl
+B262ABF5 *gestures_producer.ani
+D7215B0C *gestures_producer.mdl
+5B1B2909 *gestures_teenangst.ani
+DB7B14BE *gestures_teenangst.mdl
+
+*/

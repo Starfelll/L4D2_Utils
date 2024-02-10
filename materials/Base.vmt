@@ -1,0 +1,38 @@
+//v1.4
+"VertexLitGeneric"
+{
+	"$Model"							"1"
+	"$NoDecal"							"1"
+	// Emissive
+	"$EmissiveBlendEnabled"				"1"
+	"$EmissiveBlendStrength"			"0.002"
+	"$EmissiveBlendTexture"				"vgui/white"
+	"$EmissiveBlendFlowTexture"			"vgui/white"
+	"$EmissiveBlendTint"				" [ 1 1 1 ] "
+	"$EmissiveBlendScrollVector"		" [ 0 0 ] "
+	//"$EmissiveBlendBaseTexture"		"$BaseTexture"
+	// Phong
+	"$halflambert" 						"1"
+	"$phong"							"1"
+	// "$PhongDisableHalfLambert"			"0"
+	// "$BumpMap"							"dev/bump_normal"
+	// //"$Phongexponent"					"1"
+	// "$PhongExponentTexture"				"models/extras/speech_info_exp"
+	// "$PhongAlbedoTint"					"1"
+	// "$PhongBoost"						"13"
+	// "$PhongFresnelRanges"				"[0.008 0.008 0.35]"
+	// //"$phongtint"                    "[Rrimlight color]"
+
+	// RrimLight
+	"$RrimLight"						"1"
+	"$RrimLightExponent"				"1"
+	"$RrimLightBoost"					"1"
+
+	// unitychan
+	// ob = (b * 0.30)
+	// os = (s * (b / ob))
+	// 0.30
+
+	//liltoon
+	//blur = (weight * blur) / 2
+}

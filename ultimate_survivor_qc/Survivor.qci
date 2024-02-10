@@ -1,12 +1,14 @@
 // by @Starfelll
 
-$Model "Head" "Head.dmx" {
+$DefineVariable head "Head.dmx"
 
-    eyeball r "ValveBiped.Bip01_Head1" -1.250000 -2.610001 71.830002  "biker_manager_eyeball_r" 1.05 4 "brown_pupil" 0.55
-	eyeball l "ValveBiped.Bip01_Head1" 1.250000 -2.600001 71.830002  "biker_manager_eyeball_l" 1.05 -4 "brown_pupil" 0.55
+$Model "Head" $head$ {
 
-    dmxeyelid  upper "Head.dmx" lowerer "f01" -0.22 neutral "f00"  0.03 raiser "f02"  0.29 righteyeball "r" lefteyeball "l"
-    dmxeyelid  lower "Head.dmx" lowerer "f03" -0.34 neutral "f00" -0.2 raiser "f04" -0.04 righteyeball "r" lefteyeball "l"
+    eyeball r "ValveBiped.Bip01_Head1" -1.250000 -2.610001 71.830002  "f" 1.05 4 "iris_unused" 0.55
+	eyeball l "ValveBiped.Bip01_Head1" 1.250000 -2.600001 71.830002  "f" 1.05 -4 "iris_unused" 0.55
+
+    dmxeyelid  upper $head$ lowerer "f01" -0.22 neutral "f00"  0.03 raiser "f02"  0.29 righteyeball "r" lefteyeball "l"
+    dmxeyelid  lower $head$ lowerer "f03" -0.34 neutral "f00" -0.2 raiser "f04" -0.04 righteyeball "r" lefteyeball "l"
 
     mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
 
@@ -23,9 +25,7 @@ $BodyGroup "Body"
     studio "Body.dmx"
 }
 
-$CDMaterials models\survivors\biker
-$CDMaterials models\survivors
-$CDMaterials ""
+$CDMaterials Starfelll\Survivor.Myu
 
 // $TextureGroup "skinfamilies"
 
@@ -43,11 +43,10 @@ $ForcePhonemeCrossFade
 $IKAutoPlayLock "rfoot" 1 0.1
 $IKAutoPlayLock "lfoot" 1 0.1
 
-$Include "../QCIs/DefineBones.qci"
 $Include "../QCIs/BoneMerge.qci"
 $attathements
 $Include "../QCIs/JiggleBones.qci"
-// $ProceduralBones ".vrd"
+//$ProceduralBones "../Export/survivor_biker.vrd"
 
 
 $IKChain "rhand" "ValveBiped.Bip01_R_Hand" knee 0.707 0.707 0
@@ -60,8 +59,8 @@ $PoseParameter "body_pitch" -90 90 loop 360
 $PoseParameter "body_yaw" -90 90 loop 360
 $PoseParameter "head_pitch" -90 90 loop 360
 $PoseParameter "head_yaw" -90 90 loop 360
-// $PoseParameter "move_y" -1 1 loop 0
-// $PoseParameter "move_x" -1 1 loop 0
+$PoseParameter "move_y" -1 1 loop 0
+$PoseParameter "move_x" -1 1 loop 0
 
 $HBoxSet "L4D"
 $HBox 3 "ValveBiped.Bip01_Pelvis" -6.3 -4.725 -4.725 6.3 4.725 4.725
@@ -83,4 +82,78 @@ $HBox 5 "ValveBiped.Bip01_R_Forearm" 0.525 -1.8375 -1.8375 12.075 1.8375 1.8375
 $HBox 5 "ValveBiped.Bip01_R_Hand" 1.113 -1.512 -2.52 5.838 0.588 1.365
 $SkipBoneInBBox
 
-$animations $survivor$ $anims_set$ starfelll
+$Include ../QCIs/DeclareSequences/$survivor$.qci
+$animations $survivor$ $anims_set$ $include_model_root$ $spb_scale$ starfelll
+
+// by @Starfelll
+
+$BoneMerge "ValveBiped.weapon_bone"
+$BoneMerge "ValveBiped.L_weapon_bone"
+$BoneMerge "ValveBiped.weapon_bone_Clip2"
+$BoneMerge "ValveBiped.weapon_bolt_l"
+
+$BoneMerge "ValveBiped.Bip01_Pelvis"
+$BoneMerge "ValveBiped.Bip01_Spine"
+$BoneMerge "ValveBiped.Bip01_Spine1"
+$BoneMerge "ValveBiped.Bip01_Spine2"
+$BoneMerge "ValveBiped.Bip01_Spine4"
+$BoneMerge "ValveBiped.Bip01_L_Clavicle"
+$BoneMerge "ValveBiped.Bip01_L_UpperArm"
+$BoneMerge "ValveBiped.Bip01_L_Forearm"
+$BoneMerge "ValveBiped.Bip01_L_Hand"
+$BoneMerge "ValveBiped.Bip01_L_Finger4"
+$BoneMerge "ValveBiped.Bip01_L_Finger41"
+$BoneMerge "ValveBiped.Bip01_L_Finger42"
+$BoneMerge "ValveBiped.Bip01_L_Finger3"
+$BoneMerge "ValveBiped.Bip01_L_Finger31"
+$BoneMerge "ValveBiped.Bip01_L_Finger32"
+$BoneMerge "ValveBiped.Bip01_L_Finger2"
+$BoneMerge "ValveBiped.Bip01_L_Finger21"
+$BoneMerge "ValveBiped.Bip01_L_Finger22"
+$BoneMerge "ValveBiped.Bip01_L_Finger1"
+$BoneMerge "ValveBiped.Bip01_L_Finger11"
+$BoneMerge "ValveBiped.Bip01_L_Finger12"
+$BoneMerge "ValveBiped.Bip01_L_Finger0"
+$BoneMerge "ValveBiped.Bip01_L_Finger01"
+$BoneMerge "ValveBiped.Bip01_L_Finger02"
+$BoneMerge "ValveBiped.Bip01_R_Clavicle"
+$BoneMerge "ValveBiped.Bip01_R_UpperArm"
+$BoneMerge "ValveBiped.Bip01_R_Forearm"
+$BoneMerge "ValveBiped.Bip01_R_Hand"
+$BoneMerge "ValveBiped.Bip01_R_Finger4"
+$BoneMerge "ValveBiped.Bip01_R_Finger41"
+$BoneMerge "ValveBiped.Bip01_R_Finger42"
+$BoneMerge "ValveBiped.Bip01_R_Finger3"
+$BoneMerge "ValveBiped.Bip01_R_Finger31"
+$BoneMerge "ValveBiped.Bip01_R_Finger32"
+$BoneMerge "ValveBiped.Bip01_R_Finger2"
+$BoneMerge "ValveBiped.Bip01_R_Finger21"
+$BoneMerge "ValveBiped.Bip01_R_Finger22"
+$BoneMerge "ValveBiped.Bip01_R_Finger1"
+$BoneMerge "ValveBiped.Bip01_R_Finger11"
+$BoneMerge "ValveBiped.Bip01_R_Finger12"
+$BoneMerge "ValveBiped.Bip01_R_Finger0"
+$BoneMerge "ValveBiped.Bip01_R_Finger01"
+$BoneMerge "ValveBiped.Bip01_R_Finger02"
+
+$BoneSaveFrame "ValveBiped.Bip01_Pelvis" position rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Thigh" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Calf" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Foot" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Thigh" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Calf" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Foot" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine1" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine2" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine4" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Neck1" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Head1" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Clavicle" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_UpperArm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Forearm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Hand" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Clavicle" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_UpperArm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Forearm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Hand" rotation

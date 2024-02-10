@@ -1,0 +1,9 @@
+"Patch"
+{
+    "include"       "materials\Starfelll\Survivor.Mamehinata\Base.vmt"
+    "insert"
+    {
+        "$basetexture"                  "Starfelll\Survivor.Mamehinata\Body"
+        "$EmissiveBlendBaseTexture"     "Starfelll\Survivor.Mamehinata\Body"
+    }
+}

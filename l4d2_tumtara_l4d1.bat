@@ -1,0 +1,1 @@
+start "" "steam://rungameid/550//+map tumtara_l4d1//"
