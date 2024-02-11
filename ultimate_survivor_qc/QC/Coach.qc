@@ -1,11 +1,11 @@
+// by Starfelll
+
 $ModelName "survivors/survivor_coach.mdl"
 
 $DefineVariable anims_set coach
 $DefineVariable ref_scale 1.05
 $DefineVariable ref_variant namvet
 $DefineVariable survivor coach
-
-$Include "../Survivor_Defines.qci"
 
 $DefineMacro attathements \\
 	$att_eyes \\
@@ -91,17 +91,18 @@ $DefineMacro reference_pos \\
 	forceboneposrot "ValveBiped.Bip01_R_Finger0" pos 1.121502 -1.347836 -1.03588 \\
 	forceboneposrot "ValveBiped.Bip01_R_Finger01" pos 1.928122 0 -0.000002 \\
 	forceboneposrot "ValveBiped.Bip01_R_Finger02" pos 1.285141 0 -0.000002 \\
-	//forceboneposrot "ValveBiped.L_weapon_bone" pos 3.348999 -1.371 0.725 \\
-	// forceboneposrot "ValveBiped.weapon_bone" pos 2.856895 -1.536201 -0.9738 \\
-	forceboneposrot "ValveBiped.weapon_bone_Clip" pos -0.000004 0 10 \\
-	forceboneposrot "ValveBiped.weapon_bone_extra" pos 0.018894 0.665159 9.39588 \\
-	// forceboneposrot "ValveBiped.weapon_bone_Clip2" pos 3.02821 -0.92341 -2.009452 \\
-	forceboneposrot "ValveBiped.weapon_bone_Clip2_Bullets" pos 0.116953 4.311607 0.061859 \\
-	// forceboneposrot "ValveBiped.weapon_bolt_l" pos -0.000002 0 0.000001 \\
-	forceboneposrot "ValveBiped.weapon_bone_Clip_Bullets" pos 0 1 0.00001 \\
-	forceboneposrot "ValveBiped.weapon_bolt" pos -0.000002 0 0 \\
-	forceboneposrot "ValveBiped.weapon_bolt_opposite" pos -0.000002 0 0 \\
-	forceboneposrot "ValveBiped.weapon_charger" pos -0.000002 0 0 \\
+	forceboneposrot "ValveBiped.L_weapon_bone" pos 3.348999 -1.371 0.725 \\
+	forceboneposrot "ValveBiped.weapon_bone" pos 2.856895 -1.536201 -0.9738 \\
+	forceboneposrot "ValveBiped.weapon_bone_Clip2" pos 3.02821 -0.92341 -2.009452 \\
+	forceboneposrot "ValveBiped.weapon_bolt_l" pos -0.000002 0 0.000001 \\
+	// forceboneposrot "ValveBiped.weapon_bone_Clip" pos -0.000004 0 10 \\
+	// forceboneposrot "ValveBiped.weapon_bone_extra" pos 0.018894 0.665159 9.39588 \\
+	// forceboneposrot "ValveBiped.weapon_bone_Clip2_Bullets" pos 0.116953 4.311607 0.061859 \\
+	// forceboneposrot "ValveBiped.weapon_bone_Clip_Bullets" pos 0 1 0.00001 \\
+	// forceboneposrot "ValveBiped.weapon_bolt" pos -0.000002 0 0 \\
+	// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos -0.000002 0 0 \\
+	// forceboneposrot "ValveBiped.weapon_charger" pos -0.000002 0 0 \\
 \\
 
+$Include "../Survivor_Defines.qci"
 $Include "../Survivor.qci"

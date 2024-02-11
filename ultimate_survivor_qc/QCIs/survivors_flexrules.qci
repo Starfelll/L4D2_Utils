@@ -1,4 +1,14 @@
+// by Starfelll
+
+// eyeball r "ValveBiped.Bip01_Head1" -1.250000 -2.610001 71.830002  "f" 1.05 4 "iris_unused" 0.55
+// eyeball l "ValveBiped.Bip01_Head1" 1.250000 -2.600001 71.830002  "f" 1.05 -4 "iris_unused" 0.55
+// dmxeyelid  upper $face$ lowerer "f01" -0.22 neutral "f00"  0.03 raiser "f02"  0.29 righteyeball "r" lefteyeball "l"
+// dmxeyelid  lower $face$ lowerer "f03" -0.34 neutral "f00" -0.2 raiser "f04" -0.04 righteyeball "r" lefteyeball "l"
+mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
+// noautodmxrules
+
 //flex "AU42" unused
+flex "frame01"
 flexpair "AU1"
 flexpair "AU2"
 flexpair "AU4"
@@ -66,25 +76,28 @@ flexcontroller mouth range -1 1 jaw_sideways
 
 flexcontroller mouth lower_lip
 
+flexcontroller eyes range -30 30 eyes_updown
+flexcontroller eyes range -30 30 eyes_rightleft
+
 localvar biter
 %biter = bite
 
 // eyelids tend toward 0 as center of vision
 // FIXME: add a control to set how close to the COV the lids should match (blink == 0, normal == 1)
-%upper_right_raiser = right_lid_raiser * (1 - right_lid_droop * 0.8) * (1 - right_lid_closer) * (1 - blink)
-%upper_right_neutral = (1 - right_lid_droop * 0.8) * (1 - right_lid_raiser) * (1 - right_lid_closer) * (1 - blink)
-%upper_right_lowerer = right_lid_closer + blink * (1 - right_lid_closer)
-%upper_left_raiser = left_lid_raiser * (1 - left_lid_droop * 0.8) * (1 - left_lid_closer) * (1 - blink)
-%upper_left_neutral = (1 - left_lid_droop * 0.8) * (1 - left_lid_raiser) * (1 - left_lid_closer) * (1 - blink)
-%upper_left_lowerer = left_lid_closer + blink * (1 - left_lid_closer)
+// %upper_right_raiser = right_lid_raiser * (1 - right_lid_droop * 0.8) * (1 - right_lid_closer) * (1 - blink)
+// %upper_right_neutral = (1 - right_lid_droop * 0.8) * (1 - right_lid_raiser) * (1 - right_lid_closer) * (1 - blink)
+// %upper_right_lowerer = right_lid_closer + blink * (1 - right_lid_closer)
+// %upper_left_raiser = left_lid_raiser * (1 - left_lid_droop * 0.8) * (1 - left_lid_closer) * (1 - blink)
+// %upper_left_neutral = (1 - left_lid_droop * 0.8) * (1 - left_lid_raiser) * (1 - left_lid_closer) * (1 - blink)
+// %upper_left_lowerer = left_lid_closer + blink * (1 - left_lid_closer)
 
-%lower_right_raiser = right_lid_closer
-%lower_right_neutral = (1 - right_lid_closer) * (1 - right_lid_tightener * 0.5) * (1 - right_cheek_raiser * 0.25)
-%lower_right_lowerer = 0
-%lower_left_raiser = left_lid_closer
-%lower_left_neutral = (1 - left_lid_closer) * (1 - left_lid_tightener * 0.5) * (1 - left_cheek_raiser * 0.25)
-%lower_left_lowerer = 0
-
+// %lower_right_raiser = right_lid_closer
+// %lower_right_neutral = (1 - right_lid_closer) * (1 - right_lid_tightener * 0.5) * (1 - right_cheek_raiser * 0.25)
+// %lower_right_lowerer = 0
+// %lower_left_raiser = left_lid_closer
+// %lower_left_neutral = (1 - left_lid_closer) * (1 - left_lid_tightener * 0.5) * (1 - left_cheek_raiser * 0.25)
+// %lower_left_lowerer = 0
+%frame01 = blink
 
 
 %AU1R = right_inner_raiser * (1 - right_outer_raiser) * (1 - right_lowerer)

@@ -1,4 +1,4 @@
-// by @Starfelll
+// by Starfelll
 
 // is_flexible
 // If a Jiggle Bone is "flexible", a simulated mass is placed at the end of the bone, and the bone acts like a springy, flexible rod. This spring creates rotational motion only, with the center of rotation at the base of the Jiggle Bone.

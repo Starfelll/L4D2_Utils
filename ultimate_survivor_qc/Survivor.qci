@@ -1,33 +1,14 @@
-// by @Starfelll
+// by Starfelll
 
-$DefineVariable head "Head.dmx"
-
-$Model "Head" $head$ {
-
-    eyeball r "ValveBiped.Bip01_Head1" -1.250000 -2.610001 71.830002  "f" 1.05 4 "iris_unused" 0.55
-	eyeball l "ValveBiped.Bip01_Head1" 1.250000 -2.600001 71.830002  "f" 1.05 -4 "iris_unused" 0.55
-
-    dmxeyelid  upper $head$ lowerer "f01" -0.22 neutral "f00"  0.03 raiser "f02"  0.29 righteyeball "r" lefteyeball "l"
-    dmxeyelid  lower $head$ lowerer "f03" -0.34 neutral "f00" -0.2 raiser "f04" -0.04 righteyeball "r" lefteyeball "l"
-
-    mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
-
-    noautodmxrules
-
-    $Include "../QCIs/survivors_facerules.qci"
-
-    flexcontroller eyes range -30 30 eyes_updown
-    flexcontroller eyes range -30 30 eyes_rightleft
+$DefineVariable face "Face.glb"
+$NekoModel "Face" {
+    studio $face$
+    $Include "../QCIs/survivors_flexrules.qci"
 }
 
-$BodyGroup "Body"
-{
-    studio "Body.dmx"
-}
+$Body "Body" "Body.glb"
 
-$CDMaterials Starfelll\Survivor.Myu
-
-// $TextureGroup "skinfamilies"
+$CDMaterials Starfelll\L4D2_Utils
 
 // $AmbientBoost
 // $MostlyOpaque
@@ -43,11 +24,17 @@ $ForcePhonemeCrossFade
 $IKAutoPlayLock "rfoot" 1 0.1
 $IKAutoPlayLock "lfoot" 1 0.1
 
-$Include "../QCIs/BoneMerge.qci"
 $attathements
 $Include "../QCIs/JiggleBones.qci"
-//$ProceduralBones "../Export/survivor_biker.vrd"
-
+// $NekoDriverBone "ValveBiped.Bip01_R_Thigh" {
+//     pose "anims/Reference.dmx"
+//     trigger 100 0
+//     trigger 100 10
+//     trigger 100 20
+//     trigger 100 30
+//     qun_g10_R
+//     qun_g0_R
+// }
 
 $IKChain "rhand" "ValveBiped.Bip01_R_Hand" knee 0.707 0.707 0
 $IKChain "lhand" "ValveBiped.Bip01_L_Hand" knee 0.707 0.707 0
@@ -84,13 +71,6 @@ $SkipBoneInBBox
 
 $Include ../QCIs/DeclareSequences/$survivor$.qci
 $animations $survivor$ $anims_set$ $include_model_root$ $spb_scale$ starfelll
-
-// by @Starfelll
-
-$BoneMerge "ValveBiped.weapon_bone"
-$BoneMerge "ValveBiped.L_weapon_bone"
-$BoneMerge "ValveBiped.weapon_bone_Clip2"
-$BoneMerge "ValveBiped.weapon_bolt_l"
 
 $BoneMerge "ValveBiped.Bip01_Pelvis"
 $BoneMerge "ValveBiped.Bip01_Spine"

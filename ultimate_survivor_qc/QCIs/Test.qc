@@ -1,4 +1,4 @@
-// by @Starfelll
+// by Starfelll
    
     $Include "../QC/Bill_namvet.qc"
     $ModelName "survivors/survivor_namvet.mdl"
