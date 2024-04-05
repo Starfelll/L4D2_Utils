@@ -3,25 +3,21 @@
 $KeyValues
 {
     version "1.0"
-    usqc "1.2"
+    usqc "1.3"
 }
 
 $pushd "../Export"
 
-$DefineVariable spb_scale 0.70
-$DefineVariable include_model_root spb/$spb_scale$x
+//$DefineVariable spb_scale 0.70
+//$DefineVariable include_model_root spb/$spb_scale$x
 
-// $scale $spb_scale$
-// $Animation a_reference anims/$ref_variant$_reference.dmx {
-//     scale $ref_scale$
-//     frame 0 0
-// }
-// $scale 1.0
+$DefineVariable include_model_root survivors
+
 
 $Animation a_reference "Body.glb" {
     $reference_pos
     frame 0 0
-    scale $spb_scale$
+    //scale $spb_scale$
 }
 $Animation a_proportions "Body.glb" {
     subtract "a_reference" 0
@@ -32,9 +28,7 @@ $Animation a_proportions "Body.glb" {
 $DefineMacro animations survivor anims_set include_model_root spb_scale starfelll \\
     $Sequence Reference "a_reference" \\
     $Sequence "Proportions" "a_proportions" autoplay delta \\
-    // $IncludeModel $include_model_root$/anims_$survivor$.mdl \\
     $IncludeModel $include_model_root$/anim_$anims_set$.mdl \\
-    // $IncludeModel survivors/gestures_$survivor$.mdl \\
     $IncludeModel $include_model_root$/gestures_$anims_set$.mdl \\
 \\
 
@@ -62,72 +56,72 @@ $DefineMacro seq_ragdoll \\
 \\
 
 $UnlockDefineBones
-$DefineBone "ValveBiped.Bip01_Pelvis" "" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Thigh" "ValveBiped.Bip01_Pelvis" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_L_Thigh" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_L_Calf" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Toe0" "ValveBiped.Bip01_L_Foot" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Thigh" "ValveBiped.Bip01_Pelvis" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Calf" "ValveBiped.Bip01_R_Thigh" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Foot" "ValveBiped.Bip01_R_Calf" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Toe0" "ValveBiped.Bip01_R_Foot" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_Spine" "ValveBiped.Bip01_Pelvis" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_Spine" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_Spine1" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_Spine4" "ValveBiped.Bip01_Spine2" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_Neck1" "ValveBiped.Bip01_Spine4" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_Neck1" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_UpperArm" "ValveBiped.Bip01_L_Clavicle" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_L_UpperArm" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_L_Forearm" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger4" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger41" "ValveBiped.Bip01_L_Finger4" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger42" "ValveBiped.Bip01_L_Finger41" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger3" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger31" "ValveBiped.Bip01_L_Finger3" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger32" "ValveBiped.Bip01_L_Finger31" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger2" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger21" "ValveBiped.Bip01_L_Finger2" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger22" "ValveBiped.Bip01_L_Finger21" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger1" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger11" "ValveBiped.Bip01_L_Finger1" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger12" "ValveBiped.Bip01_L_Finger11" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger0" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger01" "ValveBiped.Bip01_L_Finger0" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Finger02" "ValveBiped.Bip01_L_Finger01" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_UpperArm" "ValveBiped.Bip01_R_Clavicle" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_UpperArm" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_R_Forearm" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger4" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger41" "ValveBiped.Bip01_R_Finger4" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger42" "ValveBiped.Bip01_R_Finger41" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger3" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger31" "ValveBiped.Bip01_R_Finger3" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger32" "ValveBiped.Bip01_R_Finger31" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger2" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger21" "ValveBiped.Bip01_R_Finger2" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger22" "ValveBiped.Bip01_R_Finger21" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger1" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger11" "ValveBiped.Bip01_R_Finger1" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger12" "ValveBiped.Bip01_R_Finger11" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger0" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger01" "ValveBiped.Bip01_R_Finger0" 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Finger02" "ValveBiped.Bip01_R_Finger01" 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Pelvis" "" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Thigh" "ValveBiped.Bip01_Pelvis" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_L_Thigh" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_L_Calf" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Toe0" "ValveBiped.Bip01_L_Foot" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Thigh" "ValveBiped.Bip01_Pelvis" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Calf" "ValveBiped.Bip01_R_Thigh" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Foot" "ValveBiped.Bip01_R_Calf" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Toe0" "ValveBiped.Bip01_R_Foot" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Spine" "ValveBiped.Bip01_Pelvis" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_Spine" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_Spine1" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Spine4" "ValveBiped.Bip01_Spine2" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Neck1" "ValveBiped.Bip01_Spine4" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_Neck1" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_UpperArm" "ValveBiped.Bip01_L_Clavicle" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_L_UpperArm" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_L_Forearm" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger4" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger41" "ValveBiped.Bip01_L_Finger4" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger42" "ValveBiped.Bip01_L_Finger41" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger3" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger31" "ValveBiped.Bip01_L_Finger3" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger32" "ValveBiped.Bip01_L_Finger31" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger2" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger21" "ValveBiped.Bip01_L_Finger2" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger22" "ValveBiped.Bip01_L_Finger21" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger1" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger11" "ValveBiped.Bip01_L_Finger1" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger12" "ValveBiped.Bip01_L_Finger11" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger0" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger01" "ValveBiped.Bip01_L_Finger0" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger02" "ValveBiped.Bip01_L_Finger01" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_UpperArm" "ValveBiped.Bip01_R_Clavicle" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_UpperArm" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_R_Forearm" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger4" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger41" "ValveBiped.Bip01_R_Finger4" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger42" "ValveBiped.Bip01_R_Finger41" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger3" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger31" "ValveBiped.Bip01_R_Finger3" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger32" "ValveBiped.Bip01_R_Finger31" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger2" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger21" "ValveBiped.Bip01_R_Finger2" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger22" "ValveBiped.Bip01_R_Finger21" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger1" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger11" "ValveBiped.Bip01_R_Finger1" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger12" "ValveBiped.Bip01_R_Finger11" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger0" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger01" "ValveBiped.Bip01_R_Finger0" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger02" "ValveBiped.Bip01_R_Finger01" 0 0 0 0 0 0 0 0 0 0 0 0
 
-$DefineBone "ValveBiped.L_weapon_bone" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.weapon_bone_Clip2" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.weapon_bone" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0
-$DefineBone "ValveBiped.weapon_bolt_l" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0
+$DefineBone "ValveBiped.L_weapon_bone" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bone_Clip2" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bone" "ValveBiped.Bip01_R_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bolt_l" "ValveBiped.Bip01_L_Hand" 0 0 0 0 0 0 0 0 0 0 0 0
 
-$DefineBone "ValveBiped.weapon_bone_Clip" "ValveBiped.weapon_bone" 0.000004 0 10.000004 0.000003 0.000002 0
-$DefineBone "ValveBiped.weapon_bone_extra" "ValveBiped.weapon_bone" 0.018898 0.665158 9.395884 0.000003 0.000002 0
-$DefineBone "ValveBiped.weapon_bone_Clip2_Bullets" "ValveBiped.weapon_bone_Clip2" 0.116951 4.311603 0.061861 -0.000027 0.000011 0.000595
-$DefineBone "ValveBiped.weapon_bone_Clip_Bullets" "ValveBiped.weapon_bone_Clip" 0 1 0.000008 0.000003 0.000002 0
-$DefineBone "ValveBiped.weapon_bolt" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0
-$DefineBone "ValveBiped.weapon_bolt_opposite" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0
-$DefineBone "ValveBiped.weapon_charger" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0
+$DefineBone "ValveBiped.weapon_bone_Clip" "ValveBiped.weapon_bone" 0.000004 0 10.000004 0.000003 0.000002 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bone_extra" "ValveBiped.weapon_bone" 0.018898 0.665158 9.395884 0.000003 0.000002 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bone_Clip2_Bullets" "ValveBiped.weapon_bone_Clip2" 0.116951 4.311603 0.061861 -0.000027 0.000011 0.000595 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bone_Clip_Bullets" "ValveBiped.weapon_bone_Clip" 0 1 0.000008 0.000003 0.000002 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bolt" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bolt_opposite" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_charger" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0 0 0 0 0 0 0
 
 
 $DefineMacro att_eyes \\
@@ -250,7 +244,8 @@ $definemacro att_legR \\
 $Attachment "legR" "ValveBiped.Bip01_R_Thigh" 0 0 0 rotate 0 0 0 \\
 
 $definemacro att_legR_B \\
-$Attachment "legR_B" "ValveBiped.attachment_bandage_legR" 0 0 0 rotate -90 -90 0 \\
+$Attachment "legR_B" "ValveBiped.Bip01_R_Thigh" 0 0 0 rotate -90 -90 0 \\
+//$Attachment "legR_B" "ValveBiped.attachment_bandage_legR" 0 0 0 rotate -90 -90 0 \\
 
 // for bill
 $definemacro att_cigarette \\

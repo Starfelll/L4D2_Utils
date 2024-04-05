@@ -1,0 +1,2 @@
+call l4d2pak all_survivors
+pause

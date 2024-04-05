@@ -1,8 +1,7 @@
 // by Starfelll
 
-$DefineVariable face "Face.glb"
 $NekoModel "Face" {
-    studio $face$
+    studio "Face.glb"
     $Include "../QCIs/survivors_flexrules.qci"
 }
 
@@ -21,8 +20,8 @@ $EyePosition 0 0 70
 $MaxEyeDeflection 30
 $ForcePhonemeCrossFade
 
-$IKAutoPlayLock "rfoot" 1 0.1
-$IKAutoPlayLock "lfoot" 1 0.1
+$IKAutoPlayLock "rfoot" 0 0.1
+$IKAutoPlayLock "lfoot" 0 0.1
 
 $attathements
 $Include "../QCIs/JiggleBones.qci"

@@ -3,6 +3,7 @@
 {
 	"$Model"							"1"
 	"$NoDecal"							"1"
+
 	// Emissive
 	"$EmissiveBlendEnabled"				"1"
 	"$EmissiveBlendStrength"			"0.002"
@@ -11,9 +12,19 @@
 	"$EmissiveBlendTint"				" [ 1 1 1 ] "
 	"$EmissiveBlendScrollVector"		" [ 0 0 ] "
 	//"$EmissiveBlendBaseTexture"		"$BaseTexture"
+
+	// $detail   "texture"
+	// $detailscale 1
+	// $detailblendmode 5
+	// $detailblendfactor 0.01
+
+	// $selfillum 1
+	// $selfillummaskscale
+	// $selfillummask
+
 	// Phong
 	"$halflambert" 						"1"
-	"$phong"							"1"
+	"$phong"							"0"
 	// "$PhongDisableHalfLambert"			"0"
 	// "$BumpMap"							"dev/bump_normal"
 	// //"$Phongexponent"					"1"
@@ -24,9 +35,9 @@
 	// //"$phongtint"                    "[Rrimlight color]"
 
 	// RrimLight
-	"$RrimLight"						"1"
-	"$RrimLightExponent"				"1"
-	"$RrimLightBoost"					"1"
+	// "$RrimLight"						"1"
+	// "$RrimLightExponent"				"1"
+	// "$RrimLightBoost"					"1"
 
 	// unitychan
 	// ob = (b * 0.30)
@@ -35,4 +46,9 @@
 
 	//liltoon
 	//blur = (weight * blur) / 2
+
+	// $alphatest 1
+	// $alphatestreference 0.5
+	// $allowalphatocoverage 1
+	// $translucent 1
 }

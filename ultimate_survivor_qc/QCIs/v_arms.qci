@@ -22,8 +22,6 @@ $Contents "solid"
 
 $IllumPosition 0 0 -31
 
-$CDMaterials Starfelll\Survivor.lyyyry\off
-$CDMaterials Starfelll\Survivor.lyyyry\on
 $CDMaterials Starfelll\Survivor.lyyyry
 
 // This list shows the VMT file names used in the SMD files.

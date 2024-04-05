@@ -1,4 +1,4 @@
-# config template version 1.3
+# config template version 1.4
 vpk_basename = "Mashu"
 version = "1.0"
 
@@ -142,4 +142,4 @@ variants = {
 
 variants["all_survivors"] = \
       variants["bill"] + variants["coach"] + variants["ellis"] + variants["francis"] \
-    + variants["louis"] + variants["nick"] + variants["rochelle"] + variants["zoey"]
+    + variants["louis"] + variants["nick"] + variants["rochelle"] + variants["zoey"] + variants["materials"]
