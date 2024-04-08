@@ -1,4 +1,5 @@
 // by Starfelll
+// Must be used with nekomdl
 
 $NekoModel "Face" {
     studio "Face.glb"
