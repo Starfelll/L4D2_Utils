@@ -69,7 +69,7 @@ $HBox 5 "ValveBiped.Bip01_R_Hand" 1.113 -1.512 -2.52 5.838 0.588 1.365
 $SkipBoneInBBox
 
 $Include ../QCIs/DeclareSequences/$survivor$.qci
-$animations $survivor$ $anims_set$ $include_model_root$ $spb_scale$ starfelll
+$animations $survivor$ $anims_set$ $include_model_root$ starfelll
 
 $BoneMerge "ValveBiped.Bip01_Pelvis"
 $BoneMerge "ValveBiped.Bip01_Spine"

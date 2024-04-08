@@ -1,2 +1,2 @@
-call l4d2pak all_survivors
+call l4d2pak all_survivors,materials
 pause

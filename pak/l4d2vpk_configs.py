@@ -1,15 +1,15 @@
 # config template version 1.4
-vpk_basename = "Mashu"
+vpk_basename = "[Survivor] Mashu"
 version = "1.0"
 
 from srctools.keyvalues import Keyvalues as KV
 
 def init(sel_variants: list[str]):
     global vpk_basename
-    vpk_basename += f' ({sel_variants[0]}'
-    for v in sel_variants[1:]:
-        vpk_basename += f',{v}'
-    vpk_basename += ')'
+    # vpk_basename += f' ({sel_variants[0]}'
+    # for v in sel_variants[1:]:
+    #     vpk_basename += f',{v}'
+    # vpk_basename += ')'
 
 
 def gen_addon_info_text() -> str:
@@ -142,4 +142,4 @@ variants = {
 
 variants["all_survivors"] = \
       variants["bill"] + variants["coach"] + variants["ellis"] + variants["francis"] \
-    + variants["louis"] + variants["nick"] + variants["rochelle"] + variants["zoey"] + variants["materials"]
+    + variants["louis"] + variants["nick"] + variants["rochelle"] + variants["zoey"]

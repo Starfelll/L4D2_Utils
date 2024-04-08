@@ -8,9 +8,8 @@ $KeyValues
 
 $pushd "../Export"
 
-//$DefineVariable spb_scale 0.70
+$DefineVariable spb_scale 0.70
 //$DefineVariable include_model_root spb/$spb_scale$x
-
 $DefineVariable include_model_root survivors
 
 
@@ -25,7 +24,7 @@ $Animation a_proportions "Body.glb" {
     origin 0 0 0
 }
 
-$DefineMacro animations survivor anims_set include_model_root spb_scale starfelll \\
+$DefineMacro animations survivor anims_set include_model_root starfelll \\
     $Sequence Reference "a_reference" \\
     $Sequence "Proportions" "a_proportions" autoplay delta \\
     $IncludeModel $include_model_root$/anim_$anims_set$.mdl \\
