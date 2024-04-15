@@ -3,10 +3,10 @@
 
 $NekoModel "Face" {
     studio "Face.glb"
-    $Include "../QCIs/survivors_flexrules.qci"
+    //$Include "../QCIs/survivors_flexrules.qci"
 }
 
-$Body "Body" "Body.glb"
+$Body "Body" $custom_model$
 
 $CDMaterials Starfelll\L4D2_Utils
 
