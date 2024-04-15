@@ -27,7 +27,7 @@ $IKAutoPlayLock "lfoot" 0 0.1
 $attathements
 $Include "../QCIs/JiggleBones.qci"
 // $NekoDriverBone "ValveBiped.Bip01_R_Thigh" {
-//     pose "anims/Reference.dmx"
+//     pose "anims/VRD.dmx"
 //     trigger 100 0
 //     trigger 100 10
 //     trigger 100 20

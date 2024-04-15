@@ -7,21 +7,29 @@
 $KeyValues
 {
     version "1.0"
-    usqc "1.4"
+    usqc "1.5"
 }
 
 $pushd "../Export"
 
 $DefineVariable spb_scale 0.70
-//$DefineVariable include_model_root spb/$spb_scale$x
+// $DefineVariable include_model_root spb/$spb_scale$x
 $DefineVariable include_model_root survivors
 
 
 $DefineVariable custom_model "Body.glb"
 $Animation a_reference $custom_model$ {
-    $reference_pos
+    // $reference_pos_auto
+    // $reference_pos_namvet
+    // $reference_pos_coach
+    // $reference_pos_mechanic
+    // $reference_pos_biker
+    // $reference_pos_manager
+    // $reference_pos_gambler
+    // $reference_pos_producer
+    $reference_pos_teenangst
     frame 0 0
-    //scale $spb_scale$
+    // scale $spb_scale$
 }
 $Animation a_proportions $custom_model$ {
     subtract "a_reference" 0
@@ -32,7 +40,9 @@ $Animation a_proportions $custom_model$ {
 $DefineMacro animations survivor anims_set include_model_root starfelll \\
     $Sequence Reference "a_reference" \\
     $Sequence "Proportions" "a_proportions" autoplay delta \\
+    $IncludeModel $include_model_root$/anim_teenangst.mdl \\
     $IncludeModel $include_model_root$/anim_$anims_set$.mdl \\
+    $IncludeModel $include_model_root$/gestures_teenangst.mdl \\
     $IncludeModel $include_model_root$/gestures_$anims_set$.mdl \\
 \\
 
