@@ -1,18 +1,18 @@
-// by Starfelll
+// by Starfelll https://github.com/Starfelll/L4D2_Utils/tree/master/ultimate_survivor_qc
 // No need to generate proportions
 // No need to generate definebones
 // The fastest way to get started is to change Body.glb and Face.glb to your own, 
-// and then compile.
+// and then compile...
 
 $KeyValues
 {
     version "1.0"
-    usqc "1.5"
+    usqc "1.6"
 }
 
 $pushd "../Export"
 
-$DefineVariable spb_scale 0.70
+// $DefineVariable spb_scale 0.70
 // $DefineVariable include_model_root spb/$spb_scale$x
 $DefineVariable include_model_root survivors
 
@@ -69,18 +69,18 @@ $DefineMacro seq_ragdoll \\
     } \\
 \\
 
-// example to fix foot ik height : 
-// $DefineBone "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_L_Calf" 1 1 4 5 1 4 0 <height> 0 0 0 0
-// Syntax $definebone (name) (parent) (X) (Y) (Z) (xr) (yr) (zr) (fixup X) (fixup Y) (fixup Z) (fixup X Rotation) (fixup Y Rotation) (fixup Z Rotation)
+
+$DefineVariable foot_ik_fix 0
+$DefineVariable calf_ik_fix 0
 $UnlockDefineBones
-$DefineBone "ValveBiped.Bip01_Pelvis" "" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Pelvis" "" 1 1 4 5 1 4 0 0 0 0 0 0 // In your model, this bone must be the root bone
 $DefineBone "ValveBiped.Bip01_L_Thigh" "ValveBiped.Bip01_Pelvis" 1 1 4 5 1 4 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_L_Thigh" 1 1 4 5 1 4 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_L_Calf" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_L_Thigh" 1 1 4 5 1 4 0 0 0 $calf_ik_fix$ 0 0
+$DefineBone "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_L_Calf" 1 1 4 5 1 4 0 $foot_ik_fix$ 0 0 0 0
 $DefineBone "ValveBiped.Bip01_L_Toe0" "ValveBiped.Bip01_L_Foot" 1 1 4 5 1 4 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_R_Thigh" "ValveBiped.Bip01_Pelvis" 1 1 4 5 1 4 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Calf" "ValveBiped.Bip01_R_Thigh" 1 1 4 5 1 4 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Foot" "ValveBiped.Bip01_R_Calf" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Calf" "ValveBiped.Bip01_R_Thigh" 1 1 4 5 1 4 0 0 0 -$calf_ik_fix$ 0 0
+$DefineBone "ValveBiped.Bip01_R_Foot" "ValveBiped.Bip01_R_Calf" 1 1 4 5 1 4 0 $foot_ik_fix$ 0 0 0 0
 $DefineBone "ValveBiped.Bip01_R_Toe0" "ValveBiped.Bip01_R_Foot" 1 1 4 5 1 4 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_Spine" "ValveBiped.Bip01_Pelvis" 1 1 4 5 1 4 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_Spine" 1 1 4 5 1 4 0 0 0 0 0 0

@@ -3,7 +3,7 @@
 
 $NekoModel "Face" {
     studio "Face.glb"
-    //$Include "../QCIs/survivors_flexrules.qci"
+    // $Include "../QCIs/survivors_flexrules.qci"
 }
 
 $Body "Body" $custom_model$
@@ -27,11 +27,11 @@ $IKAutoPlayLock "lfoot" 0 0.1
 $attathements
 $Include "../QCIs/JiggleBones.qci"
 // $NekoDriverBone "ValveBiped.Bip01_R_Thigh" {
-//     pose "anims/VRD.dmx"
-//     trigger 100 0
-//     trigger 100 10
-//     trigger 100 20
-//     trigger 100 30
+//     pose "anims/Procedural.dmx"
+//     trigger 95 0
+//     trigger 95 10
+//     trigger 95 20
+//     trigger 95 30
 //     qun_g10_R
 //     qun_g0_R
 // }
@@ -115,6 +115,17 @@ $BoneMerge "ValveBiped.Bip01_R_Finger12"
 $BoneMerge "ValveBiped.Bip01_R_Finger0"
 $BoneMerge "ValveBiped.Bip01_R_Finger01"
 $BoneMerge "ValveBiped.Bip01_R_Finger02"
+$BoneMerge "ValveBiped.L_weapon_bone"
+$BoneMerge "ValveBiped.weapon_bone"
+$BoneMerge "ValveBiped.weapon_bone_Clip"
+$BoneMerge "ValveBiped.weapon_bone_extra"
+$BoneMerge "ValveBiped.weapon_bone_Clip2"
+$BoneMerge "ValveBiped.weapon_bone_Clip2_Bullets"
+$BoneMerge "ValveBiped.weapon_bolt_l"
+$BoneMerge "ValveBiped.weapon_bone_Clip_Bullets"
+$BoneMerge "ValveBiped.weapon_bolt"
+$BoneMerge "ValveBiped.weapon_bolt_opposite"
+$BoneMerge "ValveBiped.weapon_charger"
 
 $BoneSaveFrame "ValveBiped.Bip01_Pelvis" position rotation
 $BoneSaveFrame "ValveBiped.Bip01_L_Thigh" rotation

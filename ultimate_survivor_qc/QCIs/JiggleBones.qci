@@ -1,5 +1,123 @@
 // by Starfelll
 
+$DefineMacro jigg_hair name p_min p_max y_min y_max \\
+    $Jigglebone $name$ { is_flexible { \\
+        length 200 \\
+        tip_mass 1 \\
+        allow_length_flex \\
+        pitch_friction 0 \\
+        yaw_friction 0 \\
+        along_stiffness 0 \\
+        pitch_stiffness 70 \\
+        yaw_stiffness 70 \\
+        along_damping 10 \\
+        pitch_damping 10 \\
+        yaw_damping 10 \\
+        //angle_constraint 30 \\
+        pitch_constraint $p_min$ $p_max$ \\
+        yaw_constraint $y_min$ $y_max$ \\
+    } } \\
+\\
+
+$DefineMacro jigg_nekomimi name p_min p_max y_min y_max \\
+    $Jigglebone $name$ { is_flexible { \\
+        length 50 \\
+        tip_mass 1 \\
+        //allow_length_flex \\
+        pitch_friction 0 \\
+        yaw_friction 0 \\
+        along_stiffness 80 \\
+        pitch_stiffness 80 \\
+        yaw_stiffness 80 \\
+        along_damping 8 \\
+        pitch_damping 8 \\
+        yaw_damping 8 \\
+        //angle_constraint 40 \\
+        pitch_constraint $p_min$ $p_max$ \\
+        yaw_constraint $y_min$ $y_max$ \\
+    } } \\
+\\
+
+
+$DefineMacro jigg_skirt name \\
+    $Jigglebone $name$ { is_flexible { \\
+        length 50 \\
+        tip_mass 1 \\
+        allow_length_flex \\
+        pitch_friction 0 \\
+        yaw_friction 0 \\
+        along_stiffness 0 \\
+        pitch_stiffness 80 \\
+        yaw_stiffness 80 \\
+        along_damping 10 \\
+        pitch_damping 10 \\
+        yaw_damping 10 \\
+        angle_constraint 16 \\
+    } } \\
+\\
+
+// $JiggleBone "Bell_leg" {
+//     is_rigid {
+//         length 2.8
+//         tip_mass 800
+//         yaw_friction 0
+//         pitch_friction 0
+//         pitch_constraint -10 140
+//         yaw_constraint -40 40
+//     }
+// }
+
+// $JiggleBone "jigg_nemofira"
+// {
+// 	is_flexible {
+// 		yaw_stiffness 1
+// 		along_stiffness 1
+// 		pitch_stiffness 1
+// 		yaw_damping 10
+// 		pitch_damping 10
+// 		along_damping 10
+// 		length 5
+// 		yaw_constraint -5 5
+// 		pitch_constraint -5 5
+// 		allow_length_flex
+// 		tip_mass 0
+// 	}
+// 	has_base_spring {
+// 		stiffness 40
+// 		damping 9
+// 		left_constraint -16 16
+// 		up_constraint -16 16
+// 		forward_constraint -16 3
+// 	}
+// }
+
+// $DefineMacro jigg_bust name \\
+//     $Jigglebone $name$ { \\
+//         is_flexible { \\
+//             yaw_stiffness 1 \\
+//             along_stiffness 1 \\
+//             pitch_stiffness 1 \\
+//             yaw_damping 10 \\
+//             pitch_damping 10 \\
+//             along_damping 10 \\
+//             length 200 \\
+//             angle_constraint 1.6 \\
+//             allow_length_flex \\
+//             tip_mass 200 \\
+//         } \\
+//         has_base_spring { \\
+//             stiffness 40 \\
+//             damping 9 \\
+//             left_constraint -0.2 0.2 \\
+//             up_constraint -0.2 0.2 \\
+//             forward_constraint -0.2 0.2 \\
+//         } \\
+//     } \\
+// \\
+
+
+
+
 // is_flexible
 // If a Jiggle Bone is "flexible", a simulated mass is placed at the end of the bone, and the bone acts like a springy, flexible rod. This spring creates rotational motion only, with the center of rotation at the base of the Jiggle Bone.
 
@@ -65,101 +183,3 @@
 // The amount of friction applied in the left/up plane when the spring is rubbing against the forward constraint.
 // base_mass
 // How much the base spring is affected by gravity.
-
-$DefineMacro jigg_hair name p_min p_max y_min y_max \\
-    $Jigglebone $name$ { is_flexible { \\
-        length 50 \\
-        tip_mass 1 \\
-        allow_length_flex \\
-        pitch_friction 0 \\
-        yaw_friction 0 \\
-        along_stiffness 0 \\
-        pitch_stiffness 80 \\
-        yaw_stiffness 80 \\
-        along_damping 10 \\
-        pitch_damping 10 \\
-        yaw_damping 10 \\
-        //angle_constraint 30 \\
-        pitch_constraint $p_min$ $p_max$ \\
-        yaw_constraint $y_min$ $y_max$ \\
-    } } \\
-\\
-
-$DefineMacro jigg_nekomimi name p_min p_max y_min y_max \\
-    $Jigglebone $name$ { is_flexible { \\
-        length 50 \\
-        tip_mass 1 \\
-        //allow_length_flex \\
-        pitch_friction 0 \\
-        yaw_friction 0 \\
-        along_stiffness 80 \\
-        pitch_stiffness 80 \\
-        yaw_stiffness 80 \\
-        along_damping 8 \\
-        pitch_damping 8 \\
-        yaw_damping 8 \\
-        //angle_constraint 40 \\
-        pitch_constraint $p_min$ $p_max$ \\
-        yaw_constraint $y_min$ $y_max$ \\
-    } } \\
-\\
-
-
-$JiggleBone "Bell_leg" {
-    is_rigid {
-        length 2.8
-        tip_mass 800
-        yaw_friction 0
-        pitch_friction 0
-        pitch_constraint -10 140
-        yaw_constraint -40 40
-    }
-}
-
-$JiggleBone "jigg_nemofira"
-{
-	is_flexible {
-		yaw_stiffness 1
-		along_stiffness 1
-		pitch_stiffness 1
-		yaw_damping 10
-		pitch_damping 10
-		along_damping 10
-		length 5
-		yaw_constraint -5 5
-		pitch_constraint -5 5
-		allow_length_flex
-		tip_mass 0
-	}
-	has_base_spring {
-		stiffness 40
-		damping 9
-		left_constraint -16 16
-		up_constraint -16 16
-		forward_constraint -16 3
-	}
-}
-
-$DefineMacro jigg_bust name \\
-    $Jigglebone $name$ { \\
-        is_flexible { \\
-            yaw_stiffness 1 \\
-            along_stiffness 1 \\
-            pitch_stiffness 1 \\
-            yaw_damping 10 \\
-            pitch_damping 10 \\
-            along_damping 10 \\
-            length 200 \\
-            angle_constraint 1.6 \\
-            allow_length_flex \\
-            tip_mass 200 \\
-        } \\
-        has_base_spring { \\
-            stiffness 40 \\
-            damping 9 \\
-            left_constraint -0.2 0.2 \\
-            up_constraint -0.2 0.2 \\
-            forward_constraint -0.2 0.2 \\
-        } \\
-    } \\
-\\
