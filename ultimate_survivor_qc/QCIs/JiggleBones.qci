@@ -4,7 +4,7 @@ $DefineMacro jigg_hair name p_min p_max y_min y_max \\
     $Jigglebone $name$ { is_flexible { \\
         length 200 \\
         tip_mass 1 \\
-        allow_length_flex \\
+        //allow_length_flex \\
         pitch_friction 0 \\
         yaw_friction 0 \\
         along_stiffness 0 \\
@@ -43,7 +43,7 @@ $DefineMacro jigg_skirt name \\
     $Jigglebone $name$ { is_flexible { \\
         length 50 \\
         tip_mass 1 \\
-        allow_length_flex \\
+        //allow_length_flex \\
         pitch_friction 0 \\
         yaw_friction 0 \\
         along_stiffness 0 \\
@@ -102,7 +102,7 @@ $DefineMacro jigg_skirt name \\
 //             along_damping 10 \\
 //             length 200 \\
 //             angle_constraint 1.6 \\
-//             allow_length_flex \\
+//             //allow_length_flex \\
 //             tip_mass 200 \\
 //         } \\
 //         has_base_spring { \\

@@ -1,0 +1,67 @@
+//v1.4
+"VertexLitGeneric"
+{
+	"$Model"							"1"
+	"$NoDecal"							"1"
+
+	// Emissive
+	"$EmissiveBlendEnabled"				"1"
+	"$EmissiveBlendStrength"			"0.01"
+	"$EmissiveBlendTexture"				"vgui/white"
+	"$EmissiveBlendFlowTexture"			"vgui/white"
+	"$EmissiveBlendTint"				" [ 1 1 1 ] "
+	"$EmissiveBlendScrollVector"		" [ 0 0 ] "
+	//"$EmissiveBlendBaseTexture"		"$BaseTexture"
+
+	// $detail   "texture"
+	// $detailscale 1
+	// $detailblendmode 5
+	// $detailblendfactor 0.01
+
+	// $selfillum 1
+	// $selfillummaskscale 1
+	// $selfillummask "vgui/white"
+	// $selfillumtint "[1 1 1]"
+	// $selfIllumfresnel 1
+
+	// Phong
+	// "$halflambert" 						"1"
+	// "$phong"							"0"
+	// // "$PhongDisableHalfLambert"			"0"
+	// // "$BumpMap"							"dev/bump_normal"
+	// // //"$Phongexponent"					"1"
+	// // "$PhongExponentTexture"				"models/extras/speech_info_exp"
+	// // "$PhongAlbedoTint"					"1"
+	// // "$PhongBoost"						"13"
+	// // "$PhongFresnelRanges"				"[0.008 0.008 0.35]"
+	// // //"$phongtint"                    "[Rrimlight color]"
+
+	"$halflambert" 						1
+	"$phong"							1
+	"$PhongDisableHalfLambert"			0
+	//"$BumpMap"							"dev/bump_normal"
+	//"$Phongexponent"					"0.1"
+	"$PhongExponentTexture"				"models/extras/speech_info_exp"
+	"$PhongAlbedoTint"					"1"
+	"$PhongBoost"						"20"
+	"$PhongFresnelRanges"				"[0.0008 0.0008 0.26]"
+	"$phongtint" "[0.98 0.89 0.9]"
+
+	// RimLight
+	// "$RimLight"						"1"
+	// "$RimLightExponent"				"1"
+	// "$RimLightBoost"					"1"
+
+	// unitychan
+	// ob = (b * 0.30)
+	// os = (s * (b / ob))
+	// 0.30
+
+	//liltoon
+	//blur = (weight * blur) / 2
+
+	// $alphatest 1
+	// $alphatestreference 0.5
+	// $allowalphatocoverage 1
+	// $translucent 1
+}

@@ -1,6 +1,6 @@
-# config template version 1.4
+# config template version 1.5
 vpk_basename = "[Survivor] Mashu"
-version = "1.0"
+version = "1"
 
 from srctools.keyvalues import Keyvalues as KV
 
@@ -67,6 +67,7 @@ variants = {
         "materials/vgui/select_bill.vmt",
         "models/survivors/survivor_namvet.*",
         "models/weapons/arms/v_arms_bill.*",
+        "models/survivors/namvet/namvet_deathpose.*"
     ],
     "coach": [
         ("shared/s_panel.vtf", "materials/vgui/s_panel_coach.vtf"),

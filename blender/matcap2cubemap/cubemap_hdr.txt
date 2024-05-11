@@ -1,0 +1,3 @@
+pfm 1 // read .pfm file instead of .tga
+pfmscale 1 // higher values will result in a brighter sky
+nocompress 1 // disable compression (HDR compression is only supported by skyboxes)

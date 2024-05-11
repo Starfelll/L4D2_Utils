@@ -4,19 +4,12 @@
 // The fastest way to get started is to change Body.glb and Face.glb to your own, 
 // and then compile...
 
-$KeyValues
-{
-    version "1.0"
-    usqc "1.6"
-}
 
-$pushd "../Export"
+//$UpAxis "Y"
+$PushD "../Export"
 
-// $DefineVariable spb_scale 0.70
-// $DefineVariable include_model_root spb/$spb_scale$x
+// $DefineVariable spb_scale 0.70 $DefineVariable include_model_root spb/$spb_scale$x
 $DefineVariable include_model_root survivors
-
-
 $DefineVariable custom_model "Body.glb"
 $Animation a_reference $custom_model$ {
     // $reference_pos_auto
@@ -215,7 +208,8 @@ $definemacro att_survivor_neck \\
 $Attachment "survivor_neck" "ValveBiped.Bip01_Neck1" 0 0 0 rotate 0 0 0 \\
 
 $definemacro att_forward \\
-$Attachment "forward" "ValveBiped.forward" 0 0 0 rotate 0 0 0 \\
+$Attachment "forward" "ValveBiped.Bip01_Head1" 1.91 -2.46 -0.00 rotate 0 -72 -90 \\
+//$Attachment "forward" "ValveBiped.forward" 0 0 0 rotate 0 0 0 \\
 
 $definemacro att_bleedout \\
 $Attachment "bleedout" "ValveBiped.Bip01_Pelvis" 9.07 9.55 4.78 rotate 0 0 0 \\
@@ -272,7 +266,10 @@ $Attachment "cigarette" "ValveBiped.Bip01_Head1" -0.2 -5.1 1.8 rotate 0 -90 -90 
 $definemacro att_eholster \\
 $Attachment "eholster" "ValveBiped.Bip01_L_Thigh" 5.12 -2.21 5.1 rotate 9.47 -92.11 96.8 \\
 
-
+$KeyValues
+{
+    usqc "1.7"
+}
 
 /*
     Nick	  gambler     1.0
