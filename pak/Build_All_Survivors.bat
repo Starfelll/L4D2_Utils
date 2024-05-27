@@ -20,7 +20,11 @@ nekomdl %param% Rochelle_producer.qc
 IF %ERRORLEVEL% NEQ 0 ( goto CompileFailed )
 nekomdl %param% Zoey_teenangst.qc
 IF %ERRORLEVEL% NEQ 0 ( goto CompileFailed )
+goto End
 
 :CompileFailed
 echo CompileFailed
+goto End
+
+:End
 pause

@@ -1,0 +1,126 @@
+// Created by Crowbar-Starfelll 1.0
+
+$IFDef spb_scale
+	$Scale $spb_scale$
+$EndIF
+
+$Animation "@dlc1_intro_male_leanup_corrective_animation" "survivor_biker_light_anims\@dlc1_intro_male_leanup_corrective_animation.smd" {
+}
+
+$Animation "@dlc1_intro_male_leanleft_corrective_animation" "survivor_biker_light_anims\@dlc1_intro_male_leanleft_corrective_animation.smd" {
+}
+
+$Animation "@dlc1_intro_male_headnod_corrective_animation" "survivor_biker_light_anims\@dlc1_intro_male_headnod_corrective_animation.smd" {
+}
+
+$Animation "@dlc1_intro_male_handflipR_corrective_animation" "survivor_biker_light_anims\@dlc1_intro_male_handflipR_corrective_animation.smd" {
+}
+
+$Animation "@INTROIDLENOISE_corrective_animation" "survivor_biker_light_anims\@INTROIDLENOISE_corrective_animation.smd" {
+}
+
+// $DeclareSequence "Biker"
+$seq_survivor $survivor$
+
+$Sequence "animHack" {
+	"survivor_biker_light_anims\animHack.smd"
+	fadein 0.2
+	fadeout 0.2
+	hidden
+	fps 30
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 10 10 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 10 10 target 1
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 10 10 target 2
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 10 10 target 3
+}
+
+$Sequence "dlc1_intro_male_idle" {
+	"survivor_biker_light_anims\dlc1_intro_male_idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	addlayer "INTROIDLENOISE"
+	fps 30
+	loop
+	ikrule "lhand" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 241 241 target 1 usesequence 
+	ikrule "rhand" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 241 241 target 0 usesequence 
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 241 241 target 2 usesequence 
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 241 241 target 3 usesequence 
+}
+
+$Sequence "dlc1_intro_male_leanup" {
+	"survivor_biker_light_anims\dlc1_intro_male_leanup.smd"
+	activity "ACT_DLCINTRO_01" -1
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@dlc1_intro_male_leanup_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lhand" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 120 120 target 1
+	ikrule "rhand" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 120 120 target 0
+	ikrule "lfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 120 120 target 3
+	ikrule "rfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 120 120 target 2
+}
+
+$Sequence "dlc1_intro_male_leanleft" {
+	"survivor_biker_light_anims\dlc1_intro_male_leanleft.smd"
+	activity "ACT_DLCINTRO_02" -1
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@dlc1_intro_male_leanleft_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lhand" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 125 125 target 1
+	ikrule "rhand" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 125 125 target 0
+	ikrule "lfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 125 125 target 3
+	ikrule "rfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 125 125 target 2
+}
+
+$Sequence "dlc1_intro_male_headnod" {
+	"survivor_biker_light_anims\dlc1_intro_male_headnod.smd"
+	activity "ACT_DLCINTRO_03" -1
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@dlc1_intro_male_headnod_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lhand" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 28 28 target 1
+	ikrule "rhand" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 28 28 target 0
+	ikrule "lfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 28 28 target 3
+	ikrule "rfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 28 28 target 2
+}
+
+$Sequence "dlc1_intro_male_handflipR" {
+	"survivor_biker_light_anims\dlc1_intro_male_handflipR.smd"
+	activity "ACT_DLCINTRO_04" -1
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@dlc1_intro_male_handflipR_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lhand" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+	ikrule "lfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 3
+	ikrule "rfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 2
+}
+
+// $DeclareSequence "ragdoll"
+$seq_ragdoll
+
+$Sequence "INTROIDLENOISE" {
+	"survivor_biker_light_anims\INTROIDLENOISE.smd"
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@INTROIDLENOISE_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	hidden
+	iklock "lfoot" 1 0
+	iklock "rfoot" 1 0
+	fps 30
+	loop
+	walkframe 242
+}

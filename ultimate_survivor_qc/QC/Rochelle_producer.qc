@@ -3,8 +3,6 @@
 $ModelName "survivors/survivor_producer.mdl" //Rochelle
 
 $DefineVariable anims_set producer
-$DefineVariable ref_scale 0.888
-$DefineVariable ref_variant namvet
 $DefineVariable survivor producer
 
 $DefineMacro attathements \\
@@ -40,11 +38,4 @@ $DefineMacro attathements \\
 	$att_attach_L_shoulderBladeAim \\
 \\
 
-$Include "../QCIs/DeclareSequences/pps.qci"
-
-$DefineMacro reference_pos_auto \\
-$reference_pos_producer \\
-\\
-
-$Include "../Survivor_Defines.qci"
 $Include "../Survivor.qci"

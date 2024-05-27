@@ -1,9 +1,9 @@
 // by Starfelll
 
-$ModelName "survivors/survivor_biker.mdl" // Francis
+$ModelName "survivors/survivor_biker_light.mdl" // Francis
 
 $DefineVariable anims_set biker
-$DefineVariable survivor biker
+$DefineVariable survivor biker_light
 
 $DefineMacro attathements \\
     $att_eyes \\
@@ -16,7 +16,7 @@ $DefineMacro attathements \\
     $att_molotov \\
     $att_grenade \\
     $att_pills \\
-    $att_melee \\
+    //$att_melee \\
     $att_grenade \\
     $att_molotov \\
     $att_pills \\

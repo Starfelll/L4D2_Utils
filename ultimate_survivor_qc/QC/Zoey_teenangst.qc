@@ -3,8 +3,6 @@
 $ModelName "survivors/survivor_teenangst.mdl" // Zoey
 
 $DefineVariable anims_set teenangst
-$DefineVariable ref_scale 1.00
-$DefineVariable ref_variant teenangst
 $DefineVariable survivor teenangst
 
 $DefineMacro attathements \\
@@ -38,11 +36,4 @@ $DefineMacro attathements \\
 	$att_spine \\
 \\
 
-$Include "../QCIs/DeclareSequences/pps.qci"
-
-$DefineMacro reference_pos_auto \\
-$reference_pos_teenangst \\
-\\
-
-$Include "../Survivor_Defines.qci"
 $Include "../Survivor.qci"

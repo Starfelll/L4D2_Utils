@@ -1,6 +1,8 @@
 //v1.4
 "VertexLitGeneric"
 {
+	$DefineVariable test 1
+
 	"$Model"							"1"
 	"$NoDecal"							"1"
 

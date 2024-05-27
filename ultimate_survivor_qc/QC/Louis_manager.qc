@@ -3,8 +3,6 @@
 $ModelName "survivors/survivor_manager.mdl" //Louis
 
 $DefineVariable anims_set biker
-$DefineVariable ref_scale 1.05
-$DefineVariable ref_variant namvet
 $DefineVariable survivor manager
 
 $DefineMacro attathements \\
@@ -36,11 +34,4 @@ $DefineMacro attathements \\
 	$att_spine \\
 \\
 
-$Include "../QCIs/DeclareSequences/pps.qci"
-
-$DefineMacro reference_pos_auto \\
-$reference_pos_manager \\
-\\
-
-$Include "../Survivor_Defines.qci"
 $Include "../Survivor.qci"

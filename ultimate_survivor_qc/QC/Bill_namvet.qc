@@ -3,8 +3,6 @@
 $ModelName "survivors/survivor_namvet.mdl" // Bill
 
 $DefineVariable anims_set namvet
-$DefineVariable ref_scale 1.00
-$DefineVariable ref_variant namvet
 $DefineVariable survivor namvet
 
 $DefineMacro attathements \\
@@ -39,11 +37,4 @@ $DefineMacro attathements \\
 	$att_spine \\
 \\
 
-$Include "../QCIs/DeclareSequences/pps.qci"
-
-$DefineMacro reference_pos_auto \\
-$reference_pos_namvet \\
-\\
-
-$Include "../Survivor_Defines.qci"
 $Include "../Survivor.qci"

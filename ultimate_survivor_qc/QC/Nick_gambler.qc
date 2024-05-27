@@ -3,8 +3,6 @@
 $ModelName "survivors/survivor_gambler.mdl" // Nick
 
 $DefineVariable anims_set gambler
-$DefineVariable ref_scale 1.0
-$DefineVariable ref_variant namvet
 $DefineVariable survivor gambler
 
 $DefineMacro attathements \\
@@ -39,11 +37,4 @@ $DefineMacro attathements \\
 	$att_L_weapon_bone \\
 \\
 
-$Include "../QCIs/DeclareSequences/pps.qci"
-
-$DefineMacro reference_pos_auto \\
-$reference_pos_gambler \\
-\\
-
-$Include "../Survivor_Defines.qci"
 $Include "../Survivor.qci"

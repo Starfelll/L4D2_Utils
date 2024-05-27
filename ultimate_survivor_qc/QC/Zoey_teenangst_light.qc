@@ -1,23 +1,23 @@
 // by Starfelll
 
-$ModelName "survivors/survivor_coach.mdl"
+$ModelName "survivors/survivor_TeenAngst_light.mdl" // Zoey
 
-$DefineVariable anims_set coach
-$DefineVariable survivor coach
+$DefineVariable anims_set teenangst
+$DefineVariable survivor teenangst_light
 
 $DefineMacro attathements \\
 	$att_eyes \\
 	$att_mouth \\
-	$att_survivor_light \\
-	$att_forward \\
-	$att_pistol \\
-	$att_medkit \\
-	$att_primary \\
-	$att_melee \\
+	$att_legR \\
+	$att_legR_B \\
 	$att_molotov \\
-	$att_grenade \\
 	$att_pills \\
-	$att_L_weapon_bone \\
+	$att_grenade \\
+	$att_pistol \\
+	$att_primary \\
+	$att_medkit \\
+	$att_R_shoulderBladeAim \\
+	$att_L_shoulderBladeAim \\
 	$att_lfoot \\
 	$att_rfoot \\
 	$att_muzzle_flash \\

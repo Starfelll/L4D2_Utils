@@ -3,8 +3,6 @@
 $ModelName "survivors/survivor_mechanic.mdl" //Ellis
 
 $DefineVariable anims_set mechanic
-$DefineVariable ref_scale 0.955
-$DefineVariable ref_variant namvet
 $DefineVariable survivor mechanic
 
 $DefineMacro attathements \\
@@ -41,11 +39,4 @@ $DefineMacro attathements \\
 	$att_L_weapon_bone \\
 \\
 
-$Include "../QCIs/DeclareSequences/pps.qci"
-
-$DefineMacro reference_pos_auto \\
-$reference_pos_mechanic \\
-\\
-
-$Include "../Survivor_Defines.qci"
 $Include "../Survivor.qci"

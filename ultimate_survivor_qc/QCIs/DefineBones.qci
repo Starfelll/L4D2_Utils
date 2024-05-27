@@ -1,0 +1,404 @@
+// by Starfelll
+
+// $NekoDriverBone "ValveBiped.Bip01_R_Thigh" {
+//     pose "anims/Procedural.dmx"
+//     trigger 95 0
+//     trigger 95 10
+//     trigger 95 20
+//     trigger 95 30
+//     qun_g10_R
+//     qun_g0_R
+// }
+
+$DefineMacro jigg_hair name p_min p_max y_min y_max \\
+    $Jigglebone $name$ { is_flexible { \\
+        length 200 \\
+        tip_mass 1 \\
+        //allow_length_flex \\
+        pitch_friction 0 \\
+        yaw_friction 0 \\
+        along_stiffness 0 \\
+        pitch_stiffness 70 \\
+        yaw_stiffness 70 \\
+        along_damping 10 \\
+        pitch_damping 10 \\
+        yaw_damping 10 \\
+        //angle_constraint 30 \\
+        pitch_constraint $p_min$ $p_max$ \\
+        yaw_constraint $y_min$ $y_max$ \\
+    } } \\
+\\
+
+$DefineMacro jigg_nekomimi name p_min p_max y_min y_max \\
+    $Jigglebone $name$ { is_flexible { \\
+        length 50 \\
+        tip_mass 1 \\
+        //allow_length_flex \\
+        pitch_friction 0 \\
+        yaw_friction 0 \\
+        along_stiffness 80 \\
+        pitch_stiffness 80 \\
+        yaw_stiffness 80 \\
+        along_damping 8 \\
+        pitch_damping 8 \\
+        yaw_damping 8 \\
+        //angle_constraint 40 \\
+        pitch_constraint $p_min$ $p_max$ \\
+        yaw_constraint $y_min$ $y_max$ \\
+    } } \\
+\\
+
+
+$DefineMacro jigg_skirt name \\
+    $Jigglebone $name$ { is_flexible { \\
+        length 50 \\
+        tip_mass 1 \\
+        //allow_length_flex \\
+        pitch_friction 0 \\
+        yaw_friction 0 \\
+        along_stiffness 0 \\
+        pitch_stiffness 80 \\
+        yaw_stiffness 80 \\
+        along_damping 10 \\
+        pitch_damping 10 \\
+        yaw_damping 10 \\
+        angle_constraint 16 \\
+    } } \\
+\\
+
+// $JiggleBone "Bell_leg" {
+//     is_rigid {
+//         length 2.8
+//         tip_mass 800
+//         yaw_friction 0
+//         pitch_friction 0
+//         pitch_constraint -10 140
+//         yaw_constraint -40 40
+//     }
+// }
+
+// $JiggleBone "jigg_nemofira"
+// {
+// 	is_flexible {
+// 		yaw_stiffness 1
+// 		along_stiffness 1
+// 		pitch_stiffness 1
+// 		yaw_damping 10
+// 		pitch_damping 10
+// 		along_damping 10
+// 		length 5
+// 		yaw_constraint -5 5
+// 		pitch_constraint -5 5
+// 		allow_length_flex
+// 		tip_mass 0
+// 	}
+// 	has_base_spring {
+// 		stiffness 40
+// 		damping 9
+// 		left_constraint -16 16
+// 		up_constraint -16 16
+// 		forward_constraint -16 3
+// 	}
+// }
+
+// $DefineMacro jigg_bust name \\
+//     $Jigglebone $name$ { \\
+//         is_flexible { \\
+//             yaw_stiffness 1 \\
+//             along_stiffness 1 \\
+//             pitch_stiffness 1 \\
+//             yaw_damping 10 \\
+//             pitch_damping 10 \\
+//             along_damping 10 \\
+//             length 200 \\
+//             angle_constraint 1.6 \\
+//             //allow_length_flex \\
+//             tip_mass 200 \\
+//         } \\
+//         has_base_spring { \\
+//             stiffness 40 \\
+//             damping 9 \\
+//             left_constraint -0.2 0.2 \\
+//             up_constraint -0.2 0.2 \\
+//             forward_constraint -0.2 0.2 \\
+//         } \\
+//     } \\
+// \\
+
+
+
+
+// is_flexible
+// If a Jiggle Bone is "flexible", a simulated mass is placed at the end of the bone, and the bone acts like a springy, flexible rod. This spring creates rotational motion only, with the center of rotation at the base of the Jiggle Bone.
+
+// yaw_stiffness
+// How stiff the spring is in the local yaw rotational axis.
+// yaw_damping
+// Damping along the local yaw rotational axis.
+// pitch_stiffness
+// How stiff the spring is in the local pitch rotational axis.
+// pitch_damping
+// Damping along the local pitch rotational axis.
+// along_stiffness
+// How stiff the spring is along the axis of the spring. This is only used if "allow_length_flex" is specified for this bone.
+// along_damping
+// Damping along the axis of the spring. This is only used if "allow_length_flex" is specified for this bone.
+// allow_length_flex
+// Normally, jiggle bones keep their length rigid. Specifying this allows that length to flex as well.
+// length
+// How far the "tip" mass is from the base in inches. Short lengths result in dramatic jiggling. Longer lengths result in more subtle motions.
+// tip_mass
+// How much the tip is affected by gravity. Zero disables gravity effects, whereas 1000 would be a heavy mass.
+
+// is_rigid
+// If a Jiggle Bone is "rigid", a simulated mass is placed at the end of the bone, and the bone acts like a rigid stick. This spring creates rotational motion only, with the center of rotation at the base of the Jiggle Bone.
+
+// length
+// How far the "tip" mass is from the base in inches. Short lengths result in dramatic jiggling. Longer lengths result in more subtle motions.
+// tip_mass
+// How much the tip is affected by gravity. Zero disables gravity effects, whereas 1000 would be a heavy mass.
+
+// Angular constraints
+// The following parameters can be used within either is_rigid (rigid) or is_flexible (flexible) parameter groups. Note that none or all of these constraints can be used, and that each constraint incurs nontrivial computations.
+
+// angle_constraint
+// Specify the maximum angular deflection allowed, creating a conical boundary the jiggle bone cannot penetrate.
+// yaw_constraint (min max)
+// Specify the minimum and maximum angular deflection allowed along the local yaw rotational axis. Angular values should not exceed +/- 90 degrees.
+// yaw_friction
+// Nonzero values create frictional forces when the jiggle bone is sliding against the plane defined by the yaw limit. Friction should not exceed 20 units.
+// pitch_constraint
+// Specify the minimum and maximum angular deflection allowed along the local pitch rotational axis. Angular values should not exceed +/- 90 degrees.
+// pitch_friction
+// Nonzero values create frictional forces when the jiggle bone is sliding against the plane defined by the pitch limit. Friction should not exceed 20 units.
+
+// has_base_spring
+// If a Jiggle Bone has a "base spring", a simulated mass is placed on the base of the bone. This spring creates translational motion only, moving the whole Jiggle Bone in X, Y, and Z.
+
+// stiffness
+// How stiff the base spring is.
+// damping
+// The damping of the base spring.
+// left_constraint
+// The maximum amount the bone is allowed to move along the local X axis.
+// left_friction
+// The amount of friction applied in the up/forward plane when the spring is rubbing against the left constraint.
+// up_constraint
+// The maximum amount the bone is allowed to move along the local Y axis.
+// up_friction
+// The amount of friction applied in the left/forward plane when the spring is rubbing against the up constraint.
+// forward_constraint
+// The maximum amount the bone is allowed to move along the local Z axis.
+// forward_friction
+// The amount of friction applied in the left/up plane when the spring is rubbing against the forward constraint.
+// base_mass
+// How much the base spring is affected by gravity.
+
+$UnlockDefineBones
+$DefineBone "ValveBiped.Bip01_Pelvis" "" 1 1 4 5 1 4 0 0 0 0 0 0 // In your model, this bone must be the root bone
+$DefineBone "ValveBiped.Bip01_L_Thigh" "ValveBiped.Bip01_Pelvis" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_L_Thigh" 1 1 4 5 1 4 0 0 0 $calf_ik_fix$ 0 0
+$DefineBone "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_L_Calf" 1 1 4 5 1 4 0 $foot_ik_fix$ 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Toe0" "ValveBiped.Bip01_L_Foot" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Thigh" "ValveBiped.Bip01_Pelvis" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Calf" "ValveBiped.Bip01_R_Thigh" 1 1 4 5 1 4 0 0 0 -$calf_ik_fix$ 0 0
+$DefineBone "ValveBiped.Bip01_R_Foot" "ValveBiped.Bip01_R_Calf" 1 1 4 5 1 4 0 $foot_ik_fix$ 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Toe0" "ValveBiped.Bip01_R_Foot" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Spine" "ValveBiped.Bip01_Pelvis" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_Spine" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_Spine1" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Spine4" "ValveBiped.Bip01_Spine2" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Neck1" "ValveBiped.Bip01_Spine4" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_Neck1" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_UpperArm" "ValveBiped.Bip01_L_Clavicle" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_L_UpperArm" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_L_Forearm" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger4" "ValveBiped.Bip01_L_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger41" "ValveBiped.Bip01_L_Finger4" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger42" "ValveBiped.Bip01_L_Finger41" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger3" "ValveBiped.Bip01_L_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger31" "ValveBiped.Bip01_L_Finger3" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger32" "ValveBiped.Bip01_L_Finger31" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger2" "ValveBiped.Bip01_L_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger21" "ValveBiped.Bip01_L_Finger2" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger22" "ValveBiped.Bip01_L_Finger21" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger1" "ValveBiped.Bip01_L_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger11" "ValveBiped.Bip01_L_Finger1" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger12" "ValveBiped.Bip01_L_Finger11" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger0" "ValveBiped.Bip01_L_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger01" "ValveBiped.Bip01_L_Finger0" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Finger02" "ValveBiped.Bip01_L_Finger01" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_UpperArm" "ValveBiped.Bip01_R_Clavicle" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_UpperArm" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_R_Forearm" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger4" "ValveBiped.Bip01_R_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger41" "ValveBiped.Bip01_R_Finger4" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger42" "ValveBiped.Bip01_R_Finger41" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger3" "ValveBiped.Bip01_R_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger31" "ValveBiped.Bip01_R_Finger3" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger32" "ValveBiped.Bip01_R_Finger31" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger2" "ValveBiped.Bip01_R_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger21" "ValveBiped.Bip01_R_Finger2" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger22" "ValveBiped.Bip01_R_Finger21" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger1" "ValveBiped.Bip01_R_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger11" "ValveBiped.Bip01_R_Finger1" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger12" "ValveBiped.Bip01_R_Finger11" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger0" "ValveBiped.Bip01_R_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger01" "ValveBiped.Bip01_R_Finger0" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Finger02" "ValveBiped.Bip01_R_Finger01" 1 1 4 5 1 4 0 0 0 0 0 0
+
+$DefineBone "ValveBiped.L_weapon_bone" "ValveBiped.Bip01_L_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bone_Clip2" "ValveBiped.Bip01_L_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bone" "ValveBiped.Bip01_R_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bolt_l" "ValveBiped.Bip01_L_Hand" 1 1 4 5 1 4 0 0 0 0 0 0
+
+$DefineBone "ValveBiped.weapon_bone_Clip" "ValveBiped.weapon_bone" 0.000004 0 10.000004 0.000003 0.000002 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bone_extra" "ValveBiped.weapon_bone" 0.018898 0.665158 9.395884 0.000003 0.000002 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bone_Clip2_Bullets" "ValveBiped.weapon_bone_Clip2" 0.116951 4.311603 0.061861 -0.000027 0.000011 0.000595 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bone_Clip_Bullets" "ValveBiped.weapon_bone_Clip" 0 1 0.000008 0.000003 0.000002 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bolt" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_bolt_opposite" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0 0 0 0 0 0 0
+$DefineBone "ValveBiped.weapon_charger" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0 0 0 0 0 0 0
+
+// $RenameBone V_Head1         ValveBiped.Bip01_Head1
+// $RenameBone V_Neck1         ValveBiped.Bip01_Neck1
+// $RenameBone V_Spine4        ValveBiped.Bip01_Spine4
+// $RenameBone V_Spine2        ValveBiped.Bip01_Spine2
+// $RenameBone V_Spine1        ValveBiped.Bip01_Spine1
+// $RenameBone V_Spine         ValveBiped.Bip01_Spine
+// $RenameBone V_Pelvis        ValveBiped.Bip01_Pelvis
+// $RenameBone V_Toe0_L        ValveBiped.Bip01_L_Toe0
+// $RenameBone V_Foot_L        ValveBiped.Bip01_L_Foot
+// $RenameBone V_Calf_L        ValveBiped.Bip01_L_Calf
+// $RenameBone V_Thigh_L       ValveBiped.Bip01_L_Thigh
+// $RenameBone V_Toe0_R        ValveBiped.Bip01_R_Toe0
+// $RenameBone V_Foot_R        ValveBiped.Bip01_R_Foot
+// $RenameBone V_Calf_R        ValveBiped.Bip01_R_Calf
+// $RenameBone V_Thigh_R       ValveBiped.Bip01_R_Thigh
+// $RenameBone V_Finger02_L    ValveBiped.Bip01_L_Finger02
+// $RenameBone V_Finger01_L    ValveBiped.Bip01_L_Finger01
+// $RenameBone V_Finger0_L     ValveBiped.Bip01_L_Finger0
+// $RenameBone V_Finger12_L    ValveBiped.Bip01_L_Finger12
+// $RenameBone V_Finger11_L    ValveBiped.Bip01_L_Finger11
+// $RenameBone V_Finger1_L     ValveBiped.Bip01_L_Finger1
+// $RenameBone V_Finger22_L    ValveBiped.Bip01_L_Finger22
+// $RenameBone V_Finger21_L    ValveBiped.Bip01_L_Finger21
+// $RenameBone V_Finger2_L     ValveBiped.Bip01_L_Finger2
+// $RenameBone V_Finger32_L    ValveBiped.Bip01_L_Finger32
+// $RenameBone V_Finger31_L    ValveBiped.Bip01_L_Finger31
+// $RenameBone V_Finger3_L     ValveBiped.Bip01_L_Finger3
+// $RenameBone V_Finger42_L    ValveBiped.Bip01_L_Finger42
+// $RenameBone V_Finger41_L    ValveBiped.Bip01_L_Finger41
+// $RenameBone V_Finger4_L     ValveBiped.Bip01_L_Finger4
+// $RenameBone V_Hand_L        ValveBiped.Bip01_L_Hand
+// $RenameBone V_Forearm_L     ValveBiped.Bip01_L_Forearm
+// $RenameBone V_UpperArm_L    ValveBiped.Bip01_L_UpperArm
+// $RenameBone V_Clavicle_L    ValveBiped.Bip01_L_Clavicle
+// $RenameBone V_Finger02_R    ValveBiped.Bip01_R_Finger02
+// $RenameBone V_Finger01_R    ValveBiped.Bip01_R_Finger01
+// $RenameBone V_Finger0_R     ValveBiped.Bip01_R_Finger0
+// $RenameBone V_Finger12_R    ValveBiped.Bip01_R_Finger12
+// $RenameBone V_Finger11_R    ValveBiped.Bip01_R_Finger11
+// $RenameBone V_Finger1_R     ValveBiped.Bip01_R_Finger1
+// $RenameBone V_Finger22_R    ValveBiped.Bip01_R_Finger22
+// $RenameBone V_Finger21_R    ValveBiped.Bip01_R_Finger21
+// $RenameBone V_Finger2_R     ValveBiped.Bip01_R_Finger2
+// $RenameBone V_Finger32_R    ValveBiped.Bip01_R_Finger32
+// $RenameBone V_Finger31_R    ValveBiped.Bip01_R_Finger31
+// $RenameBone V_Finger3_R     ValveBiped.Bip01_R_Finger3
+// $RenameBone V_Finger42_R    ValveBiped.Bip01_R_Finger42
+// $RenameBone V_Finger41_R    ValveBiped.Bip01_R_Finger41
+// $RenameBone V_Finger4_R     ValveBiped.Bip01_R_Finger4
+// $RenameBone V_Hand_R        ValveBiped.Bip01_R_Hand
+// $RenameBone V_Forearm_R     ValveBiped.Bip01_R_Forearm
+// $RenameBone V_UpperArm_R    ValveBiped.Bip01_R_UpperArm
+// $RenameBone V_Clavicle_R    ValveBiped.Bip01_R_Clavicle
+
+$BoneMerge "ValveBiped.Bip01_Pelvis"
+$BoneMerge "ValveBiped.Bip01_Spine"
+$BoneMerge "ValveBiped.Bip01_Spine1"
+$BoneMerge "ValveBiped.Bip01_Spine2"
+$BoneMerge "ValveBiped.Bip01_Spine4"
+$BoneMerge "ValveBiped.Bip01_L_Clavicle"
+$BoneMerge "ValveBiped.Bip01_L_UpperArm"
+$BoneMerge "ValveBiped.Bip01_L_Forearm"
+$BoneMerge "ValveBiped.Bip01_L_Hand"
+$BoneMerge "ValveBiped.Bip01_L_Finger4"
+$BoneMerge "ValveBiped.Bip01_L_Finger41"
+$BoneMerge "ValveBiped.Bip01_L_Finger42"
+$BoneMerge "ValveBiped.Bip01_L_Finger3"
+$BoneMerge "ValveBiped.Bip01_L_Finger31"
+$BoneMerge "ValveBiped.Bip01_L_Finger32"
+$BoneMerge "ValveBiped.Bip01_L_Finger2"
+$BoneMerge "ValveBiped.Bip01_L_Finger21"
+$BoneMerge "ValveBiped.Bip01_L_Finger22"
+$BoneMerge "ValveBiped.Bip01_L_Finger1"
+$BoneMerge "ValveBiped.Bip01_L_Finger11"
+$BoneMerge "ValveBiped.Bip01_L_Finger12"
+$BoneMerge "ValveBiped.Bip01_L_Finger0"
+$BoneMerge "ValveBiped.Bip01_L_Finger01"
+$BoneMerge "ValveBiped.Bip01_L_Finger02"
+$BoneMerge "ValveBiped.Bip01_R_Clavicle"
+$BoneMerge "ValveBiped.Bip01_R_UpperArm"
+$BoneMerge "ValveBiped.Bip01_R_Forearm"
+$BoneMerge "ValveBiped.Bip01_R_Hand"
+$BoneMerge "ValveBiped.Bip01_R_Finger4"
+$BoneMerge "ValveBiped.Bip01_R_Finger41"
+$BoneMerge "ValveBiped.Bip01_R_Finger42"
+$BoneMerge "ValveBiped.Bip01_R_Finger3"
+$BoneMerge "ValveBiped.Bip01_R_Finger31"
+$BoneMerge "ValveBiped.Bip01_R_Finger32"
+$BoneMerge "ValveBiped.Bip01_R_Finger2"
+$BoneMerge "ValveBiped.Bip01_R_Finger21"
+$BoneMerge "ValveBiped.Bip01_R_Finger22"
+$BoneMerge "ValveBiped.Bip01_R_Finger1"
+$BoneMerge "ValveBiped.Bip01_R_Finger11"
+$BoneMerge "ValveBiped.Bip01_R_Finger12"
+$BoneMerge "ValveBiped.Bip01_R_Finger0"
+$BoneMerge "ValveBiped.Bip01_R_Finger01"
+$BoneMerge "ValveBiped.Bip01_R_Finger02"
+$BoneMerge "ValveBiped.L_weapon_bone"
+$BoneMerge "ValveBiped.weapon_bone"
+$BoneMerge "ValveBiped.weapon_bone_Clip"
+$BoneMerge "ValveBiped.weapon_bone_extra"
+$BoneMerge "ValveBiped.weapon_bone_Clip2"
+$BoneMerge "ValveBiped.weapon_bone_Clip2_Bullets"
+$BoneMerge "ValveBiped.weapon_bolt_l"
+$BoneMerge "ValveBiped.weapon_bone_Clip_Bullets"
+$BoneMerge "ValveBiped.weapon_bolt"
+$BoneMerge "ValveBiped.weapon_bolt_opposite"
+$BoneMerge "ValveBiped.weapon_charger"
+$BoneMerge "ValveBiped.Bip01_R_Thigh"
+$BoneMerge "ValveBiped.Bip01_R_Calf"
+$BoneMerge "ValveBiped.Bip01_R_Foot"
+$BoneMerge "ValveBiped.Bip01_R_Toe0"
+$BoneMerge "ValveBiped.Bip01_L_Thigh"
+$BoneMerge "ValveBiped.Bip01_L_Calf"
+$BoneMerge "ValveBiped.Bip01_L_Foot"
+$BoneMerge "ValveBiped.Bip01_L_Toe0"
+$BoneMerge "ValveBiped.Bip01_Head1"
+$BoneMerge "ValveBiped.Bip01_Neck1"
+
+$BoneSaveFrame "ValveBiped.Bip01_Pelvis" position rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Thigh" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Calf" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Foot" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Thigh" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Calf" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Foot" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine1" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine2" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Spine4" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Neck1" rotation
+$BoneSaveFrame "ValveBiped.Bip01_Head1" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Clavicle" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_UpperArm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Forearm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_L_Hand" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Clavicle" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_UpperArm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Forearm" rotation
+$BoneSaveFrame "ValveBiped.Bip01_R_Hand" rotation

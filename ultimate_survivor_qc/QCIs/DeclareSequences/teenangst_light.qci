@@ -1,0 +1,108 @@
+// by Starfelll
+
+$IFDef spb_scale
+	$Scale $spb_scale$
+$EndIF
+
+$Animation "@dlc1_intro_zoey_shrug_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_shrug_corrective_animation.smd" {
+}
+
+$Animation "@dlc1_intro_zoey_shout_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_shout_corrective_animation.smd" {
+}
+
+$Animation "@dlc1_intro_zoey_headshake_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_headshake_corrective_animation.smd" {
+}
+
+$Animation "@dlc1_intro_zoey_handflipR_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_handflipR_corrective_animation.smd" {
+}
+
+$Animation "@dlc1_intro_zoey_head_gesture_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_head_gesture_corrective_animation.smd" {
+}
+
+$Animation "@dlc1_intro_zoey_generator_point_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_generator_point_corrective_animation.smd" {
+}
+
+
+// $DeclareSequence "TeenAngst"
+$seq_survivor $survivor$
+
+// $DeclareSequence "ragdoll"
+$seq_ragdoll
+
+$Sequence "dlc1_intro_zoey_idle" {
+	"survivor_teenangst_light_anims\dlc1_intro_zoey_idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 1
+	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 2
+	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 3
+}
+
+$Sequence "dlc1_intro_zoey_shrug" {
+	"survivor_teenangst_light_anims\dlc1_intro_zoey_shrug.smd"
+	activity "ACT_DLCINTRO_ZOEY_01" -1
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@dlc1_intro_zoey_shrug_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$Sequence "dlc1_intro_zoey_shout" {
+	"survivor_teenangst_light_anims\dlc1_intro_zoey_shout.smd"
+	activity "ACT_DLCINTRO_ZOEY_02" -1
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@dlc1_intro_zoey_shout_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$Sequence "dlc1_intro_zoey_headshake" {
+	"survivor_teenangst_light_anims\dlc1_intro_zoey_headshake.smd"
+	activity "ACT_DLCINTRO_ZOEY_03" -1
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@dlc1_intro_zoey_headshake_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$Sequence "dlc1_intro_zoey_handflipR" {
+	"survivor_teenangst_light_anims\dlc1_intro_zoey_handflipR.smd"
+	activity "ACT_DLCINTRO_ZOEY_04" -1
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@dlc1_intro_zoey_handflipR_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$Sequence "dlc1_intro_zoey_head_gesture" {
+	"survivor_teenangst_light_anims\dlc1_intro_zoey_head_gesture.smd"
+	activity "ACT_DLCINTRO_ZOEY_05" -1
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@dlc1_intro_zoey_head_gesture_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$Sequence "dlc1_intro_zoey_generator_point" {
+	"survivor_teenangst_light_anims\dlc1_intro_zoey_generator_point.smd"
+	activity "ACT_DLCINTRO_ZOEY_06" -1
+	delta
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "@dlc1_intro_zoey_generator_point_corrective_animation" 0
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
