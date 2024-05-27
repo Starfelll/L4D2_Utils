@@ -252,6 +252,8 @@ $IFDef anti_decompile
     $AntiDecompile
 $EndIF
 
+    // $Include "../Test/Test.qci"
+
 $KeyValues
 {
     usqc "2.0"
