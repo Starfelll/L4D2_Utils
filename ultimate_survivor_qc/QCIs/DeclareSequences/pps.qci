@@ -595,5 +595,6 @@ $IFDef usqc_idle_anim
 		$DefineMacro append_usqc_idle_anim \\
 			a_usqc_idle \\
 		\\
+
 	$EndIF
 $EndIF

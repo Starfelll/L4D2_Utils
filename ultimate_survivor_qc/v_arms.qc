@@ -1,55 +1,63 @@
-// Created by Crowbar 0.74
-//$ModelName "weapons\arms\v_arms_producer_new.mdl"
+// by Starfelll
 
-$DefineVariable arms "v_arms.glb"
-$CDMaterials Starfelll\L4D2_Utils
+// $AntiDecompile // 反反编译开关
+$DefineVariable custom_model "v_arms.glb"
+$CDMaterials Starfelll\Survivor.
 
-$pushd "../Export/"
-$Body "arms" $arms$
-$Sequence "idle" $arms$
+// nekomdl.exe -Darms_name zoey v_arms.qc
+$IFDef arms_name
+$Else
+    // bill,coach_new,mechanic_new,francis,louis,gambler_new,producer_new,zoey
+    $DefineVariable arms_name bill
+$EndIF
+$ModelName weapons\arms\v_arms_$arms_name$.mdl
+
+$PushD "Export/"
+$Body "arms" $custom_model$
+$Sequence "idle" $custom_model$ frame 0 0
 
 $SurfaceProp "default"
 $Contents "solid"
 $IllumPosition 0 0 -31
 $CBox 0 0 0 0 0 0
 
-$RenameBone "ValveBiped.Bip01_UpperArm_L" 	"ValveBiped.Bip01_L_UpperArm"
-$RenameBone "ValveBiped.Bip01_Forearm_L" 	"ValveBiped.Bip01_L_Forearm"
-$RenameBone "ValveBiped.Bip01_Hand_L" 		"ValveBiped.Bip01_L_Hand"
-$RenameBone "ValveBiped.Bip01_Finger0_L" 	"ValveBiped.Bip01_L_Finger0"
-$RenameBone "ValveBiped.Bip01_Finger01_L" 	"ValveBiped.Bip01_L_Finger01"
-$RenameBone "ValveBiped.Bip01_Finger02_L" 	"ValveBiped.Bip01_L_Finger02"
-$RenameBone "ValveBiped.Bip01_Finger1_L" 	"ValveBiped.Bip01_L_Finger1"
-$RenameBone "ValveBiped.Bip01_Finger11_L" 	"ValveBiped.Bip01_L_Finger11"
-$RenameBone "ValveBiped.Bip01_Finger12_L" 	"ValveBiped.Bip01_L_Finger12"
-$RenameBone "ValveBiped.Bip01_Finger2_L" 	"ValveBiped.Bip01_L_Finger2"
-$RenameBone "ValveBiped.Bip01_Finger21_L" 	"ValveBiped.Bip01_L_Finger21"
-$RenameBone "ValveBiped.Bip01_Finger22_L" 	"ValveBiped.Bip01_L_Finger22"
-$RenameBone "ValveBiped.Bip01_Finger3_L" 	"ValveBiped.Bip01_L_Finger3"
-$RenameBone "ValveBiped.Bip01_Finger31_L" 	"ValveBiped.Bip01_L_Finger31"
-$RenameBone "ValveBiped.Bip01_Finger32_L" 	"ValveBiped.Bip01_L_Finger32"
-$RenameBone "ValveBiped.Bip01_Finger4_L" 	"ValveBiped.Bip01_L_Finger4"
-$RenameBone "ValveBiped.Bip01_Finger41_L" 	"ValveBiped.Bip01_L_Finger41"
-$RenameBone "ValveBiped.Bip01_Finger42_L" 	"ValveBiped.Bip01_L_Finger42"
+// $RenameBone "ValveBiped.Bip01_UpperArm_L" 	"ValveBiped.Bip01_L_UpperArm"
+// $RenameBone "ValveBiped.Bip01_Forearm_L" 	"ValveBiped.Bip01_L_Forearm"
+// $RenameBone "ValveBiped.Bip01_Hand_L" 		"ValveBiped.Bip01_L_Hand"
+// $RenameBone "ValveBiped.Bip01_Finger0_L" 	"ValveBiped.Bip01_L_Finger0"
+// $RenameBone "ValveBiped.Bip01_Finger01_L" 	"ValveBiped.Bip01_L_Finger01"
+// $RenameBone "ValveBiped.Bip01_Finger02_L" 	"ValveBiped.Bip01_L_Finger02"
+// $RenameBone "ValveBiped.Bip01_Finger1_L" 	"ValveBiped.Bip01_L_Finger1"
+// $RenameBone "ValveBiped.Bip01_Finger11_L" 	"ValveBiped.Bip01_L_Finger11"
+// $RenameBone "ValveBiped.Bip01_Finger12_L" 	"ValveBiped.Bip01_L_Finger12"
+// $RenameBone "ValveBiped.Bip01_Finger2_L" 	"ValveBiped.Bip01_L_Finger2"
+// $RenameBone "ValveBiped.Bip01_Finger21_L" 	"ValveBiped.Bip01_L_Finger21"
+// $RenameBone "ValveBiped.Bip01_Finger22_L" 	"ValveBiped.Bip01_L_Finger22"
+// $RenameBone "ValveBiped.Bip01_Finger3_L" 	"ValveBiped.Bip01_L_Finger3"
+// $RenameBone "ValveBiped.Bip01_Finger31_L" 	"ValveBiped.Bip01_L_Finger31"
+// $RenameBone "ValveBiped.Bip01_Finger32_L" 	"ValveBiped.Bip01_L_Finger32"
+// $RenameBone "ValveBiped.Bip01_Finger4_L" 	"ValveBiped.Bip01_L_Finger4"
+// $RenameBone "ValveBiped.Bip01_Finger41_L" 	"ValveBiped.Bip01_L_Finger41"
+// $RenameBone "ValveBiped.Bip01_Finger42_L" 	"ValveBiped.Bip01_L_Finger42"
 
-$RenameBone "ValveBiped.Bip01_UpperArm_R" 	"ValveBiped.Bip01_R_UpperArm"
-$RenameBone "ValveBiped.Bip01_Forearm_R" 	"ValveBiped.Bip01_R_Forearm"
-$RenameBone "ValveBiped.Bip01_Hand_R" 		"ValveBiped.Bip01_R_Hand"
-$RenameBone "ValveBiped.Bip01_Finger0_R" 	"ValveBiped.Bip01_R_Finger0"
-$RenameBone "ValveBiped.Bip01_Finger01_R" 	"ValveBiped.Bip01_R_Finger01"
-$RenameBone "ValveBiped.Bip01_Finger02_R" 	"ValveBiped.Bip01_R_Finger02"
-$RenameBone "ValveBiped.Bip01_Finger1_R" 	"ValveBiped.Bip01_R_Finger1"
-$RenameBone "ValveBiped.Bip01_Finger11_R" 	"ValveBiped.Bip01_R_Finger11"
-$RenameBone "ValveBiped.Bip01_Finger12_R" 	"ValveBiped.Bip01_R_Finger12"
-$RenameBone "ValveBiped.Bip01_Finger2_R" 	"ValveBiped.Bip01_R_Finger2"
-$RenameBone "ValveBiped.Bip01_Finger21_R" 	"ValveBiped.Bip01_R_Finger21"
-$RenameBone "ValveBiped.Bip01_Finger22_R" 	"ValveBiped.Bip01_R_Finger22"
-$RenameBone "ValveBiped.Bip01_Finger3_R" 	"ValveBiped.Bip01_R_Finger3"
-$RenameBone "ValveBiped.Bip01_Finger31_R" 	"ValveBiped.Bip01_R_Finger31"
-$RenameBone "ValveBiped.Bip01_Finger32_R" 	"ValveBiped.Bip01_R_Finger32"
-$RenameBone "ValveBiped.Bip01_Finger4_R" 	"ValveBiped.Bip01_R_Finger4"
-$RenameBone "ValveBiped.Bip01_Finger41_R" 	"ValveBiped.Bip01_R_Finger41"
-$RenameBone "ValveBiped.Bip01_Finger42_R" 	"ValveBiped.Bip01_R_Finger42"
+// $RenameBone "ValveBiped.Bip01_UpperArm_R" 	"ValveBiped.Bip01_R_UpperArm"
+// $RenameBone "ValveBiped.Bip01_Forearm_R" 	"ValveBiped.Bip01_R_Forearm"
+// $RenameBone "ValveBiped.Bip01_Hand_R" 		"ValveBiped.Bip01_R_Hand"
+// $RenameBone "ValveBiped.Bip01_Finger0_R" 	"ValveBiped.Bip01_R_Finger0"
+// $RenameBone "ValveBiped.Bip01_Finger01_R" 	"ValveBiped.Bip01_R_Finger01"
+// $RenameBone "ValveBiped.Bip01_Finger02_R" 	"ValveBiped.Bip01_R_Finger02"
+// $RenameBone "ValveBiped.Bip01_Finger1_R" 	"ValveBiped.Bip01_R_Finger1"
+// $RenameBone "ValveBiped.Bip01_Finger11_R" 	"ValveBiped.Bip01_R_Finger11"
+// $RenameBone "ValveBiped.Bip01_Finger12_R" 	"ValveBiped.Bip01_R_Finger12"
+// $RenameBone "ValveBiped.Bip01_Finger2_R" 	"ValveBiped.Bip01_R_Finger2"
+// $RenameBone "ValveBiped.Bip01_Finger21_R" 	"ValveBiped.Bip01_R_Finger21"
+// $RenameBone "ValveBiped.Bip01_Finger22_R" 	"ValveBiped.Bip01_R_Finger22"
+// $RenameBone "ValveBiped.Bip01_Finger3_R" 	"ValveBiped.Bip01_R_Finger3"
+// $RenameBone "ValveBiped.Bip01_Finger31_R" 	"ValveBiped.Bip01_R_Finger31"
+// $RenameBone "ValveBiped.Bip01_Finger32_R" 	"ValveBiped.Bip01_R_Finger32"
+// $RenameBone "ValveBiped.Bip01_Finger4_R" 	"ValveBiped.Bip01_R_Finger4"
+// $RenameBone "ValveBiped.Bip01_Finger41_R" 	"ValveBiped.Bip01_R_Finger41"
+// $RenameBone "ValveBiped.Bip01_Finger42_R" 	"ValveBiped.Bip01_R_Finger42"
 
 $UnlockDefineBones
 //$DefineBone "ValveBiped.ValveBiped" "" 0 0 0 0 0 89.999989 0 0 0 0 0 0

@@ -5,35 +5,30 @@
 // The fastest way to get started is to change Body.glb and Face.glb to your own, 
 // and then compile...
 
+$PushD "../Export"
+// $DefineVariable anti_decompile ON //反反编译开关
 $DefineVariable custom_model "Body.glb"
+$CDMaterials "Starfelll\Survivor."
 
-$PushD "../Export" //$UpAxis "Z"
 
 $NekoModel "Face" {
     studio "Face.glb"
-    // $Include "QCIs/survivors_flexrules.qci"
+    // $Include "../QCIs/survivors_flexrules.qci" //表情开关
 }
-
 $Body "Body" $custom_model$
 
-$CDMaterials "Starfelll\Survivor."
-
-// auto,namvet,coach,mechanic,biker,manager,gambler,producer,teenangst 
+//使用的人物动画，auto,namvet,coach,mechanic,biker,manager,gambler,producer,teenangst 
 $DefineVariable ref_survivor teenangst
+$DefineVariable usqc_idle_anim 01 //测试图动画，可选范围01~03 
 
-$DefineVariable usqc_idle_anim 01 // 01,02,03
-
-// $DefineVariable spb_scale 0.70 // 0.40 0.50 0.60 0.70
+// $DefineVariable spb_scale 0.70 //0.40 0.50 0.60 0.70
 $Include "../QCIs/DeclareSequences/pps.qci"
 $Animation "a_proportions" $custom_model$ {
     subtract "a_reference" 0
     origin 0 0 0 
 }
 
-// $DefineVariable anti_decompile ON 
-// $MostlyOpaque
-$Opaque
-// $AmbientBoost
+$Opaque // $MostlyOpaque
 $EyePosition 0 0 70 
 $MaxEyeDeflection 30 
 $ForcePhonemeCrossFade
@@ -207,6 +202,7 @@ $IKChain "ikclip" "ValveBiped.weapon_bone_Clip" knee 0.707 -0.707 0
 $IKAutoPlayLock "rfoot" 0 0.1 
 $IKAutoPlayLock "lfoot" 0 0.1
 
+// $AmbientBoost
 $SurfaceProp "flesh" 
 $IllumPosition -2.397 0.123 38.156
 

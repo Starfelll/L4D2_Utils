@@ -20,7 +20,7 @@ $Animation "@INTROIDLENOISE_corrective_animation" "survivor_biker_light_anims\@I
 }
 
 // $DeclareSequence "Biker"
-$seq_survivor $survivor$
+$seq_survivor "Biker"
 
 $Sequence "animHack" {
 	"survivor_biker_light_anims\animHack.smd"

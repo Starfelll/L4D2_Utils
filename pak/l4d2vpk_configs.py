@@ -97,6 +97,7 @@ variants = {
         "materials/vgui/s_panel_biker_incap.vmt",
         "materials/vgui/select_francis.vmt",
         "models/survivors/survivor_biker.*",
+        "models/survivors/survivor_biker_light.*",
         "models/weapons/arms/v_arms_francis.*",
     ],
     "louis": [
@@ -137,6 +138,7 @@ variants = {
         "materials/vgui/s_panel_teenangst_incap.vmt",
         "materials/vgui/select_zoey.vmt",
         "models/survivors/survivor_teenangst.*",
+        "models/survivors/survivor_teenangst_light.*",
         "models/weapons/arms/v_arms_zoey.*",
     ],
 }

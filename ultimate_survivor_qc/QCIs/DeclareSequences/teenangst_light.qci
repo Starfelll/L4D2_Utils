@@ -24,7 +24,7 @@ $Animation "@dlc1_intro_zoey_generator_point_corrective_animation" "survivor_tee
 
 
 // $DeclareSequence "TeenAngst"
-$seq_survivor $survivor$
+$seq_survivor "TeenAngst"
 
 // $DeclareSequence "ragdoll"
 $seq_ragdoll
