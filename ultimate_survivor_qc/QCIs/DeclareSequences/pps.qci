@@ -1,5 +1,5 @@
 // by Starfelll
-// ÅÝÅÝöè...
+// æ³¡æ³¡é²¨....
 
 $IF survivor == biker_light
 	$RedefineVariable ref_survivor "biker"
@@ -24,82 +24,153 @@ $Else
 	$IncludeModel $include_model_root$/gestures_$anims_set$.mdl
 $EndIF
 
+$DefineMacro reference_pos_teenangst \\
+	forceboneposrot "ValveBiped.Bip01_Pelvis" pos -1.442119 0 35.350025 \\
+	forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.455587 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Calf" pos 16.572346 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Foot" pos 16.265829 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Toe0" pos 5.046457 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Thigh" pos -3.455587 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Calf" pos 16.572346 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Foot" pos 16.265831 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Toe0" pos 5.046457 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_Spine" pos 0 3.703728 0.293189 \\
+	forceboneposrot "ValveBiped.Bip01_Spine1" pos 3.307846 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_Spine2" pos 3.297962 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_Spine4" pos 6.040985 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_Neck1" pos 5.065758 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_Head1" pos 3.993755 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Clavicle" pos 3.815876 1.385489 1.5 \\
+	forceboneposrot "ValveBiped.Bip01_L_UpperArm" pos 4.327093 0.000004 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Forearm" pos 11.105114 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Hand" pos 9.862099 -0.000011 -0.000031 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger4" pos 2.641094 0.214619 -1.073586 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger41" pos 1.361605 -0.000002 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger42" pos 0.779602 0.000002 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger3" pos 2.908712 0.221762 -0.431868 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger31" pos 1.597527 0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger32" pos 0.91268 0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger2" pos 3.26545 0.050007 0.415744 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger21" pos 1.86047 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger22" pos 1.061481 -0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger1" pos 3.340382 -0.242393 1.285012 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger11" pos 1.550753 0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger12" pos 0.904888 0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger0" pos 1.219385 -1.06386 0.837143 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger01" pos 1.496971 -0.000002 -0.000001 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger02" pos 1.100086 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Clavicle" pos 3.815876 1.385489 -1.5 \\
+	forceboneposrot "ValveBiped.Bip01_R_UpperArm" pos 4.327089 -0.000004 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Forearm" pos 11.105106 0 0.000004 \\
+	forceboneposrot "ValveBiped.Bip01_R_Hand" pos 9.86208 -0.000007 0.000017 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger4" pos 2.641111 0.211586 1.074188 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger41" pos 1.361601 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger42" pos 0.779604 0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger3" pos 2.90873 0.220541 0.432493 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger31" pos 1.597527 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger32" pos 0.912678 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger2" pos 3.265471 0.051184 -0.4156 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger21" pos 1.86047 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger22" pos 1.061485 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger1" pos 3.340403 -0.238762 -1.285691 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger11" pos 1.550755 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger12" pos 0.904886 0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger0" pos 1.21941 -1.061498 -0.840143 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger01" pos 1.496971 0.000002 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger02" pos 1.100088 0 0 \\
+	forceboneposrot "ValveBiped.weapon_bone" pos 2.856947 -1.536175 -0.97378 \\
+	forceboneposrot "ValveBiped.L_weapon_bone" pos 2.856899 -1.536201 -0.9738 \\
+	forceboneposrot "ValveBiped.weapon_bone_Clip2" pos 3.02821 -0.923409 -2.009452 \\
+	forceboneposrot "ValveBiped.weapon_bolt_l" pos 0 -0.000002 0 \\
+	// forceboneposrot "ValveBiped.weapon_bone_Clip" pos 0 0 10 \\
+	// forceboneposrot "ValveBiped.weapon_bone_extra" pos 0.018896 0.665159 9.39588 \\
+	// forceboneposrot "ValveBiped.weapon_bone_Clip2_Bullets" pos 0.116954 4.311606 0.061861 \\
+	// forceboneposrot "ValveBiped.weapon_bone_Clip_Bullets" pos 0 1 0.00001 \\
+	// forceboneposrot "ValveBiped.weapon_bolt" pos -0.000001 0 0 \\
+	// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos -0.000001 0 0 \\
+	// forceboneposrot "ValveBiped.weapon_charger" pos -0.000001 0 0 \\
+\\
+
+$DefineMacro reference_pos_namvet \\
+	forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.516773 0 38.317692 \\
+	forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.625659 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Calf" pos 18.345819 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Foot" pos 16.751528 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Toe0" pos 5.943489 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Thigh" pos -3.625659 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Calf" pos 18.345812 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Foot" pos 16.751524 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Toe0" pos 5.94349 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_Spine" pos 0 4.043964 -0.017929 \\
+	forceboneposrot "ValveBiped.Bip01_Spine1" pos 3.995838 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_Spine2" pos 3.698242 -0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_Spine4" pos 5.70089 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_Neck1" pos 5.352852 -0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_Head1" pos 4.461819 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Clavicle" pos 4.065388 1.458945 1.5 \\
+	forceboneposrot "ValveBiped.Bip01_L_UpperArm" pos 5.507357 0.000004 -0.000001 \\
+	forceboneposrot "ValveBiped.Bip01_L_Forearm" pos 10.907398 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Hand" pos 10.424324 -0.000008 -0.000027 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger4" pos 2.997274 0.005409 -1.477472 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger41" pos 1.510382 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger42" pos 0.808655 0.000002 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger3" pos 3.305792 0.203112 -0.54673 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger31" pos 1.807182 0.000002 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger32" pos 0.966137 0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger2" pos 3.571512 0.109303 0.40958 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger21" pos 2.150654 -0.000002 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger22" pos 1.152748 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger1" pos 3.684092 -0.158705 1.419183 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger11" pos 1.701014 -0.000002 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger12" pos 0.994705 0.000002 0 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger0" pos 1.068069 -1.287201 0.981905 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger01" pos 1.836304 -0.000002 -0.000004 \\
+	forceboneposrot "ValveBiped.Bip01_L_Finger02" pos 1.223948 -0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Clavicle" pos 4.065392 1.458946 -1.5 \\
+	forceboneposrot "ValveBiped.Bip01_R_UpperArm" pos 5.50736 0.000008 -0.000001 \\
+	forceboneposrot "ValveBiped.Bip01_R_Forearm" pos 10.907398 0 0.000004 \\
+	forceboneposrot "ValveBiped.Bip01_R_Hand" pos 10.424301 -0.000005 0.000019 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger4" pos 2.997293 0.000065 1.477481 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger41" pos 1.510378 -0.000004 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger42" pos 0.808655 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger3" pos 3.305817 0.201134 0.547461 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger31" pos 1.807175 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger32" pos 0.966141 -0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger2" pos 3.571524 0.110786 -0.409182 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger21" pos 2.150656 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger22" pos 1.152752 0 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger1" pos 3.684113 -0.153563 -1.419748 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger11" pos 1.701017 0.000002 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger12" pos 0.994705 0.000001 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger0" pos 1.068094 -1.283653 -0.986553 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger01" pos 1.836306 -0.000002 0 \\
+	forceboneposrot "ValveBiped.Bip01_R_Finger02" pos 1.223946 0 0.000002 \\
+	forceboneposrot "ValveBiped.L_weapon_bone" pos 2.856897 -1.536201 -0.9738 \\
+	forceboneposrot "ValveBiped.weapon_bone" pos 2.856895 -1.536198 -0.9738 \\
+	forceboneposrot "ValveBiped.weapon_bone_Clip2" pos 3.02821 -0.923409 -2.009452 \\
+	forceboneposrot "ValveBiped.weapon_bolt_l" pos 0 0 0.000001 \\
+	// forceboneposrot "ValveBiped.weapon_bone_Clip" pos 0 0 10 \\
+	// forceboneposrot "ValveBiped.weapon_bone_extra" pos 0.018898 0.665159 9.395884 \\
+	// forceboneposrot "ValveBiped.weapon_bone_Clip2_Bullets" pos 0.116955 4.311607 0.061861 \\
+	// forceboneposrot "ValveBiped.weapon_bone_Clip_Bullets" pos 0 1 0.000008 \\
+	// forceboneposrot "ValveBiped.weapon_bolt" pos 0 0 0.000002 \\
+	// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos 0 0 0.000002 \\
+	// forceboneposrot "ValveBiped.weapon_charger" pos 0 0 0.000002 \\
+\\
+
 $Animation "a_reference" $custom_model$ {
     frame 0 0
     $IFDef spb_scale
         scale $spb_scale$
     $EndIF
-	$if ref_survivor == namvet
+	$IF ref_survivor == namvet
 		$DefineVariable ref_scale 1.00
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.516773 38.317692
-		forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.625659 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Calf" pos 18.345819 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Foot" pos 16.751528 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Toe0" pos 5.943489 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Thigh" pos -3.625659 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Calf" pos 18.345812 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Foot" pos 16.751524 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Toe0" pos 5.94349 0 0
-		forceboneposrot "ValveBiped.Bip01_Spine" pos 0 4.043964 -0.017929
-		forceboneposrot "ValveBiped.Bip01_Spine1" pos 3.995838 0 0
-		forceboneposrot "ValveBiped.Bip01_Spine2" pos 3.698242 -0.000001 0
-		forceboneposrot "ValveBiped.Bip01_Spine4" pos 5.70089 0 0
-		forceboneposrot "ValveBiped.Bip01_Neck1" pos 5.352852 -0.000001 0
-		forceboneposrot "ValveBiped.Bip01_Head1" pos 4.461819 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Clavicle" pos 4.065388 1.458945 1.5
-		forceboneposrot "ValveBiped.Bip01_L_UpperArm" pos 5.507357 0.000004 -0.000001
-		forceboneposrot "ValveBiped.Bip01_L_Forearm" pos 10.907398 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Hand" pos 10.424324 -0.000008 -0.000027
-		forceboneposrot "ValveBiped.Bip01_L_Finger4" pos 2.997274 0.005409 -1.477472
-		forceboneposrot "ValveBiped.Bip01_L_Finger41" pos 1.510382 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger42" pos 0.808655 0.000002 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger3" pos 3.305792 0.203112 -0.54673
-		forceboneposrot "ValveBiped.Bip01_L_Finger31" pos 1.807182 0.000002 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger32" pos 0.966137 0.000001 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger2" pos 3.571512 0.109303 0.40958
-		forceboneposrot "ValveBiped.Bip01_L_Finger21" pos 2.150654 -0.000002 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger22" pos 1.152748 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger1" pos 3.684092 -0.158705 1.419183
-		forceboneposrot "ValveBiped.Bip01_L_Finger11" pos 1.701014 -0.000002 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger12" pos 0.994705 0.000002 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger0" pos 1.068069 -1.287201 0.981905
-		forceboneposrot "ValveBiped.Bip01_L_Finger01" pos 1.836304 -0.000002 -0.000004
-		forceboneposrot "ValveBiped.Bip01_L_Finger02" pos 1.223948 -0.000001 0
-		forceboneposrot "ValveBiped.Bip01_R_Clavicle" pos 4.065392 1.458946 -1.5
-		forceboneposrot "ValveBiped.Bip01_R_UpperArm" pos 5.50736 0.000008 -0.000001
-		forceboneposrot "ValveBiped.Bip01_R_Forearm" pos 10.907398 0 0.000004
-		forceboneposrot "ValveBiped.Bip01_R_Hand" pos 10.424301 -0.000005 0.000019
-		forceboneposrot "ValveBiped.Bip01_R_Finger4" pos 2.997293 0.000065 1.477481
-		forceboneposrot "ValveBiped.Bip01_R_Finger41" pos 1.510378 -0.000004 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger42" pos 0.808655 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger3" pos 3.305817 0.201134 0.547461
-		forceboneposrot "ValveBiped.Bip01_R_Finger31" pos 1.807175 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger32" pos 0.966141 -0.000001 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger2" pos 3.571524 0.110786 -0.409182
-		forceboneposrot "ValveBiped.Bip01_R_Finger21" pos 2.150656 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger22" pos 1.152752 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger1" pos 3.684113 -0.153563 -1.419748
-		forceboneposrot "ValveBiped.Bip01_R_Finger11" pos 1.701017 0.000002 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger12" pos 0.994705 0.000001 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger0" pos 1.068094 -1.283653 -0.986553
-		forceboneposrot "ValveBiped.Bip01_R_Finger01" pos 1.836306 -0.000002 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger02" pos 1.223946 0 0.000002
-		forceboneposrot "ValveBiped.L_weapon_bone" pos 2.856897 -1.536201 -0.9738
-		forceboneposrot "ValveBiped.weapon_bone" pos 2.856895 -1.536198 -0.9738
-		forceboneposrot "ValveBiped.weapon_bone_Clip2" pos 3.02821 -0.923409 -2.009452
-		forceboneposrot "ValveBiped.weapon_bolt_l" pos 0 0 0.000001
-		// forceboneposrot "ValveBiped.weapon_bone_Clip" pos 0 0 10
-		// forceboneposrot "ValveBiped.weapon_bone_extra" pos 0.018898 0.665159 9.395884
-		// forceboneposrot "ValveBiped.weapon_bone_Clip2_Bullets" pos 0.116955 4.311607 0.061861
-		// forceboneposrot "ValveBiped.weapon_bone_Clip_Bullets" pos 0 1 0.000008
-		// forceboneposrot "ValveBiped.weapon_bolt" pos 0 0 0.000002
-		// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos 0 0 0.000002
-		// forceboneposrot "ValveBiped.weapon_charger" pos 0 0 0.000002
-	$elif ref_survivor == coach
+		$reference_pos_namvet
+	$ELIF ref_survivor == coach
 		$DefineVariable ref_scale 1.05
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.542612 40.233574
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.542612 0 40.233574
 		forceboneposrot "ValveBiped.Bip01_Spine" pos 0 4.246162 -0.018825
 		forceboneposrot "ValveBiped.Bip01_Spine1" pos 4.195629 0 0
 		forceboneposrot "ValveBiped.Bip01_Spine2" pos 3.883152 0.000001 0
@@ -163,10 +234,10 @@ $Animation "a_reference" $custom_model$ {
 		// forceboneposrot "ValveBiped.weapon_bolt" pos -0.000002 0 0
 		// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos -0.000002 0 0
 		// forceboneposrot "ValveBiped.weapon_charger" pos -0.000002 0 0
-	$elif ref_survivor == mechanic
+	$ELIF ref_survivor == mechanic
 		$DefineVariable ref_scale 0.955
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.493518 36.593395
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.493518 0 36.593395
 		forceboneposrot "ValveBiped.Bip01_Spine" pos 0 3.861988 -0.017122
 		forceboneposrot "ValveBiped.Bip01_Spine1" pos 3.816021 0 0
 		forceboneposrot "ValveBiped.Bip01_Spine2" pos 3.531826 0 0
@@ -230,10 +301,10 @@ $Animation "a_reference" $custom_model$ {
 		// forceboneposrot "ValveBiped.weapon_bolt" pos 0 0 0
 		// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos 0 0 0
 		// forceboneposrot "ValveBiped.weapon_charger" pos 0 0 0
-	$elif ref_survivor == biker
+	$ELIF ref_survivor == biker
 		$DefineVariable ref_scale 1.05
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.542612 40.233574
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.542612 0 40.233574
 		forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.806942 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Calf" pos 19.263105 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Foot" pos 17.5891 0 0
@@ -297,10 +368,10 @@ $Animation "a_reference" $custom_model$ {
 		// forceboneposrot "ValveBiped.weapon_bolt" pos 0 0 0
 		// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos 0 0 0
 		// forceboneposrot "ValveBiped.weapon_charger" pos 0 0 0
-	$elif ref_survivor == manager
+	$ELIF ref_survivor == manager
 		$DefineVariable ref_scale 1.05
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.542624 40.233574
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.542624 0 40.233574
 		forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.806942 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Calf" pos 19.263102 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Foot" pos 17.589098 0 0
@@ -364,10 +435,10 @@ $Animation "a_reference" $custom_model$ {
 		// forceboneposrot "ValveBiped.weapon_bolt" pos 0 0 0
 		// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos 0 0 0
 		// forceboneposrot "ValveBiped.weapon_charger" pos 0 0 0
-	$elif ref_survivor == gambler
+	$ELIF ref_survivor == gambler
 		$DefineVariable ref_scale 1.0
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.516773 38.317692
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.516773 0 38.317692
 		forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.625659 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Calf" pos 18.345819 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Foot" pos 16.751528 0 0
@@ -431,10 +502,10 @@ $Animation "a_reference" $custom_model$ {
 		// forceboneposrot "ValveBiped.weapon_bolt" pos 0 0 0.000002
 		// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos 0 0 0.000002
 		// forceboneposrot "ValveBiped.weapon_charger" pos 0 0 0.000002
-	$elif ref_survivor == producer
+	$ELIF ref_survivor == producer
 		$DefineVariable ref_scale 0.888
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.458894 34.026112
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.458894 0 34.026112
 		forceboneposrot "ValveBiped.Bip01_Spine" pos 0 3.591042 -0.015921
 		forceboneposrot "ValveBiped.Bip01_Spine1" pos 3.548302 0 0
 		forceboneposrot "ValveBiped.Bip01_Spine2" pos 3.284046 0.000001 0
@@ -498,72 +569,31 @@ $Animation "a_reference" $custom_model$ {
 		// forceboneposrot "ValveBiped.weapon_bolt" pos 0 0 0
 		// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos 0 0 0
 		// forceboneposrot "ValveBiped.weapon_charger" pos 0 0 0
-	$elif ref_survivor == teenangst
+	$ELIF ref_survivor == teenangst
 		$DefineVariable ref_scale 1.00
 		$DefineVariable ref_base teenangst
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 -1.442119 35.350025
-		forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.455587 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Calf" pos 16.572346 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Foot" pos 16.265829 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Toe0" pos 5.046457 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Thigh" pos -3.455587 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Calf" pos 16.572346 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Foot" pos 16.265831 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Toe0" pos 5.046457 0 0
-		forceboneposrot "ValveBiped.Bip01_Spine" pos 0 3.703728 0.293189
-		forceboneposrot "ValveBiped.Bip01_Spine1" pos 3.307846 0 0
-		forceboneposrot "ValveBiped.Bip01_Spine2" pos 3.297962 0 0
-		forceboneposrot "ValveBiped.Bip01_Spine4" pos 6.040985 0 0
-		forceboneposrot "ValveBiped.Bip01_Neck1" pos 5.065758 0 0
-		forceboneposrot "ValveBiped.Bip01_Head1" pos 3.993755 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Clavicle" pos 3.815876 1.385489 1.5
-		forceboneposrot "ValveBiped.Bip01_L_UpperArm" pos 4.327093 0.000004 0
-		forceboneposrot "ValveBiped.Bip01_L_Forearm" pos 11.105114 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Hand" pos 9.862099 -0.000011 -0.000031
-		forceboneposrot "ValveBiped.Bip01_L_Finger4" pos 2.641094 0.214619 -1.073586
-		forceboneposrot "ValveBiped.Bip01_L_Finger41" pos 1.361605 -0.000002 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger42" pos 0.779602 0.000002 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger3" pos 2.908712 0.221762 -0.431868
-		forceboneposrot "ValveBiped.Bip01_L_Finger31" pos 1.597527 0.000001 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger32" pos 0.91268 0.000001 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger2" pos 3.26545 0.050007 0.415744
-		forceboneposrot "ValveBiped.Bip01_L_Finger21" pos 1.86047 0 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger22" pos 1.061481 -0.000001 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger1" pos 3.340382 -0.242393 1.285012
-		forceboneposrot "ValveBiped.Bip01_L_Finger11" pos 1.550753 0.000001 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger12" pos 0.904888 0.000001 0
-		forceboneposrot "ValveBiped.Bip01_L_Finger0" pos 1.219385 -1.06386 0.837143
-		forceboneposrot "ValveBiped.Bip01_L_Finger01" pos 1.496971 -0.000002 -0.000001
-		forceboneposrot "ValveBiped.Bip01_L_Finger02" pos 1.100086 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Clavicle" pos 3.815876 1.385489 -1.5
-		forceboneposrot "ValveBiped.Bip01_R_UpperArm" pos 4.327089 -0.000004 0
-		forceboneposrot "ValveBiped.Bip01_R_Forearm" pos 11.105106 0 0.000004
-		forceboneposrot "ValveBiped.Bip01_R_Hand" pos 9.86208 -0.000007 0.000017
-		forceboneposrot "ValveBiped.Bip01_R_Finger4" pos 2.641111 0.211586 1.074188
-		forceboneposrot "ValveBiped.Bip01_R_Finger41" pos 1.361601 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger42" pos 0.779604 0.000001 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger3" pos 2.90873 0.220541 0.432493
-		forceboneposrot "ValveBiped.Bip01_R_Finger31" pos 1.597527 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger32" pos 0.912678 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger2" pos 3.265471 0.051184 -0.4156
-		forceboneposrot "ValveBiped.Bip01_R_Finger21" pos 1.86047 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger22" pos 1.061485 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger1" pos 3.340403 -0.238762 -1.285691
-		forceboneposrot "ValveBiped.Bip01_R_Finger11" pos 1.550755 0 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger12" pos 0.904886 0.000001 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger0" pos 1.21941 -1.061498 -0.840143
-		forceboneposrot "ValveBiped.Bip01_R_Finger01" pos 1.496971 0.000002 0
-		forceboneposrot "ValveBiped.Bip01_R_Finger02" pos 1.100088 0 0
-		forceboneposrot "ValveBiped.weapon_bone" pos 2.856947 -1.536175 -0.97378
-		forceboneposrot "ValveBiped.L_weapon_bone" pos 2.856899 -1.536201 -0.9738
-		forceboneposrot "ValveBiped.weapon_bone_Clip2" pos 3.02821 -0.923409 -2.009452
-		forceboneposrot "ValveBiped.weapon_bolt_l" pos 0 -0.000002 0
-		// forceboneposrot "ValveBiped.weapon_bone_Clip" pos 0 0 10
-		// forceboneposrot "ValveBiped.weapon_bone_extra" pos 0.018896 0.665159 9.39588
-		// forceboneposrot "ValveBiped.weapon_bone_Clip2_Bullets" pos 0.116954 4.311606 0.061861
-		// forceboneposrot "ValveBiped.weapon_bone_Clip_Bullets" pos 0 1 0.00001
-		// forceboneposrot "ValveBiped.weapon_bolt" pos -0.000001 0 0
-		// forceboneposrot "ValveBiped.weapon_bolt_opposite" pos -0.000001 0 0
-		// forceboneposrot "ValveBiped.weapon_charger" pos -0.000001 0 0
+		$reference_pos_teenangst
 	$endif
 }
+
+$IFDef usqc_idle_anim
+	$IF usqc_idle_anim == 02
+		$Animation a_usqc_idle anims/usqc_idle_2.fbx fixuploop 0 260 scale $ref_scale$ angles 0 0 -90
+	$ELIF  usqc_idle_anim == 03
+		$Animation a_usqc_idle anims/usqc_idle_3.fbx fixuploop 0 220 scale $ref_scale$ angles 0 0 -90
+	$ELSE
+		$Animation a_usqc_idle anims/usqc_idle_1.fbx fixuploop 0 220 scale $ref_scale$ angles 0 0 -90
+	$EndIF
+
+	$IF ref_survivor == "teenangst"
+		$DefineMacro append_usqc_idle_anim \\
+			a_usqc_idle \\
+			addlayer teenangst_anim_fix \\
+		\\
+
+	$Else
+		$DefineMacro append_usqc_idle_anim \\
+			a_usqc_idle \\
+		\\
+	$EndIF
+$EndIF

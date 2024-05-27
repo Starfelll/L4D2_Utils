@@ -5,9 +5,7 @@
 // The fastest way to get started is to change Body.glb and Face.glb to your own, 
 // and then compile...
 
-//$DefineVariable author "Starfelll"
-
-$DefineVariable custom_model "…ÌÃÂ.glb"
+$DefineVariable custom_model "Body.glb"
 
 $PushD "../Export" //$UpAxis "Z"
 
@@ -23,7 +21,9 @@ $CDMaterials "Starfelll\Survivor."
 // auto,namvet,coach,mechanic,biker,manager,gambler,producer,teenangst 
 $DefineVariable ref_survivor teenangst
 
-//$DefineVariable spb_scale 0.70 // 0.40 0.50 0.60 0.70
+$DefineVariable usqc_idle_anim 01 // 01,02,03
+
+// $DefineVariable spb_scale 0.70 // 0.40 0.50 0.60 0.70
 $Include "../QCIs/DeclareSequences/pps.qci"
 $Animation "a_proportions" $custom_model$ {
     subtract "a_reference" 0
@@ -41,13 +41,9 @@ $ForcePhonemeCrossFade
 $DefineVariable foot_ik_fix 0
 $DefineVariable calf_ik_fix 0
 
-$Animation usqc_idle "anims/usqc_idle_01.fbx" origin 0 0 0 angles 0 0 -90 fixuploop 0 220
-//$Animation usqc_idle "anims/usqc_idle_03.fbx" origin 0 0 0 angles 0 0 -90 fixuploop 0 260
-//$Animation usqc_idle "anims/usqc_idle_04.fbx" origin 0 0 0 angles 0 0 -90 fixuploop 0 220
-
 $DefineMacro seq_survivor survivor \\
     $Sequence $survivor$ { \\
-        "usqc_idle" \\
+        $append_usqc_idle_anim \\
         ikrule "rhand" release \\
         ikrule "lhand" release \\
         ikrule "rfoot" release \\
@@ -58,7 +54,7 @@ $DefineMacro seq_survivor survivor \\
 
 $DefineMacro seq_ragdoll \\
     $Sequence "ragdoll" { \\
-        "usqc_idle" \\
+        $append_usqc_idle_anim \\
         activity "ACT_DIERAGDOLL" 1 \\
         ikrule "rhand" release \\
         ikrule "lhand" release \\
@@ -244,22 +240,33 @@ $SkipBoneInBBox
 $CBox 0 0 0 0 0 0 $BBox -13 -13 0 13 13 72
 
 $Include ../QCIs/DeclareSequences/$survivor$.qci
-//$Sequence Reference "a_reference"
+// $Sequence Reference "a_reference"
 $Sequence "Proportions" "a_proportions" autoplay delta
+
+$IFDef usqc_idle_anim
+    $IF ref_survivor == "teenangst"
+        $Animation "a_namvet_ref" $custom_model$ {
+            $reference_pos_namvet
+        }
+        $Sequence "teenangst_anim_fix" {
+            $custom_model$
+            $reference_pos_teenangst
+            subtract a_namvet_ref 0
+            delta
+        }
+    $EndIF
+$EndIF
 
 $IFDef anti_decompile
     $AnimBlockSize 32 nostall
     $AntiDecompile
 $EndIF
 
-    // $Include "../Test/Test.qci"
+    //$Include "../Test/Test.qci"
 
 $KeyValues
 {
-    usqc "2.0"
-    $IFDef author
-        author $author$
-    $EndIF
+    usqc "2.1"
 }
 
 /*
