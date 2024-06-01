@@ -4,26 +4,14 @@ $IFDef spb_scale
 	$Scale $spb_scale$
 $EndIF
 
-$Animation "@dlc1_intro_male_leanup_corrective_animation" "survivor_biker_light_anims\@dlc1_intro_male_leanup_corrective_animation.smd" {
-}
-
-$Animation "@dlc1_intro_male_leanleft_corrective_animation" "survivor_biker_light_anims\@dlc1_intro_male_leanleft_corrective_animation.smd" {
-}
-
-$Animation "@dlc1_intro_male_headnod_corrective_animation" "survivor_biker_light_anims\@dlc1_intro_male_headnod_corrective_animation.smd" {
-}
-
-$Animation "@dlc1_intro_male_handflipR_corrective_animation" "survivor_biker_light_anims\@dlc1_intro_male_handflipR_corrective_animation.smd" {
-}
-
-$Animation "@INTROIDLENOISE_corrective_animation" "survivor_biker_light_anims\@INTROIDLENOISE_corrective_animation.smd" {
+$Animation "corrective_animation" "usqc_anims\corrective_animation.dmx" {
 }
 
 // $DeclareSequence "Biker"
 $seq_survivor "Biker"
 
 $Sequence "animHack" {
-	"survivor_biker_light_anims\animHack.smd"
+	"usqc_anims\animHack.dmx"
 	fadein 0.2
 	fadeout 0.2
 	hidden
@@ -35,7 +23,7 @@ $Sequence "animHack" {
 }
 
 $Sequence "dlc1_intro_male_idle" {
-	"survivor_biker_light_anims\dlc1_intro_male_idle.smd"
+	"usqc_anims\dlc1_intro_male_idle.dmx"
 	fadein 0.2
 	fadeout 0.2
 	addlayer "INTROIDLENOISE"
@@ -48,11 +36,11 @@ $Sequence "dlc1_intro_male_idle" {
 }
 
 $Sequence "dlc1_intro_male_leanup" {
-	"survivor_biker_light_anims\dlc1_intro_male_leanup.smd"
+	"usqc_anims\dlc1_intro_male_leanup.dmx"
 	activity "ACT_DLCINTRO_01" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@dlc1_intro_male_leanup_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -63,11 +51,11 @@ $Sequence "dlc1_intro_male_leanup" {
 }
 
 $Sequence "dlc1_intro_male_leanleft" {
-	"survivor_biker_light_anims\dlc1_intro_male_leanleft.smd"
+	"usqc_anims\dlc1_intro_male_leanleft.dmx"
 	activity "ACT_DLCINTRO_02" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@dlc1_intro_male_leanleft_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -78,11 +66,11 @@ $Sequence "dlc1_intro_male_leanleft" {
 }
 
 $Sequence "dlc1_intro_male_headnod" {
-	"survivor_biker_light_anims\dlc1_intro_male_headnod.smd"
+	"usqc_anims\dlc1_intro_male_headnod.dmx"
 	activity "ACT_DLCINTRO_03" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@dlc1_intro_male_headnod_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -93,11 +81,11 @@ $Sequence "dlc1_intro_male_headnod" {
 }
 
 $Sequence "dlc1_intro_male_handflipR" {
-	"survivor_biker_light_anims\dlc1_intro_male_handflipR.smd"
+	"usqc_anims\dlc1_intro_male_handflipR.dmx"
 	activity "ACT_DLCINTRO_04" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@dlc1_intro_male_handflipR_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -111,10 +99,10 @@ $Sequence "dlc1_intro_male_handflipR" {
 $seq_ragdoll
 
 $Sequence "INTROIDLENOISE" {
-	"survivor_biker_light_anims\INTROIDLENOISE.smd"
+	"usqc_anims\INTROIDLENOISE.dmx"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@INTROIDLENOISE_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	hidden

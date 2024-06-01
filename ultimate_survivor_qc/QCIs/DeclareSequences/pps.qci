@@ -578,11 +578,11 @@ $Animation "a_reference" $custom_model$ {
 
 $IFDef usqc_idle_anim
 	$IF usqc_idle_anim == 02
-		$Animation a_usqc_idle anims/usqc_idle_2.fbx fixuploop 0 260 scale $ref_scale$ angles 0 0 -90
+		$Animation a_usqc_idle usqc_anims/usqc_idle_2.fbx fixuploop 0 260 scale $ref_scale$ angles 0 0 -90
 	$ELIF  usqc_idle_anim == 03
-		$Animation a_usqc_idle anims/usqc_idle_3.fbx fixuploop 0 220 scale $ref_scale$ angles 0 0 -90
+		$Animation a_usqc_idle usqc_anims/usqc_idle_3.fbx fixuploop 0 220 scale $ref_scale$ angles 0 0 -90
 	$ELSE
-		$Animation a_usqc_idle anims/usqc_idle_1.fbx fixuploop 0 220 scale $ref_scale$ angles 0 0 -90
+		$Animation a_usqc_idle usqc_anims/usqc_idle_1.fbx fixuploop 0 220 scale $ref_scale$ angles 0 0 -90
 	$EndIF
 
 	$IF ref_survivor == "teenangst"

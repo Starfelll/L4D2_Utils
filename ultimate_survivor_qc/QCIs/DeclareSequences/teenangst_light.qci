@@ -4,24 +4,8 @@ $IFDef spb_scale
 	$Scale $spb_scale$
 $EndIF
 
-$Animation "@dlc1_intro_zoey_shrug_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_shrug_corrective_animation.smd" {
+$Animation "corrective_animation" "usqc_anims\corrective_animation.dmx" {
 }
-
-$Animation "@dlc1_intro_zoey_shout_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_shout_corrective_animation.smd" {
-}
-
-$Animation "@dlc1_intro_zoey_headshake_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_headshake_corrective_animation.smd" {
-}
-
-$Animation "@dlc1_intro_zoey_handflipR_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_handflipR_corrective_animation.smd" {
-}
-
-$Animation "@dlc1_intro_zoey_head_gesture_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_head_gesture_corrective_animation.smd" {
-}
-
-$Animation "@dlc1_intro_zoey_generator_point_corrective_animation" "survivor_teenangst_light_anims\@dlc1_intro_zoey_generator_point_corrective_animation.smd" {
-}
-
 
 // $DeclareSequence "TeenAngst"
 $seq_survivor "TeenAngst"
@@ -30,7 +14,7 @@ $seq_survivor "TeenAngst"
 $seq_ragdoll
 
 $Sequence "dlc1_intro_zoey_idle" {
-	"survivor_teenangst_light_anims\dlc1_intro_zoey_idle.smd"
+	"usqc_anims\dlc1_intro_zoey_idle.dmx"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -42,66 +26,66 @@ $Sequence "dlc1_intro_zoey_idle" {
 }
 
 $Sequence "dlc1_intro_zoey_shrug" {
-	"survivor_teenangst_light_anims\dlc1_intro_zoey_shrug.smd"
+	"usqc_anims\dlc1_intro_zoey_shrug.dmx"
 	activity "ACT_DLCINTRO_ZOEY_01" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@dlc1_intro_zoey_shrug_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "dlc1_intro_zoey_shout" {
-	"survivor_teenangst_light_anims\dlc1_intro_zoey_shout.smd"
+	"usqc_anims\dlc1_intro_zoey_shout.dmx"
 	activity "ACT_DLCINTRO_ZOEY_02" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@dlc1_intro_zoey_shout_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "dlc1_intro_zoey_headshake" {
-	"survivor_teenangst_light_anims\dlc1_intro_zoey_headshake.smd"
+	"usqc_anims\dlc1_intro_zoey_headshake.dmx"
 	activity "ACT_DLCINTRO_ZOEY_03" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@dlc1_intro_zoey_headshake_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "dlc1_intro_zoey_handflipR" {
-	"survivor_teenangst_light_anims\dlc1_intro_zoey_handflipR.smd"
+	"usqc_anims\dlc1_intro_zoey_handflipR.dmx"
 	activity "ACT_DLCINTRO_ZOEY_04" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@dlc1_intro_zoey_handflipR_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "dlc1_intro_zoey_head_gesture" {
-	"survivor_teenangst_light_anims\dlc1_intro_zoey_head_gesture.smd"
+	"usqc_anims\dlc1_intro_zoey_head_gesture.dmx"
 	activity "ACT_DLCINTRO_ZOEY_05" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@dlc1_intro_zoey_head_gesture_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 }
 
 $Sequence "dlc1_intro_zoey_generator_point" {
-	"survivor_teenangst_light_anims\dlc1_intro_zoey_generator_point.smd"
+	"usqc_anims\dlc1_intro_zoey_generator_point.dmx"
 	activity "ACT_DLCINTRO_ZOEY_06" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
-	subtract "@dlc1_intro_zoey_generator_point_corrective_animation" 0
+	subtract "corrective_animation" 0
 	fadein 0.2
 	fadeout 0.2
 	fps 30

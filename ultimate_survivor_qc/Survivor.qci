@@ -6,7 +6,7 @@
 // and then compile...
 
 $PushD "../Export"
-// $DefineVariable anti_decompile ON //反反编译开关
+// $AntiDecompile //反反编译开关
 $DefineVariable custom_model "Body.glb"
 $CDMaterials "Starfelll\Survivor."
 
@@ -253,16 +253,11 @@ $IFDef usqc_idle_anim
     $EndIF
 $EndIF
 
-$IFDef anti_decompile
-    $AnimBlockSize 32 nostall
-    $AntiDecompile
-$EndIF
-
     //$Include "../Test/Test.qci"
 
 $KeyValues
 {
-    usqc "2.1"
+    usqc "2.2"
 }
 
 /*
