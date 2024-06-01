@@ -1,4 +1,4 @@
-set VProject=C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2\left4dead2
+@REM set VProject=C:\Program Files (x86)\Steam\steamapps\common\Left 4 Dead 2\left4dead2
 set param=-quiet -outdir %~dp0 -nvtristrip -parsecompletion -Darms_name
 @echo off
 
