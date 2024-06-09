@@ -21,6 +21,9 @@ $Body "Body" $custom_model$
 $DefineVariable ref_survivor teenangst
 $DefineVariable usqc_idle_anim 01 //测试图动画，可选范围01~03 
 
+$DefineVariable foot_ik_fix 0
+$DefineVariable calf_ik_fix 0
+
 // $DefineVariable spb_scale 0.70 //0.40 0.50 0.60 0.70
 $Include "../QCIs/DeclareSequences/pps.qci"
 $Animation "a_proportions" $custom_model$ {
@@ -32,9 +35,6 @@ $Opaque // $MostlyOpaque
 $EyePosition 0 0 70 
 $MaxEyeDeflection 30 
 $ForcePhonemeCrossFade
-
-$DefineVariable foot_ik_fix 0
-$DefineVariable calf_ik_fix 0
 
 $DefineMacro seq_survivor survivor \\
     $Sequence $survivor$ { \\
@@ -257,7 +257,7 @@ $EndIF
 
 $KeyValues
 {
-    usqc "2.2"
+    usqc "2.3"
 }
 
 /*

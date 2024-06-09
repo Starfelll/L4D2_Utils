@@ -12,7 +12,7 @@ $Else
 $EndIF
 $ModelName weapons\arms\v_arms_$arms_name$.mdl
 
-$PushD "Export/"
+$PushD "../Export/"
 $Body "arms" $custom_model$
 $Sequence "idle" $custom_model$ frame 0 0
 
