@@ -1,6 +1,9 @@
 // by Starfelll
 // 泡泡鲨....
 
+// sacle_fix = 1.0 / $Scale
+$DefineVariable scale_fix 1.0
+
 $IF survivor == biker_light
 	$RedefineVariable ref_survivor "biker"
 $ELIF survivor == teenangst_light
@@ -8,6 +11,7 @@ $ELIF survivor == teenangst_light
 $Else
 	$IFDef spb_scale
 		$DefineVariable include_model_root spb/$spb_scale$x
+		$RedefineVariable scale_fix $spb_scale$
 	$Else
 		$DefineVariable include_model_root survivors
 	$EndIF
@@ -160,9 +164,7 @@ $DefineMacro reference_pos_namvet \\
 
 $Animation "a_reference" $custom_model$ {
     frame 0 0
-    $IFDef spb_scale
-        scale $spb_scale$
-    $EndIF
+    scale $scale_fix$
 	$IF ref_survivor == namvet
 		$DefineVariable ref_scale 1.00
 		$DefineVariable ref_base namvet
@@ -585,16 +587,12 @@ $IFDef usqc_idle_anim
 		$Animation a_usqc_idle usqc_anims/usqc_idle_1.fbx fixuploop 0 220 scale $ref_scale$ angles 0 0 -90 NoBoneRealign origin 0 0 -$foot_ik_fix$
 	$EndIF
 
-	$IF ref_survivor == "teenangst"
-		$DefineMacro append_usqc_idle_anim \\
-			a_usqc_idle \\
+	$DefineMacro append_usqc_idle_anim \\
+		a_usqc_idle \\
+		$IF ref_survivor == "teenangst" \\
 			addlayer teenangst_anim_fix \\
-		\\
+		$EndIF \\
+		scale $scale_fix$ \\
+	\\
 
-	$Else
-		$DefineMacro append_usqc_idle_anim \\
-			a_usqc_idle \\
-		\\
-
-	$EndIF
 $EndIF

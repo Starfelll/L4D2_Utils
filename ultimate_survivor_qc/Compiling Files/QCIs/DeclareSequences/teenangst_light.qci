@@ -1,9 +1,5 @@
 // by Starfelll
 
-$IFDef spb_scale
-	$Scale $spb_scale$
-$EndIF
-
 $Animation "corrective_animation" "usqc_anims\corrective_animation.dmx" {
 }
 
@@ -23,6 +19,8 @@ $Sequence "dlc1_intro_zoey_idle" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 1
 	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 2
 	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 3
+	scale $scale_fix$
+	origin 0 0 -$foot_ik_fix$
 }
 
 $Sequence "dlc1_intro_zoey_shrug" {
@@ -34,6 +32,8 @@ $Sequence "dlc1_intro_zoey_shrug" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	scale $scale_fix$
+	origin 0 0 -$foot_ik_fix$
 }
 
 $Sequence "dlc1_intro_zoey_shout" {
@@ -45,6 +45,8 @@ $Sequence "dlc1_intro_zoey_shout" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	scale $scale_fix$
+	origin 0 0 -$foot_ik_fix$
 }
 
 $Sequence "dlc1_intro_zoey_headshake" {
@@ -56,6 +58,8 @@ $Sequence "dlc1_intro_zoey_headshake" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	scale $scale_fix$
+	origin 0 0 -$foot_ik_fix$
 }
 
 $Sequence "dlc1_intro_zoey_handflipR" {
@@ -67,6 +71,8 @@ $Sequence "dlc1_intro_zoey_handflipR" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	scale $scale_fix$
+	origin 0 0 -$foot_ik_fix$
 }
 
 $Sequence "dlc1_intro_zoey_head_gesture" {
@@ -78,6 +84,8 @@ $Sequence "dlc1_intro_zoey_head_gesture" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	scale $scale_fix$
+	origin 0 0 -$foot_ik_fix$
 }
 
 $Sequence "dlc1_intro_zoey_generator_point" {
@@ -89,4 +97,6 @@ $Sequence "dlc1_intro_zoey_generator_point" {
 	fadein 0.2
 	fadeout 0.2
 	fps 30
+	scale $scale_fix$
+	origin 0 0 -$foot_ik_fix$
 }

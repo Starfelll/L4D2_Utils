@@ -4,7 +4,7 @@
 // No need to generate definebones
 // The fastest way to get started is to change Body.glb and Face.glb to your own, 
 // and then compile...
-
+$Scale 1.0
 $PushD "../Export"
 // $AntiDecompile //反反编译开关
 $DefineVariable custom_model "Body.glb"
@@ -249,6 +249,7 @@ $IFDef usqc_idle_anim
             $reference_pos_teenangst
             subtract a_namvet_ref 0
             delta
+            hidden
         }
     $EndIF
 $EndIF
@@ -257,7 +258,7 @@ $EndIF
 
 $KeyValues
 {
-    usqc "2.3"
+    usqc "2.4"
 }
 
 /*
