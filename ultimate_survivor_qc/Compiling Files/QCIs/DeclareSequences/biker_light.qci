@@ -1,6 +1,7 @@
 // by Starfelll
 
 $Animation "corrective_animation" "usqc_anims\corrective_animation.dmx" {
+	NoBoneRealign
 }
 
 
@@ -18,7 +19,8 @@ $Sequence "animHack" {
 	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 10 10 target 2
 	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 10 10 target 3
 	scale $scale_fix$
-	origin 0 0 -$foot_ik_fix$
+	//origin 0 0 -$foot_ik_fix$
+	NoBoneRealign
 }
 
 $Sequence "dlc1_intro_male_idle" {
@@ -33,7 +35,8 @@ $Sequence "dlc1_intro_male_idle" {
 	// ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 241 241 target 2 usesequence 
 	// ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 241 241 target 3 usesequence 
 	scale $scale_fix$
-	origin 0 0 -$foot_ik_fix$
+	//origin 0 0 -$foot_ik_fix$
+	NoBoneRealign
 }
 
 $Sequence "dlc1_intro_male_leanup" {
@@ -50,7 +53,8 @@ $Sequence "dlc1_intro_male_leanup" {
 	// ikrule "lfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 120 120 target 3
 	// ikrule "rfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 120 120 target 2
 	scale $scale_fix$
-	origin 0 0 -$foot_ik_fix$
+	//origin 0 0 -$foot_ik_fix$
+	NoBoneRealign
 }
 
 $Sequence "dlc1_intro_male_leanleft" {
@@ -67,7 +71,8 @@ $Sequence "dlc1_intro_male_leanleft" {
 	// ikrule "lfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 125 125 target 3
 	// ikrule "rfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 125 125 target 2
 	scale $scale_fix$
-	origin 0 0 -$foot_ik_fix$
+	//origin 0 0 -$foot_ik_fix$
+	NoBoneRealign
 }
 
 $Sequence "dlc1_intro_male_headnod" {
@@ -84,7 +89,8 @@ $Sequence "dlc1_intro_male_headnod" {
 	// ikrule "lfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 28 28 target 3
 	// ikrule "rfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 28 28 target 2
 	scale $scale_fix$
-	origin 0 0 -$foot_ik_fix$
+	//origin 0 0 -$foot_ik_fix$
+	NoBoneRealign
 }
 
 $Sequence "dlc1_intro_male_handflipR" {
@@ -101,7 +107,8 @@ $Sequence "dlc1_intro_male_handflipR" {
 	// ikrule "lfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 3
 	// ikrule "rfoot" touch "" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 2
 	scale $scale_fix$
-	origin 0 0 -$foot_ik_fix$
+	//origin 0 0 -$foot_ik_fix$
+	NoBoneRealign
 }
 
 // $DeclareSequence "ragdoll"
@@ -121,5 +128,6 @@ $Sequence "INTROIDLENOISE" {
 	loop
 	walkframe 242
 	scale $scale_fix$
-	origin 0 0 -$foot_ik_fix$
+	//origin 0 0 -$foot_ik_fix$
+	NoBoneRealign
 }
