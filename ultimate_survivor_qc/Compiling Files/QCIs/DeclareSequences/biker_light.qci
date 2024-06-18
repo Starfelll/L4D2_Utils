@@ -1,7 +1,8 @@
 // by Starfelll
 
-$Animation "corrective_animation" "usqc_anims\corrective_animation.dmx" {
+$Animation "corrective_animation" "usqc_anims\light_model_amims.dmx" {
 	NoBoneRealign
+	frame 0 0
 }
 
 
@@ -9,7 +10,7 @@ $Animation "corrective_animation" "usqc_anims\corrective_animation.dmx" {
 $seq_survivor "Biker"
 
 $Sequence "animHack" {
-	"usqc_anims\animHack.dmx"
+	"usqc_anims\light_model_amims.dmx" frame 349 359
 	fadein 0.2
 	fadeout 0.2
 	hidden
@@ -24,7 +25,7 @@ $Sequence "animHack" {
 }
 
 $Sequence "dlc1_intro_male_idle" {
-	"usqc_anims\dlc1_intro_male_idle.dmx"
+	"usqc_anims\light_model_amims.dmx" frame 359 600
 	fadein 0.2
 	fadeout 0.2
 	addlayer "INTROIDLENOISE"
@@ -40,7 +41,7 @@ $Sequence "dlc1_intro_male_idle" {
 }
 
 $Sequence "dlc1_intro_male_leanup" {
-	"usqc_anims\dlc1_intro_male_leanup.dmx"
+	"usqc_anims\light_model_amims.dmx" frame 600 720
 	activity "ACT_DLCINTRO_01" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -58,7 +59,7 @@ $Sequence "dlc1_intro_male_leanup" {
 }
 
 $Sequence "dlc1_intro_male_leanleft" {
-	"usqc_anims\dlc1_intro_male_leanleft.dmx"
+	"usqc_anims\light_model_amims.dmx" frame 730 845
 	activity "ACT_DLCINTRO_02" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -76,7 +77,7 @@ $Sequence "dlc1_intro_male_leanleft" {
 }
 
 $Sequence "dlc1_intro_male_headnod" {
-	"usqc_anims\dlc1_intro_male_headnod.dmx"
+	"usqc_anims\light_model_amims.dmx" frame 845 873
 	activity "ACT_DLCINTRO_03" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -94,7 +95,7 @@ $Sequence "dlc1_intro_male_headnod" {
 }
 
 $Sequence "dlc1_intro_male_handflipR" {
-	"usqc_anims\dlc1_intro_male_handflipR.dmx"
+	"usqc_anims\light_model_amims.dmx" frame 873 913
 	activity "ACT_DLCINTRO_04" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -115,7 +116,7 @@ $Sequence "dlc1_intro_male_handflipR" {
 $seq_ragdoll
 
 $Sequence "INTROIDLENOISE" {
-	"usqc_anims\INTROIDLENOISE.dmx"
+	"usqc_anims\light_model_amims.dmx" frame 913 1155
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "corrective_animation" 0
