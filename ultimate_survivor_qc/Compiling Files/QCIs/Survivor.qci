@@ -196,8 +196,8 @@ $Include "../QCIs/DefineBones.qci"
 
 $IKChain "rhand" "ValveBiped.Bip01_R_Hand" knee 0.707 0.707 0
 $IKChain "lhand" "ValveBiped.Bip01_L_Hand" knee 0.707 0.707 0
-$IKChain "rfoot" "ValveBiped.Bip01_R_Foot" knee 0.707 -0.707 //0.05
-$IKChain "lfoot" "ValveBiped.Bip01_L_Foot" knee 0.707 -0.707 //-0.05
+$IKChain "rfoot" "ValveBiped.Bip01_R_Foot" knee 0.707 -0.707 0 //0.05
+$IKChain "lfoot" "ValveBiped.Bip01_L_Foot" knee 0.707 -0.707 0 //-0.05
 $IKChain "ikclip" "ValveBiped.weapon_bone_Clip" knee 0.707 -0.707 0
 $IKAutoPlayLock "rfoot" 0 0.1 
 $IKAutoPlayLock "lfoot" 0 0.1
