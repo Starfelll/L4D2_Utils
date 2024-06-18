@@ -2,7 +2,7 @@
 set param=-quiet -outdir %~dp0 -nvtristrip -parsecompletion -Darms_name
 @echo off
 
-cd ../Compiling Files/qc
+cd ../Compiling Files
 
 nekomdl %param% bill v_arms.qc
 IF %ERRORLEVEL% NEQ 0 ( goto CompileFailed )
