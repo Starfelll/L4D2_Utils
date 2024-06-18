@@ -38,4 +38,4 @@ $DefineMacro attathements \\
 	$att_attach_L_shoulderBladeAim \\
 \\
 
-$Include "../Survivor.qci"
+$Include "QCIs/Survivor.qci"

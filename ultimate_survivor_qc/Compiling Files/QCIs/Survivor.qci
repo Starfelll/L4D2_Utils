@@ -5,7 +5,7 @@
 // The fastest way to get started is to change Body.glb and Face.glb to your own, 
 // and then compile...
 $Scale 1.0
-$PushD "../Export"
+$PushD "Export/"
 // $AntiDecompile //反反编译开关
 $DefineVariable custom_model "Body.glb"
 $CDMaterials "Starfelll\Survivor."
@@ -13,7 +13,7 @@ $CDMaterials "Starfelll\Survivor."
 
 $NekoModel "Face" {
     studio "Face.glb"
-    // $Include "../QCIs/survivors_flexrules.qci" //表情开关
+    // $Include "QCIs/survivors_flexrules.qci" //表情开关
 }
 $Body "Body" $custom_model$
 
@@ -25,7 +25,7 @@ $DefineVariable foot_ik_fix 0
 $DefineVariable calf_ik_fix 0
 
 // $DefineVariable spb_scale 0.70 //0.40 0.50 0.60 0.70
-$Include "../QCIs/DeclareSequences/pps.qci"
+$Include "QCIs/DeclareSequences/pps.qci"
 $Animation "a_proportions" $custom_model$ {
     subtract "a_reference" 0
     origin 0 0 0 
@@ -192,7 +192,7 @@ $DefineMacro att_eholster \\
 $Attachment "eholster" "ValveBiped.Bip01_L_Thigh" 5.12 -2.21 5.1 rotate 9.47 -92.11 96.8 \\
 
 $attathements
-$Include "../QCIs/DefineBones.qci"
+$Include "QCIs/DefineBones.qci"
 
 $IKChain "rhand" "ValveBiped.Bip01_R_Hand" knee 0.707 0.707 0
 $IKChain "lhand" "ValveBiped.Bip01_L_Hand" knee 0.707 0.707 0
@@ -235,7 +235,7 @@ $SkipBoneInBBox
 
 $CBox 0 0 0 0 0 0 $BBox -13 -13 0 13 13 72
 
-$Include ../QCIs/DeclareSequences/$survivor$.qci
+$Include QCIs/DeclareSequences/$survivor$.qci
 // $Sequence Reference "a_reference"
 $Sequence "Proportions" "a_proportions" autoplay delta
 

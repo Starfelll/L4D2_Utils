@@ -37,4 +37,4 @@ $DefineMacro attathements \\
 	$att_spine \\
 \\
 
-$Include "../Survivor.qci"
+$Include "QCIs/Survivor.qci"

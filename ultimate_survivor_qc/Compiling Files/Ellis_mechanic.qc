@@ -39,4 +39,4 @@ $DefineMacro attathements \\
 	$att_L_weapon_bone \\
 \\
 
-$Include "../Survivor.qci"
+$Include "QCIs/Survivor.qci"
