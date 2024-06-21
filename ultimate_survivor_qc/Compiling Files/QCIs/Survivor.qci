@@ -39,11 +39,7 @@ $ForcePhonemeCrossFade
 $DefineMacro seq_survivor survivor \\
     $Sequence $survivor$ { \\
         $append_usqc_idle_anim \\
-        ikrule "rhand" release \\
-        ikrule "lhand" release \\
-        ikrule "rfoot" release \\
-        ikrule "lfoot" release \\
-        ikrule "ikclip" release \\
+        ikrule "rhand" release ikrule "lhand" release ikrule "rfoot" release ikrule "lfoot" release ikrule "ikclip" release \\
     } \\
 \\
 
@@ -51,11 +47,7 @@ $DefineMacro seq_ragdoll \\
     $Sequence "ragdoll" { \\
         $append_usqc_idle_anim \\
         activity "ACT_DIERAGDOLL" 1 \\
-        ikrule "rhand" release \\
-        ikrule "lhand" release \\
-        ikrule "rfoot" release \\
-        ikrule "lfoot" release \\
-        ikrule "ikclip" release \\
+        ikrule "rhand" release ikrule "lhand" release ikrule "rfoot" release ikrule "lfoot" release ikrule "ikclip" release \\
     } \\
 \\
 
@@ -258,7 +250,7 @@ $EndIF
 
 $KeyValues
 {
-    usqc "2.4"
+    usqc "2.5"
 }
 
 /*

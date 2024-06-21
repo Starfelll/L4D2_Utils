@@ -175,9 +175,17 @@ $DeclareSequence Walk_O2
 $DeclareSequence WalkN_Axe_layer
 $DeclareSequence WalkN_Axe_arms
 $DeclareSequence Walk_Axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence WalkN_Fry_Pan_layer
+$DeclareSequence WalkN_Fry_Pan_arms
+$DeclareSequence Walk_Fry_Pan
+$Else
 $DeclareSequence WalkN_Frying_Pan_layer
 $DeclareSequence WalkN_Frying_Pan_arms
 $DeclareSequence Walk_Frying_Pan
+$EndIF
+
 $DeclareSequence WalkN_BAT_layer
 $DeclareSequence WalkN_BAT_arms
 $DeclareSequence Walk_BAT
@@ -202,15 +210,31 @@ $DeclareSequence CrouchWalk_O2
 $DeclareSequence CrouchWalkN_axe_layer
 $DeclareSequence CrouchWalkN_axe_arms
 $DeclareSequence CrouchWalk_axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence CrouchWalkN_Fry_Pan_layer
+$DeclareSequence CrouchWalkN_Fry_Pan_arms
+$DeclareSequence CrouchWalk_Fry_Pan
+$Else
 $DeclareSequence CrouchWalkN_Frying_Pan_layer
 $DeclareSequence CrouchWalkN_Frying_Pan_arms
 $DeclareSequence CrouchWalk_Frying_Pan
+$EndIF
+
 $DeclareSequence CrouchWalkN_bat_layer
 $DeclareSequence CrouchWalkN_bat_arms
 $DeclareSequence CrouchWalk_bat
+
+$IF ref_survivor == teenangst
 $DeclareSequence RunN_SMG_layer
 $DeclareSequence RunN_SMG_arms
 $DeclareSequence Run_SMG
+$Else
+$DeclareSequence RunN_SMG_layer
+$DeclareSequence RunN_SMG_arms
+$DeclareSequence Run_SMG
+$EndIF
+
 $DeclareSequence RunN_Elites_layer
 $DeclareSequence RunN_Elites_arms
 $DeclareSequence Run_Elites
@@ -244,9 +268,17 @@ $DeclareSequence Run_O2
 $DeclareSequence RunN_Axe_layer
 $DeclareSequence RunN_Axe_arms
 $DeclareSequence Run_Axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence RunN_Fry_Pan_layer
+$DeclareSequence RunN_Fry_Pan_arms
+$DeclareSequence Run_Fry_Pan
+$Else
 $DeclareSequence RunN_Frying_Pan_layer
 $DeclareSequence RunN_Frying_Pan_arms
 $DeclareSequence Run_Frying_Pan
+$EndIF
+
 $DeclareSequence RunN_BAT_layer
 $DeclareSequence RunN_BAT_arms
 $DeclareSequence Run_BAT
@@ -313,7 +345,13 @@ $DeclareSequence LimpWalk_Sniper
 $DeclareSequence LimpWalk_PumpShotgun
 $DeclareSequence LimpWalk_O2
 $DeclareSequence LimpWalk_Axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence LimpWalk_Fry_Pan
+$Else
 $DeclareSequence LimpWalk_Frying_Pan
+$EndIF
+
 $DeclareSequence LimpWalk_BAT
 $DeclareSequence LimpRun_Rifle
 $DeclareSequence LimpRun_SMG
@@ -326,7 +364,13 @@ $DeclareSequence LimpRun_FirstAidKit
 $DeclareSequence LimpRun_Sniper
 $DeclareSequence LimpRun_PumpShotgun
 $DeclareSequence LimpRun_O2
+
+$IF ref_survivor == teenangst
+$DeclareSequence LimpRun_Fry_Pan
+$Else
 $DeclareSequence LimpRun_Frying_Pan
+$EndIF
+
 $DeclareSequence LimpRun_Axe
 $DeclareSequence LimpRun_BAT
 $DeclareSequence Push_Pull
@@ -365,7 +409,13 @@ $DeclareSequence mechanic_AimMatrix_Pistol_Standing_Calm
 $DeclareSequence mechanic_aimmatrix_bat_injured_standing
 $DeclareSequence mechanic_aimmatrix_grenade_standing_ready
 $DeclareSequence mechanic_aimmatrix_Axe_injured_standing
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Fry_Pan_Injured_Standing
+$Else
 $DeclareSequence mechanic_aimmatrix_fry_pan_injured_standing
+$EndIF
+
 $DeclareSequence mechanic_aimmatrix_pumpshotgun_standing
 $DeclareSequence mechanic_aimmatrix_axe_standing
 $DeclareSequence mechanic_aimmatrix_axe_crouching
@@ -408,12 +458,25 @@ $DeclareSequence NamVet_AimMatrix_o2_Crouching
 $DeclareSequence NamVet_AimMatrix_o2_Injured_Standing
 $DeclareSequence coach_AimMatrix_axe_Standing
 $DeclareSequence coach_AimMatrix_axe_Crouching
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Fry_Pan_Standing
+$DeclareSequence AimMatrix_Fry_Pan_Crouching
+$Else
 $DeclareSequence coach_AimMatrix_Frying_Pan_Standing
 $DeclareSequence coach_AimMatrix_Frying_Pan_Crouching
+$EndIF
+
 $DeclareSequence coach_AimMatrix_BAT_Standing
 $DeclareSequence coach_AimMatrix_BAT_Crouching
 $DeclareSequence coach_AimMatrix_BAT_Injured_Standing
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Fry_Pan_Standing
+$Else
 $DeclareSequence NamVet_AimMatrix_Frying_Pan_Standing_Calm
+$EndIF
+
 $DeclareSequence mechanic_AimMatrix_Elites_Crouching
 $DeclareSequence mechanic_AimMatrix_Rifle_Crouching
 $DeclareSequence mechanic_AimMatrix_Pistol_Crouching

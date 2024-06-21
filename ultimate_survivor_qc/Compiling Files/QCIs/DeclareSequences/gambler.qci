@@ -15,11 +15,25 @@ $DeclareSequence CalmIdlenoisePistol
 $DeclareSequence Idle_Standing_pistol
 $DeclareSequence Idle_Standing_rifle
 $DeclareSequence Idle_Standing_elites
+
+$IF ref_survivor == gambler || ref_survivor == namvet
 $DeclareSequence gambler_aimmatrix_sniper_military_standing_layer
 $DeclareSequence gambler_aimmatrix_sniper_military_standing_arms
+$Else
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_layer
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_Sniper_military
+
+$IF ref_survivor == gambler || ref_survivor == namvet
 $DeclareSequence gambler_aimmatrix_sniper_military_standing_zoom_layer
 $DeclareSequence gambler_aimmatrix_sniper_military_standing_zoom_arms
+$Else
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_zoom_layer
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_zoom_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_Sniper_military_Zoomed
 $DeclareSequence NamVet_AimMatrix_Shotgun_Standing_layer
 $DeclareSequence NamVet_AimMatrix_Shotgun_Standing_arms
@@ -71,8 +85,15 @@ $DeclareSequence Idle_Crouching_BAT
 $DeclareSequence Idle_Calm_Pistol
 $DeclareSequence Idle_Calm_Rifle
 $DeclareSequence Idle_Calm_Elites
+
+$IF ref_survivor == gambler || ref_survivor == namvet
 $DeclareSequence gambler_aimmatrix_sniper_military_standing_calm_layer
 $DeclareSequence gambler_aimmatrix_sniper_military_standing_calm_arms
+$Else
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_calm_layer
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_Sniper_military
 $DeclareSequence NamVet_AimMatrix_SMG_Standing_Calm_layer
 $DeclareSequence NamVet_AimMatrix_SMG_Standing_Calm_arms
@@ -106,11 +127,25 @@ $DeclareSequence idle_injured_bat
 $DeclareSequence Idle_Injured_axe
 $DeclareSequence Idle_Injured_GasCan
 $DeclareSequence Idle_Injured_Frying_Pan
+
+$IF ref_survivor == gambler || ref_survivor == namvet
 $DeclareSequence gambler_aimmatrix_sniper_military_injured_Standing_layer
 $DeclareSequence gambler_aimmatrix_sniper_military_injured_Standing_arms
+$Else
+$DeclareSequence mechanic_aimmatrix_sniper_military_injured_Standing_layer
+$DeclareSequence mechanic_aimmatrix_sniper_military_injured_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_Sniper_military
+
+$IF ref_survivor == gambler || ref_survivor == namvet
 $DeclareSequence gambler_aimmatrix_sniper_military_injured_Standing_zoom_layer
 $DeclareSequence gambler_aimmatrix_sniper_military_injured_Standing_zoom_arms
+$Else
+$DeclareSequence mechanic_aimmatrix_sniper_military_injured_Standing_zoom_layer
+$DeclareSequence mechanic_aimmatrix_sniper_military_injured_Standing_zoom_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_Sniper_military_Zoomed
 $DeclareSequence NamVet_AimMatrix_Grenade_Injured_Standing_layer
 $DeclareSequence NamVet_AimMatrix_Grenade_Injured_Standing_arms
@@ -178,9 +213,17 @@ $DeclareSequence Walk_O2
 $DeclareSequence WalkN_Axe_layer
 $DeclareSequence WalkN_Axe_arms
 $DeclareSequence Walk_Axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence WalkN_Fry_Pan_layer
+$DeclareSequence WalkN_Fry_Pan_arms
+$DeclareSequence Walk_Fry_Pan
+$Else
 $DeclareSequence WalkN_Frying_Pan_layer
 $DeclareSequence WalkN_Frying_Pan_arms
 $DeclareSequence Walk_Frying_Pan
+$EndIF
+
 $DeclareSequence WalkN_BAT_layer
 $DeclareSequence WalkN_BAT_arms
 $DeclareSequence Walk_BAT
@@ -211,9 +254,17 @@ $DeclareSequence CrouchWalk_O2
 $DeclareSequence CrouchWalkN_axe_layer
 $DeclareSequence CrouchWalkN_axe_arms
 $DeclareSequence CrouchWalk_axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence CrouchWalkN_Fry_Pan_layer
+$DeclareSequence CrouchWalkN_Fry_Pan_arms
+$DeclareSequence CrouchWalk_Fry_Pan
+$Else
 $DeclareSequence CrouchWalkN_Frying_Pan_layer
 $DeclareSequence CrouchWalkN_Frying_Pan_arms
 $DeclareSequence CrouchWalk_Frying_Pan
+$EndIF
+
 $DeclareSequence CrouchWalkN_BAT_layer
 $DeclareSequence CrouchWalkN_BAT_arms
 $DeclareSequence CrouchWalk_BAT
@@ -253,9 +304,17 @@ $DeclareSequence Run_O2
 $DeclareSequence RunN_Axe_layer
 $DeclareSequence RunN_Axe_arms
 $DeclareSequence Run_Axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence RunN_Fry_Pan_layer
+$DeclareSequence RunN_Fry_Pan_arms
+$DeclareSequence Run_Fry_Pan
+$Else
 $DeclareSequence RunN_Frying_Pan_layer
 $DeclareSequence RunN_Frying_Pan_arms
 $DeclareSequence Run_Frying_Pan
+$EndIF
+
 $DeclareSequence RunN_BAT_layer
 $DeclareSequence RunN_BAT_arms
 $DeclareSequence Run_BAT
@@ -316,7 +375,13 @@ $DeclareSequence LimpWalk_PumpShotgun
 $DeclareSequence LimpWalk_GasCan
 $DeclareSequence LimpWalk_O2
 $DeclareSequence LimpWalk_Axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence LimpWalk_Fry_Pan
+$Else
 $DeclareSequence LimpWalk_Frying_Pan
+$EndIF
+
 $DeclareSequence LimpWalk_BAT
 $DeclareSequence LimpRun_Pistol
 $DeclareSequence LimpRun_Rifle
@@ -329,7 +394,13 @@ $DeclareSequence LimpRun_Sniper
 $DeclareSequence LimpRun_PumpShotgun
 $DeclareSequence LimpRun_GasCan
 $DeclareSequence LimpRun_O2
+
+$IF ref_survivor == teenangst
+$DeclareSequence LimpRun_Fry_Pan
+$Else
 $DeclareSequence LimpRun_Frying_Pan
+$EndIF
+
 $DeclareSequence LimpRun_Axe
 $DeclareSequence LimpRun_BAT
 $DeclareSequence Push_Pull
@@ -355,7 +426,13 @@ $DeclareSequence gambler_aimmatrix_axe_injured_standing
 $DeclareSequence gambler_aimmatrix_bat_injured_standing
 $DeclareSequence gambler_AimMatrix_Rifle_Injured_Standing
 $DeclareSequence gambler_AimMatrix_gascan_injured
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Fry_Pan_Injured_Standing
+$Else
 $DeclareSequence gambler_aimmatrix_fryingpan_injured_standing
+$EndIF
+
 $DeclareSequence gambler_aimmatrix_sniper_military_crouching
 $DeclareSequence gambler_aimmatrix_sniper_military_crouching_zoom
 $DeclareSequence gambler_aimmatrix_sniper_military_standing_calm
@@ -403,13 +480,27 @@ $DeclareSequence NamVet_AimMatrix_o2_Injured_Standing
 $DeclareSequence coach_AimMatrix_axe_Standing
 $DeclareSequence coach_AimMatrix_axe_Crouching
 $DeclareSequence coach_AimMatrix_axe_Injured_Standing
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Fry_Pan_Standing
+$DeclareSequence AimMatrix_Fry_Pan_Crouching
+$DeclareSequence AimMatrix_Fry_Pan_Injured_Standing
+$Else
 $DeclareSequence coach_AimMatrix_Frying_Pan_Standing
 $DeclareSequence coach_AimMatrix_Frying_Pan_Crouching
 $DeclareSequence coach_AimMatrix_Frying_Pan_Injured_Standing
+$EndIF
+
 $DeclareSequence coach_AimMatrix_BAT_Standing
 $DeclareSequence coach_AimMatrix_BAT_Crouching
 $DeclareSequence coach_AimMatrix_BAT_Injured_Standing
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Fry_Pan_Standing
+$Else
 $DeclareSequence NamVet_AimMatrix_Frying_Pan_Standing_Calm
+$EndIF
+
 $DeclareSequence gambler_AimMatrix_Pistol_Crouching
 $DeclareSequence gambler_AimMatrix_Rifle_Crouching
 $DeclareSequence gambler_AimMatrix_Elites_Crouching

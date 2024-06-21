@@ -14,53 +14,165 @@ $DeclareSequence CalmIdlenoise
 $DeclareSequence CalmIdlenoisePistol
 $DeclareSequence Idle_Standing_Elites
 $DeclareSequence Idle_Standing_Rifle
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Sniper_Military_Standing_layer
+$DeclareSequence AimMatrix_Sniper_Military_Standing_arms
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_layer
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_arms
+$Else
 $DeclareSequence producer_AimMatrix_Sniper_Military_Standing_layer
 $DeclareSequence producer_AimMatrix_Sniper_Military_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_Sniper_military
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Sniper_military_Zoomed_Standing_layer
+$DeclareSequence AimMatrix_Sniper_military_Zoomed_Standing_arms
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_zoom_layer
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_zoom_arms
+$Else
 $DeclareSequence producer_AimMatrix_Sniper_militaryZoomed_Standing_layer
 $DeclareSequence producer_AimMatrix_Sniper_militaryZoomed_Standing_arms
+$EndIF
+
+$IF ref_survivor == mechanic
+$DeclareSequence Idle_Standing_Sniper_military_Zoomed
+$Else
 $DeclareSequence Idle_Standing_Sniper_militaryZoomed
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_Shoot_Pistol_Standing_layer
+$DeclareSequence TeenAngst_Shoot_Pistol_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_Pistol_Standing_layer
 $DeclareSequence NamVet_AimMatrix_Pistol_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_Pistol
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Shotgun_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_Shotgun_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_Shotgun_Standing_layer
 $DeclareSequence NamVet_AimMatrix_Shotgun_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_Shotgun
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_Standing_layer
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_PumpShotgun
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Grenade_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_Grenade_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_Grenade_Standing_layer
 $DeclareSequence NamVet_AimMatrix_Grenade_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_Grenade
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_FirstAidKit_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_FirstAidKit_Standing_arms
+$Else
 $DeclareSequence NamVet_Idle_FirstAidKit_layer
 $DeclareSequence NamVet_Idle_FirstAidKit_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_FirstAidKit
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_SMG_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_SMG_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_SMG_Standing_layer
 $DeclareSequence NamVet_AimMatrix_SMG_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_SMG
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Sniper_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_Sniper_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_Sniper_Standing_layer
 $DeclareSequence NamVet_AimMatrix_Sniper_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_Sniper
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_SniperZoomed_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_SniperZoomed_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_SniperZoomed_Standing_layer
 $DeclareSequence NamVet_AimMatrix_SniperZoomed_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_SniperZoomed
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_GasCan_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_GasCan_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_gasCan_Standing_layer
 $DeclareSequence NamVet_AimMatrix_gasCan_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_GasCan
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_o2_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_o2_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_o2_Standing_layer
 $DeclareSequence NamVet_AimMatrix_o2_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_o2
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_axe_Standing
+$Else
 $DeclareSequence coach_AimMatrix_axe_Standing_layer
+$EndIF
+
 $DeclareSequence coach_AimMatrix_axe_Standing_arms
 $DeclareSequence Idle_Standing_axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Fry_Pan_Standing
+$Else
 $DeclareSequence coach_AimMatrix_Frying_Pan_Standing_layer
+$EndIF
+
 $DeclareSequence coach_AimMatrix_Frying_Pan_Standing_arms
 $DeclareSequence Idle_Standing_fry_Pan
 $DeclareSequence idle_standing_bat
 $DeclareSequence Idle_Crouching_Rifle
 $DeclareSequence Idle_Crouching_Elites
 $DeclareSequence Idle_Crouching_Sniper_Military
+
+$IF ref_survivor == mechanic
+$DeclareSequence Idle_Crouching_Sniper_military_Zoomed
+$Else
 $DeclareSequence Idle_Crouching_Sniper_MilitaryZoomed
+$EndIF
+
 $DeclareSequence Idle_Crouching_Pistol
 $DeclareSequence Idle_Crouching_Shotgun
 $DeclareSequence Idle_Crouching_PumpShotgun
@@ -74,72 +186,225 @@ $DeclareSequence Idle_Crouching_o2
 $DeclareSequence Idle_Crouching_axe
 $DeclareSequence Idle_Crouching_Frying_Pan
 $DeclareSequence Idle_Crouching_BAT
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Elites_Standing_Calm_layer
+$DeclareSequence TeenAngst_AimMatrix_Elites_Standing_Calm_arms
+$Else
 $DeclareSequence producer_AimMatrix_Elites_Standing_Calm_layer
 $DeclareSequence producer_AimMatrix_Elites_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_Elites
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Rifle_Standing_Calm_layer
+$DeclareSequence TeenAngst_AimMatrix_Rifle_Standing_Calm_arms
+$Else
 $DeclareSequence producer_AimMatrix_Rifle_Standing_Calm_layer
 $DeclareSequence producer_AimMatrix_Rifle_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_Rifle
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Sniper_Military_Standing_Calm_layer
+$DeclareSequence AimMatrix_Sniper_Military_Standing_Calm_arms
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_calm_layer
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_calm_arms
+$Else
 $DeclareSequence producer_AimMatrix_Sniper_Military_Standing_Calm_layer
 $DeclareSequence producer_AimMatrix_Sniper_Military_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_Sniper_Military
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Pistol_Standing_Calm_layer
+$DeclareSequence TeenAngst_AimMatrix_Pistol_Standing_Calm_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_Pistol_Standing_Calm_layer
 $DeclareSequence NamVet_AimMatrix_Pistol_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_Pistol
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_SMG_Standing_Calm_layer
+$DeclareSequence TeenAngst_AimMatrix_SMG_Standing_Calm_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_SMG_Standing_Calm_layer
 $DeclareSequence NamVet_AimMatrix_SMG_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_SMG
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Shotgun_Standing_Calm_layer
+$DeclareSequence TeenAngst_AimMatrix_Shotgun_Standing_Calm_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_Shotgun_Standing_Calm_layer
 $DeclareSequence NamVet_AimMatrix_Shotgun_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_Shotgun
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Sniper_Standing_Calm_layer
+$DeclareSequence TeenAngst_AimMatrix_Sniper_Standing_Calm_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_Sniper_Standing_Calm_layer
 $DeclareSequence NamVet_AimMatrix_Sniper_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_Sniper
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_Standing_Calm_layer
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_Standing_Calm_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_Standing_Calm_layer
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_PumpShotgun
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_GasCan_Standing_Calm_layer
+$DeclareSequence TeenAngst_AimMatrix_GasCan_Standing_Calm_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_gasCan_Standing_Calm_layer
 $DeclareSequence NamVet_AimMatrix_gasCan_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_GasCan
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_o2_Standing_Calm_layer
+$DeclareSequence TeenAngst_AimMatrix_o2_Standing_Calm_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_O2_Standing_Calm_layer
 $DeclareSequence NamVet_AimMatrix_O2_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_O2
 $DeclareSequence Idle_Calm_Frying_Pan
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_axe_Standing
+$Else
 $DeclareSequence coach_AimMatrix_axe_Standing_Calm_layer
+$EndIF
+
 $DeclareSequence coach_AimMatrix_axe_Standing_Calm_arms
 $DeclareSequence Idle_Calm_Axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_bat_Standing
+$Else
 $DeclareSequence coach_AimMatrix_BAT_Standing_Calm_layer
+$EndIF
+
 $DeclareSequence coach_AimMatrix_BAT_Standing_Calm_arms
 $DeclareSequence Idle_Calm_BAT
 $DeclareSequence Idle_Injured_Rifle
 $DeclareSequence Idle_Injured_elites
 $DeclareSequence idle_injured_pistol
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Sniper_Military_Injured_Standing_layer
+$DeclareSequence AimMatrix_Sniper_Military_Injured_Standing_arms
+$Else
 $DeclareSequence producer_AimMatrix_Sniper_Military_Injured_Standing_layer
 $DeclareSequence producer_AimMatrix_Sniper_Military_Injured_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_Sniper_Military
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Sniper_Military_Zoomed_Injured_Standing_layer
+$DeclareSequence AimMatrix_Sniper_Military_Zoomed_Injured_Standing_arms
+$Else
 $DeclareSequence producer_AimMatrix_Sniper_MilitaryZoomed_Injured_Standing_layer
 $DeclareSequence producer_AimMatrix_Sniper_MilitaryZoomed_Injured_Standing_arms
+$EndIF
+
+
+$IF ref_survivor == mechanic
+$DeclareSequence Idle_Injured_Sniper_military_Zoomed
+$Else
 $DeclareSequence Idle_Injured_Sniper_MilitaryZoomed
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Grenade_Injured_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_Grenade_Injured_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_Grenade_Injured_Standing_layer
 $DeclareSequence NamVet_AimMatrix_Grenade_Injured_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_Grenade
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_FirstAidKit_Injured_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_FirstAidKit_Injured_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_FirstAidKit_Injured_Standing_layer
 $DeclareSequence NamVet_AimMatrix_FirstAidKit_Injured_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_FirstAidKit
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_SMG_Injured_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_SMG_Injured_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_SMG_Injured_Standing_layer
 $DeclareSequence NamVet_AimMatrix_SMG_Injured_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_SMG
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_Injured_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_Injured_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_Injured_Standing_layer
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_Injured_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_PumpShotgun
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Sniper_Injured_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_Sniper_Injured_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_Sniper_Injured_Standing_layer
 $DeclareSequence NamVet_AimMatrix_Sniper_Injured_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_Sniper
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_SniperZoomed_Injured_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_SniperZoomed_Injured_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_SniperZoomed_Injured_Standing_layer
 $DeclareSequence NamVet_AimMatrix_SniperZoomed_Injured_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_SniperZoomed
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_O2_Injured_Standing_layer
+$DeclareSequence TeenAngst_AimMatrix_O2_Injured_Standing_arms
+$Else
 $DeclareSequence NamVet_AimMatrix_o2_Injured_Standing_layer
 $DeclareSequence NamVet_AimMatrix_o2_Injured_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_O2
 $DeclareSequence idle_injured_bat
 $DeclareSequence Idle_Injured_axe
@@ -187,9 +452,17 @@ $DeclareSequence Walk_O2
 $DeclareSequence WalkN_Axe_layer
 $DeclareSequence WalkN_Axe_arms
 $DeclareSequence Walk_Axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence WalkN_Fry_Pan_layer
+$DeclareSequence WalkN_Fry_Pan_arms
+$DeclareSequence Walk_Fry_Pan
+$Else
 $DeclareSequence WalkN_Frying_Pan_layer
 $DeclareSequence WalkN_Frying_Pan_arms
 $DeclareSequence Walk_Frying_Pan
+$EndIF
+
 $DeclareSequence WalkN_BAT_layer
 $DeclareSequence WalkN_BAT_arms
 $DeclareSequence Walk_BAT
@@ -223,9 +496,17 @@ $DeclareSequence CrouchWalk_O2
 $DeclareSequence CrouchWalkN_axe_layer
 $DeclareSequence CrouchWalkN_axe_arms
 $DeclareSequence CrouchWalk_axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence CrouchWalkN_Fry_Pan_layer
+$DeclareSequence CrouchWalkN_Fry_Pan_arms
+$DeclareSequence CrouchWalk_Fry_Pan
+$Else
 $DeclareSequence CrouchWalkN_Frying_Pan_layer
 $DeclareSequence CrouchWalkN_Frying_Pan_arms
 $DeclareSequence CrouchWalk_Frying_Pan
+$EndIF
+
 $DeclareSequence CrouchWalkN_BAT_layer
 $DeclareSequence CrouchWalkN_BAT_arms
 $DeclareSequence CrouchWalk_BAT
@@ -265,9 +546,17 @@ $DeclareSequence Run_O2
 $DeclareSequence RunN_Axe_layer
 $DeclareSequence RunN_Axe_arms
 $DeclareSequence Run_Axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence RunN_Fry_Pan_layer
+$DeclareSequence RunN_Fry_Pan_arms
+$DeclareSequence Run_Fry_Pan
+$Else
 $DeclareSequence RunN_Frying_Pan_layer
 $DeclareSequence RunN_Frying_Pan_arms
 $DeclareSequence Run_Frying_Pan
+$EndIF
+
 $DeclareSequence RunN_BAT_layer
 $DeclareSequence RunN_BAT_arms
 $DeclareSequence Run_BAT
@@ -328,7 +617,13 @@ $DeclareSequence LimpWalk_PumpShotgun
 $DeclareSequence LimpWalk_GasCan
 $DeclareSequence LimpWalk_O2
 $DeclareSequence LimpWalk_Axe
+
+$IF ref_survivor == teenangst
+$DeclareSequence LimpWalk_Fry_Pan
+$Else
 $DeclareSequence LimpWalk_Frying_Pan
+$EndIF
+
 $DeclareSequence LimpWalk_BAT
 $DeclareSequence LimpRun_Elites
 $DeclareSequence LimpRun_Rifle
@@ -341,18 +636,81 @@ $DeclareSequence LimpRun_Sniper
 $DeclareSequence LimpRun_PumpShotgun
 $DeclareSequence LimpRun_GasCan
 $DeclareSequence LimpRun_O2
+
+$IF ref_survivor == teenangst
+$DeclareSequence LimpRun_Fry_Pan
+$Else
 $DeclareSequence LimpRun_Frying_Pan
+$EndIF
+
 $DeclareSequence LimpRun_Axe
 $DeclareSequence LimpRun_BAT
 $DeclareSequence Push_Pull
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Elites_Standing
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_Elites_Standing
+$Else
 $DeclareSequence producer_AimMatrix_Elites_Standing
+$EndIF
+
+$IF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_Elites_Injured_Standing
+$Else
 $DeclareSequence producer_AimMatrix_Elites_Injured_Standing
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Elites_Walking
+$DeclareSequence TeenAngst_AimMatrix_Elites_Running
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_Elites_Walking
+$DeclareSequence mechanic_AimMatrix_Elites_Running
+$Else
 $DeclareSequence producer_AimMatrix_Elites_Walking
 $DeclareSequence producer_AimMatrix_Elites_Running
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Elites_CrouchWalking
+$DeclareSequence TeenAngst_AimMatrix_Elites_LimpWalking
+$DeclareSequence TeenAngst_AimMatrix_Elites_LimpRunning
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_Elites_CrouchWalking
+$DeclareSequence mechanic_AimMatrix_Elites_LimpWalking
+$DeclareSequence mechanic_AimMatrix_Elites_LimpRunning
+$Else
 $DeclareSequence producer_AimMatrix_Elites_CrouchWalking
 $DeclareSequence producer_AimMatrix_Elites_LimpWalking
 $DeclareSequence producer_AimMatrix_Elites_LimpRunning
+$EndIF
+
+$IF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_Elites_standing_calm
+$Else
 $DeclareSequence producer_AimMatrix_Elites_standing_calm
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Rifle_Standing
+$DeclareSequence TeenAngst_AimMatrix_Rifle_Running
+$DeclareSequence TeenAngst_AimMatrix_Rifle_Walking
+$DeclareSequence TeenAngst_AimMatrix_Rifle_CrouchWalking
+$DeclareSequence TeenAngst_AimMatrix_Rifle_LimpRunning
+$DeclareSequence TeenAngst_AimMatrix_Rifle_Standing_Calm
+$DeclareSequence TeenAngst_AimMatrix_Rifle_Injured_Standing
+$DeclareSequence TeenAngst_AimMatrix_Rifle_LimpWalking
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_Rifle_Standing
+$DeclareSequence mechanic_AimMatrix_Rifle_Running
+$DeclareSequence mechanic_AimMatrix_Rifle_Walking
+$DeclareSequence mechanic_AimMatrix_Rifle_CrouchWalking
+$DeclareSequence mechanic_AimMatrix_Rifle_LimpRunning
+$DeclareSequence mechanic_AimMatrix_Rifle_Standing_Calm
+$DeclareSequence mechanic_AimMatrix_Rifle_injured_standing
+$DeclareSequence producer_AimMatrix_rifle_LimpWalking
+$Else
 $DeclareSequence producer_AimMatrix_Rifle_Standing
 $DeclareSequence producer_AimMatrix_Rifle_Running
 $DeclareSequence producer_AimMatrix_Rifle_Walking
@@ -361,7 +719,31 @@ $DeclareSequence producer_AimMatrix_Rifle_LimpRunning
 $DeclareSequence producer_AimMatrix_Rifle_Standing_Calm
 $DeclareSequence producer_AimMatrix_rifle_Injured_Standing
 $DeclareSequence producer_AimMatrix_rifle_LimpWalking
+$EndIF
+
+$IF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_Pistol_Injured_Standing
+$Else
 $DeclareSequence producer_aimmatrix_pistol_injured_standing
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Sniper_Military_Standing
+$DeclareSequence AimMatrix_Sniper_Military_Zoomed_Standing
+$DeclareSequence AimMatrix_Sniper_Military_Standing_Calm
+$DeclareSequence AimMatrix_Sniper_Military_Injured_Standing
+$DeclareSequence AimMatrix_Sniper_Military_Zoomed_Injured_Standing
+$DeclareSequence AimMatrix_Sniper_Military_Crouching
+$DeclareSequence AimMatrix_Sniper_Military_Zoomed_Crouching
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_zoom
+$DeclareSequence mechanic_aimmatrix_sniper_military_standing_calm
+$DeclareSequence mechanic_aimmatrix_sniper_military_injured_standing
+$DeclareSequence mechanic_aimmatrix_sniper_military_injured_standing_zoom
+$DeclareSequence mechanic_aimmatrix_sniper_military_crouching
+$DeclareSequence mechanic_aimmatrix_sniper_military_crouching_zoom
+$Else
 $DeclareSequence producer_AimMatrix_Sniper_Military_Standing
 $DeclareSequence producer_AimMatrix_Sniper_MilitaryZoomed_Standing
 $DeclareSequence producer_AimMatrix_Sniper_Military_Standing_Calm
@@ -369,73 +751,244 @@ $DeclareSequence producer_AimMatrix_Sniper_Military_Injured_Standing
 $DeclareSequence producer_AimMatrix_Sniper_MilitaryZoomed_Injured_Standing
 $DeclareSequence producer_AimMatrix_Sniper_Military_Crouching
 $DeclareSequence producer_AimMatrix_Sniper_MilitaryZoomed_Crouching
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence NamVet_AimMatrix_Melee_Shove_Rifle_Standing
+$Else
 $DeclareSequence coach_AimMatrix_Melee_Shove_Rifle_Standing
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Pistol_Standing
+$DeclareSequence TeenAngst_AimMatrix_Pistol_CrouchWalking
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_Pistol_Standing
+$DeclareSequence mechanic_AimMatrix_Pistol_CrouchWalking
+$Else
 $DeclareSequence NamVet_AimMatrix_Pistol_Standing
 $DeclareSequence NamVet_AimMatrix_Pistol_CrouchWalking
+$EndIF
+
+$IF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_Pistol_Injured_Standing
+$Else
 $DeclareSequence NamVet_AimMatrix_Pistol_Injured_Standing
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Pistol_LimpRunning
+$DeclareSequence TeenAngst_AimMatrix_Pistol_Standing_Calm
+$Else
 $DeclareSequence NamVet_AimMatrix_Pistol_LimpRunning
 $DeclareSequence NamVet_AimMatrix_Pistol_Standing_Calm
+$EndIF
+
 $DeclareSequence NamVet_AimMatrix_Pistol_Standing_Calm_Checkpoint
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Shotgun_Standing
+$DeclareSequence TeenAngst_AimMatrix_Shotgun_CrouchWalking
+$Else
 $DeclareSequence NamVet_AimMatrix_Shotgun_Standing
 $DeclareSequence NamVet_AimMatrix_Shotgun_CrouchWalking
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Grenade_Standing
+$Else
 $DeclareSequence NamVet_AimMatrix_Grenade_Standing
+$EndIF
+
 $DeclareSequence NamVet_AimMatrix_Grenade_Crouching
 $DeclareSequence NamVet_AimMatrix_Grenade_CrouchWalking
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Shoot_Grenade_Standing_Ready
+$DeclareSequence TeenAngst_AimMatrix_Shoot_Grenade_Standing
+$DeclareSequence TeenAngst_AimMatrix_Shoot_Grenade_Running
+$Else
 $DeclareSequence NamVet_AimMatrix_Shoot_Grenade_Standing_Ready
 $DeclareSequence NamVet_AimMatrix_Shoot_Grenade_Standing
 $DeclareSequence NamVet_AimMatrix_Shoot_Grenade_Running
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_SMG_Standing_Calm
+$DeclareSequence TeenAngst_AimMatrix_SMG_Standing
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_SMG_Standing_Calm
+$DeclareSequence mechanic_AimMatrix_SMG_Standing
+$Else
 $DeclareSequence NamVet_AimMatrix_SMG_Standing_Calm
 $DeclareSequence NamVet_AimMatrix_SMG_Standing
+$EndIF
+
+$IF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_SMG_Crouching
+$Else
 $DeclareSequence NamVet_AimMatrix_SMG_Crouching
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_SMG_Walking
+$DeclareSequence TeenAngst_AimMatrix_SMG_CrouchWalking
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_SMG_Walking
+$DeclareSequence mechanic_AimMatrix_SMG_CrouchWalking
+$Else
 $DeclareSequence NamVet_AimMatrix_SMG_Walking
 $DeclareSequence NamVet_AimMatrix_SMG_CrouchWalking
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Sniper_Standing
+$DeclareSequence TeenAngst_AimMatrix_SniperZoomed_Injured_Standing
+$DeclareSequence TeenAngst_AimMatrix_SniperZoomed_Standing
+$Else
 $DeclareSequence NamVet_AimMatrix_Sniper_Standing
 $DeclareSequence NamVet_AimMatrix_SniperZoomed_Injured_Standing
 $DeclareSequence NamVet_AimMatrix_SniperZoomed_Standing
+$EndIF
+
+
 $DeclareSequence NamVet_AimMatrix_Sniper_Crouching
 $DeclareSequence NamVet_AimMatrix_SniperZoomed_Crouching
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_Standing
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_Walking
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_Running
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_CrouchWalking
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_LimpRunning
+$Else
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_Standing
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_Walking
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_Running
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_CrouchWalking
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_LimpRunning
+$EndIF
+
 $DeclareSequence NamVet_AimMatrix_Pickup_Rifle_Standing
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Melee_Sweep_Rifle_Standing
+$Else
 $DeclareSequence NamVet_AimMatrix_Melee_Sweep_Rifle_Standing
+$EndIF
+
 $DeclareSequence NamVet_AimMatrix_Melee_Shove_Rifle_Standing
 $DeclareSequence NamVet_AimMatrix_Melee_Straight_Rifle_Standing
 $DeclareSequence NamVet_AimMatrix_Melee_Sweep_Rifle_Running
 $DeclareSequence NamVet_AimMatrix_Melee_Sweep_Rifle_Running_03
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_GasCan_Standing
+$DeclareSequence TeenAngst_AimMatrix_GasCan_Crouching
+$DeclareSequence TeenAngst_AimMatrix_GasCan_Injured_Standing
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_gasCan_Standing
+$DeclareSequence mechanic_AimMatrix_gasCan_Crouching
+//TODO: Unsure what to replace with.
+$DeclareSequence NamVet_AimMatrix_gasCan_Injured_Standing
+$Else
 $DeclareSequence NamVet_AimMatrix_gasCan_Standing
 $DeclareSequence NamVet_AimMatrix_gasCan_Crouching
 $DeclareSequence NamVet_AimMatrix_gasCan_Injured_Standing
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_o2_Standing
+$DeclareSequence TeenAngst_AimMatrix_o2_Crouching
+$DeclareSequence TeenAngst_AimMatrix_o2_Injured_Standing
+$Else
 $DeclareSequence NamVet_AimMatrix_o2_Standing
 $DeclareSequence NamVet_AimMatrix_o2_Crouching
 $DeclareSequence NamVet_AimMatrix_o2_Injured_Standing
+$EndIF
+
+$IF ref_survivor == mechanic
+$DeclareSequence coach_AimMatrix_BAT_Injured_Standing
+$DeclareSequence mechanic_aimmatrix_Axe_injured_standing
+$DeclareSequence mechanic_AimMatrix_gasCan_Injured
+$Else
 $DeclareSequence gambler_aimmatrix_bat_injured_standing
 $DeclareSequence gambler_aimmatrix_axe_injured_standing
 $DeclareSequence gambler_AimMatrix_gascan_injured
+$EndIF
+
 $DeclareSequence gambler_aimmatrix_fryingpan_injured_standing
+
+$IF ref_survivor == mechanic
+$DeclareSequence mechanic_aimmatrix_axe_standing
+$DeclareSequence mechanic_aimmatrix_axe_crouching
+$DeclareSequence mechanic_aimmatrix_Axe_injured_standing
+$Else
 $DeclareSequence coach_AimMatrix_axe_Standing
 $DeclareSequence coach_AimMatrix_axe_Crouching
 $DeclareSequence coach_AimMatrix_axe_Injured_Standing
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_Fry_Pan_Standing
+$DeclareSequence AimMatrix_Fry_Pan_Crouching
+$DeclareSequence AimMatrix_Fry_Pan_Injured_Standing
+$Else
 $DeclareSequence coach_AimMatrix_Frying_Pan_Standing
 $DeclareSequence coach_AimMatrix_Frying_Pan_Crouching
-$DeclareSequence coach_AimMatrix_Frying_Pan_Injured_Standing
+    $IF ref_survivor == mechanic
+        $DeclareSequence mechanic_aimmatrix_fry_pan_injured_standing
+    $Else
+        $DeclareSequence coach_AimMatrix_Frying_Pan_Injured_Standing
+    $EndIF
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_bat_Standing
+$DeclareSequence AimMatrix_bat_Crouching
+$DeclareSequence AimMatrix_bat_Injured
+$Else
 $DeclareSequence coach_AimMatrix_BAT_Standing
 $DeclareSequence coach_AimMatrix_BAT_Crouching
 $DeclareSequence coach_AimMatrix_BAT_Injured_Standing
+$EndIF
+
 $DeclareSequence NamVet_AimMatrix_Frying_Pan_Standing_Calm
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Elites_Crouching
+$DeclareSequence TeenAngst_AimMatrix_Rifle_Crouching
+$DeclareSequence TeenAngst_AimMatrix_Pistol_Crouching
+$ELIF ref_survivor == mechanic
+$DeclareSequence mechanic_AimMatrix_Elites_Crouching
+$DeclareSequence mechanic_AimMatrix_Rifle_Crouching
+$DeclareSequence mechanic_AimMatrix_Pistol_Crouching
+$Else
 $DeclareSequence producer_AimMatrix_Elites_Crouching
 $DeclareSequence producer_AimMatrix_Rifle_Crouching
 $DeclareSequence NamVet_AimMatrix_Pistol_Crouching
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_Shotgun_Crouching
+$DeclareSequence TeenAngst_AimMatrix_PumpShotgun_Crouching
+$Else
 $DeclareSequence NamVet_AimMatrix_Shotgun_Crouching
 $DeclareSequence NamVet_AimMatrix_PumpShotgun_Crouching
+$EndIF
+
 $DeclareSequence NamVet_AimMatrix_Pistol_Incap
 $DeclareSequence NamVet_AimMatrix_Elites_Incap
 $DeclareSequence NamVet_AimMatrix_Ladder_Climb
 $DeclareSequence DummyAim
 $DeclareSequence NamVet_BodyLeans
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_MiniGun
+$Else
 $DeclareSequence NamVet_AimMatrix_MiniGun
+$EndIF
+
 $DeclareSequence Idle_Standing_Minigun
 $DeclareSequence Shoot_Standing_Minigun
 $DeclareSequence Shoot_Standing_PISTOL
@@ -475,8 +1028,15 @@ $DeclareSequence shoot_standing_o22
 $DeclareSequence shoot_running_o21
 $DeclareSequence shoot_running_o22
 $DeclareSequence idle_o2_ready
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_Shoot_Grenade_Standing_layer
+$DeclareSequence TeenAngst_Shoot_Grenade_Standing_arms
+$Else
 $DeclareSequence NamVet_Shoot_Grenade_Standing_layer
 $DeclareSequence NamVet_Shoot_Grenade_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_Grenade_Ready
 $DeclareSequence Idle_Crouching_Grenade_Ready
 $DeclareSequence Idle_Injured_Grenade_Ready
@@ -557,10 +1117,19 @@ $DeclareSequence Fidget_Wipe_Hand_Delta
 $DeclareSequence Fidget_Wipe_Hand_layer
 $DeclareSequence Fidget_Wipe_Hand
 $DeclareSequence Fidget_Stretch_Back
+
+$IF ref_survivor == mechanic
+$DeclareSequence Fidget_Scratch_Head_Delta
+$DeclareSequence Fidget_Scratch_Head_layer
+$DeclareSequence Fidget_Scratch_Head
+$DeclareSequence Fidget_Roll_Shoulders
+$Else
 $DeclareSequence Fidget_Wipe_Brow_Delta
 $DeclareSequence Fidget_Wipe_Brow_layer
 $DeclareSequence Fidget_Wipe_Brow
 $DeclareSequence Fidget_Roll_Head
+$EndIF
+
 $DeclareSequence Pickup_Standing_M4_subtract
 $DeclareSequence Pickup_Standing_M4_delta
 $DeclareSequence Pickup_Standing_M4_layer
@@ -576,9 +1145,25 @@ $DeclareSequence Unholster_Standing_Shotgun
 $DeclareSequence Unholster_Standing_Gren_layer
 $DeclareSequence Unholster_Standing_Gren
 $DeclareSequence Idle_Rescue_01c
+
+$IF ref_survivor == teenangst
+$DeclareSequence Heal_Self_Standing
+$Else
 $DeclareSequence Heal_Self_Standing_06
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence Heal_Self_Crouching_01
+$Else
 $DeclareSequence Heal_Self_Crouching
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence Heal_Incap_Standing
+$Else
 $DeclareSequence Heal_Incap_Standing_02
+$EndIF
+
 $DeclareSequence Heal_Incap_Standing_03
 $DeclareSequence Heal_Incap_Crouching
 $DeclareSequence Heal_Incap_Above_Standing
@@ -636,7 +1221,13 @@ $DeclareSequence Collapse_to_Incap_Pounced
 $DeclareSequence Idle_Incap_Pounced
 $DeclareSequence GetUpFrom_Pounced
 $DeclareSequence Collapse_to_Incap_Tongue_germany
+
+$IF ref_survivor == teenangst
+$DeclareSequence Idle_Incap_Hanging_SmokerChoke
+$Else
 $DeclareSequence Idle_Incap_Hanging_SmokerChoke_germany
+$EndIF
+
 $DeclareSequence Idle_Fall_From_Tongue_germany
 $DeclareSequence Idle_Tongued_choking_ground
 $DeclareSequence Idle_Tongued_Dragging_Ground
@@ -657,7 +1248,13 @@ $DeclareSequence Collapse_to_Hanging
 $DeclareSequence GetUpFrom_Ledge
 $DeclareSequence GetUpFrom_Ledge_Crouching
 $DeclareSequence Idle_Falling
+
+$IF ref_survivor == teenangst
+$DeclareSequence Death_m10ab
+$Else
 $DeclareSequence Death_10ab
+$EndIF
+
 $DeclareSequence deathpose_front
 $DeclareSequence deathpose_back
 $DeclareSequence deathpose_right
@@ -668,11 +1265,21 @@ $DeclareSequence Flinch_03
 $DeclareSequence Flinch_Ledge_01
 $DeclareSequence Flinch_Ledge_02
 $DeclareSequence Flinch_Ledge_03
+
+$IF ref_survivor == mechanic
+$DeclareSequence c2m1_intro_mechanic
+$DeclareSequence c5m1_intro_mechanic
+$DeclareSequence c4m1_intro_mechanic
+$DeclareSequence c1m1_intro_mechanic
+$DeclareSequence c6m1_intro_mechanic
+$EndIF
 $DeclareSequence c2m1_intro_producer
 $DeclareSequence c5m1_intro_producer
 $DeclareSequence c4m1_intro_producer
 $DeclareSequence c1m1_intro_producer
 $DeclareSequence c6m1_intro_producer
+$EndIF
+
 $DeclareSequence Idle_Fall_From_charger
 $DeclareSequence Charger_pounded
 $DeclareSequence Charger_pounded_down
@@ -687,22 +1294,49 @@ $DeclareSequence Charger_Slammed_Wall
 $DeclareSequence Charger_Slammed_Ground
 $DeclareSequence survivor_ridden_upper
 $DeclareSequence survivor_ridden_lower_walk
+
+$IF ref_survivor == teenangst
+$DeclareSequence adrenaline_use
+$Else
 $DeclareSequence coach_adrenaline_use
+$EndIF
+
 $DeclareSequence Defibrillate_Incap_Standing
 $DeclareSequence Defibrillate_Incap_Crouching
 $DeclareSequence Die_Standing
 $DeclareSequence Die_Incap
 $DeclareSequence Defib_Revive
 $DeclareSequence Defib_jolt
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_chainsaw_Standing_layer
+$DeclareSequence AimMatrix_chainsaw_Standing_arms
+$Else
 $DeclareSequence coach_AimMatrix_chainsaw_Standing_layer
 $DeclareSequence coach_AimMatrix_chainsaw_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Standing_chainsaw
 $DeclareSequence Idle_Crouching_chainsaw
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_chainsaw_Standing_Calm_layer
+$DeclareSequence AimMatrix_chainsaw_Standing_Calm_arms
+$Else
 $DeclareSequence coach_AimMatrix_chainsaw_Standing_Calm_layer
 $DeclareSequence coach_AimMatrix_chainsaw_Standing_Calm_arms
+$EndIF
+
 $DeclareSequence Idle_Calm_chainsaw
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_chainsaw_Injured_layer
+$DeclareSequence AimMatrix_chainsaw_Injured_arms
+$Else
 $DeclareSequence coach_AimMatrix_chainsaw_Injured_Standing_layer
 $DeclareSequence coach_AimMatrix_chainsaw_Injured_Standing_arms
+$EndIF
+
 $DeclareSequence Idle_Injured_chainsaw
 $DeclareSequence CrouchWalkN_chainsaw_layer
 $DeclareSequence CrouchWalkN_chainsaw_arms
@@ -715,9 +1349,17 @@ $DeclareSequence RunN_chainsaw_arms
 $DeclareSequence Run_chainsaw
 $DeclareSequence LimpWalk_CHAINSAW
 $DeclareSequence LimpRun_chainsaw
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_chainsaw_Standing
+$DeclareSequence AimMatrix_chainsaw_Crouching
+$DeclareSequence AimMatrix_chainsaw_Injured
+$Else
 $DeclareSequence coach_AimMatrix_chainsaw_Standing
 $DeclareSequence coach_AimMatrix_chainsaw_Crouching
 $DeclareSequence coach_AimMatrix_chainsaw_Injured_Standing
+$EndIF
+
 $DeclareSequence Idle_Attack_Chainsaw
 $DeclareSequence jump_chainsaw_layer
 $DeclareSequence Jump_chainsaw_01
@@ -739,9 +1381,17 @@ $DeclareSequence RunN_GUITAR_arms
 $DeclareSequence Run_GUITAR
 $DeclareSequence LimpWalk_GUITAR
 $DeclareSequence LimpRun_GUITAR
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_GUITAR_Standing
+$DeclareSequence AimMatrix_GUITAR_Crouching
+$DeclareSequence AimMatrix_GUITAR_Injured
+$Else
 $DeclareSequence coach_AimMatrix_GUITAR_Standing
 $DeclareSequence coach_AimMatrix_GUITAR_Crouching
 $DeclareSequence coach_AimMatrix_GUITAR_Injured_Standing
+$EndIF
+
 $DeclareSequence jump_GUITAR_layer
 $DeclareSequence Jump_GUITAR_01
 $DeclareSequence idle_standing_gnome
@@ -765,9 +1415,17 @@ $DeclareSequence CalmRunN_gnome_arms
 $DeclareSequence CalmRun_gnome
 $DeclareSequence LimpWalk_gnome
 $DeclareSequence LimpRun_gnome
+
+$IF ref_survivor == teenangst
+$DeclareSequence AimMatrix_gnome_Standing
+$DeclareSequence AimMatrix_gnome_Crouching
+$DeclareSequence AimMatrix_gnome_Injured
+$Else
 $DeclareSequence Coach_AimMatrix_gnome_Standing
 $DeclareSequence Coach_AimMatrix_gnome_Crouching
 $DeclareSequence Coach_AimMatrix_gnome_Injured
+$EndIF
+
 $DeclareSequence jump_gnome_layer
 $DeclareSequence jump_gnome_gesture
 $DeclareSequence jump_gnome_gesture_aim
@@ -803,7 +1461,13 @@ $DeclareSequence crouch_use_ammopack
 $DeclareSequence melee_sweep_gnome
 $DeclareSequence melee_sweep_chainsaw
 $DeclareSequence use_cola
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_AimMatrix_FirstAidKit_Standing
+$Else
 $DeclareSequence Coach_AimMatrix_FirstAidKit_Standing
+$EndIF
+
 $DeclareSequence melee_sweep_FirstAidKit
 $DeclareSequence melee_sweep_cola
 $DeclareSequence melee_sweep_defibrillator
@@ -830,6 +1494,33 @@ $DeclareSequence Shoved_Rightward_chainsaw
 $DeclareSequence Shoved_Leftward_chainsaw
 
 // gestures_producer_DeclareSequence.qci
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_gesture_overhereinDelta
+$DeclareSequence TeenAngst_gesture_overhereinFrameArms
+$DeclareSequence TeenAngst_gesture_overhereinFrameSpine
+$DeclareSequence TeenAngst_gesture_overhereCoreDelta
+$DeclareSequence TeenAngst_gesture_overhereOutFrameArms
+$DeclareSequence TeenAngst_gesture_overhereOutFrameSpine
+$DeclareSequence TeenAngst_gesture_overhereoutDelta
+$DeclareSequence TeenAngst_gesture_overhere
+$DeclareSequence TeenAngst_gesture_pointLeftinDelta
+$DeclareSequence TeenAngst_gesture_pointLeftinFrameArms
+$DeclareSequence TeenAngst_gesture_pointLeftinFrameSpine
+$DeclareSequence TeenAngst_gesture_pointLeftCoreDelta
+$DeclareSequence TeenAngst_gesture_pointLeftOutFrameArms
+$DeclareSequence TeenAngst_gesture_pointLeftOutFrameSpine
+$DeclareSequence TeenAngst_gesture_pointLeftoutDelta
+$DeclareSequence TeenAngst_gesture_pointLeft
+$DeclareSequence TeenAngst_gesture_pointLeft_quickinDelta
+$DeclareSequence TeenAngst_gesture_pointLeft_quickinFrameArms
+$DeclareSequence TeenAngst_gesture_pointLeft_quickinFrameSpine
+$DeclareSequence TeenAngst_gesture_pointLeft_quickCoreDelta
+$DeclareSequence TeenAngst_gesture_pointLeft_quickOutFrameArms
+$DeclareSequence TeenAngst_gesture_pointLeft_quickOutFrameSpine
+$DeclareSequence TeenAngst_gesture_pointLeft_quickoutDelta
+$DeclareSequence TeenAngst_gesture_pointLeft_quick
+$Else
 $DeclareSequence namvet_gesture_overhereinDelta
 $DeclareSequence namvet_gesture_overhereinFrameArms
 $DeclareSequence namvet_gesture_overhereinFrameSpine
@@ -854,17 +1545,60 @@ $DeclareSequence namvet_gesture_pointLeft_quickOutFrameArms
 $DeclareSequence namvet_gesture_pointLeft_quickOutFrameSpine
 $DeclareSequence namvet_gesture_pointLeft_quickoutDelta
 $DeclareSequence namvet_gesture_pointLeft_quick
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_gesture_head_no
+$Else
 $DeclareSequence namVet_head_no
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_gesture_head_twistLeftdefault
+$DeclareSequence TeenAngst_gesture_head_twistLeftapexDelta
+$DeclareSequence TeenAngst_gesture_head_twistLeftloopDelta
+$DeclareSequence TeenAngst_gesture_head_twistLeft
+$Else
 $DeclareSequence namvet_gesture_head_twistLeftdefault
 $DeclareSequence namvet_gesture_head_twistLeftapexDelta
 $DeclareSequence namvet_gesture_head_twistLeftloopDelta
 $DeclareSequence namvet_gesture_head_twistLeft
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_gesture_head_downdefault
+$DeclareSequence TeenAngst_gesture_head_downapexDelta
+$DeclareSequence TeenAngst_gesture_head_downloopDelta
+$DeclareSequence TeenAngst_gesture_head_down
+$Else
 $DeclareSequence namvet_gesture_head_downdefault
 $DeclareSequence namvet_gesture_head_downapexDelta
 $DeclareSequence namvet_gesture_head_downloopDelta
 $DeclareSequence namvet_gesture_head_down
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_gesture_head_nod
+$Else
 $DeclareSequence namvet_gesture_head_nod
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_gesture_head_yes
+$Else
 $DeclareSequence namvet_gesture_head_yes
+$EndIF
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_gesture_gogoinDelta
+$DeclareSequence TeenAngst_gesture_gogoinFrameArms
+$DeclareSequence TeenAngst_gesture_gogoinFrameSpine
+$DeclareSequence TeenAngst_gesture_gogoCoreDelta
+$DeclareSequence TeenAngst_gesture_gogoOutFrameArms
+$DeclareSequence TeenAngst_gesture_gogoOutFrameSpine
+$DeclareSequence TeenAngst_gesture_gogooutDelta
+$DeclareSequence TeenAngst_gesture_gogo
+$Else
 $DeclareSequence namvet_gesture_gogoinDelta
 $DeclareSequence namvet_gesture_gogoinFrameArms
 $DeclareSequence namvet_gesture_gogoinFrameSpine
@@ -873,6 +1607,8 @@ $DeclareSequence namvet_gesture_gogoOutFrameArms
 $DeclareSequence namvet_gesture_gogoOutFrameSpine
 $DeclareSequence namvet_gesture_gogooutDelta
 $DeclareSequence namvet_gesture_gogo
+$EndIF
+
 $DeclareSequence namvet_gesture_waveinDelta
 $DeclareSequence namvet_gesture_waveinFrameArms
 $DeclareSequence namvet_gesture_waveinFrameSpine
@@ -881,6 +1617,49 @@ $DeclareSequence namvet_gesture_waveOutFrameArms
 $DeclareSequence namvet_gesture_waveOutFrameSpine
 $DeclareSequence namvet_gesture_waveoutDelta
 $DeclareSequence namvet_gesture_wave
+
+$IF ref_survivor == teenangst
+$DeclareSequence TeenAngst_gesture_coughinDelta
+$DeclareSequence TeenAngst_gesture_coughinFrameArms
+$DeclareSequence TeenAngst_gesture_coughinFrameSpine
+$DeclareSequence TeenAngst_gesture_coughCoreDelta
+$DeclareSequence TeenAngst_gesture_coughOutFrameArms
+$DeclareSequence TeenAngst_gesture_coughOutFrameSpine
+$DeclareSequence TeenAngst_gesture_coughoutDelta
+$DeclareSequence TeenAngst_gesture_cough
+$DeclareSequence TeenAngst_gesture_cough1inDelta
+$DeclareSequence TeenAngst_gesture_cough1inFrameArms
+$DeclareSequence TeenAngst_gesture_cough1inFrameSpine
+$DeclareSequence TeenAngst_gesture_cough1CoreDelta
+$DeclareSequence TeenAngst_gesture_cough1OutFrameArms
+$DeclareSequence TeenAngst_gesture_cough1OutFrameSpine
+$DeclareSequence TeenAngst_gesture_cough1outDelta
+$DeclareSequence TeenAngst_gesture_cough1
+$DeclareSequence TeenAngst_gesture_cough2inDelta
+$DeclareSequence TeenAngst_gesture_cough2inFrameArms
+$DeclareSequence TeenAngst_gesture_cough2inFrameSpine
+$DeclareSequence TeenAngst_gesture_cough2CoreDelta
+$DeclareSequence TeenAngst_gesture_cough2OutFrameArms
+$DeclareSequence TeenAngst_gesture_cough2OutFrameSpine
+$DeclareSequence TeenAngst_gesture_cough2outDelta
+$DeclareSequence TeenAngst_gesture_cough2
+$DeclareSequence TeenAngst_gesture_cough3inDelta
+$DeclareSequence TeenAngst_gesture_cough3inFrameArms
+$DeclareSequence TeenAngst_gesture_cough3inFrameSpine
+$DeclareSequence TeenAngst_gesture_cough3CoreDelta
+$DeclareSequence TeenAngst_gesture_cough3OutFrameArms
+$DeclareSequence TeenAngst_gesture_cough3OutFrameSpine
+$DeclareSequence TeenAngst_gesture_cough3outDelta
+$DeclareSequence TeenAngst_gesture_cough3
+$DeclareSequence TeenAngst_gesture_vomit01inDelta
+$DeclareSequence TeenAngst_gesture_vomit01inFrameArms
+$DeclareSequence TeenAngst_gesture_vomit01inFrameSpine
+$DeclareSequence TeenAngst_gesture_vomit01CoreDelta
+$DeclareSequence TeenAngst_gesture_vomit01OutFrameArms
+$DeclareSequence TeenAngst_gesture_vomit01OutFrameSpine
+$DeclareSequence TeenAngst_gesture_vomit01outDelta
+$DeclareSequence TeenAngst_gesture_vomit01
+$Else
 $DeclareSequence namvet_gesture_coughinDelta
 $DeclareSequence namvet_gesture_coughinFrameArms
 $DeclareSequence namvet_gesture_coughinFrameSpine
@@ -921,6 +1700,8 @@ $DeclareSequence namvet_gesture_vomit01OutFrameArms
 $DeclareSequence namvet_gesture_vomit01OutFrameSpine
 $DeclareSequence namvet_gesture_vomit01outDelta
 $DeclareSequence namvet_gesture_vomit01
+$EndIF
+
 $DeclareSequence g_Idle_Intro_CalminDelta
 $DeclareSequence g_Idle_Intro_CalminFrameArms
 $DeclareSequence g_Idle_Intro_CalminFrameSpine
