@@ -1,6 +1,5 @@
 // by Starfelll
 
-// $AntiDecompile // 反反编译开关
 $DefineVariable custom_model "v_arms.glb"
 $CDMaterials Starfelll\Survivor.
 

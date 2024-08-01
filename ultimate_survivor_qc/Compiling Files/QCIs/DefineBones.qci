@@ -1,5 +1,7 @@
 // by Starfelll
 
+// vscode选中行按下 “ctrl+/” 可开关注释
+
 // $NekoDriverBone "ValveBiped.Bip01_R_Thigh" {
 //     pose "anims/Procedural.dmx"
 //     trigger 95 0
@@ -10,43 +12,97 @@
 //     qun_g0_R
 // }
 
-$DefineMacro jigg_hair name p_min p_max y_min y_max \\
+
+$JiggleBoneRealign -90 0 0
+$ReverseJiggleBoneRotation pitch yaw
+
+$DefineMacro jigg_hair name ang \\
+//p_min p_max y_min y_max \\
     $Jigglebone $name$ { is_flexible { \\
-        length 200 \\
-        tip_mass 1 \\
-        //allow_length_flex \\
+        length 10 \\
+        tip_mass 0 \\
         pitch_friction 0 \\
         yaw_friction 0 \\
-        along_stiffness 0 \\
         pitch_stiffness 70 \\
         yaw_stiffness 70 \\
-        along_damping 10 \\
         pitch_damping 10 \\
         yaw_damping 10 \\
-        //angle_constraint 30 \\
+        //pitch_constraint $p_min$ $p_max$ \\
+        //yaw_constraint $y_min$ $y_max$ \\
+        angle_constraint $ang$ \\
+    } } \\
+\\
+/*
+$DefineMacro jigg_hair1 name \\
+    //$jigg_hair $name$ -2 12 -10 10 \\
+    $jigg_hair $name$ 6 \\
+\\
+
+$DefineMacro jigg_hair2 name \\
+    //$jigg_hair $name$ -4 24 -15 15 \\
+    $jigg_hair $name$ 12 \\
+\\
+
+$DefineMacro jigg_hair3 name \\
+    //$jigg_hair $name$ -6 26 -20 20 \\
+    $jigg_hair $name$ 17 \\
+\\
+
+$DefineMacro jigg_hair5 name \\
+    //$jigg_hair $name$ -8 34 -25 25 \\
+    $jigg_hair $name$ 24 \\
+\\
+
+$jigg_hair1 hairB_0_L
+$jigg_hair1 hairB_0
+$jigg_hair1 hairB_0_R
+
+$jigg_hair2 hairB_1_L
+$jigg_hair2 hairB_1
+$jigg_hair2 hairB_1_R
+
+$jigg_hair3 hairB_3_L
+$jigg_hair3 hairB_3
+$jigg_hair3 hairB_3_R
+
+$jigg_hair5 hairB_5_L
+$jigg_hair5 hairB_5
+$jigg_hair5 hairB_5_R
+*/
+
+$DefineMacro jigg_hairf name p_min p_max y_min y_max \\
+    $Jigglebone $name$ { is_flexible { \\
+        length 5 \\
+        tip_mass 0 \\
+        pitch_friction 0 \\
+        yaw_friction 0 \\
+        pitch_stiffness 70 \\
+        yaw_stiffness 70 \\
+        pitch_damping 10 \\
+        yaw_damping 10 \\
         pitch_constraint $p_min$ $p_max$ \\
         yaw_constraint $y_min$ $y_max$ \\
     } } \\
 \\
 
-$DefineMacro jigg_nekomimi name p_min p_max y_min y_max \\
-    $Jigglebone $name$ { is_flexible { \\
-        length 50 \\
-        tip_mass 1 \\
-        //allow_length_flex \\
-        pitch_friction 0 \\
-        yaw_friction 0 \\
-        along_stiffness 80 \\
-        pitch_stiffness 80 \\
-        yaw_stiffness 80 \\
-        along_damping 8 \\
-        pitch_damping 8 \\
-        yaw_damping 8 \\
-        //angle_constraint 40 \\
-        pitch_constraint $p_min$ $p_max$ \\
-        yaw_constraint $y_min$ $y_max$ \\
-    } } \\
-\\
+// $DefineMacro jigg_nekomimi name p_min p_max y_min y_max \\
+//     $Jigglebone $name$ { is_flexible { \\
+//         length 50 \\
+//         tip_mass 1 \\
+//         //allow_length_flex \\
+//         pitch_friction 0 \\
+//         yaw_friction 0 \\
+//         along_stiffness 80 \\
+//         pitch_stiffness 80 \\
+//         yaw_stiffness 80 \\
+//         along_damping 8 \\
+//         pitch_damping 8 \\
+//         yaw_damping 8 \\
+//         //angle_constraint 40 \\
+//         pitch_constraint $p_min$ $p_max$ \\
+//         yaw_constraint $y_min$ $y_max$ \\
+//     } } \\
+// \\
 
 
 $DefineMacro jigg_skirt name \\

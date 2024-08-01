@@ -1,21 +1,18 @@
 // by Starfelll https://github.com/Starfelll/L4D2_Utils/tree/master/ultimate_survivor_qc
 // Must be used with nekomdl(https://steamcommunity.com/sharedfiles/filedetails/?id=3142607978)
-// No need to generate proportions
-// No need to generate definebones
-// The fastest way to get started is to change Body.glb and Face.glb to your own, 
-// and then compile...
-$Scale 1.0
-$PushD "Export/"
-// $AntiDecompile //反反编译开关
+
+$PushD "Export"
+$Root "ValveBiped.Bip01_Pelvis"
+
 $DefineVariable custom_model "Body.glb"
 $CDMaterials "Starfelll\Survivor."
 
-
 $NekoModel "Face" {
-    studio "Face.glb"
+    studio $custom_model$ InNode "Face"
     // $Include "QCIs/survivors_flexrules.qci" //表情开关
 }
-$Body "Body" $custom_model$
+$Body "Body" $custom_model$ InNode "Body"
+$Body "Skirt" $custom_model$ InNode "Skirt"
 
 //使用的人物动画，auto,namvet,coach,mechanic,biker,manager,gambler,producer,teenangst 
 $DefineVariable ref_survivor teenangst
@@ -250,7 +247,7 @@ $EndIF
 
 $KeyValues
 {
-    usqc "2.5"
+    usqc "2.7"
 }
 
 /*

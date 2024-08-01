@@ -4,6 +4,6 @@
 *.blend1
 **/Test/*
 
-**usqcRel/*
+**/usqcRel/*
 
 *.glb

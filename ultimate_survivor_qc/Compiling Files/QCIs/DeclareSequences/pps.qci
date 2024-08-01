@@ -580,11 +580,11 @@ $Animation "a_reference" $custom_model$ {
 
 $IFDef usqc_idle_anim
 	$IF usqc_idle_anim == 02
-		$Animation a_usqc_idle usqc_anims/usqc_idle_2.fbx fixuploop 0 260 scale $ref_scale$ angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
+		$Animation a_usqc_idle usqc_anims/usqc_idle.fbx Pick "Armature|idle_2" SampleRate 24 fps 24 fixuploop 0 260 scale $ref_scale$ angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
 	$ELIF  usqc_idle_anim == 03
-		$Animation a_usqc_idle usqc_anims/usqc_idle_3.fbx fixuploop 0 220 scale $ref_scale$ angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
+		$Animation a_usqc_idle usqc_anims/usqc_idle.fbx Pick "Armature|idle_3" SampleRate 24 fps 24 fixuploop 0 220 scale $ref_scale$ angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
 	$ELSE
-		$Animation a_usqc_idle usqc_anims/usqc_idle_1.fbx fixuploop 0 220 scale $ref_scale$ angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
+		$Animation a_usqc_idle usqc_anims/usqc_idle.fbx Pick "Armature|idle_1" SampleRate 24 fps 24 fixuploop 0 220 scale $ref_scale$ angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
 	$EndIF
 
 	$DefineMacro append_usqc_idle_anim \\
@@ -592,7 +592,7 @@ $IFDef usqc_idle_anim
 		$IF ref_survivor == "teenangst" \\
 			addlayer teenangst_anim_fix \\
 		$EndIF \\
-		scale $scale_fix$ \\
+		//scale $scale_fix$ \\
 	\\
 
 $EndIF
