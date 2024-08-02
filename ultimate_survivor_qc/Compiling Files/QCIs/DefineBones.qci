@@ -32,6 +32,7 @@ $DefineMacro jigg_hair name ang \\
         angle_constraint $ang$ \\
     } } \\
 \\
+
 /*
 $DefineMacro jigg_hair1 name \\
     //$jigg_hair $name$ -2 12 -10 10 \\

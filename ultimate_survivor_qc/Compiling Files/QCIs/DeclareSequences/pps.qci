@@ -162,7 +162,7 @@ $DefineMacro reference_pos_namvet \\
 	// forceboneposrot "ValveBiped.weapon_charger" pos 0 0 0.000002 \\
 \\
 
-$Animation "a_reference" $custom_model$ {
+$Animation "a_reference" $custom_model$ Pick BindPose {
     frame 0 0
     scale $scale_fix$
 	$IF ref_survivor == namvet

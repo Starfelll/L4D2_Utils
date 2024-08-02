@@ -23,7 +23,7 @@ $DefineVariable calf_ik_fix 0
 
 // $DefineVariable spb_scale 0.70 //0.40 0.50 0.60 0.70
 $Include "QCIs/DeclareSequences/pps.qci"
-$Animation "a_proportions" $custom_model$ {
+$Animation "a_proportions" $custom_model$ Pick BindPose {
     subtract "a_reference" 0
     origin 0 0 0 
 }
@@ -247,7 +247,7 @@ $EndIF
 
 $KeyValues
 {
-    usqc "2.7"
+    usqc "2.8"
 }
 
 /*
