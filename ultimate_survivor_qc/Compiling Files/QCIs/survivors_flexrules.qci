@@ -1,11 +1,11 @@
 // by Starfelll
 
-// eyeball r "ValveBiped.Bip01_Head1" -1.250000 -2.610001 71.830002  "f" 1.05 4 "iris_unused" 0.55
-// eyeball l "ValveBiped.Bip01_Head1" 1.250000 -2.600001 71.830002  "f" 1.05 -4 "iris_unused" 0.55
-// dmxeyelid  upper $face$ lowerer "f01" -0.22 neutral "f00"  0.03 raiser "f02"  0.29 righteyeball "r" lefteyeball "l"
-// dmxeyelid  lower $face$ lowerer "f03" -0.34 neutral "f00" -0.2 raiser "f04" -0.04 righteyeball "r" lefteyeball "l"
+// eyeball r "ValveBiped.Bip01_Head1" -1.250000 -2.610001 71.830002 "material_name" 1.05 4 "iris_unused" 0.55
+// eyeball l "ValveBiped.Bip01_Head1" 1.250000 -2.600001 71.830002 "material_name" 1.05 -4 "iris_unused" 0.55
+// eyelid upper "frame01" -0.22 "f05" 0.09 "frame02" 0.34 r l
+// eyelid lower "frame03" -0.39 "f05" -0.22 "frame04" -0.11 r l
+
 mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
-// noautodmxrules
 
 //flex "AU42" unused
 flex "frame01"

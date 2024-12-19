@@ -3,16 +3,17 @@
 
 $PushD "Export"
 $Root "ValveBiped.Bip01_Pelvis"
+//$Include "QCIs/mmd_flex_map.qci"
 
 $DefineVariable custom_model "Body.glb"
 $CDMaterials "Starfelll\Survivor."
 
 $NekoModel "Face" {
-    studio $custom_model$ InNode "Face"
+    studio "Face.glb"
     // $Include "QCIs/survivors_flexrules.qci" //表情开关
 }
-$Body "Body" $custom_model$ InNode "Body"
-$Body "Skirt" $custom_model$ InNode "Skirt"
+$Body "Body" $custom_model$
+//$Body "Skirt" "Skirt.glb"
 
 //使用的人物动画，auto,namvet,coach,mechanic,biker,manager,gambler,producer,teenangst 
 $DefineVariable ref_survivor teenangst
@@ -28,7 +29,7 @@ $Animation "a_proportions" $custom_model$ Pick BindPose {
     origin 0 0 0 
 }
 
-$Opaque // $MostlyOpaque
+$MostlyOpaque //$Opaque // 
 $EyePosition 0 0 70 
 $MaxEyeDeflection 30 
 $ForcePhonemeCrossFade
@@ -230,11 +231,11 @@ $Sequence "Proportions" "a_proportions" autoplay delta
 
 $IFDef usqc_idle_anim
     $IF ref_survivor == "teenangst"
-        $Animation "a_namvet_ref" $custom_model$ {
+        $Animation "a_namvet_ref" $custom_model$ Pick BindPose {
             $reference_pos_namvet
         }
         $Sequence "teenangst_anim_fix" {
-            $custom_model$
+            $custom_model$ Pick BindPose
             $reference_pos_teenangst
             subtract a_namvet_ref 0
             delta
@@ -247,7 +248,7 @@ $EndIF
 
 $KeyValues
 {
-    usqc "2.8"
+    usqc "2.9"
 }
 
 /*

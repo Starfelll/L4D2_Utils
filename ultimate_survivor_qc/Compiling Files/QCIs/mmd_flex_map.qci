@@ -1,0 +1,21 @@
+$RenameMorph "まばたき" "frame01"
+//$RenameMorph "笑い" "frame01"
+
+$RenameMorph "困る" "AU1"
+$RenameMorph "真面目" "AU2"
+$RenameMorph "眉下" "AU4"
+
+$RenameMorph "下" "AU4"
+$RenameMorph "にやり" "AU12"
+$RenameMorph "口角上げ" "AU12"
+$RenameMorph "ん" "AU15"
+$RenameMorph "口角下げ" "AU15"
+$RenameMorph "い" "AU16"
+$RenameMorph "う" "AU25"
+$RenameMorph "口横広げ" "AU20"
+$RenameMorph "あ" "AU27"
+$RenameMorph "あ２" "AU26Z"
+$RenameMorph "ワ" "AU27Z"
+
+$RenameMorph "にこり" "AU1AU2"
+$RenameMorph "怒り" "AU2AU4"

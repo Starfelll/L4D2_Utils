@@ -37,7 +37,6 @@ goto End
 
 :CompileFailed
 echo CompileFailed
-goto End
+pause
 
 :End
-pause

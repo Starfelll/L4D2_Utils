@@ -6,10 +6,10 @@
         "$basetexture"              "Starfelll\Survivor.Mamehinata\Body"
         // "$EmissiveBlendBaseTexture"     "Starfelll\Survivor.Mamehinata\Body"
         // $nocull 1
-        // $alphatest 0
+        // $alphatest 1
         // $alphatestreference 0.5
         // $allowalphatocoverage 1
-        // $translucent 0
+        // $translucent 1
         //"$lightwarptexture"         "models/survivors/coach/coach_head_wrp"
     }
 }

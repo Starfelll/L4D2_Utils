@@ -1,4 +1,4 @@
-# config template version 1.5
+# config template version 1.7
 vpk_basename = "[Survivor] Mashu"
 version = "1"
 
@@ -6,6 +6,7 @@ from srctools.keyvalues import Keyvalues as KV
 
 def init(sel_variants: list[str]):
     global vpk_basename
+    vpk_basename += f"_v{version}"
     # vpk_basename += f' ({sel_variants[0]}'
     # for v in sel_variants[1:]:
     #     vpk_basename += f',{v}'
@@ -14,7 +15,7 @@ def init(sel_variants: list[str]):
 
 def gen_addon_info_text() -> str:
     return str(KV("AddonInfo", [
-        KV("addontitle", f'{vpk_basename} v{version}'),
+        KV("addontitle", f'{vpk_basename}'),
         KV("addonauthor", "Starfelll"),
         KV("addonversion", version),
 

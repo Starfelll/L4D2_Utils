@@ -13,50 +13,32 @@ $ModelName weapons\arms\v_arms_$arms_name$.mdl
 
 $PushD "Export/"
 $Body "arms" $custom_model$
-$Sequence "idle" $custom_model$ frame 0 0
+$Sequence "idle" $custom_model$ Pick "BindPose" frame 0 0
 
 $SurfaceProp "default"
 $Contents "solid"
 $IllumPosition 0 0 -31
 $CBox 0 0 0 0 0 0
 
-// $RenameBone "ValveBiped.Bip01_UpperArm_L" 	"ValveBiped.Bip01_L_UpperArm"
-// $RenameBone "ValveBiped.Bip01_Forearm_L" 	"ValveBiped.Bip01_L_Forearm"
-// $RenameBone "ValveBiped.Bip01_Hand_L" 		"ValveBiped.Bip01_L_Hand"
-// $RenameBone "ValveBiped.Bip01_Finger0_L" 	"ValveBiped.Bip01_L_Finger0"
-// $RenameBone "ValveBiped.Bip01_Finger01_L" 	"ValveBiped.Bip01_L_Finger01"
-// $RenameBone "ValveBiped.Bip01_Finger02_L" 	"ValveBiped.Bip01_L_Finger02"
-// $RenameBone "ValveBiped.Bip01_Finger1_L" 	"ValveBiped.Bip01_L_Finger1"
-// $RenameBone "ValveBiped.Bip01_Finger11_L" 	"ValveBiped.Bip01_L_Finger11"
-// $RenameBone "ValveBiped.Bip01_Finger12_L" 	"ValveBiped.Bip01_L_Finger12"
-// $RenameBone "ValveBiped.Bip01_Finger2_L" 	"ValveBiped.Bip01_L_Finger2"
-// $RenameBone "ValveBiped.Bip01_Finger21_L" 	"ValveBiped.Bip01_L_Finger21"
-// $RenameBone "ValveBiped.Bip01_Finger22_L" 	"ValveBiped.Bip01_L_Finger22"
-// $RenameBone "ValveBiped.Bip01_Finger3_L" 	"ValveBiped.Bip01_L_Finger3"
-// $RenameBone "ValveBiped.Bip01_Finger31_L" 	"ValveBiped.Bip01_L_Finger31"
-// $RenameBone "ValveBiped.Bip01_Finger32_L" 	"ValveBiped.Bip01_L_Finger32"
-// $RenameBone "ValveBiped.Bip01_Finger4_L" 	"ValveBiped.Bip01_L_Finger4"
-// $RenameBone "ValveBiped.Bip01_Finger41_L" 	"ValveBiped.Bip01_L_Finger41"
-// $RenameBone "ValveBiped.Bip01_Finger42_L" 	"ValveBiped.Bip01_L_Finger42"
+// blender
+$JiggleBoneRealign -90 0 0
+$ReverseJiggleBoneRotation pitch yaw
 
-// $RenameBone "ValveBiped.Bip01_UpperArm_R" 	"ValveBiped.Bip01_R_UpperArm"
-// $RenameBone "ValveBiped.Bip01_Forearm_R" 	"ValveBiped.Bip01_R_Forearm"
-// $RenameBone "ValveBiped.Bip01_Hand_R" 		"ValveBiped.Bip01_R_Hand"
-// $RenameBone "ValveBiped.Bip01_Finger0_R" 	"ValveBiped.Bip01_R_Finger0"
-// $RenameBone "ValveBiped.Bip01_Finger01_R" 	"ValveBiped.Bip01_R_Finger01"
-// $RenameBone "ValveBiped.Bip01_Finger02_R" 	"ValveBiped.Bip01_R_Finger02"
-// $RenameBone "ValveBiped.Bip01_Finger1_R" 	"ValveBiped.Bip01_R_Finger1"
-// $RenameBone "ValveBiped.Bip01_Finger11_R" 	"ValveBiped.Bip01_R_Finger11"
-// $RenameBone "ValveBiped.Bip01_Finger12_R" 	"ValveBiped.Bip01_R_Finger12"
-// $RenameBone "ValveBiped.Bip01_Finger2_R" 	"ValveBiped.Bip01_R_Finger2"
-// $RenameBone "ValveBiped.Bip01_Finger21_R" 	"ValveBiped.Bip01_R_Finger21"
-// $RenameBone "ValveBiped.Bip01_Finger22_R" 	"ValveBiped.Bip01_R_Finger22"
-// $RenameBone "ValveBiped.Bip01_Finger3_R" 	"ValveBiped.Bip01_R_Finger3"
-// $RenameBone "ValveBiped.Bip01_Finger31_R" 	"ValveBiped.Bip01_R_Finger31"
-// $RenameBone "ValveBiped.Bip01_Finger32_R" 	"ValveBiped.Bip01_R_Finger32"
-// $RenameBone "ValveBiped.Bip01_Finger4_R" 	"ValveBiped.Bip01_R_Finger4"
-// $RenameBone "ValveBiped.Bip01_Finger41_R" 	"ValveBiped.Bip01_R_Finger41"
-// $RenameBone "ValveBiped.Bip01_Finger42_R" 	"ValveBiped.Bip01_R_Finger42"
+$DefineMacro jigg_hairf name p_min p_max y_min y_max \\
+    $Jigglebone $name$ { is_flexible { \\
+        length 5 \\
+        tip_mass 0 \\
+        pitch_friction 0 \\
+        yaw_friction 0 \\
+        pitch_stiffness 70 \\
+        yaw_stiffness 70 \\
+        pitch_damping 10 \\
+        yaw_damping 10 \\
+        pitch_constraint $p_min$ $p_max$ \\
+        yaw_constraint $y_min$ $y_max$ \\
+    } } \\
+\\
+
 
 $UnlockDefineBones
 //$DefineBone "ValveBiped.ValveBiped" "" 0 0 0 0 0 89.999989 0 0 0 0 0 0
@@ -85,17 +67,17 @@ $DefineBone "ValveBiped.Bip01_L_Finger12" "ValveBiped.Bip01_L_Finger11" 0.994701
 $DefineBone "ValveBiped.Bip01_L_Finger0" "ValveBiped.Bip01_L_Hand" 1.068058 -1.287212 0.981909 -19.74169 -7.111736 97.051565 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_L_Finger01" "ValveBiped.Bip01_L_Finger0" 1.836306 0.000015 -0.000002 -10.777465 -10.615431 0.000044 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_L_Finger02" "ValveBiped.Bip01_L_Finger01" 1.223946 -0.000006 0.000023 -2.329325 11.249299 -0.000186 0 0 0 0 0 0
-//$DefineBone "ValveBiped.Bip01_L_wrist_helper2" "ValveBiped.Bip01_L_Hand" -0.776926 -0.827263 -0.331177 -11.876439 95.056419 3.199369 0 0 0 0 0 0
-//$DefineBone "ValveBiped.Bip01_L_thumbroot" "ValveBiped.Bip01_L_Hand" 0.084955 -0.692274 1.011116 21.208359 174.730651 -88.769537 0 0 0 0 0 0
-//$DefineBone "ValveBiped.Bip01_L_wrist_helper1" "ValveBiped.Bip01_L_Hand" -0.709017 0.056328 -1.034471 21.207217 174.731129 -88.769742 0 0 0 0 0 0
-//$DefineBone "ValveBiped.hlp_wrist01_L" "ValveBiped.Bip01_L_Hand" 0 0 -0.000001 0.000108 -0.000089 0.000071 0 0 0 0 0 0
-//$DefineBone "ValveBiped.hlp_thumb_fix_L" "ValveBiped.Bip01_L_Hand" 0 0 -0.000001 0.000108 -0.000089 0.000071 0 0 0 0 0 0
-//$DefineBone "ValveBiped.Bip01_L_Driven_ulna" "ValveBiped.Bip01_L_Forearm" 6.86829 0.000021 -0.000004 6.000351 6.999839 78.89572 0 0 0 0 0 0
-//$DefineBone "ValveBiped.Bip01_Braclet" "ValveBiped.Bip01_L_Driven_ulna" -1.049229 -23.346693 7.357173 68.441678 -57.232559 127.698269 0 0 0 0 0 0
-//$DefineBone "ValveBiped.Bip01_L_Forearm_driven" "ValveBiped.Bip01_L_Forearm" 3.358414 -0.03083 0.000031 6.000425 6.999684 78.518304 0 0 0 0 0 0
-//$DefineBone "ValveBiped.hlp_ulna02_L" "ValveBiped.Bip01_L_Forearm" 9.179501 0.000054 -0.000008 0.000014 0.000001 -0.000575 0 0 0 0 0 0
-//$DefineBone "ValveBiped.hlp_ulna01_L" "ValveBiped.Bip01_L_Forearm" 6.694328 0.000039 -0.000004 0.000022 0.000431 -0.000575 0 0 0 0 0 0
-//$DefineBone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 4.065372 1.458974 -1.499992 63.875417 -147.034015 -54.581862 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_wrist_helper2" "ValveBiped.Bip01_L_Hand" -0.776926 -0.827263 -0.331177 -11.876439 95.056419 3.199369 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_thumbroot" "ValveBiped.Bip01_L_Hand" 0.084955 -0.692274 1.011116 21.208359 174.730651 -88.769537 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_wrist_helper1" "ValveBiped.Bip01_L_Hand" -0.709017 0.056328 -1.034471 21.207217 174.731129 -88.769742 0 0 0 0 0 0
+$DefineBone "ValveBiped.hlp_wrist01_L" "ValveBiped.Bip01_L_Hand" 0 0 -0.000001 0.000108 -0.000089 0.000071 0 0 0 0 0 0
+$DefineBone "ValveBiped.hlp_thumb_fix_L" "ValveBiped.Bip01_L_Hand" 0 0 -0.000001 0.000108 -0.000089 0.000071 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Driven_ulna" "ValveBiped.Bip01_L_Forearm" 6.86829 0.000021 -0.000004 6.000351 6.999839 78.89572 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_Braclet" "ValveBiped.Bip01_L_Driven_ulna" -1.049229 -23.346693 7.357173 68.441678 -57.232559 127.698269 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_Forearm_driven" "ValveBiped.Bip01_L_Forearm" 3.358414 -0.03083 0.000031 6.000425 6.999684 78.518304 0 0 0 0 0 0
+$DefineBone "ValveBiped.hlp_ulna02_L" "ValveBiped.Bip01_L_Forearm" 9.179501 0.000054 -0.000008 0.000014 0.000001 -0.000575 0 0 0 0 0 0
+$DefineBone "ValveBiped.hlp_ulna01_L" "ValveBiped.Bip01_L_Forearm" 6.694328 0.000039 -0.000004 0.000022 0.000431 -0.000575 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 4.065372 1.458974 -1.499992 63.875417 -147.034015 -54.581862 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_R_Clavicle" "" 4.065372 1.458974 -1.499992 63.875417 -147.034015 -54.581862 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_R_UpperArm" "ValveBiped.Bip01_R_Clavicle" 5.50736 -0.000061 -0.000051 22.698385 -42.95425 82.693735 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_UpperArm" 10.907402 -0.000063 -0.000008 0.000077 -7.202604 0.001001 0 0 0 0 0 0
@@ -128,6 +110,74 @@ $DefineBone "ValveBiped.Bip01_R_Finger02" "ValveBiped.Bip01_R_Finger01" 1.223936
 // $DefineBone "ValveBiped.Camera" "ValveBiped.ValveBiped" 0 56.084805 0 0 0 0 0 0 0 0 0 0
 // $DefineBone "ValveBiped.attach_camera" "ValveBiped.Camera" 0 0 0 -89.999975 0 0 0 0 0 0 0 0
 
+
+
+$RenameBone V_Head1         ValveBiped.Bip01_Head1
+$RenameBone V_Neck1         ValveBiped.Bip01_Neck1
+$RenameBone V_Spine4        ValveBiped.Bip01_Spine4
+$RenameBone V_Spine2        ValveBiped.Bip01_Spine2
+$RenameBone V_Spine1        ValveBiped.Bip01_Spine1
+$RenameBone V_Spine         ValveBiped.Bip01_Spine
+$RenameBone V_Pelvis        ValveBiped.Bip01_Pelvis
+$RenameBone V_Toe0_L        ValveBiped.Bip01_L_Toe0
+$RenameBone V_Foot_L        ValveBiped.Bip01_L_Foot
+$RenameBone V_Calf_L        ValveBiped.Bip01_L_Calf
+$RenameBone V_Thigh_L       ValveBiped.Bip01_L_Thigh
+$RenameBone V_Toe0_R        ValveBiped.Bip01_R_Toe0
+$RenameBone V_Foot_R        ValveBiped.Bip01_R_Foot
+$RenameBone V_Calf_R        ValveBiped.Bip01_R_Calf
+$RenameBone V_Thigh_R       ValveBiped.Bip01_R_Thigh
+$RenameBone V_Finger02_L    ValveBiped.Bip01_L_Finger02
+$RenameBone V_Finger01_L    ValveBiped.Bip01_L_Finger01
+$RenameBone V_Finger0_L     ValveBiped.Bip01_L_Finger0
+$RenameBone V_Finger12_L    ValveBiped.Bip01_L_Finger12
+$RenameBone V_Finger11_L    ValveBiped.Bip01_L_Finger11
+$RenameBone V_Finger1_L     ValveBiped.Bip01_L_Finger1
+$RenameBone V_Finger22_L    ValveBiped.Bip01_L_Finger22
+$RenameBone V_Finger21_L    ValveBiped.Bip01_L_Finger21
+$RenameBone V_Finger2_L     ValveBiped.Bip01_L_Finger2
+$RenameBone V_Finger32_L    ValveBiped.Bip01_L_Finger32
+$RenameBone V_Finger31_L    ValveBiped.Bip01_L_Finger31
+$RenameBone V_Finger3_L     ValveBiped.Bip01_L_Finger3
+$RenameBone V_Finger42_L    ValveBiped.Bip01_L_Finger42
+$RenameBone V_Finger41_L    ValveBiped.Bip01_L_Finger41
+$RenameBone V_Finger4_L     ValveBiped.Bip01_L_Finger4
+$RenameBone V_Hand_L        ValveBiped.Bip01_L_Hand
+$RenameBone V_Forearm_L     ValveBiped.Bip01_L_Forearm
+$RenameBone V_UpperArm_L    ValveBiped.Bip01_L_UpperArm
+$RenameBone V_Clavicle_L    ValveBiped.Bip01_L_Clavicle
+$RenameBone V_Finger02_R    ValveBiped.Bip01_R_Finger02
+$RenameBone V_Finger01_R    ValveBiped.Bip01_R_Finger01
+$RenameBone V_Finger0_R     ValveBiped.Bip01_R_Finger0
+$RenameBone V_Finger12_R    ValveBiped.Bip01_R_Finger12
+$RenameBone V_Finger11_R    ValveBiped.Bip01_R_Finger11
+$RenameBone V_Finger1_R     ValveBiped.Bip01_R_Finger1
+$RenameBone V_Finger22_R    ValveBiped.Bip01_R_Finger22
+$RenameBone V_Finger21_R    ValveBiped.Bip01_R_Finger21
+$RenameBone V_Finger2_R     ValveBiped.Bip01_R_Finger2
+$RenameBone V_Finger32_R    ValveBiped.Bip01_R_Finger32
+$RenameBone V_Finger31_R    ValveBiped.Bip01_R_Finger31
+$RenameBone V_Finger3_R     ValveBiped.Bip01_R_Finger3
+$RenameBone V_Finger42_R    ValveBiped.Bip01_R_Finger42
+$RenameBone V_Finger41_R    ValveBiped.Bip01_R_Finger41
+$RenameBone V_Finger4_R     ValveBiped.Bip01_R_Finger4
+$RenameBone V_Hand_R        ValveBiped.Bip01_R_Hand
+$RenameBone V_Forearm_R     ValveBiped.Bip01_R_Forearm
+$RenameBone V_UpperArm_R    ValveBiped.Bip01_R_UpperArm
+$RenameBone V_Clavicle_R    ValveBiped.Bip01_R_Clavicle
+
+
+$RenameBone V_Forearm_driven_R      ValveBiped.Bip01_R_Forearm_driven
+$RenameBone V_Driven_ulna_R         ValveBiped.Bip01_R_Driven_ulna
+$RenameBone V_wrist_helper2_R       ValveBiped.Bip01_R_wrist_helper2
+$RenameBone V_wrist_helper1_R       ValveBiped.Bip01_R_wrist_helper1
+$RenameBone V_thumbroot_R           ValveBiped.Bip01_R_thumbroot
+
+$RenameBone V_Forearm_driven_L      ValveBiped.Bip01_L_Forearm_driven
+$RenameBone V_Driven_ulna_L         ValveBiped.Bip01_L_Driven_ulna
+$RenameBone V_wrist_helper2_L       ValveBiped.Bip01_L_wrist_helper2
+$RenameBone V_wrist_helper1_L       ValveBiped.Bip01_L_wrist_helper1
+$RenameBone V_thumbroot_L           ValveBiped.Bip01_L_thumbroot
 
 
 $BoneMerge "ValveBiped.ValveBiped"
@@ -195,4 +245,6 @@ $BoneMerge "ValveBiped.attach_shell_eject"
 $BoneMerge "ValveBiped.attach_muzzle"
 $BoneMerge "ValveBiped.Camera"
 $BoneMerge "ValveBiped.attach_camera"
+
+
 

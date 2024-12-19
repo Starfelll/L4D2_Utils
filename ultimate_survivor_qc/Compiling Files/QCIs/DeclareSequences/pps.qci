@@ -29,7 +29,7 @@ $Else
 $EndIF
 
 $DefineMacro reference_pos_teenangst \\
-	forceboneposrot "ValveBiped.Bip01_Pelvis" pos -1.442119 0 35.350025 \\
+	forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 -1.442119 35.350025 \\
 	forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.455587 0 0 \\
 	forceboneposrot "ValveBiped.Bip01_L_Calf" pos 16.572346 0 0 \\
 	forceboneposrot "ValveBiped.Bip01_L_Foot" pos 16.265829 0 0 \\
@@ -96,7 +96,7 @@ $DefineMacro reference_pos_teenangst \\
 \\
 
 $DefineMacro reference_pos_namvet \\
-	forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.516773 0 38.317692 \\
+	forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.516773 38.317692 \\
 	forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.625659 0 0 \\
 	forceboneposrot "ValveBiped.Bip01_L_Calf" pos 18.345819 0 0 \\
 	forceboneposrot "ValveBiped.Bip01_L_Foot" pos 16.751528 0 0 \\
@@ -172,7 +172,7 @@ $Animation "a_reference" $custom_model$ Pick BindPose {
 	$ELIF ref_survivor == coach
 		$DefineVariable ref_scale 1.05
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.542612 0 40.233574
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.542612 40.233574
 		forceboneposrot "ValveBiped.Bip01_Spine" pos 0 4.246162 -0.018825
 		forceboneposrot "ValveBiped.Bip01_Spine1" pos 4.195629 0 0
 		forceboneposrot "ValveBiped.Bip01_Spine2" pos 3.883152 0.000001 0
@@ -239,7 +239,7 @@ $Animation "a_reference" $custom_model$ Pick BindPose {
 	$ELIF ref_survivor == mechanic
 		$DefineVariable ref_scale 0.955
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.493518 0 36.593395
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.493518 36.593395
 		forceboneposrot "ValveBiped.Bip01_Spine" pos 0 3.861988 -0.017122
 		forceboneposrot "ValveBiped.Bip01_Spine1" pos 3.816021 0 0
 		forceboneposrot "ValveBiped.Bip01_Spine2" pos 3.531826 0 0
@@ -306,7 +306,7 @@ $Animation "a_reference" $custom_model$ Pick BindPose {
 	$ELIF ref_survivor == biker
 		$DefineVariable ref_scale 1.05
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.542612 0 40.233574
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.542612 40.233574
 		forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.806942 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Calf" pos 19.263105 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Foot" pos 17.5891 0 0
@@ -373,7 +373,7 @@ $Animation "a_reference" $custom_model$ Pick BindPose {
 	$ELIF ref_survivor == manager
 		$DefineVariable ref_scale 1.05
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.542624 0 40.233574
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.542624 40.233574
 		forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.806942 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Calf" pos 19.263102 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Foot" pos 17.589098 0 0
@@ -440,7 +440,7 @@ $Animation "a_reference" $custom_model$ Pick BindPose {
 	$ELIF ref_survivor == gambler
 		$DefineVariable ref_scale 1.0
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.516773 0 38.317692
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.516773 38.317692
 		forceboneposrot "ValveBiped.Bip01_L_Thigh" pos 3.625659 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Calf" pos 18.345819 0 0
 		forceboneposrot "ValveBiped.Bip01_L_Foot" pos 16.751528 0 0
@@ -507,7 +507,7 @@ $Animation "a_reference" $custom_model$ Pick BindPose {
 	$ELIF ref_survivor == producer
 		$DefineVariable ref_scale 0.888
 		$DefineVariable ref_base namvet
-		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0.458894 0 34.026112
+		forceboneposrot "ValveBiped.Bip01_Pelvis" pos 0 0.458894 34.026112
 		forceboneposrot "ValveBiped.Bip01_Spine" pos 0 3.591042 -0.015921
 		forceboneposrot "ValveBiped.Bip01_Spine1" pos 3.548302 0 0
 		forceboneposrot "ValveBiped.Bip01_Spine2" pos 3.284046 0.000001 0
@@ -580,11 +580,11 @@ $Animation "a_reference" $custom_model$ Pick BindPose {
 
 $IFDef usqc_idle_anim
 	$IF usqc_idle_anim == 02
-		$Animation a_usqc_idle usqc_anims/usqc_idle.fbx Pick "Armature|idle_2" SampleRate 24 fps 24 fixuploop 0 260 scale $ref_scale$ angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
+		$Animation a_usqc_idle usqc_anims/usqc_idle.fbx Pick "Armature|idle_2" SampleRate 24 fps 24 fixuploop 0 260 angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
 	$ELIF  usqc_idle_anim == 03
-		$Animation a_usqc_idle usqc_anims/usqc_idle.fbx Pick "Armature|idle_3" SampleRate 24 fps 24 fixuploop 0 220 scale $ref_scale$ angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
+		$Animation a_usqc_idle usqc_anims/usqc_idle.fbx Pick "Armature|idle_3" SampleRate 24 fps 24 fixuploop 0 220 angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
 	$ELSE
-		$Animation a_usqc_idle usqc_anims/usqc_idle.fbx Pick "Armature|idle_1" SampleRate 24 fps 24 fixuploop 0 220 scale $ref_scale$ angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
+		$Animation a_usqc_idle usqc_anims/usqc_idle.fbx Pick "Armature|idle_1" SampleRate 24 fps 24 fixuploop 0 220 angles 0 0 -90 NoBoneRealign //origin 0 0 -$foot_ik_fix$
 	$EndIF
 
 	$DefineMacro append_usqc_idle_anim \\
@@ -592,7 +592,8 @@ $IFDef usqc_idle_anim
 		$IF ref_survivor == "teenangst" \\
 			addlayer teenangst_anim_fix \\
 		$EndIF \\
-		//scale $scale_fix$ \\
+		scale $ref_scale$ \\
+		appendscale $scale_fix$ \\
 	\\
 
 $EndIF

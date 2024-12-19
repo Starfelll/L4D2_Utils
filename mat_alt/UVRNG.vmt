@@ -1,0 +1,86 @@
+// "Patch"
+// {
+// "include"           "materials\Starfelll\Sur.Nali_Theia\.vmt"
+// "insert"
+// {
+// 
+// 
+//// $nocull 1
+// $alphatest 1
+// $alphatestreference 0.5
+// $allowalphatocoverage 1
+//// $translucent 0
+// 
+// }
+// }
+"VertexLitGeneric"
+{
+
+    "$basetexture"              "Starfelll\Sur.Nali_Theia\eyes"
+    "$lightwarptexture"         "Starfelll\Sur.Nali_Theia\LR_Body"
+    
+	"$Model"							"1"
+	"$NoDecal"							"1"
+
+	// Emissive
+	"$EmissiveBlendEnabled"				"1"
+	"$EmissiveBlendStrength"			"0.05"
+	"$EmissiveBlendTexture"				"vgui/white"
+	"$EmissiveBlendFlowTexture"			"vgui/white"
+	"$EmissiveBlendTint"				" [ 1 1 1 ] "
+	"$EmissiveBlendScrollVector"		" [ 0 0 ] "
+    "$EmissiveBlendBaseTexture"     "Starfelll\Sur.Nali_Theia\eyes_emissive"
+
+	"$halflambert" 						1
+	"$phong"							1
+	"$PhongDisableHalfLambert"			0
+	//"$BumpMap"							"dev/bump_normal"
+	//"$Phongexponent"					"0.1"
+	"$PhongExponentTexture"				"models/extras/speech_info_exp"
+	"$PhongAlbedoTint"					"1"
+	"$PhongBoost"						"20"
+	"$PhongFresnelRanges"				"[0.0008 0.0008 0.26]"
+	"$phongtint" "[0.98 0.89 0.9]"
+	
+
+    "$rand"         "0"
+    "$one" "1"
+
+    $uvscale "[1 1]"
+    $uvscale1 "[1 1]"
+    $uvscale2 "[-1 1]"
+
+    $uvtranslate "[0 0]"
+    $uvtranslate1 "[0 0]"
+    $uvtranslate2 "[1.61 0]"
+    "Proxies"
+    {
+        "EntityRandom"
+        {
+            "scale"             "1.99"
+            "resultVar"         "$rand"
+        }
+        "LessOrEqual"
+        {
+            "srcVar1"               "$rand"
+            "srcVar2"               "$one"
+            "resultVar"             "$uvscale"
+            "greaterVar"            "$uvscale1"
+            "LessEqualVar"          "$uvscale2"
+        }
+        "LessOrEqual"
+        {
+            "srcVar1"               "$rand"
+            "srcVar2"               "$one"
+            "resultVar"             "$uvtranslate"
+            "greaterVar"            "$uvtranslate1"
+            "LessEqualVar"          "$uvtranslate2"
+        }
+        "texturetransform"
+        {
+            "scalevar"              "$uvscale"
+            "translatevar"          "$uvtranslate"
+            "resultvar"             "$BaseTextureTransform"
+        }
+    }
+}
