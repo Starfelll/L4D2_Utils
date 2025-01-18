@@ -598,3 +598,16 @@ $IFDef usqc_idle_anim
 	\\
 
 $EndIF
+
+$IFDef pps_no_weapon_bone
+	$WeightList pps_no_weapon_bones {
+		"ValveBiped.Bip01_Pelvis" 1
+		"ValveBiped.weapon_bone_Clip" 0
+		"ValveBiped.weapon_bone_extra" 0
+		"ValveBiped.weapon_bone_Clip2_Bullets" 0
+		"ValveBiped.weapon_bone_Clip_Bullets" 0
+		"ValveBiped.weapon_bolt" 0
+		"ValveBiped.weapon_bolt_opposite" 0
+		"ValveBiped.weapon_charger" 0
+	}
+$EndIF
