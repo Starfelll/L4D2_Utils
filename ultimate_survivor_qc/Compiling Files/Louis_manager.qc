@@ -2,7 +2,6 @@
 
 $ModelName "survivors/survivor_manager.mdl" //Louis
 
-$DefineVariable anims_set biker
 $DefineVariable survivor manager
 
 $DefineMacro attathements \\

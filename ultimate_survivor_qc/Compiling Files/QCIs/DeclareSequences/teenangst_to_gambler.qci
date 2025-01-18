@@ -1,0 +1,1852 @@
+// update time: 2025-01-19
+$IncludeModel $include_model_root$/anim_TeenAngst.mdl
+$IncludeModel $include_model_root$/gestures_TeenAngst.mdl
+$IncludeModel $include_model_root$/anim_mechanic.mdl
+$IncludeModel $include_model_root$/gestures_mechanic.mdl
+//$IncludeModel $include_model_root$/anim_NamVet.mdl
+// [0]
+$seq_survivor $survivor$
+// [1] ACT_DIERAGDOLL 1
+$seq_ragdoll
+// [2]
+$DeclareSequence "Idle_Standing_Align"
+// [3]
+$DeclareSequence "Idlenoise"
+// [4]
+$DeclareSequence "InjuredIdlenoise"
+// [5]
+$DeclareSequence "CalmIdlenoise"
+// [6]
+$DeclareSequence "CalmIdlenoisePistol"
+// [7] ACT_IDLE_PISTOL 1
+$DeclareSequence "Idle_Standing_Pistol"
+// [8] ACT_IDLE_RIFLE 1
+$DeclareSequence "Idle_Standing_Rifle"
+// [9] ACT_IDLE_ELITES 1
+$DeclareSequence "Idle_Standing_Elites"
+// [10]
+$DeclareSequence "TeenAngst_Shoot_Pistol_Standing_layer"
+// [11]
+$DeclareSequence "TeenAngst_Shoot_Pistol_Standing_arms"
+// [12] ACT_IDLE_SNIPER_MILITARY 1
+$DeclareSequence "Idle_Standing_Sniper_military"
+// [13]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Standing_layer"
+// [14]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Standing_arms"
+// [15] ACT_IDLE_SNIPER_MILITARYZOOMED 1
+$DeclareSequence "Idle_Standing_Sniper_militaryZoomed"
+// [16]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Standing_layer"
+// [17]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Standing_arms"
+// [18] ACT_IDLE_SHOTGUN 1
+$DeclareSequence "Idle_Standing_Shotgun"
+// [19]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_Standing_layer"
+// [20]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_Standing_arms"
+// [21] ACT_IDLE_PUMPSHOTGUN 1
+$DeclareSequence "Idle_Standing_PumpShotgun"
+// [22]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Standing_layer"
+// [23]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Standing_arms"
+// [24] ACT_IDLE_GREN 1
+$DeclareSequence "Idle_Standing_Grenade"
+// [25]
+$DeclareSequence "TeenAngst_AimMatrix_Grenade_Standing_layer"
+// [26]
+$DeclareSequence "TeenAngst_AimMatrix_Grenade_Standing_arms"
+// [27] ACT_IDLE_FIRSTAIDKIT 1
+$DeclareSequence "Idle_Standing_FirstAidKit"
+// [28]
+$DeclareSequence "TeenAngst_AimMatrix_FirstAidKit_Standing_layer"
+// [29]
+$DeclareSequence "TeenAngst_AimMatrix_FirstAidKit_Standing_arms"
+// [30] ACT_IDLE_SMG 1
+$DeclareSequence "Idle_Standing_SMG"
+// [31]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Standing_layer"
+// [32]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Standing_arms"
+// [33] ACT_IDLE_SNIPER 1
+$DeclareSequence "Idle_Standing_Sniper"
+// [34]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Standing_layer"
+// [35]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Standing_arms"
+// [36] ACT_IDLE_SNIPER_ZOOMED 1
+$DeclareSequence "Idle_Standing_SniperZoomed"
+// [37]
+$DeclareSequence "TeenAngst_AimMatrix_SniperZoomed_Standing_layer"
+// [38]
+$DeclareSequence "TeenAngst_AimMatrix_SniperZoomed_Standing_arms"
+// [39] ACT_IDLE_GASCAN 1
+$DeclareSequence "Idle_Standing_GasCan"
+// [40]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Standing_layer"
+// [41]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Standing_arms"
+// [42] ACT_IDLE_O2 1
+$DeclareSequence "Idle_Standing_o2"
+// [43] ACT_IDLE_FRYINGPAN 1
+$DeclareSequence "Idle_Standing_fry_pan"
+// [44] ACT_IDLE_AXE 1
+$DeclareSequence "Idle_Standing_axe"
+// [45] ACT_IDLE_BAT 1
+$DeclareSequence "idle_standing_bat"
+// [46] ACT_CROUCHIDLE_PISTOL 1
+$DeclareSequence "Idle_Crouching_Pistol"
+// [47] ACT_CROUCHIDLE_RIFLE 1
+$DeclareSequence "Idle_Crouching_Rifle"
+// [48] ACT_CROUCHIDLE_ELITES 1
+$DeclareSequence "Idle_Crouching_Elites"
+// [49] ACT_CROUCHIDLE_SNIPER_MILITARY -1
+$DeclareSequence "Idle_Crouching_Sniper_Military"
+// [50] ACT_CROUCHIDLE_SNIPER_MILITARYZOOMED -1
+$DeclareSequence "Idle_Crouching_Sniper_MilitaryZoomed"
+// [51] ACT_CROUCHIDLE_SHOTGUN 1
+$DeclareSequence "Idle_Crouching_Shotgun"
+// [52] ACT_CROUCHIDLE_PUMPSHOTGUN 1
+$DeclareSequence "Idle_Crouching_PumpShotgun"
+// [53] ACT_CROUCHIDLE_GREN 1
+$DeclareSequence "Idle_Crouching_Grenade"
+// [54] ACT_CROUCHIDLE_FIRSTAIDKIT 1
+$DeclareSequence "Idle_Crouching_FirstAidKit"
+// [55] ACT_CROUCHIDLE_SMG 1
+$DeclareSequence "Idle_Crouching_SMG"
+// [56] ACT_CROUCHIDLE_SNIPER 1
+$DeclareSequence "Idle_Crouching_Sniper"
+// [57] ACT_CROUCHIDLE_SNIPER_ZOOMED 1
+$DeclareSequence "Idle_Crouching_SniperZoomed"
+// [58] ACT_CROUCHIDLE_GASCAN 1
+$DeclareSequence "Idle_Crouching_GasCan"
+// [59] ACT_CROUCHIDLE_O2 1
+$DeclareSequence "Idle_Crouching_o2"
+// [60] ACT_CROUCHIDLE_AXE 1
+$DeclareSequence "Idle_Crouching_axe"
+// [61] ACT_CROUCHIDLE_FRYINGPAN -1
+$DeclareSequence "Idle_Crouching_Frying_Pan"
+// [62] ACT_CROUCHIDLE_BAT 1
+$DeclareSequence "Idle_Crouching_bat"
+// [63] ACT_IDLE_CALM_PISTOL 1
+$DeclareSequence "Idle_Calm_Pistol"
+// [64] ACT_IDLE_CALM_RIFLE 1
+$DeclareSequence "Idle_Calm_Rifle"
+// [65] ACT_IDLE_CALM_ELITES 1
+$DeclareSequence "Idle_Calm_Elites"
+// [66]
+$DeclareSequence "TeenAngst_AimMatrix_o2_Standing_layer"
+// [67]
+$DeclareSequence "TeenAngst_AimMatrix_o2_Standing_arms"
+// [68] ACT_IDLE_CALM_SNIPER_MILITARY 1
+$DeclareSequence "Idle_Calm_Sniper_Military"
+// [69]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Crouching_layer"
+// [70]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Crouching_arms"
+// [71] ACT_IDLE_CALM_SMG 1
+$DeclareSequence "Idle_Calm_SMG"
+// [72]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Crouching_layer"
+// [73]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Crouching_arms"
+// [74] ACT_IDLE_CALM_SHOTGUN 1
+$DeclareSequence "Idle_Calm_Shotgun"
+// [75]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Crouching_layer"
+// [76]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Crouching_arms"
+// [77] ACT_IDLE_CALM_SNIPER 1
+$DeclareSequence "Idle_Calm_Sniper"
+// [78]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Crouching_layer"
+// [79]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Crouching_arms"
+// [80] ACT_IDLE_CALM_PUMPSHOTGUN 1
+$DeclareSequence "Idle_Calm_PumpShotgun"
+// [81]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_Crouching_layer"
+// [82]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_Crouching_arms"
+// [83] ACT_IDLE_CALM_GASCAN 1
+$DeclareSequence "Idle_Calm_GasCan"
+// [84]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Crouching_layer"
+// [85]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Crouching_arms"
+// [86] ACT_IDLE_CALM_O2 1
+$DeclareSequence "Idle_Calm_o2"
+// [87] ACT_IDLE_CALM_FRYINGPAN 1
+$DeclareSequence "Idle_Calm_Frying_Pan"
+// [88]
+$DeclareSequence "TeenAngst_AimMatrix_Grenade_Crouching_layer"
+// [89]
+$DeclareSequence "TeenAngst_AimMatrix_Grenade_Crouching_arms"
+// [90] ACT_IDLE_CALM_AXE 1
+$DeclareSequence "Idle_Calm_Axe"
+// [91]
+$DeclareSequence "TeenAngst_AimMatrix_FirstAidKit_Crouching_layer"
+// [92]
+$DeclareSequence "TeenAngst_AimMatrix_FirstAidKit_Crouching_arms"
+// [93] ACT_IDLE_CALM_BAT 1
+$DeclareSequence "Idle_Calm_bat"
+// [94] ACT_IDLE_INJURED_PISTOL 1
+$DeclareSequence "Idle_Injured_Pistol"
+// [95] ACT_IDLE_INJURED_RIFLE 1
+$DeclareSequence "Idle_Injured_Rifle"
+// [96] ACT_IDLE_INJURED_ELITES 1
+$DeclareSequence "Idle_Injured_Elites"
+// [97] ACT_IDLE_INJURED_BAT 1
+$DeclareSequence "Idle_Injured_Bat"
+// [98] ACT_IDLE_INJURED_AXE 1
+$DeclareSequence "idle_injured_axe"
+// [99] ACT_IDLE_INJURED_GASCAN 1
+$DeclareSequence "Idle_Injured_GasCan"
+// [100] ACT_IDLE_INJURED_FRYINGPAN 1
+$DeclareSequence "Idle_Injured_Frying_Pan"
+// [101]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Crouching_layer"
+// [102]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Crouching_arms"
+// [103] ACT_IDLE_INJURED_SNIPER_MILITARY 1
+$DeclareSequence "Idle_Injured_Sniper_Military"
+// [104]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Crouching_layer"
+// [105]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Crouching_arms"
+// [106] ACT_IDLE_INJURED_SNIPER_MILITARYZOOMED 1
+$DeclareSequence "Idle_Injured_Sniper_MilitaryZoomed"
+// [107]
+$DeclareSequence "TeenAngst_AimMatrix_SniperZoomed_Crouching_layer"
+// [108]
+$DeclareSequence "TeenAngst_AimMatrix_SniperZoomed_Crouching_arms"
+// [109] ACT_IDLE_INJURED_GREN 1
+$DeclareSequence "Idle_Injured_Grenade"
+// [110]
+$DeclareSequence "TeenAngst_AimMatrix_o2_Crouching_layer"
+// [111]
+$DeclareSequence "TeenAngst_AimMatrix_o2_Crouching_arms"
+// [112] ACT_IDLE_INJURED_FIRSTAIDKIT 1
+$DeclareSequence "Idle_Injured_FirstAidKit"
+// [113]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Standing_Calm_layer"
+// [114]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Standing_Calm_arms"
+// [115] ACT_IDLE_INJURED_SMG 1
+$DeclareSequence "Idle_Injured_SMG"
+// [116]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Standing_Calm_layer"
+// [117]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Standing_Calm_arms"
+// [118] ACT_IDLE_INJURED_PUMPSHOTGUN 1
+$DeclareSequence "Idle_Injured_PumpShotgun"
+// [119]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Standing_Calm_layer"
+// [120]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Standing_Calm_arms"
+// [121] ACT_IDLE_INJURED_SNIPER 1
+$DeclareSequence "Idle_Injured_Sniper"
+// [122]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Standing_Calm_layer"
+// [123]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Standing_Calm_arms"
+// [124] ACT_IDLE_INJURED_SNIPER_ZOOMED 1
+$DeclareSequence "Idle_Injured_SniperZoomed"
+// [125]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_Standing_Calm_layer"
+// [126]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_Standing_Calm_arms"
+// [127] ACT_IDLE_INJURED_O2 1
+$DeclareSequence "Idle_Injured_O2"
+// [128]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Standing_Calm_layer"
+// [129]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Standing_Calm_arms"
+// [130] ACT_WALK_PISTOL -1
+$DeclareSequence "Walk_Pistol"
+// [131]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Standing_Calm_layer"
+// [132]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Standing_Calm_arms"
+// [133] ACT_RUN_CROUCH_PISTOL -1
+$DeclareSequence "CrouchWalk_Pistol"
+// [134]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Standing_Calm_layer"
+// [135]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Standing_Calm_arms"
+// [136] ACT_WALK_ELITES -1
+$DeclareSequence "Walk_Elites"
+// [137]
+$DeclareSequence "TeenAngst_AimMatrix_o2_Standing_Calm_layer"
+// [138]
+$DeclareSequence "TeenAngst_AimMatrix_o2_Standing_Calm_arms"
+// [139] ACT_RUN_CROUCH_ELITES -1
+$DeclareSequence "CrouchWalk_Elites"
+// [140]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Injured_Standing_layer"
+// [141]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Injured_Standing_arms"
+// [142] ACT_WALK_SNIPER_MILITARY -1
+$DeclareSequence "Walk_Sniper_Military"
+// [143]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Injured_Standing_layer"
+// [144]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Injured_Standing_arms"
+// [145] ACT_RUN_CROUCH_SNIPER_MILITARY -1
+$DeclareSequence "CrouchWalk_Sniper_Military"
+// [146]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Injured_Standing_layer"
+// [147]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Injured_Standing_arms"
+// [148] ACT_WALK_SHOTGUN -1
+$DeclareSequence "Walk_Shotgun"
+// [149]
+$DeclareSequence "TeenAngst_AimMatrix_Grenade_Injured_Standing_layer"
+// [150]
+$DeclareSequence "TeenAngst_AimMatrix_Grenade_Injured_Standing_arms"
+// [151] ACT_WALK_GREN -1
+$DeclareSequence "Walk_Grenade"
+// [152]
+$DeclareSequence "TeenAngst_AimMatrix_FirstAidKit_Injured_Standing_layer"
+// [153]
+$DeclareSequence "TeenAngst_AimMatrix_FirstAidKit_Injured_Standing_arms"
+// [154] ACT_WALK_FIRSTAIDKIT -1
+$DeclareSequence "Walk_FirstAidKit"
+// [155]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Injured_Standing_layer"
+// [156]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Injured_Standing_arms"
+// [157] ACT_WALK_SMG -1
+$DeclareSequence "Walk_SMG"
+// [158]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Injured_Standing_layer"
+// [159]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Injured_Standing_arms"
+// [160] ACT_WALK_SNIPER -1
+$DeclareSequence "Walk_Sniper"
+// [161]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Injured_Standing_layer"
+// [162]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Injured_Standing_arms"
+// [163] ACT_WALK_PUMPSHOTGUN -1
+$DeclareSequence "Walk_PumpShotgun"
+// [164]
+$DeclareSequence "TeenAngst_AimMatrix_SniperZoomed_Injured_Standing_layer"
+// [165]
+$DeclareSequence "TeenAngst_AimMatrix_SniperZoomed_Injured_Standing_arms"
+// [166] ACT_WALK_GASCAN -1
+$DeclareSequence "Walk_GasCan"
+// [167]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Injured_Standing_layer"
+// [168]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Injured_Standing_arms"
+// [169] ACT_WALK_O2 -1
+$DeclareSequence "Walk_o2"
+// [170]
+$DeclareSequence "TeenAngst_AimMatrix_O2_Injured_Standing_layer"
+// [171]
+$DeclareSequence "TeenAngst_AimMatrix_O2_Injured_Standing_arms"
+// [172] ACT_WALK_AXE -1
+$DeclareSequence "Walk_axe"
+// [173]
+$DeclareSequence "WalkN_Pistol_layer"
+// [174]
+$DeclareSequence "WalkN_Pistol_arms"
+// [175] ACT_WALK_FRYINGPAN -1
+$DeclareSequence "Walk_Fry_Pan"
+// [176]
+$DeclareSequence "WalkN_Elites_layer"
+// [177]
+$DeclareSequence "WalkN_Elites_arms"
+// [178] ACT_WALK_BAT -1
+$DeclareSequence "Walk_bat"
+// [179]
+$DeclareSequence "WalkN_Shotgun_layer"
+// [180]
+$DeclareSequence "WalkN_Shotgun_arms"
+// [181] ACT_RUN_CROUCH_SHOTGUN -1
+$DeclareSequence "CrouchWalk_Shotgun"
+// [182]
+$DeclareSequence "WalkN_PumpShotgun_layer"
+// [183]
+$DeclareSequence "WalkN_PumpShotgun_arms"
+// [184] ACT_RUN_CROUCH_GREN -1
+$DeclareSequence "CrouchWalk_Grenade"
+// [185]
+$DeclareSequence "WalkN_Grenade_layer"
+// [186]
+$DeclareSequence "WalkN_Grenade_arms"
+// [187] ACT_RUN_CROUCH_FIRSTAIDKIT -1
+$DeclareSequence "CrouchWalk_FirstAidKit"
+// [188]
+$DeclareSequence "WalkN_FirstAidKit_layer"
+// [189]
+$DeclareSequence "WalkN_FirstAidKit_arms"
+// [190] ACT_RUN_CROUCH_SMG -1
+$DeclareSequence "CrouchWalk_SMG"
+// [191]
+$DeclareSequence "WalkN_SMG_layer"
+// [192]
+$DeclareSequence "WalkN_SMG_arms"
+// [193] ACT_RUN_CROUCH_SNIPER -1
+$DeclareSequence "CrouchWalk_Sniper"
+// [194]
+$DeclareSequence "WalkN_Sniper_layer"
+// [195]
+$DeclareSequence "WalkN_Sniper_arms"
+// [196] ACT_RUN_CROUCH_PUMPSHOTGUN -1
+$DeclareSequence "CrouchWalk_PumpShotgun"
+// [197]
+$DeclareSequence "WalkN_GasCan_layer"
+// [198]
+$DeclareSequence "WalkN_GasCan_arms"
+// [199] ACT_RUN_CROUCH_GASCAN -1
+$DeclareSequence "CrouchWalk_GasCan"
+// [200]
+$DeclareSequence "WalkN_o2_layer"
+// [201]
+$DeclareSequence "WalkN_o2_arms"
+// [202] ACT_RUN_CROUCH_O2 -1
+$DeclareSequence "CrouchWalk_o2"
+// [203]
+$DeclareSequence "CrouchWalkN_Pistol_layer"
+// [204]
+$DeclareSequence "CrouchWalkN_Pistol_arms"
+// [205] ACT_RUN_CROUCH_AXE -1
+$DeclareSequence "CrouchWalk_axe"
+// [206]
+$DeclareSequence "CrouchWalkN_Elites_layer"
+// [207]
+$DeclareSequence "CrouchWalkN_Elites_arms"
+// [208] ACT_RUN_CROUCH_FRYINGPAN -1
+$DeclareSequence "CrouchWalk_Fry_Pan"
+// [209]
+$DeclareSequence "CrouchWalkN_Shotgun_layer"
+// [210]
+$DeclareSequence "CrouchWalkN_Shotgun_arms"
+// [211] ACT_RUN_CROUCH_BAT -1
+$DeclareSequence "CrouchWalk_bat"
+// [212]
+$DeclareSequence "CrouchWalkN_PumpShotgun_layer"
+// [213]
+$DeclareSequence "CrouchWalkN_PumpShotgun_arms"
+// [214] ACT_RUN_PISTOL -1
+$DeclareSequence "Run_Pistol"
+// [215]
+$DeclareSequence "CrouchWalkN_Grenade_layer"
+// [216]
+$DeclareSequence "CrouchWalkN_Grenade_arms"
+// [217] ACT_RUN_ELITES -1
+$DeclareSequence "Run_Elites"
+// [218]
+$DeclareSequence "CrouchWalkN_FirstAidKit_layer"
+// [219]
+$DeclareSequence "CrouchWalkN_FirstAidKit_arms"
+// [220] ACT_RUN_SNIPER_MILITARY -1
+$DeclareSequence "Run_Sniper_Military"
+// [221]
+$DeclareSequence "CrouchWalkN_SMG_layer"
+// [222]
+$DeclareSequence "CrouchWalkN_SMG_arms"
+// [223] ACT_RUN_SHOTGUN -1
+$DeclareSequence "Run_Shotgun"
+// [224]
+$DeclareSequence "CrouchWalkN_Sniper_layer"
+// [225]
+$DeclareSequence "CrouchWalkN_Sniper_arms"
+// [226] ACT_RUN_GREN -1
+$DeclareSequence "Run_Grenade"
+// [227]
+$DeclareSequence "CrouchWalkN_GasCan_layer"
+// [228]
+$DeclareSequence "CrouchWalkN_GasCan_arms"
+// [229] ACT_RUN_FIRSTAIDKIT -1
+$DeclareSequence "Run_FirstAidKit"
+// [230]
+$DeclareSequence "CrouchWalkN_o2_layer"
+// [231]
+$DeclareSequence "CrouchWalkN_o2_arms"
+// [232] ACT_RUN_SMG -1
+$DeclareSequence "Run_SMG"
+// [233]
+$DeclareSequence "RunN_Pistol_layer"
+// [234]
+$DeclareSequence "RunN_Pistol_arms"
+// [235] ACT_RUN_SNIPER -1
+$DeclareSequence "Run_Sniper"
+// [236]
+$DeclareSequence "RunN_Elites_layer"
+// [237]
+$DeclareSequence "RunN_Elites_arms"
+// [238] ACT_RUN_PUMPSHOTGUN -1
+$DeclareSequence "Run_PumpShotgun"
+// [239]
+$DeclareSequence "RunN_Shotgun_layer"
+// [240]
+$DeclareSequence "RunN_Shotgun_arms"
+// [241] ACT_RUN_GASCAN -1
+$DeclareSequence "Run_GasCan"
+// [242]
+$DeclareSequence "RunN_PumpShotgun_layer"
+// [243]
+$DeclareSequence "RunN_PumpShotgun_arms"
+// [244] ACT_RUN_O2 -1
+$DeclareSequence "Run_O2"
+// [245]
+$DeclareSequence "RunN_Grenade_layer"
+// [246]
+$DeclareSequence "RunN_Grenade_arms"
+// [247] ACT_RUN_AXE -1
+$DeclareSequence "Run_Axe"
+// [248]
+$DeclareSequence "RunN_FirstAidKit_layer"
+// [249]
+$DeclareSequence "RunN_FirstAidKit_arms"
+// [250] ACT_RUN_FRYINGPAN -1
+$DeclareSequence "Run_Fry_Pan"
+// [251]
+$DeclareSequence "RunN_SMG_layer"
+// [252]
+$DeclareSequence "RunN_SMG_arms"
+// [253] ACT_RUN_BAT -1
+$DeclareSequence "Run_bat"
+// [254]
+$DeclareSequence "RunN_Sniper_layer"
+// [255]
+$DeclareSequence "RunN_Sniper_arms"
+// [256] ACT_WALK_CALM_PISTOL -1
+$DeclareSequence "CalmWalk_Pistol"
+// [257]
+$DeclareSequence "RunN_GasCan_layer"
+// [258]
+$DeclareSequence "RunN_GasCan_arms"
+// [259] ACT_RUN_CALM_PISTOL -1
+$DeclareSequence "CalmRun_Pistol"
+// [260]
+$DeclareSequence "RunN_O2_layer"
+// [261]
+$DeclareSequence "RunN_O2_arms"
+// [262] ACT_WALK_CALM_RIFLE -1
+$DeclareSequence "CalmWalk_Rifle"
+// [263]
+$DeclareSequence "CalmWalkN_Pistol_layer"
+// [264]
+$DeclareSequence "CalmWalkN_Pistol_arms"
+// [265] ACT_RUN_CALM_RIFLE -1
+$DeclareSequence "CalmRun_Rifle"
+// [266]
+$DeclareSequence "CalmWalkN_Elites_layer"
+// [267]
+$DeclareSequence "CalmWalkN_Elites_arms"
+// [268] ACT_WALK_CALM_ELITES -1
+$DeclareSequence "CalmWalk_Elites"
+// [269]
+$DeclareSequence "CalmWalkN_SMG_layer"
+// [270]
+$DeclareSequence "CalmWalkN_SMG_arms"
+// [271] ACT_RUN_CALM_ELITES -1
+$DeclareSequence "CalmRun_Elites"
+// [272]
+$DeclareSequence "CalmWalkN_Rifle_layer"
+// [273]
+$DeclareSequence "CalmWalkN_Rifle_arms"
+// [274] ACT_WALK_CALM_SNIPER_MILITARY -1
+$DeclareSequence "CalmWalk_Sniper_Military"
+// [275]
+$DeclareSequence "CalmWalkN_Sniper_layer"
+// [276]
+$DeclareSequence "CalmWalkN_Sniper_arms"
+// [277] ACT_RUN_CALM_SNIPER_MILITARY -1
+$DeclareSequence "CalmRun_Sniper_Military"
+// [278]
+$DeclareSequence "CalmWalkN_PumpShotgun_layer"
+// [279]
+$DeclareSequence "CalmWalkN_PumpShotgun_arms"
+// [280] ACT_WALK_CALM_SMG -1
+$DeclareSequence "CalmWalk_SMG"
+// [281]
+$DeclareSequence "CalmRunN_Pistol_layer"
+// [282]
+$DeclareSequence "CalmRunN_Pistol_arms"
+// [283] ACT_WALK_CALM_SNIPER -1
+$DeclareSequence "CalmWalk_Sniper"
+// [284]
+$DeclareSequence "CalmRunN_Elites_layer"
+// [285]
+$DeclareSequence "CalmRunN_Elites_arms"
+// [286] ACT_WALK_CALM_PUMPSHOTGUN -1
+$DeclareSequence "CalmWalk_PumpShotgun"
+// [287]
+$DeclareSequence "CalmRunN_Rifle_layer"
+// [288]
+$DeclareSequence "CalmRunN_Rifle_arms"
+// [289] ACT_RUN_CALM_SMG -1
+$DeclareSequence "CalmRun_SMG"
+// [290]
+$DeclareSequence "CalmRunN_SMG_layer"
+// [291]
+$DeclareSequence "CalmRunN_SMG_arms"
+// [292] ACT_RUN_CALM_SNIPER -1
+$DeclareSequence "CalmRun_Sniper"
+// [293]
+$DeclareSequence "CalmRunN_Sniper_layer"
+// [294]
+$DeclareSequence "CalmRunN_Sniper_arms"
+// [295] ACT_RUN_CALM_PUMPSHOTGUN -1
+$DeclareSequence "CalmRun_PumpShotgun"
+// [296] ACT_WALK_INJURED_PISTOL -1
+$DeclareSequence "LimpWalk_Pistol"
+// [297] ACT_WALK_RIFLE -1
+$DeclareSequence "Walk_Rifle"
+// [298] ACT_RUN_RIFLE -1
+$DeclareSequence "Run_Rifle"
+// [299] ACT_WALK_INJURED_RIFLE -1
+$DeclareSequence "LimpWalk_Rifle"
+// [300] ACT_RUN_CROUCH_RIFLE -1
+$DeclareSequence "CrouchWalk_Rifle"
+// [301] ACT_WALK_INJURED_ELITES -1
+$DeclareSequence "LimpWalk_Elites"
+// [302] ACT_WALK_INJURED_SNIPER_MILITARY -1
+$DeclareSequence "LimpWalk_Sniper_Military"
+// [303] ACT_WALK_INJURED_GREN -1
+$DeclareSequence "LimpWalk_Grenade"
+// [304] ACT_WALK_INJURED_FIRSTAIDKIT -1
+$DeclareSequence "LimpWalk_FirstAidKit"
+// [305] ACT_WALK_INJURED_SMG -1
+$DeclareSequence "LimpWalk_SMG"
+// [306] ACT_WALK_INJURED_SNIPER -1
+$DeclareSequence "LimpWalk_Sniper"
+// [307] ACT_WALK_INJURED_PUMPSHOTGUN -1
+$DeclareSequence "LimpWalk_PumpShotgun"
+// [308] ACT_WALK_INJURED_GASCAN -1
+$DeclareSequence "LimpWalk_GasCan"
+// [309] ACT_WALK_INJURED_O2 -1
+$DeclareSequence "LimpWalk_o2"
+// [310] ACT_WALK_INJURED_AXE -1
+$DeclareSequence "LimpWalk_Axe"
+// [311] ACT_WALK_INJURED_FRYINGPAN -1
+$DeclareSequence "LimpWalk_Fry_Pan"
+// [312] ACT_WALK_INJURED_BAT -1
+$DeclareSequence "LimpWalk_Bat"
+// [313] ACT_RUN_INJURED_PISTOL -1
+$DeclareSequence "LimpRun_Pistol"
+// [314] ACT_RUN_INJURED_RIFLE -1
+$DeclareSequence "LimpRun_Rifle"
+// [315] ACT_RUN_INJURED_ELITES -1
+$DeclareSequence "LimpRun_Elites"
+// [316] ACT_RUN_INJURED_SNIPER_MILITARY -1
+$DeclareSequence "LimpRun_Sniper_military"
+// [317] ACT_RUN_INJURED_GREN -1
+$DeclareSequence "LimpRun_Grenade"
+// [318] ACT_RUN_INJURED_FIRSTAIDKIT -1
+$DeclareSequence "LimpRun_FirstAidKit"
+// [319] ACT_RUN_INJURED_SMG -1
+$DeclareSequence "LimpRun_SMG"
+// [320] ACT_RUN_INJURED_SNIPER -1
+$DeclareSequence "LimpRun_Sniper"
+// [321] ACT_RUN_INJURED_PUMPSHOTGUN -1
+$DeclareSequence "LimpRun_PumpShotgun"
+// [322] ACT_RUN_INJURED_GASCAN -1
+$DeclareSequence "LimpRun_GasCan"
+// [323] ACT_RUN_INJURED_O2 -1
+$DeclareSequence "LimpRun_O2"
+// [324] ACT_RUN_INJURED_FRYINGPAN -1
+$DeclareSequence "LimpRun_Fry_Pan"
+// [325] ACT_RUN_INJURED_AXE -1
+$DeclareSequence "LimpRun_Axe"
+// [326] ACT_RUN_INJURED_BAT -1
+$DeclareSequence "LimpRun_Bat"
+// [327] ACT_PUSH -1
+$DeclareSequence "Push_Pull"
+// [328]
+$DeclareSequence "CalmRunN_PumpShotgun_layer"
+// [329]
+$DeclareSequence "CalmRunN_PumpShotgun_arms"
+// [330]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Standing"
+// [331]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Running"
+// [332]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Walking"
+// [333]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_CrouchWalking"
+// [334]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_CrouchWalking_head"
+// [335]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Standing_Calm"
+// [336]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Walking_Calm"
+// [337]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_LimpRunning"
+// [338]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Standing"
+// [339]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Running"
+// [340]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Walking"
+// [341]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_CrouchWalking"
+// [342]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_LimpWalking"
+// [343]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_LimpRunning"
+// [344]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Standing"
+// [345]
+$DeclareSequence "TeenAngst_AimMatrix_SniperZoomed_Standing"
+// [346]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Running"
+// [347]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Walking"
+// [348]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_CrouchWalking"
+// [349]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Injured_Standing"
+// [350]
+$DeclareSequence "TeenAngst_AimMatrix_SniperZoomed_Injured_Standing"
+// [351]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_Standing"
+// [352]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_Running"
+// [353]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_Walking"
+// [354]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_CrouchWalking"
+// [355]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Standing"
+// [356]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Walking"
+// [357]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Running"
+// [358]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_CrouchWalking"
+// [359]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Injured_Standing"
+// [360]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_LimpRunning"
+// [361]
+$DeclareSequence "TeenAngst_AimMatrix_FirstAidKit_Standing"
+// [362]
+$DeclareSequence "TeenAngst_AimMatrix_FirstAidKit_CrouchWalking"
+// [363]
+$DeclareSequence "TeenAngst_AimMatrix_Grenade_Standing"
+// [364]
+$DeclareSequence "TeenAngst_AimMatrix_Shoot_Grenade_Standing"
+// [365]
+$DeclareSequence "TeenAngst_AimMatrix_Shoot_Grenade_Standing_Ready"
+// [366]
+$DeclareSequence "TeenAngst_AimMatrix_Shoot_Grenade_Running"
+// [367]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Standing"
+// [368]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Running"
+// [369]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Walking"
+// [370]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_CrouchWalking"
+// [371]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Standing_Calm"
+// [372]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Standing"
+// [373]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Walking"
+// [374]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Running"
+// [375]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_CrouchWalking"
+// [376]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Injured_Standing"
+// [377]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_LimpWalking"
+// [378]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_LimpRunning"
+// [379]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Standing_Calm"
+// [380]
+$DeclareSequence "NamVet_AimMatrix_Grenade_Crouching"
+// [381]
+$DeclareSequence "NamVet_AimMatrix_Pickup_Rifle_Standing"
+// [382]
+$DeclareSequence "TeenAngst_AimMatrix_Melee_Sweep_Rifle_Standing"
+// [383]
+$DeclareSequence "NamVet_AimMatrix_Melee_Shove_Rifle_Standing"
+// [384]
+$DeclareSequence "NamVet_AimMatrix_Melee_Straight_Rifle_Standing"
+// [385]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Standing"
+// [386]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Standing_Calm"
+// [387]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Crouching"
+// [388]
+$DeclareSequence "TeenAngst_AimMatrix_GasCan_Injured_Standing"
+// [389]
+$DeclareSequence "TeenAngst_AimMatrix_o2_Standing"
+// [390]
+$DeclareSequence "TeenAngst_AimMatrix_o2_Standing_Calm"
+// [391]
+$DeclareSequence "TeenAngst_AimMatrix_o2_Crouching"
+// [392]
+$DeclareSequence "TeenAngst_AimMatrix_o2_Injured_Standing"
+// [393]
+$DeclareSequence "Namvet_Aimmatrix_rifle_standing_calm"
+// [394]
+$DeclareSequence "Namvet_Aimmatrix_rifle_standing"
+// [395]
+$DeclareSequence "TeenAngst_AimMatrix_Rifle_Crouching"
+// [396]
+$DeclareSequence "TeenAngst_AimMatrix_Elites_Crouching"
+// [397]
+$DeclareSequence "TeenAngst_AimMatrix_Pistol_Crouching"
+// [398]
+$DeclareSequence "TeenAngst_AimMatrix_Sniper_Crouching"
+// [399]
+$DeclareSequence "TeenAngst_AimMatrix_SniperZoomed_Crouching"
+// [400]
+$DeclareSequence "TeenAngst_AimMatrix_SMG_Crouching"
+// [401]
+$DeclareSequence "TeenAngst_AimMatrix_Shotgun_Crouching"
+// [402]
+$DeclareSequence "TeenAngst_AimMatrix_PumpShotgun_Crouching"
+// [403]
+$DeclareSequence "NamVet_AimMatrix_Rifle_Crouching"
+// [404]
+$DeclareSequence "NamVet_AimMatrix_Pistol_Incap"
+// [405]
+$DeclareSequence "NamVet_AimMatrix_Elites_Incap"
+// [406]
+$DeclareSequence "NamVet_AimMatrix_Ladder_Climb"
+// [407]
+$DeclareSequence "DummyAim"
+// [408]
+$DeclareSequence "presubtract_TeenAngst_AimMatrix_Rifle_Standing_Calm"
+// [409]
+$DeclareSequence "NamVet_BodyLeans"
+// [410]
+$DeclareSequence "TeenAngst_AimMatrix_MiniGun"
+// [411]
+$DeclareSequence "Gren_Prep_Delta"
+// [412]
+$DeclareSequence "Gren_Throw_Delta"
+// [413]
+$DeclareSequence "Gren_Pull_Back_Delta"
+// [414]
+$DeclareSequence "Gren_Pull_Back_layer"
+// [415]
+$DeclareSequence "gasCan_Running_Subtract"
+// [416] ACT_IDLE_MINIGUN -1
+$DeclareSequence "Idle_Standing_Minigun"
+// [417] ACT_PRIMARYATTACK_MINIGUN -1
+$DeclareSequence "Shoot_Standing_Minigun"
+// [418] ACT_PRIMARYATTACK_Pistol -1
+$DeclareSequence "Shoot_Standing_Pistol"
+// [419] ACT_PRIMARYATTACK_Elites_R -1
+$DeclareSequence "Shoot_Standing_Elites_R"
+// [420] ACT_PRIMARYATTACK_Elites_L -1
+$DeclareSequence "Shoot_Standing_Elites_L"
+// [421] ACT_PRIMARYATTACK_Rifle -1
+$DeclareSequence "Shoot_Standing_Rifle"
+// [422] ACT_PRIMARYATTACK_XM1014 -1
+$DeclareSequence "Shoot_Standing_XM1014"
+// [423] ACT_PRIMARYATTACK_SMG -1
+$DeclareSequence "Shoot_Standing_SMG"
+// [424] ACT_PRIMARYATTACK_M3S90 -1
+$DeclareSequence "Shoot_Standing_M3S90"
+// [425] ACT_PRIMARYATTACK_PUMPSHOTGUN -1
+$DeclareSequence "Shoot_Standing_PumpShotgun"
+// [426]
+$DeclareSequence "gasCan_Prep_Delta"
+// [427]
+$DeclareSequence "gasCan_Throw_Delta"
+// [428]
+$DeclareSequence "gascan_pull_back_delta"
+// [429]
+$DeclareSequence "gasCan_pull_back_layer"
+// [430]
+$DeclareSequence "o2_Running_Subtract"
+// [431] ACT_PRIMARYATTACK_GREN1_IDLE 1
+$DeclareSequence "Shoot_Standing_Grenade1"
+// [432] ACT_PRIMARYATTACK_GREN2_IDLE 1
+$DeclareSequence "Shoot_Standing_Grenade2"
+// [433] ACT_PRIMARYATTACK_GREN1_RUN 1
+$DeclareSequence "Shoot_Running_Grenade1"
+// [434] ACT_PRIMARYATTACK_GREN2_RUN 1
+$DeclareSequence "Shoot_Running_Grenade2"
+// [435]
+$DeclareSequence "o2_Prep_Delta"
+// [436]
+$DeclareSequence "o2_Throw_Delta"
+// [437]
+$DeclareSequence "o2_pull_back_delta"
+// [438]
+$DeclareSequence "o2_pull_back_layer"
+// [439]
+$DeclareSequence "TeenAngst_Shoot_Grenade_Standing_layer"
+// [440] ACT_PRIMARYATTACK_GASCAN1_IDLE 1
+$DeclareSequence "shoot_standing_gascan1"
+// [441] ACT_PRIMARYATTACK_GASCAN2_IDLE -1
+$DeclareSequence "shoot_standing_gascan2"
+// [442] ACT_PRIMARYATTACK_GASCAN1_RUN 1
+$DeclareSequence "shoot_running_gascan1"
+// [443] ACT_PRIMARYATTACK_GASCAN2_RUN -1
+$DeclareSequence "shoot_running_gascan2"
+// [444] ACT_IDLE_GASCAN_PULL_BACK 1
+$DeclareSequence "idle_gasCan_ready"
+// [445] ACT_TERROR_USE_GAS_CAN 1
+$DeclareSequence "pour_gascan"
+// [446]
+$DeclareSequence "TeenAngst_Shoot_Grenade_Standing_arms"
+// [447]
+$DeclareSequence "Melee_Sweep_Standing_Rifle_layer"
+// [448]
+$DeclareSequence "Melee_Sweep_Running_Rifle_subtract"
+// [449]
+$DeclareSequence "Melee_Sweep_Running_Rifle_Delta"
+// [450]
+$DeclareSequence "Melee_Sweep_Running_Rifle_layer"
+// [451] ACT_PRIMARYATTACK_o21_IDLE 1
+$DeclareSequence "shoot_standing_o21"
+// [452] ACT_PRIMARYATTACK_o22_IDLE -1
+$DeclareSequence "shoot_standing_o22"
+// [453] ACT_PRIMARYATTACK_o21_RUN 1
+$DeclareSequence "shoot_running_o21"
+// [454] ACT_PRIMARYATTACK_o22_RUN -1
+$DeclareSequence "shoot_running_o22"
+// [455] ACT_IDLE_o2_PULL_BACK 1
+$DeclareSequence "idle_o2_ready"
+// [456]
+$DeclareSequence "Melee_Shove_Standing_Rifle_layer"
+// [457]
+$DeclareSequence "Melee_Shove_Running_Rifle_subtract"
+// [458] ACT_IDLE_GREN_PULL_BACK -1
+$DeclareSequence "Idle_Standing_Grenade_Ready"
+// [459] ACT_CROUCHIDLE_GREN_PULL_BACK -1
+$DeclareSequence "Idle_Crouching_Grenade_Ready"
+// [460] ACT_IDLE_INJURED_GREN_PULL_BACK -1
+$DeclareSequence "Idle_Injured_Grenade_Ready"
+// [461] ACT_WALK_GREN_PULL_BACK -1
+$DeclareSequence "Walk_Grenade_Ready"
+// [462] ACT_RUN_CROUCH_GREN_PULL_BACK -1
+$DeclareSequence "CrouchWalk_Grenade_Ready"
+// [463] ACT_RUN_GREN_PULL_BACK -1
+$DeclareSequence "Run_Grenade_Ready"
+// [464] ACT_WALK_INJURED_GREN_PULL_BACK -1
+$DeclareSequence "LimpWalk_Grenade_Ready"
+// [465] ACT_RUN_INJURED_GREN_PULL_BACK -1
+$DeclareSequence "LimpRun_Grenade_Ready"
+// [466] ACT_WALK_GASCAN_PULL_BACK -1
+$DeclareSequence "Walk_gascan_Ready"
+// [467] ACT_RUN_CROUCH_GASCAN_PULL_BACK -1
+$DeclareSequence "CrouchWalk_gascan_Ready"
+// [468] ACT_RUN_GASCAN_PULL_BACK -1
+$DeclareSequence "Run_gascan_Ready"
+// [469] ACT_WALK_O2_PULL_BACK -1
+$DeclareSequence "Walk_o2_Ready"
+// [470] ACT_RUN_CROUCH_O2_PULL_BACK -1
+$DeclareSequence "CrouchWalk_o2_Ready"
+// [471] ACT_RUN_O2_PULL_BACK -1
+$DeclareSequence "Run_o2_Ready"
+// [472]
+$DeclareSequence "Melee_Shove_Running_Rifle_Delta"
+// [473] ACT_MELEE_Sweep_Rifle_IDLE 1
+$DeclareSequence "Melee_Sweep_Standing_Rifle"
+// [474]
+$DeclareSequence "Melee_Shove_Running_Rifle_layer"
+// [475]
+$DeclareSequence "Melee_Straight_Standing_Rifle_layer"
+// [476]
+$DeclareSequence "Melee_Straight_Running_Rifle_subtract"
+// [477] ACT_MELEE_Sweep_Rifle_RUN 1
+$DeclareSequence "Melee_Sweep_Running_Rifle"
+// [478]
+$DeclareSequence "Melee_Straight_Running_Rifle_Delta"
+// [479] ACT_MELEE_Straight_Rifle_IDLE 1
+$DeclareSequence "Melee_Straight_Standing_Rifle"
+// [480]
+$DeclareSequence "Melee_Straight_Running_Rifle_layer"
+// [481]
+$DeclareSequence "Reload_Standing_Sniper_layer"
+// [482]
+$DeclareSequence "Reload_Standing_SMG_layer"
+// [483] ACT_MELEE_Straight_Rifle_RUN 1
+$DeclareSequence "Melee_Straight_Running_Rifle"
+// [484]
+$DeclareSequence "Reload_Standing_Pistol_layer"
+// [485] ACT_MELEE_Shove_Rifle_IDLE 1
+$DeclareSequence "Melee_Shove_Standing_Rifle"
+// [486]
+$DeclareSequence "Reload_Standing_Rifle_layer"
+// [487]
+$DeclareSequence "Reload_Standing_Elites_layer"
+// [488]
+$DeclareSequence "ShotgunReloadAim"
+// [489] ACT_MELEE_Shove_Rifle_RUN 1
+$DeclareSequence "Melee_Shove_Running_Rifle"
+// [490] ACT_MELEE_SWEEP_GASCAN 1
+$DeclareSequence "melee_sweep_gascan"
+// [491] ACT_MELEE_SWEEP_O2 1
+$DeclareSequence "melee_sweep_o2"
+// [492] ACT_MELEE_STOMP_RIFLE_IDLE 1
+$DeclareSequence "Melee_Stomp_Standing_Rifle"
+// [493] ACT_MELEE_STOMP_RIFLE_WALK 1
+$DeclareSequence "Melee_Stomp_Walking_Rifle"
+// [494]
+$DeclareSequence "PumpShotgunReloadAim"
+// [495] ACT_MELEE_Sweep_Rifle_IDLE 1
+$DeclareSequence "Melee_Sweep_Standing_Rifle_02"
+// [496]
+$DeclareSequence "Pickup_Standing_M4_subtract"
+// [497]
+$DeclareSequence "Pickup_Standing_M4_delta"
+// [498]
+$DeclareSequence "Pickup_Standing_M4_layer"
+// [499] ACT_MELEE_Sweep_Rifle_RUN 1
+$DeclareSequence "Melee_Sweep_Running_Rifle_02"
+// [500]
+$DeclareSequence "Unholster_Standing_Pistol_layer"
+// [501] ACT_MELEE_Sweep_Rifle_IDLE 1
+$DeclareSequence "Melee_Sweep_Standing_Rifle_03"
+// [502]
+$DeclareSequence "Unholster_Standing_Elites_layer"
+// [503]
+$DeclareSequence "Unholster_Standing_Rifle_layer"
+// [504]
+$DeclareSequence "Unholster_Standing_Shotgun_layer"
+// [505] ACT_MELEE_Sweep_Rifle_RUN 1
+$DeclareSequence "Melee_Sweep_Running_Rifle_03"
+// [506]
+$DeclareSequence "Unholster_Standing_Gren_layer"
+// [507] ACT_RELOAD_grenade_launcher -1
+$DeclareSequence "Reload_Standing_grendade_launcher"
+// [508]
+$DeclareSequence "layer_bandage_armL"
+// [509] ACT_RELOAD_RIFLE -1
+$DeclareSequence "Reload_Standing_Sniper"
+// [510]
+$DeclareSequence "Pills_Swallow_layer"
+// [511] ACT_RELOAD_SMG -1
+$DeclareSequence "Reload_Standing_SMG"
+// [512]
+$DeclareSequence "jump_gas_layer"
+// [513] ACT_RELOAD_PISTOL -1
+$DeclareSequence "Reload_Standing_Pistol"
+// [514]
+$DeclareSequence "jump_o2_layer"
+// [515] ACT_RELOAD_M4 -1
+$DeclareSequence "Reload_Standing_Rifle"
+// [516]
+$DeclareSequence "IncapIdlenoise"
+// [517] ACT_RELOAD_ELITES -1
+$DeclareSequence "Reload_Standing_Elites"
+// [518]
+$DeclareSequence "Death"
+// [519]
+$DeclareSequence "deathpose_incap"
+// [520] ACT_RELOAD_SHOTGUN_START -1
+$DeclareSequence "Reload_Standing_Shotgun_start"
+// [521] ACT_RELOAD_SHOTGUN_LOOP -1
+$DeclareSequence "Reload_Standing_Shotgun_loop"
+// [522] ACT_RELOAD_SHOTGUN_LOOP 1
+$DeclareSequence "Reload_Standing_Shotgun_loop1"
+// [523] ACT_RELOAD_SHOTGUN_LOOP 1
+$DeclareSequence "Reload_Standing_Shotgun_loop2"
+// [524] ACT_RELOAD_SHOTGUN_END -1
+$DeclareSequence "Reload_Standing_Shotgun_end"
+// [525] ACT_RELOAD_PUMPSHOTGUN_START -1
+$DeclareSequence "Reload_Standing_PumpShotgun_start"
+// [526] ACT_RELOAD_PUMPSHOTGUN_LOOP -1
+$DeclareSequence "Reload_Standing_PumpShotgun_loop"
+// [527] ACT_RELOAD_PUMPSHOTGUN_LOOP 1
+$DeclareSequence "Reload_Standing_PumpShotgun_loop1"
+// [528] ACT_RELOAD_PUMPSHOTGUN_LOOP 1
+$DeclareSequence "Reload_Standing_PumpShotgun_loop2"
+// [529] ACT_RELOAD_PUMPSHOTGUN_END -1
+$DeclareSequence "Reload_Standing_PumpShotgun_end"
+// [530]
+$DeclareSequence "CalmIdlenoiseRealtime"
+// [531]
+$DeclareSequence "AimMatrix_Fry_Pan_Standing"
+// [532] ACT_TERROR_FIDGET -1
+$DeclareSequence "Fidget_Scratch_Face"
+// [533]
+$DeclareSequence "AimMatrix_Fry_Pan_Crouching"
+// [534]
+$DeclareSequence "AimMatrix_Fry_Pan_Injured_Standing"
+// [535] ACT_TERROR_FIDGET -1
+$DeclareSequence "Fidget_Wipe_Face"
+// [536]
+$DeclareSequence "CrouchWalkN_Fry_Pan_layer"
+// [537]
+$DeclareSequence "CrouchWalkN_Fry_Pan_arms"
+// [538] ACT_TERROR_FIDGET -1
+$DeclareSequence "Fidget_Wipe_Hand"
+// [539]
+$DeclareSequence "WalkN_Fry_Pan_layer"
+// [540]
+$DeclareSequence "WalkN_Fry_Pan_arms"
+// [541] ACT_TERROR_FIDGET 1
+$DeclareSequence "Fidget_Stretch_Neck"
+// [542]
+$DeclareSequence "RunN_Fry_Pan_layer"
+// [543]
+$DeclareSequence "RunN_Fry_Pan_arms"
+// [544] ACT_TERROR_FIDGET 1
+$DeclareSequence "Fidget_Stretch_Back"
+// [545] ACT_TERROR_FIDGET 1
+$DeclareSequence "Fidget_Roll_Head"
+// [546] ACT_TERROR_FIDGET -1
+$DeclareSequence "Fidget_Scratch_Nose"
+// [547]
+$DeclareSequence "jump_Frying_Pan_layer"
+// [548]
+$DeclareSequence "AimMatrix_Sniper_Military_Standing"
+// [549]
+$DeclareSequence "AimMatrix_Sniper_Military_Zoomed_Standing"
+// [550] ACT_TERROR_ITEM_PICKUP 1
+$DeclareSequence "Pickup_Standing_M4"
+// [551]
+$DeclareSequence "AimMatrix_Sniper_Military_Standing_Calm"
+// [552] ACT_DEPLOY_Pistol -1
+$DeclareSequence "Unholster_Standing_Pistol"
+// [553]
+$DeclareSequence "AimMatrix_Sniper_Military_Zoomed_Injured_Standing"
+// [554] ACT_DEPLOY_Elites -1
+$DeclareSequence "Unholster_Standing_Elites"
+// [555]
+$DeclareSequence "AimMatrix_Sniper_Military_Injured_Standing"
+// [556] ACT_DEPLOY_Rifle -1
+$DeclareSequence "Unholster_Standing_Rifle"
+// [557]
+$DeclareSequence "AimMatrix_Sniper_Military_Crouching"
+// [558] ACT_DEPLOY_SHOTGUN -1
+$DeclareSequence "Unholster_Standing_Shotgun"
+// [559]
+$DeclareSequence "AimMatrix_Sniper_Military_Zoomed_Crouching"
+// [560] ACT_DEPLOY_GREN -1
+$DeclareSequence "Unholster_Standing_Gren"
+// [561] ACT_CALL_FOR_RESCUE -1
+$DeclareSequence "Idle_Rescue_01c"
+// [562] ACT_TERROR_HEAL_SELF -1
+$DeclareSequence "Heal_Self_Standing"
+// [563] ACT_TERROR_CROUCH_HEAL_SELF 1
+$DeclareSequence "Heal_Self_Crouching_01"
+// [564] ACT_TERROR_HEAL_INCAPACITATED -1
+$DeclareSequence "Heal_Incap_Standing"
+// [565] ACT_TERROR_HEAL_INCAPACITATED 1
+$DeclareSequence "Heal_Incap_Standing_02"
+// [566] ACT_TERROR_CROUCH_HEAL_INCAPACITATED -1
+$DeclareSequence "Heal_Incap_Crouching"
+// [567] ACT_TERROR_HEAL_INCAPACITATED_ABOVE -1
+$DeclareSequence "Heal_Incap_Above_Standing"
+// [568] ACT_TERROR_CROUCH_HEAL_INCAPACITATED_ABOVE -1
+$DeclareSequence "Heal_Incap_Above_Crouching"
+// [569] ACT_TERROR_HEAL_FRIEND -1
+$DeclareSequence "Heal_Friend_Standing"
+// [570] ACT_TERROR_CROUCH_HEAL_FRIEND -1
+$DeclareSequence "Heal_Friend_Crouching"
+// [571]
+$DeclareSequence "AimMatrix_Sniper_Military_Standing_layer"
+// [572] ACT_TERROR_USE_PILLS -1
+$DeclareSequence "Pills_Swallow"
+// [573] ACT_JUMP_RIFLE -1
+$DeclareSequence "Jump_Rifle_01"
+// [574]   0
+$DeclareSequence "Jump_Rifle_02"
+// [575] ACT_JUMP_SHOTGUN -1
+$DeclareSequence "Jump_Shotgun_01"
+// [576] ACT_JUMP_SHOTGUN -1
+$DeclareSequence "Jump_Shotgun_02"
+// [577]
+$DeclareSequence "AimMatrix_Sniper_Military_Standing_arms"
+// [578] ACT_JUMP_AXE 1
+$DeclareSequence "Jump_axe_01"
+// [579]
+$DeclareSequence "AimMatrix_Sniper_military_Zoomed_Standing_layer"
+// [580] ACT_JUMP_BAT -1
+$DeclareSequence "Jump_bat_01"
+// [581]
+$DeclareSequence "AimMatrix_Sniper_military_Zoomed_Standing_arms"
+// [582] ACT_JUMP_FRYINGPAN 1
+$DeclareSequence "Jump_Frying_Pan_01"
+// [583]
+$DeclareSequence "AimMatrix_Sniper_Military_Standing_Calm_layer"
+// [584]
+$DeclareSequence "AimMatrix_Sniper_Military_Standing_Calm_arms"
+// [585]
+$DeclareSequence "AimMatrix_Sniper_Military_Injured_Standing_layer"
+// [586] ACT_JUMP_GASCAN -1
+$DeclareSequence "Jump_GasCan_01"
+// [587] ACT_JUMP_GASCAN -1
+$DeclareSequence "Jump_GasCan_02"
+// [588]
+$DeclareSequence "AimMatrix_Sniper_Military_Injured_Standing_arms"
+// [589]
+$DeclareSequence "AimMatrix_Sniper_Military_Zoomed_Injured_Standing_layer"
+// [590]
+$DeclareSequence "AimMatrix_Sniper_Military_Zoomed_Injured_Standing_arms"
+// [591] ACT_JUMP_o2 -1
+$DeclareSequence "Jump_o2_01"
+// [592] ACT_JUMP_O2 -1
+$DeclareSequence "Jump_o2_02"
+// [593] ACT_JUMP_SMG -1
+$DeclareSequence "Jump_Smg_01"
+// [594] ACT_JUMP_SMG -1
+$DeclareSequence "Jump_Smg_02"
+// [595] ACT_JUMP_PISTOL -1
+$DeclareSequence "Jump_Pistol_01"
+// [596] ACT_JUMP_PISTOL -1
+$DeclareSequence "Jump_Pistol_02"
+// [597] ACT_JUMP_DUAL_PISTOL -1
+$DeclareSequence "Jump_DualPistols_01"
+// [598] ACT_JUMP_DUAL_PISTOL -1
+$DeclareSequence "Jump_DualPistols_02"
+// [599] ACT_JUMP_ITEM -1
+$DeclareSequence "Jump_Item_01"
+// [600] ACT_JUMP_ITEM -1
+$DeclareSequence "Jump_Item_02"
+// [601] ACT_TERROR_JUMP_LANDING 1
+$DeclareSequence "Jump_Land_gesture"
+// [602] ACT_FALL -1
+$DeclareSequence "Fall"
+// [603] ACT_TERROR_JUMP_LANDING_HARD -1
+$DeclareSequence "Land_Injured"
+// [604] ACT_TERROR_IDLE_LADDER -1
+$DeclareSequence "Ladder_Idlenoise"
+// [605] ACT_CLIMB_UP -1
+$DeclareSequence "Ladder_Ascend"
+// [606] ACT_CLIMB_DOWN -1
+$DeclareSequence "Ladder_Descend"
+// [607] ACT_TERROR_PULLED_RUN_RIFLE 1
+$DeclareSequence "Pulled_Running_Rifle"
+// [608]
+$DeclareSequence "CrouchWalkN_Sniper_Military_layer"
+// [609]
+$DeclareSequence "CrouchWalkN_Sniper_Military_arms"
+// [610] ACT_IDLE_INCAP -1
+$DeclareSequence "Idle_Incap"
+// [611] ACT_DIESIMPLE -1
+$DeclareSequence "Collapse_to_Incap"
+// [612] ACT_IDLE_INCAP_PISTOL -1
+$DeclareSequence "Idle_Incap_Pistol"
+// [613] ACT_IDLE_INCAP_ELITES -1
+$DeclareSequence "Idle_Incap_Elites"
+// [614] ACT_TERROR_INCAP_TO_STAND -1
+$DeclareSequence "GetUpFrom_Incap"
+// [615] ACT_TERROR_INCAP_TO_STAND 1
+$DeclareSequence "GetUpFrom_Incap_04"
+// [616] ACT_TERROR_INCAP_TO_STAND 1
+$DeclareSequence "GetUpFrom_Incap_05"
+// [617] ACT_TERROR_INCAP_TO_CROUCH -1
+$DeclareSequence "GetUpFrom_Incap_Crouching_01"
+// [618] ACT_TERROR_INCAP_FROM_POUNCE -1
+$DeclareSequence "Collapse_to_Incap_Pounced"
+// [619] ACT_IDLE_POUNCED -1
+$DeclareSequence "Idle_Incap_Pounced"
+// [620] ACT_TERROR_POUNCED_TO_STAND -1
+$DeclareSequence "GetUpFrom_Pounced"
+// [621] ACT_TERROR_INCAP_FROM_TONGUE -1
+$DeclareSequence "Collapse_to_Incap_Tongue_germany"
+// [622] ACT_TERROR_HANGING_FROM_TONGUE -1
+$DeclareSequence "Idle_Incap_Hanging_SmokerChoke"
+// [623] ACT_TERROR_IDLE_FALL_FROM_TONGUE -1
+$DeclareSequence "Idle_Fall_From_Tongue_germany"
+// [624] ACT_TERROR_STANDING_CHOKE_FROM_TONGUE -1
+$DeclareSequence "Idle_Incap_Standing_SmokerChoke_germany"
+// [625] ACT_TERROR_CHOKING_TONGUE_GROUND 1
+$DeclareSequence "Idle_Tongued_choking_ground"
+// [626] ACT_TERROR_DRAGGING_FROM_TONGUE 1
+$DeclareSequence "Idle_Tongued_Dragging_Ground"
+// [627] ACT_TERROR_TANKROCK_TO_STAND -1
+$DeclareSequence "GetUpFrom_TankRock"
+// [628] ACT_TERROR_HIT_BY_TANKPUNCH -1
+$DeclareSequence "Hit_by_TankPunch"
+// [629] ACT_TERROR_IDLE_FALL_FROM_TANKPUNCH -1
+$DeclareSequence "Idle_Fall_From_TankPunch"
+// [630] ACT_TERROR_TANKPUNCH_LAND -1
+$DeclareSequence "GetUpFrom_TankPunch"
+// [631] ACT_TERROR_INCAP_CRAWL -1
+$DeclareSequence "incap_crawl"
+// [632] ACT_TERROR_TUGGED_FORWARD -1
+$DeclareSequence "incap_drag_front"
+// [633] ACT_TERROR_TUGGED_BACKWARD -1
+$DeclareSequence "incap_drag_back"
+// [634] ACT_TERROR_TUGGED_LEFTWARD -1
+$DeclareSequence "incap_drag_left"
+// [635] ACT_TERROR_TUGGED_RIGHTWARD -1
+$DeclareSequence "incap_drag_right"
+// [636] ACT_TERROR_TUG -1
+$DeclareSequence "drag"
+// [637] ACT_TERROR_LEDGE_HANG_FIRM -1
+$DeclareSequence "Idle_Incap_Hanging1"
+// [638] ACT_TERROR_LEDGE_HANG_WEAK -1
+$DeclareSequence "Idle_Incap_Hanging2"
+// [639] ACT_TERROR_LEDGE_HANG_DANGLE -1
+$DeclareSequence "Idle_Incap_Hanging3"
+// [640] ACT_TERROR_FALL_GRAB_LEDGE -1
+$DeclareSequence "Collapse_to_Hanging"
+// [641] ACT_TERROR_LEDGE_CLIMB -1
+$DeclareSequence "GetUpFrom_Ledge"
+// [642] ACT_TERROR_LEDGE_CLIMB_TO_CROUCH -1
+$DeclareSequence "GetUpFrom_Ledge_Crouching"
+// [643] ACT_TERROR_FALL -1
+$DeclareSequence "Idle_Falling"
+// [644] ACT_TERROR_DIE_FROM_STAND 1
+$DeclareSequence "Death_m10ab"
+// [645] ACT_DIE_FRONTSIDE -1
+$DeclareSequence "deathpose_front"
+// [646] ACT_DIE_BACKSIDE -1
+$DeclareSequence "deathpose_back"
+// [647] ACT_DIE_RIGHTSIDE -1
+$DeclareSequence "deathpose_right"
+// [648] ACT_DIE_LEFTSIDE -1
+$DeclareSequence "deathpose_left"
+// [649] ACT_TERROR_FLINCH 1
+$DeclareSequence "Flinch_01"
+// [650] ACT_TERROR_FLINCH 1
+$DeclareSequence "Flinch_02"
+// [651] ACT_TERROR_FLINCH 1
+$DeclareSequence "Flinch_03"
+// [652] ACT_TERROR_FLINCH_LEDGE 1
+$DeclareSequence "Flinch_Ledge_01"
+// [653] ACT_TERROR_FLINCH_LEDGE 1
+$DeclareSequence "Flinch_Ledge_02"
+// [654] ACT_TERROR_FLINCH_LEDGE 1
+$DeclareSequence "Flinch_Ledge_03"
+// [655]
+$DeclareSequence "WalkN_Sniper_Military_layer"
+// [656]
+$DeclareSequence "WalkN_Sniper_Military_arms"
+// [657]
+$DeclareSequence "RunN_Sniper_Military_layer"
+// [658]
+$DeclareSequence "RunN_Sniper_Military_arms"
+// [659]
+$DeclareSequence "CalmWalkN_Sniper_Military_layer"
+// [660]
+$DeclareSequence "CalmWalkN_Sniper_Military_arms"
+// [661] ACT_TERROR_IDLE_FALL_FROM_CHARGERHIT -1
+$DeclareSequence "Idle_Fall_From_charger"
+// [662] ACT_TERROR_CHARGER_POUNDED 1
+$DeclareSequence "Charger_pounded"
+// [663] ACT_TERROR_CHARGER_POUNDED_DOWN 1
+$DeclareSequence "Charger_pounded_down"
+// [664] ACT_TERROR_CHARGER_POUNDED_NORTH 1
+$DeclareSequence "Charger_pounded_north"
+// [665] ACT_TERROR_CHARGER_POUNDED_UP 1
+$DeclareSequence "Charger_pounded_up"
+// [666] ACT_TERROR_CHARGER_POUNDED_INCAP 1
+$DeclareSequence "Charger_pounded_incap"
+// [667] ACT_TERROR_CHARGERHIT_LAND_SLOW -1
+$DeclareSequence "GetUpFrom_Charger"
+// [668] ACT_TERROR_CHARGER_PUMMELED -1
+$DeclareSequence "IncapFrom_Charger"
+// [669] ACT_TERROR_HIT_BY_CHARGER 1
+$DeclareSequence "Hit_by_Charger"
+// [670] ACT_TERROR_CARRIED 1
+$DeclareSequence "Charger_Carried"
+// [671] ACT_TERROR_SLAMMED_WALL 1
+$DeclareSequence "Charger_Slammed_Wall"
+// [672] ACT_TERROR_SLAMMED_GROUND 1
+$DeclareSequence "Charger_Slammed_Ground"
+// [673]
+$DeclareSequence "CalmRunN_Sniper_Military_layer"
+// [674] ACT_TERROR_JOCKEY_RIDDEN -1
+$DeclareSequence "survivor_ridden_lower_walk"
+// [675] ACT_TERROR_USE_ADRENALINE 1
+$DeclareSequence "adrenaline_use"
+// [676] ACT_TERROR_USE_DEFIBRILLATOR -1
+$DeclareSequence "Defibrillate_Incap_Standing"
+// [677] ACT_TERROR_CROUCH_USE_DEFIBRILLATOR -1
+$DeclareSequence "Defibrillate_Incap_Crouching"
+// [678] ACT_DIE_STANDING -1
+$DeclareSequence "Die_Standing"
+// [679] ACT_DIE_INCAP -1
+$DeclareSequence "Die_Incap"
+// [680] ACT_TERROR_REVIVE_FROM_DEATH -1
+$DeclareSequence "Defib_Revive"
+// [681] ACT_TERROR_DEFIBRILLATOR_SHOCK -1
+$DeclareSequence "Defib_jolt"
+// [682]
+$DeclareSequence "CalmRunN_Sniper_Military_arms"
+// [683]
+$DeclareSequence "AimMatrix_bat_Standing"
+// [684] ACT_IDLE_CHAINSAW 1
+$DeclareSequence "Idle_Standing_chainsaw"
+// [685] ACT_CROUCHIDLE_CHAINSAW -1
+$DeclareSequence "Idle_Crouching_chainsaw"
+// [686]
+$DeclareSequence "AimMatrix_bat_Crouching"
+// [687]
+$DeclareSequence "AimMatrix_bat_Injured"
+// [688] ACT_IDLE_CALM_CHAINSAW 1
+$DeclareSequence "Idle_Calm_chainsaw"
+// [689]
+$DeclareSequence "CrouchWalkN_bat_layer"
+// [690]
+$DeclareSequence "CrouchWalkN_bat_arms"
+// [691] ACT_IDLE_INJURED_CHAINSAW 1
+$DeclareSequence "Idle_Injured_chainsaw"
+// [692]
+$DeclareSequence "WalkN_bat_layer"
+// [693]
+$DeclareSequence "WalkN_bat_arms"
+// [694] ACT_RUN_CROUCH_CHAINSAW -1
+$DeclareSequence "CrouchWalk_chainsaw"
+// [695]
+$DeclareSequence "RunN_bat_layer"
+// [696]
+$DeclareSequence "RunN_bat_arms"
+// [697] ACT_WALK_CHAINSAW -1
+$DeclareSequence "Walk_chainsaw"
+// [698]
+$DeclareSequence "jump_bat_layer"
+// [699]
+$DeclareSequence "AimMatrix_axe_Standing"
+// [700] ACT_RUN_CHAINSAW -1
+$DeclareSequence "Run_chainsaw"
+// [701] ACT_WALK_INJURED_CHAINSAW -1
+$DeclareSequence "LimpWalk_CHAINSAW"
+// [702] ACT_RUN_INJURED_CHAINSAW -1
+$DeclareSequence "LimpRun_chainsaw"
+// [703]
+$DeclareSequence "AimMatrix_axe_Crouching"
+// [704]
+$DeclareSequence "AimMatrix_axe_Injured"
+// [705]
+$DeclareSequence "idle_axe_anim_mdl"
+// [706] ACT_IDLE_ATTACK_CHAINSAW -1
+$DeclareSequence "Idle_Attack_Chainsaw"
+// [707]
+$DeclareSequence "CrouchWalkN_axe_layer"
+// [708] ACT_JUMP_CHAINSAW 1
+$DeclareSequence "Jump_chainsaw_01"
+// [709] ACT_CHAINSAW_STARTUP -1
+$DeclareSequence "chainsaw_startup"
+// [710] ACT_CHAINSAW_REV -1
+$DeclareSequence "chainsaw_rev"
+// [711] ACT_SHOOT_CHAINSAW -1
+$DeclareSequence "chainsaw_attack"
+// [712] ACT_IDLE_GUITAR 1
+$DeclareSequence "Idle_Standing_guitar"
+// [713] ACT_CROUCHIDLE_GUITAR 1
+$DeclareSequence "Idle_Crouching_guitar"
+// [714] ACT_IDLE_CALM_GUITAR 1
+$DeclareSequence "Idle_Calm_Guitar"
+// [715] ACT_IDLE_INJURED_GUITAR 1
+$DeclareSequence "idle_injured_guitar"
+// [716]
+$DeclareSequence "CrouchWalkN_axe_arms"
+// [717]
+$DeclareSequence "WalkN_axe_layer"
+// [718] ACT_WALK_GUITAR -1
+$DeclareSequence "Walk_guitar"
+// [719]
+$DeclareSequence "WalkN_axe_arms"
+// [720]
+$DeclareSequence "RunN_Axe_layer"
+// [721] ACT_RUN_CROUCH_GUITAR -1
+$DeclareSequence "CrouchWalk_guitar"
+// [722]
+$DeclareSequence "RunN_Axe_arms"
+// [723]
+$DeclareSequence "jump_axe_layer"
+// [724] ACT_RUN_GUITAR -1
+$DeclareSequence "Run_GUITAR"
+// [725] ACT_WALK_INJURED_GUITAR -1
+$DeclareSequence "LimpWalk_GUITAR"
+// [726] ACT_RUN_INJURED_GUITAR -1
+$DeclareSequence "LimpRun_GUITAR"
+// [727]
+$DeclareSequence "Reload_Standing_grenade_launcher_raw"
+// [728]
+$DeclareSequence "Reload_Standing_grenade_launcher_layer"
+// [729]
+$DeclareSequence "AimMatrix_chainsaw_Standing"
+// [730]
+$DeclareSequence "AimMatrix_chainsaw_Crouching"
+// [731] ACT_JUMP_GUITAR 1
+$DeclareSequence "Jump_GUITAR_01"
+// [732] ACT_IDLE_GNOME 1
+$DeclareSequence "idle_standing_gnome"
+// [733] ACT_CROUCHIDLE_GNOME 1
+$DeclareSequence "idle_crouching_gnome"
+// [734] ACT_IDLE_CALM_GNOME 1
+$DeclareSequence "idle_calm_gnome"
+// [735] ACT_IDLE_INJURED_GNOME 1
+$DeclareSequence "Idle_Injured_gnome"
+// [736]
+$DeclareSequence "AimMatrix_chainsaw_Injured"
+// [737]
+$DeclareSequence "AimMatrix_chainsaw_Standing_layer"
+// [738] ACT_RUN_CROUCH_GNOME -1
+$DeclareSequence "CrouchWalk_gnome"
+// [739]
+$DeclareSequence "AimMatrix_chainsaw_Standing_arms"
+// [740]
+$DeclareSequence "AimMatrix_chainsaw_Standing_Calm_layer"
+// [741] ACT_WALK_GNOME -1
+$DeclareSequence "Walk_gnome"
+// [742]
+$DeclareSequence "AimMatrix_chainsaw_Standing_Calm_arms"
+// [743]
+$DeclareSequence "AimMatrix_chainsaw_Injured_layer"
+// [744] ACT_RUN_GNOME -1
+$DeclareSequence "Run_gnome"
+// [745]
+$DeclareSequence "AimMatrix_chainsaw_Injured_arms"
+// [746]
+$DeclareSequence "CrouchWalkN_chainsaw_layer"
+// [747] ACT_WALK_CALM_GNOME -1
+$DeclareSequence "CalmWalk_gnome"
+// [748]
+$DeclareSequence "CrouchWalkN_chainsaw_arms"
+// [749]
+$DeclareSequence "WalkN_chainsaw_layer"
+// [750] ACT_RUN_CALM_GNOME -1
+$DeclareSequence "CalmRun_gnome"
+// [751] ACT_WALK_INJURED_GNOME 1
+$DeclareSequence "LimpWalk_gnome"
+// [752] ACT_RUN_INJURED_GNOME 1
+$DeclareSequence "LimpRun_gnome"
+// [753]
+$DeclareSequence "WalkN_chainsaw_arms"
+// [754]
+$DeclareSequence "RunN_chainsaw_layer"
+// [755]
+$DeclareSequence "RunN_chainsaw_arms"
+// [756]
+$DeclareSequence "jump_chainsaw_layer"
+// [757]
+$DeclareSequence "AimMatrix_GUITAR_Standing"
+// [758]
+$DeclareSequence "AimMatrix_GUITAR_Crouching"
+// [759] ACT_JUMP_GNOME -1
+$DeclareSequence "Jump_gnome_01"
+// [760] ACT_JUMP_GNOME -1
+$DeclareSequence "Jump_gnome_02"
+// [761] ACT_SHOOT_E2W_AXE 1
+$DeclareSequence "axe_swing_ne_w_layer"
+// [762] ACT_SHOOT_E2W_IDLE_AXE 1
+$DeclareSequence "axe_swing_ne_w_idle"
+// [763] ACT_SHOOT_E2W_IDLE_AXE 1
+$DeclareSequence "axe_swing_strong_layer"
+// [764] ACT_SHOOT_E2W_AXE 1
+$DeclareSequence "axe_swing_layer_2"
+// [765] ACT_SHOOT_SECONDARY_AXE 1
+$DeclareSequence "axe_secondary_attack"
+// [766] ACT_SHOOT_W2E_AXE 1
+$DeclareSequence "AXE_primary_attack_reverse"
+// [767] ACT_SHOOT_W2E_IDLE_AXE 1
+$DeclareSequence "AXE_primary_attack_reverse_idle"
+// [768] ACT_SHOOT_N2S_FRYINGPAN 1
+$DeclareSequence "Frying_Pan_swing_N_S_layer"
+// [769] ACT_SHOOT_N2S_IDLE_FRYINGPAN 1
+$DeclareSequence "Frying_Pan_swing_N_S_idle"
+// [770] ACT_SHOOT_SECONDARY_FRYINGPAN 1
+$DeclareSequence "Frying_Pan_secondary_attack"
+// [771] ACT_SHOOT_N2S_FRYINGPAN 1
+$DeclareSequence "Frying_Pan_strong_attack"
+// [772] ACT_SHOOT_N2S_IDLE_FRYINGPAN 1
+$DeclareSequence "Frying_Pan_strong_attack_idle"
+// [773] ACT_SHOOT_W2E_FRYINGPAN 1
+$DeclareSequence "Frying_Pan_swing_NE_SW_layer"
+// [774] ACT_SHOOT_W2E_IDLE_FRYINGPAN 1
+$DeclareSequence "Frying_Pan_swing_NE_SW_idle"
+// [775] ACT_SHOOT_E2W_BAT 1
+$DeclareSequence "bat_swing_ne_w_layer"
+// [776] ACT_SHOOT_E2W_IDLE_BAT 1
+$DeclareSequence "bat_swing_ne_w_idle"
+// [777] ACT_SHOOT_W2E_BAT 1
+$DeclareSequence "bat_swing_w2e_layer"
+// [778] ACT_SHOOT_W2E_IDLE_BAT 1
+$DeclareSequence "bat_swing_w2e_idle"
+// [779] ACT_SHOOT_SECONDARY_BAT 1
+$DeclareSequence "bat_secondary_attack"
+// [780] ACT_SHOOT_E2W_GUITAR 1
+$DeclareSequence "guitar_primary_attack_LAYER"
+// [781] ACT_SHOOT_E2W_IDLE_GUITAR 1
+$DeclareSequence "guitar_primary_attack"
+// [782] ACT_SHOOT_E2W_GUITAR 1
+$DeclareSequence "guitar_primary_attack02_LAYER"
+// [783] ACT_SHOOT_E2W_IDLE_GUITAR 1
+$DeclareSequence "guitar_primary_attack02"
+// [784] ACT_SHOOT_SECONDARY_IDLE_GUITAR 1
+$DeclareSequence "guitar_secondary_attack_LAYER"
+// [785] ACT_SHOOT_SECONDARY_GUITAR 1
+$DeclareSequence "guitar_secondary_attack"
+// [786] ACT_TERROR_USE_UPGRADEPACK 1
+$DeclareSequence "use_ammopack"
+// [787] ACT_TERROR_CROUCH_USE_UPGRADEPACK 1
+$DeclareSequence "crouch_use_ammopack"
+// [788] ACT_MELEE_SWEEP_GNOME 1
+$DeclareSequence "melee_sweep_gnome"
+// [789] ACT_MELEE_SWEEP_CHAINSAW 1
+$DeclareSequence "melee_sweep_chainsaw"
+// [790] ACT_TERROR_USE_COLA 1
+$DeclareSequence "use_cola"
+// [791]
+$DeclareSequence "AimMatrix_GUITAR_Injured"
+// [792] ACT_MELEE_SWEEP_FIRSTAIDKIT 1
+$DeclareSequence "melee_sweep_FirstAidKit"
+// [793] ACT_MELEE_SWEEP_COLA 1
+$DeclareSequence "melee_sweep_cola"
+// [794] ACT_MELEE_SWEEP_DEFIBRILLATOR 1
+$DeclareSequence "melee_sweep_defibrillator"
+// [795] ACT_MELEE_SWEEP_UPGRADE_PACK 1
+$DeclareSequence "melee_sweep_ammopack"
+// [796] ACT_SHOOT_E2W_KATANA 1
+$DeclareSequence "katana_swing_e2w_layer"
+// [797] ACT_SHOOT_E2W_IDLE_KATANA 1
+$DeclareSequence "katana_swing_e2w_idle"
+// [798] ACT_SHOOT_W2E_KATANA 1
+$DeclareSequence "katana_swing_w2e_layer"
+// [799] ACT_SHOOT_W2E_IDLE_KATANA 1
+$DeclareSequence "katana_swing_w2e_idle"
+// [800] ACT_TERROR_SHOVED_BACKWARD -1
+$DeclareSequence "Shoved_Backward"
+// [801] ACT_TERROR_SHOVED_FORWARD -1
+$DeclareSequence "Shoved_Forward"
+// [802] ACT_TERROR_SHOVED_RIGHTWARD -1
+$DeclareSequence "Shoved_Rightward"
+// [803] ACT_TERROR_SHOVED_LEFTWARD -1
+$DeclareSequence "Shoved_Leftward"
+// [804] ACT_TERROR_SHOVED_BACKWARD_MELEE -1
+$DeclareSequence "Shoved_Backward_Melee"
+// [805] ACT_TERROR_SHOVED_FORWARD_MELEE -1
+$DeclareSequence "Shoved_Forward_Melee"
+// [806] ACT_TERROR_SHOVED_RIGHTWARD_MELEE -1
+$DeclareSequence "Shoved_Rightward_Melee"
+// [807] ACT_TERROR_SHOVED_LEFTWARD_MELEE -1
+$DeclareSequence "Shoved_Leftward_Melee"
+// [808] ACT_TERROR_SHOVED_BACKWARD_BAT -1
+$DeclareSequence "Shoved_Backward_bat"
+// [809] ACT_TERROR_SHOVED_FORWARD_BAT -1
+$DeclareSequence "Shoved_Forward_bat"
+// [810] ACT_TERROR_SHOVED_RIGHTWARD_BAT -1
+$DeclareSequence "Shoved_Rightward_bat"
+// [811] ACT_TERROR_SHOVED_LEFTWARD_BAT -1
+$DeclareSequence "Shoved_Leftward_bat"
+// [812] ACT_TERROR_SHOVED_BACKWARD_CHAINSAW -1
+$DeclareSequence "Shoved_Backward_chainsaw"
+// [813] ACT_TERROR_SHOVED_FORWARD_CHAINSAW -1
+$DeclareSequence "Shoved_Forward_chainsaw"
+// [814] ACT_TERROR_SHOVED_RIGHTWARD_CHAINSAW -1
+$DeclareSequence "Shoved_Rightward_chainsaw"
+// [815] ACT_TERROR_SHOVED_LEFTWARD_CHAINSAW -1
+$DeclareSequence "Shoved_Leftward_chainsaw"
+// [816]
+$DeclareSequence "WalkN_guitar_layer"
+// [817]
+$DeclareSequence "WalkN_guitar_arms"
+// [818]
+$DeclareSequence "CrouchWalkN_guitar_layer"
+// [819]
+$DeclareSequence "CrouchWalkN_guitar_arms"
+// [820]
+$DeclareSequence "RunN_GUITAR_layer"
+// [821]
+$DeclareSequence "RunN_GUITAR_arms"
+// [822]
+$DeclareSequence "jump_GUITAR_layer"
+// [823] ACT_GEST_OVERHERE 1
+$DeclareSequence "TeenAngst_gesture_overhere"
+// [824]
+$DeclareSequence "AimMatrix_gnome_standing_raw"
+// [825]
+$DeclareSequence "AimMatrix_gnome_Crouching_raw"
+// [826]
+$DeclareSequence "AimMatrix_gnome_Injured_raw"
+// [827]
+$DeclareSequence "AimMatrix_gnome_Standing"
+// [828]
+$DeclareSequence "AimMatrix_gnome_Crouching"
+// [829]
+$DeclareSequence "AimMatrix_gnome_Injured"
+// [830]
+$DeclareSequence "CrouchWalkN_gnome_layer"
+// [831] ACT_GEST_POINTLEFT 1
+$DeclareSequence "TeenAngst_gesture_pointLeft"
+// [832]
+$DeclareSequence "CrouchWalkN_gnome_arms"
+// [833]
+$DeclareSequence "WalkN_gnome_layer"
+// [834]
+$DeclareSequence "WalkN_gnome_arms"
+// [835]
+$DeclareSequence "RunN_gnome_layer"
+// [836]
+$DeclareSequence "RunN_gnome_arms"
+// [837]
+$DeclareSequence "CalmWalkN_gnome_layer"
+// [838]
+$DeclareSequence "CalmWalkN_gnome_arms"
+// [839] ACT_GEST_POINTLEFT_QUICK 1
+$DeclareSequence "TeenAngst_gesture_pointLeft_quick"
+// [840] ACT_GEST_HEAD_NO 1
+$DeclareSequence "TeenAngst_gesture_head_no"
+// [841]
+$DeclareSequence "CalmRunN_gnome_layer"
+// [842]
+$DeclareSequence "CalmRunN_gnome_arms"
+// [843]
+$DeclareSequence "jump_gnome_layer"
+// [844] ACT_GEST_HEAD_TWISTLEFT 1
+$DeclareSequence "TeenAngst_gesture_head_twistLeft"
+// [845]
+$DeclareSequence "jump_gnome_gesture"
+// [846]
+$DeclareSequence "jump_gnome_gesture_aim"
+// [847]
+$DeclareSequence "survivor_ridden_upper"
+// [848] ACT_GEST_HEAD_DOWN 1
+$DeclareSequence "TeenAngst_gesture_head_down"
+// [849] ACT_GEST_HEAD_NOD 1
+$DeclareSequence "TeenAngst_gesture_head_nod"
+// [850] ACT_GEST_HEAD_YES 1
+$DeclareSequence "TeenAngst_gesture_head_yes"
+// [851]
+$DeclareSequence "dlc1_finaleintro_zoey_idle"
+// [852]
+$DeclareSequence "dlc1_outro_zoey"
+// [853]
+$DeclareSequence "TeenAngst_gesture_overhereinDelta"
+// [854]
+$DeclareSequence "TeenAngst_gesture_overhereinFrameArms"
+// [855]
+$DeclareSequence "TeenAngst_gesture_overhereinFrameSpine"
+// [856]
+$DeclareSequence "TeenAngst_gesture_overhereCoreDelta"
+// [857]
+$DeclareSequence "TeenAngst_gesture_overhereOutFrameArms"
+// [858] ACT_GEST_GOGOGO 1
+$DeclareSequence "TeenAngst_gesture_gogo"
+// [859]
+$DeclareSequence "TeenAngst_gesture_overhereOutFrameSpine"
+// [860]
+$DeclareSequence "TeenAngst_gesture_overhereoutDelta"
+// [861]
+$DeclareSequence "TeenAngst_gesture_pointLeftinDelta"
+// [862]
+$DeclareSequence "TeenAngst_gesture_pointLeftinFrameArms"
+// [863]
+$DeclareSequence "TeenAngst_gesture_pointLeftinFrameSpine"
+// [864]
+$DeclareSequence "TeenAngst_gesture_pointLeftCoreDelta"
+// [865]
+$DeclareSequence "TeenAngst_gesture_pointLeftOutFrameArms"
+// [866] ACT_GEST_WAVE 1
+$DeclareSequence "namvet_gesture_wave"
+// [867]
+$DeclareSequence "TeenAngst_gesture_pointLeftOutFrameSpine"
+// [868]
+$DeclareSequence "TeenAngst_gesture_pointLeftoutDelta"
+// [869]
+$DeclareSequence "TeenAngst_gesture_pointLeft_quickinDelta"
+// [870]
+$DeclareSequence "TeenAngst_gesture_pointLeft_quickinFrameArms"
+// [871]
+$DeclareSequence "TeenAngst_gesture_pointLeft_quickinFrameSpine"
+// [872]
+$DeclareSequence "TeenAngst_gesture_pointLeft_quickCoreDelta"
+// [873]
+$DeclareSequence "TeenAngst_gesture_pointLeft_quickOutFrameArms"
+// [874] ACT_GEST_COUGH 1
+$DeclareSequence "TeenAngst_gesture_cough"
+// [875]
+$DeclareSequence "TeenAngst_gesture_pointLeft_quickOutFrameSpine"
+// [876]
+$DeclareSequence "TeenAngst_gesture_pointLeft_quickoutDelta"
+// [877]
+$DeclareSequence "TeenAngst_gesture_gogoinDelta"
+// [878]
+$DeclareSequence "TeenAngst_gesture_gogoinFrameArms"
+// [879]
+$DeclareSequence "TeenAngst_gesture_gogoinFrameSpine"
+// [880]
+$DeclareSequence "TeenAngst_gesture_gogoCoreDelta"
+// [881]
+$DeclareSequence "TeenAngst_gesture_gogoOutFrameArms"
+// [882] ACT_GEST_COUGH01 1
+$DeclareSequence "namvet_gesture_cough1"
+// [883]
+$DeclareSequence "TeenAngst_gesture_gogoOutFrameSpine"
+// [884]
+$DeclareSequence "TeenAngst_gesture_gogooutDelta"
+// [885]
+$DeclareSequence "TeenAngst_gesture_head_noddefault"
+// [886]
+$DeclareSequence "TeenAngst_gesture_head_nodapexDelta"
+// [887]
+$DeclareSequence "TeenAngst_gesture_head_nodloopDelta"
+// [888]
+$DeclareSequence "TeenAngst_gesture_head_twistLeftdefault"
+// [889]
+$DeclareSequence "TeenAngst_gesture_head_twistLeftapexDelta"
+// [890] ACT_GEST_COUGH02 1
+$DeclareSequence "namvet_gesture_cough2"
+// [891]
+$DeclareSequence "TeenAngst_gesture_head_twistLeftloopDelta"
+// [892]
+$DeclareSequence "TeenAngst_gesture_coughinDelta"
+// [893]
+$DeclareSequence "TeenAngst_gesture_coughinFrameArms"
+// [894]
+$DeclareSequence "TeenAngst_gesture_coughinFrameSpine"
+// [895]
+$DeclareSequence "TeenAngst_gesture_coughCoreDelta"
+// [896]
+$DeclareSequence "TeenAngst_gesture_coughOutFrameArms"
+// [897]
+$DeclareSequence "TeenAngst_gesture_coughOutFrameSpine"
+// [898] ACT_GEST_COUGH03 1
+$DeclareSequence "TeenAngst_gesture_cough3"
+// [899]
+$DeclareSequence "TeenAngst_gesture_coughoutDelta"
+// [900]
+$DeclareSequence "TeenAngst_gesture_cough1inDelta"
+// [901]
+$DeclareSequence "TeenAngst_gesture_cough1inFrameArms"
+// [902]
+$DeclareSequence "TeenAngst_gesture_cough1inFrameSpine"
+// [903]
+$DeclareSequence "TeenAngst_gesture_cough1CoreDelta"
+// [904]
+$DeclareSequence "TeenAngst_gesture_cough1OutFrameArms"
+// [905]
+$DeclareSequence "TeenAngst_gesture_cough1OutFrameSpine"
+// [906] ACT_GEST_VOMIT01 1
+$DeclareSequence "namvet_gesture_vomit01"
+// [907]
+$DeclareSequence "TeenAngst_gesture_cough1outDelta"
+// [908]
+$DeclareSequence "TeenAngst_gesture_cough2inDelta"
+// [909]
+$DeclareSequence "TeenAngst_gesture_cough2inFrameArms"
+// [910]
+$DeclareSequence "TeenAngst_gesture_cough2inFrameSpine"
+// [911]
+$DeclareSequence "TeenAngst_gesture_cough2CoreDelta"
+// [912]
+$DeclareSequence "TeenAngst_gesture_cough2OutFrameArms"
+// [913]
+$DeclareSequence "TeenAngst_gesture_cough2OutFrameSpine"
+// [914] ACT_GEST_INTRO_CALM 1
+$DeclareSequence "g_Idle_Intro_Calm"
+// [915]
+$DeclareSequence "TeenAngst_gesture_cough2outDelta"
+// [916]
+$DeclareSequence "TeenAngst_gesture_cough3inDelta"
+// [917]
+$DeclareSequence "TeenAngst_gesture_cough3inFrameArms"
+// [918]
+$DeclareSequence "TeenAngst_gesture_cough3inFrameSpine"
+// [919]
+$DeclareSequence "TeenAngst_gesture_cough3CoreDelta"
+// [920]
+$DeclareSequence "TeenAngst_gesture_cough3OutFrameArms"
+// [921]
+$DeclareSequence "TeenAngst_gesture_cough3OutFrameSpine"
+// [922] ACT_GEST_INTRO_WAVE 1
+$DeclareSequence "g_Namvet_Intro_Wave"

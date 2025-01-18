@@ -2,7 +2,6 @@
 
 $ModelName "survivors/survivor_gambler.mdl" // Nick
 
-$DefineVariable anims_set gambler
 $DefineVariable survivor gambler
 
 $DefineMacro attathements \\

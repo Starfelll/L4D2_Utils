@@ -7,8 +7,10 @@ $DefineVariable scale_fix 1.0
 
 $IF survivor == biker_light
 	$RedefineVariable ref_survivor "biker"
+	$DefineVariable declare_sequences_qci "biker_light.qci"
 $ELIF survivor == teenangst_light
 	$RedefineVariable ref_survivor "teenangst"
+	$DefineVariable declare_sequences_qci "teenangst_light.qci"
 $Else
 	$IFDef spb_scale
 		$DefineVariable include_model_root spb/$spb_scale$x
@@ -18,15 +20,9 @@ $Else
 	$EndIF
 
 	$IF ref_survivor == auto
-		$RedefineVariable ref_survivor $anims_set$
-	$Else
-		$IF ref_survivor != $survivor$
-			$IncludeModel $include_model_root$/anim_$ref_survivor$.mdl
-			$IncludeModel $include_model_root$/gestures_$ref_survivor$.mdl
-		$EndIF
+		$RedefineVariable ref_survivor $survivor$
 	$EndIF
-	$IncludeModel $include_model_root$/anim_$anims_set$.mdl
-	$IncludeModel $include_model_root$/gestures_$anims_set$.mdl
+	$DefineVariable declare_sequences_qci $ref_survivor$_to_$survivor$.qci
 $EndIF
 
 $DefineMacro reference_pos_teenangst \\

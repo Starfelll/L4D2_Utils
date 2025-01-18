@@ -2,7 +2,6 @@
 
 $ModelName "survivors/survivor_teenangst.mdl" // Zoey
 
-$DefineVariable anims_set teenangst
 $DefineVariable survivor teenangst
 
 $DefineMacro attathements \\

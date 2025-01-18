@@ -2,7 +2,6 @@
 
 $ModelName "survivors/survivor_biker_light.mdl" // Francis
 
-$DefineVariable anims_set biker
 $DefineVariable survivor biker_light
 
 $DefineMacro attathements \\

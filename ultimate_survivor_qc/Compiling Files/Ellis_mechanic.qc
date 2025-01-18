@@ -2,7 +2,6 @@
 
 $ModelName "survivors/survivor_mechanic.mdl" //Ellis
 
-$DefineVariable anims_set mechanic
 $DefineVariable survivor mechanic
 
 $DefineMacro attathements \\

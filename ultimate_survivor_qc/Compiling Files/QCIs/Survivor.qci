@@ -223,7 +223,7 @@ $SkipBoneInBBox
 
 $CBox 0 0 0 0 0 0 $BBox -13 -13 0 13 13 72
 
-$Include QCIs/DeclareSequences/$survivor$.qci
+$Include QCIs/DeclareSequences/$declare_sequences_qci$
 // $Sequence Reference "a_reference"
 $Sequence "Proportions" {
     "a_proportions" autoplay delta

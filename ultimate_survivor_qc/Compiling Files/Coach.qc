@@ -2,7 +2,6 @@
 
 $ModelName "survivors/survivor_coach.mdl"
 
-$DefineVariable anims_set coach
 $DefineVariable survivor coach
 
 $DefineMacro attathements \\

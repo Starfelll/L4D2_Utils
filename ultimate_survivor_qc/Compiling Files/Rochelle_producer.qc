@@ -2,7 +2,6 @@
 
 $ModelName "survivors/survivor_producer.mdl" //Rochelle
 
-$DefineVariable anims_set producer
 $DefineVariable survivor producer
 
 $DefineMacro attathements \\
