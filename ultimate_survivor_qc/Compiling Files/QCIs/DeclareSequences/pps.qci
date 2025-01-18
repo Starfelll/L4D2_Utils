@@ -3,6 +3,7 @@
 
 // sacle_fix = 1.0 / $Scale
 $DefineVariable scale_fix 1.0
+//$DefineVariable pps_no_weapon_bone 1
 
 $IF survivor == biker_light
 	$RedefineVariable ref_survivor "biker"

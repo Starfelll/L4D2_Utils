@@ -225,7 +225,12 @@ $CBox 0 0 0 0 0 0 $BBox -13 -13 0 13 13 72
 
 $Include QCIs/DeclareSequences/$survivor$.qci
 // $Sequence Reference "a_reference"
-$Sequence "Proportions" "a_proportions" autoplay delta
+$Sequence "Proportions" {
+    "a_proportions" autoplay delta
+    $IFDef pps_no_weapon_bone
+        weightlist pps_no_weapon_bone
+    $EndIF
+}
 
 $IFDef usqc_idle_anim
     $IF ref_survivor == "teenangst"
