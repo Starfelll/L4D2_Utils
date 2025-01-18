@@ -236,13 +236,13 @@ $IFDef usqc_idle_anim
     $IF ref_survivor == "teenangst"
         $Animation "a_namvet_ref" $custom_model$ Pick BindPose {
             $reference_pos_namvet
+            appendscale $scale_fix$
         }
         $Sequence "teenangst_anim_fix" {
             $custom_model$ Pick BindPose
             $reference_pos_teenangst
-            subtract a_namvet_ref 0
-            delta
-            hidden
+            subtract a_namvet_ref 0 delta hidden
+            appendscale $scale_fix$
         }
     $EndIF
 $EndIF
