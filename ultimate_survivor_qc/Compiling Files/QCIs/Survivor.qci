@@ -2,18 +2,16 @@
 // Must be used with nekomdl(https://steamcommunity.com/sharedfiles/filedetails/?id=3142607978)
 
 $PushD "Export"
-$Root "ValveBiped.Bip01_Pelvis"
 //$Include "QCIs/mmd_flex_map.qci"
 
 $DefineVariable custom_model "Body.glb"
 $CDMaterials "Starfelll\Survivor."
 
-$NekoModel "Face" {
-    studio "Face.glb"
-    // $Include "QCIs/survivors_flexrules.qci" //表情开关
-}
+// $NekoModel "Face" {
+//     studio "Face.glb"
+//     $Include "QCIs/survivors_flexrules.qci"
+// }
 $Body "Body" $custom_model$
-//$Body "Skirt" "Skirt.glb"
 
 //使用的人物动画，auto,namvet,coach,mechanic,biker,manager,gambler,producer,teenangst 
 $DefineVariable ref_survivor teenangst

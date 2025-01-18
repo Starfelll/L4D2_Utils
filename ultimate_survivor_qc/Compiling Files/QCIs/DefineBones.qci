@@ -169,7 +169,7 @@ $DefineMacro jigg_skirt name \\
 // 	}
 // }
 
-// $DefineMacro jigg_bust name \\
+// $DefineMacro jigg_breast name v1 \\
 //     $Jigglebone $name$ { \\
 //         is_flexible { \\
 //             yaw_stiffness 1 \\
@@ -186,9 +186,9 @@ $DefineMacro jigg_skirt name \\
 //         has_base_spring { \\
 //             stiffness 40 \\
 //             damping 9 \\
-//             left_constraint -0.2 0.2 \\
-//             up_constraint -0.2 0.2 \\
-//             forward_constraint -0.2 0.2 \\
+//             left_constraint -$v1$ $v1$ \\
+//             up_constraint -$v1$ $v1$ \\
+//             forward_constraint -$v1$ $v1$ \\
 //         } \\
 //     } \\
 // \\
@@ -264,7 +264,7 @@ $DefineMacro jigg_skirt name \\
 
 $Hierarchy "ValveBiped.Bip01_Pelvis" ""
 $UnlockDefineBones
-$DefineBone "ValveBiped.Bip01_Pelvis" "" 1 1 4 5 1 4 0 0 0 0 0 0 // In your model, this bone must be the root bone
+$DefineBone "ValveBiped.Bip01_Pelvis" "" 1 1 4 5 1 4 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_L_Thigh" "ValveBiped.Bip01_Pelvis" 1 1 4 5 1 4 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_L_Thigh" 1 1 4 5 1 4 0 0 0 $calf_ik_fix$ 0 0
 $DefineBone "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_L_Calf" 1 1 4 5 1 4 0 $foot_ik_fix$ 0 0 0 0
