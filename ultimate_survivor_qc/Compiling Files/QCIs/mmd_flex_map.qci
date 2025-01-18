@@ -13,8 +13,11 @@ $RenameMorph "口角下げ" "AU15"
 $RenameMorph "い" "AU16"
 $RenameMorph "う" "AU25"
 $RenameMorph "口横広げ" "AU20"
+
 $RenameMorph "あ" "AU27"
-$RenameMorph "あ２" "AU26Z"
+//$RenameMorph "あ２" "AU26Z"
+//$RenameMorph "お" "AU26Z"
+$RenameMorph "え" "AU26Z"
 $RenameMorph "ワ" "AU27Z"
 
 $RenameMorph "にこり" "AU1AU2"
