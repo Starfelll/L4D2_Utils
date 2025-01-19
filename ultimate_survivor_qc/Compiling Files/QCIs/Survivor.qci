@@ -226,7 +226,7 @@ $CBox 0 0 0 0 0 0 $BBox -13 -13 0 13 13 72
 $Include QCIs/DeclareSequences/$declare_sequences_qci$
 // $Sequence Reference "a_reference"
 $Sequence "Proportions" {
-    "a_proportions" autoplay delta
+    "a_proportions" autoplay delta hidden
     $IFDef pps_no_weapon_bone
         weightlist pps_no_weapon_bone
     $EndIF
@@ -251,7 +251,7 @@ $EndIF
 
 $KeyValues
 {
-    usqc "2.9"
+    usqc "3.0"
 }
 
 /*
