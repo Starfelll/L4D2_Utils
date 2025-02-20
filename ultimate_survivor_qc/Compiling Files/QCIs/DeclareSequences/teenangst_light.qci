@@ -22,7 +22,7 @@ $Sequence "dlc1_intro_zoey_idle" {
 	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 2
 	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 100 100 target 3
 	scale $scale_fix$
-	//origin 0 0 -$foot_ik_fix$
+	origin 0 0 $pps_z_delta$
 	NoBoneRealign
 }
 
@@ -36,7 +36,7 @@ $Sequence "dlc1_intro_zoey_shrgu" {
 	fadeout 0.2
 	fps 30
 	scale $scale_fix$
-	//origin 0 0 -$foot_ik_fix$
+	origin 0 0 $pps_z_delta$
 	NoBoneRealign
 }
 
@@ -50,7 +50,7 @@ $Sequence "dlc1_intro_zoey_shout" {
 	fadeout 0.2
 	fps 30
 	scale $scale_fix$
-	//origin 0 0 -$foot_ik_fix$
+	origin 0 0 $pps_z_delta$
 	NoBoneRealign
 }
 
@@ -64,7 +64,7 @@ $Sequence "dlc1_intro_zoey_headshake" {
 	fadeout 0.2
 	fps 30
 	scale $scale_fix$
-	//origin 0 0 -$foot_ik_fix$
+	origin 0 0 $pps_z_delta$
 	NoBoneRealign
 }
 
@@ -78,7 +78,7 @@ $Sequence "dlc1_intro_zoey_handflipR" {
 	fadeout 0.2
 	fps 30
 	scale $scale_fix$
-	//origin 0 0 -$foot_ik_fix$
+	origin 0 0 $pps_z_delta$
 	NoBoneRealign
 }
 
@@ -92,7 +92,7 @@ $Sequence "dlc1_intro_zoey_head_gesture" {
 	fadeout 0.2
 	fps 30
 	scale $scale_fix$
-	//origin 0 0 -$foot_ik_fix$
+	origin 0 0 $pps_z_delta$
 	NoBoneRealign
 }
 
@@ -106,6 +106,6 @@ $Sequence "dlc1_intro_zoey_generator_point" {
 	fadeout 0.2
 	fps 30
 	scale $scale_fix$
-	//origin 0 0 -$foot_ik_fix$
+	origin 0 0 $pps_z_delta$
 	NoBoneRealign
 }

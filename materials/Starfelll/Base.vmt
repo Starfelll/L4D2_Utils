@@ -64,4 +64,6 @@
 	// $alphatestreference 0.5
 	// $allowalphatocoverage 1
 	// $translucent 1
+
+	// $no_draw 1
 }

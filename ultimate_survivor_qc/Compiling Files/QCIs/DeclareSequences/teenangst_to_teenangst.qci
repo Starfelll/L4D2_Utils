@@ -1895,3 +1895,9 @@ $DeclareSequence "Fidget_Stretch_Neck"
 $DeclareSequence "Fidget_Stretch_Back"
 // [946] ACT_TERROR_FIDGET 1
 $DeclareSequence "Fidget_Roll_Head"
+
+$IFDef dance
+//$DeclareSequence "****dance"
+$Else
+
+$EndIF

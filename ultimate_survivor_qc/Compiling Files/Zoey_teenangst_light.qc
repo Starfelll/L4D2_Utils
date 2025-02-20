@@ -3,6 +3,7 @@
 $ModelName "survivors/survivor_TeenAngst_light.mdl" // Zoey
 
 $DefineVariable survivor teenangst_light
+$DefineVariable survivor_name Zoey_light
 
 $DefineMacro attathements \\
 	$att_eyes \\

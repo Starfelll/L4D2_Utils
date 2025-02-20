@@ -2,29 +2,30 @@
 // Must be used with nekomdl(https://steamcommunity.com/sharedfiles/filedetails/?id=3142607978)
 
 $PushD "Export"
-//$Include "QCIs/mmd_flex_map.qci"
+// $DefineVariable spb_scale 0.70 //0.40 0.50 0.60 0.70
+$DefineVariable ref_survivor teenangst //使用的人物动画，auto,namvet,coach,mechanic,biker,manager,gambler,producer,teenangst 
+$DefineVariable dance 1
+$DefineVariable usqc_idle_anim 01 //ragdoll动画，可选范围01~03 
+$DefineVariable foot_ik_fix 0
+$DefineVariable calf_ik_fix 0
+$DefineVariable pps_z_delta 0
+$DefineVariable custom_model "../../Body.glb"
+$DefineVariable custom_model_name "name"
+$CDMaterials "Starfelll\Sur_"
 
-$DefineVariable custom_model "Body.glb"
-$CDMaterials "Starfelll\Survivor."
-
+//$Include "QCIs/mmd_flex_mapping.qci"
 // $NekoModel "Face" {
 //     studio "Face.glb"
 //     $Include "QCIs/survivors_flexrules.qci"
 // }
-$Body "Body" $custom_model$
+$BodyGroup "Body" {
+    studio $custom_model$
+}
 
-//使用的人物动画，auto,namvet,coach,mechanic,biker,manager,gambler,producer,teenangst 
-$DefineVariable ref_survivor teenangst
-$DefineVariable usqc_idle_anim 01 //测试图动画，可选范围01~03 
-
-$DefineVariable foot_ik_fix 0
-$DefineVariable calf_ik_fix 0
-
-// $DefineVariable spb_scale 0.70 //0.40 0.50 0.60 0.70
 $Include "QCIs/DeclareSequences/pps.qci"
 $Animation "a_proportions" $custom_model$ Pick BindPose {
     subtract "a_reference" 0
-    origin 0 0 0 
+    origin 0 0 -$pps_z_delta$
 }
 
 $MostlyOpaque //$Opaque // 
@@ -238,7 +239,7 @@ $IFDef usqc_idle_anim
             $reference_pos_namvet
             appendscale $scale_fix$
         }
-        $Sequence "teenangst_anim_fix" {
+        $Sequence "idle" { //teenangst_anim_fix
             $custom_model$ Pick BindPose
             $reference_pos_teenangst
             subtract a_namvet_ref 0 delta hidden
@@ -251,7 +252,10 @@ $EndIF
 
 $KeyValues
 {
-    usqc "3.0"
+    "purple_mood" {
+        name $custom_model_name$($survivor_name$)
+    }
+    usqc "3.3"
 }
 
 /*

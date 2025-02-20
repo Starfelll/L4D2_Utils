@@ -1,12 +1,15 @@
-# config template version 1.7
-vpk_basename = "[Survivor] Mashu"
+# config template version 3
+vpk_basename = "Mashu"
 version = "1"
 
 from srctools.keyvalues import Keyvalues as KV
+import datetime
 
 def init(sel_variants: list[str]):
     global vpk_basename
     vpk_basename += f"_v{version}"
+    if sel_variants[0] != "all_survivors":
+        vpk_basename = vpk_basename + f' ({sel_variants[0]})'
     # vpk_basename += f' ({sel_variants[0]}'
     # for v in sel_variants[1:]:
     #     vpk_basename += f',{v}'
@@ -19,10 +22,9 @@ def gen_addon_info_text() -> str:
         KV("addonauthor", "Starfelll"),
         KV("addonversion", version),
 
-        #KV("addonDescription", "required: https://steamcommunity.com/sharedfiles/filedetails/?id=3016940505"),
-        # https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
-        # KV("addonDescription_En", "English"),
-        # KV("addonDescription_zh", "中文"),
+        KV("addonDescription", 
+           """ """ + f"build: {datetime.date.today().strftime('%Y%m%d')}"
+        ),
 
         # Tags
         # KV("addonContent_Map", "1"),
@@ -53,7 +55,7 @@ def gen_addon_info_text() -> str:
         # KV("Content_WeaponModel", "1")
     ]))
 
-file_types = {"vmt", "vtf", "mdl", "phy", "vtx", "vvd", "ani"}
+file_types = {"vmt", "vtf", "mdl", "phy", "vtx", "vvd", "ani", "wav", "pcf", "txt"}
 
 # string, tuple("src", "dst")
 variants = {

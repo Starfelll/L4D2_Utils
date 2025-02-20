@@ -3,6 +3,7 @@
 $ModelName "survivors/survivor_coach.mdl"
 
 $DefineVariable survivor coach
+$DefineVariable survivor_name Coach
 
 $DefineMacro attathements \\
 	$att_eyes \\

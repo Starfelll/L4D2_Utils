@@ -1,5 +1,6 @@
 // by Starfelll
 
+$DefineVariable custom_model_name "you_model_name"
 $DefineVariable custom_model "v_arms.glb"
 $CDMaterials Starfelll\Survivor.
 
@@ -12,14 +13,16 @@ $EndIF
 $ModelName weapons\arms\v_arms_$arms_name$.mdl
 
 $PushD "Export/"
-$Body "arms" $custom_model$
+$BodyGroup "arms" {
+    studio $custom_model$
+}
 $Sequence "idle" $custom_model$ Pick "BindPose" frame 0 0
 
 $SurfaceProp "default"
 $Contents "solid"
 $IllumPosition 0 0 -31
 $CBox 0 0 0 0 0 0
-
+$MostlyOpaque //$Opaque // 
 // blender
 $JiggleBoneRealign -90 0 0
 $ReverseJiggleBoneRotation pitch yaw
@@ -249,5 +252,29 @@ $BoneMerge "ValveBiped.attach_muzzle"
 $BoneMerge "ValveBiped.Camera"
 $BoneMerge "ValveBiped.attach_camera"
 
+$IF arms_name == "bill"
+    $DefineVariable name "Bill"
+$ELIF arms_name == "coach_new"
+    $DefineVariable name "Coach"
+$ELIF arms_name == "mechanic_new"
+    $DefineVariable name "Ellis"
+$ELIF arms_name == "francis"
+    $DefineVariable name "Francis"
+$ELIF arms_name == "louis"
+    $DefineVariable name "Louis"
+$ELIF arms_name == "gambler_new"
+    $DefineVariable name "Nick"
+$ELIF arms_name == "producer_new"
+    $DefineVariable name "Rochelle"
+$ELIF arms_name == "zoey"
+    $DefineVariable name "Zoey"
+$Else
+    $DefineVariable name "-"
+$EndIF
 
-
+$KeyValues {
+    "purple_mood" {
+        name $custom_model_name$($name$_arms)
+    }
+    usqc "3.2"
+}

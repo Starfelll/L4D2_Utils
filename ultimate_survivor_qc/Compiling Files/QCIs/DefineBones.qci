@@ -18,28 +18,20 @@ $ReverseJiggleBoneRotation pitch yaw
 
 $DefineMacro jigg_hair name ang \\
     $Jigglebone $name$ { is_flexible { \\
-        length 10 \\
-        tip_mass 0 \\
-        pitch_friction 0 \\
-        yaw_friction 0 \\
-        pitch_stiffness 70 \\
-        yaw_stiffness 70 \\
-        pitch_damping 10 \\
-        yaw_damping 10 \\
+        length 10  tip_mass 0 \\
+        pitch_friction 0 yaw_friction 0 \\
+        pitch_stiffness 70 yaw_stiffness 70 \\
+        pitch_damping 10 yaw_damping 10 \\
         angle_constraint $ang$ \\
     } } \\
 \\
 
 $DefineMacro jigg_long_hair name ang mass \\
     $Jigglebone $name$ { is_flexible { \\
-        length 10 \\
-        tip_mass $mass$ \\
-        pitch_friction 0 \\
-        yaw_friction 0 \\
-        pitch_stiffness 50 \\
-        yaw_stiffness 50 \\
-        pitch_damping 10 \\
-        yaw_damping 10 \\
+        length 10 tip_mass $mass$ \\
+        pitch_friction 0 yaw_friction 0 \\
+        pitch_stiffness 50 yaw_stiffness 50 \\
+        pitch_damping 10 yaw_damping 10 \\
         angle_constraint $ang$ \\
     } } \\
 \\
@@ -84,14 +76,10 @@ $jigg_hair5 hairB_5_R
 
 $DefineMacro jigg_hairf name p_min p_max y_min y_max \\
     $Jigglebone $name$ { is_flexible { \\
-        length 5 \\
-        tip_mass 0 \\
-        pitch_friction 0 \\
-        yaw_friction 0 \\
-        pitch_stiffness 70 \\
-        yaw_stiffness 70 \\
-        pitch_damping 10 \\
-        yaw_damping 10 \\
+        length 5 tip_mass 0 \\
+        pitch_friction 0 yaw_friction 0 \\
+        pitch_stiffness 70 yaw_stiffness 70 \\
+        pitch_damping 10 yaw_damping 10 \\
         pitch_constraint $p_min$ $p_max$ \\
         yaw_constraint $y_min$ $y_max$ \\
     } } \\
@@ -99,17 +87,11 @@ $DefineMacro jigg_hairf name p_min p_max y_min y_max \\
 
 $DefineMacro jigg_nekomimi name p_min p_max y_min y_max \\
     $Jigglebone $name$ { is_flexible { \\
-        length 50 \\
-        tip_mass 0 \\
+        length 50 tip_mass 0 \\
         //allow_length_flex \\
-        pitch_friction 0 \\
-        yaw_friction 0 \\
-        along_stiffness 80 \\
-        pitch_stiffness 80 \\
-        yaw_stiffness 80 \\
-        along_damping 8 \\
-        pitch_damping 8 \\
-        yaw_damping 8 \\
+        pitch_friction 0 yaw_friction 0 \\
+        along_stiffness 80 pitch_stiffness 80 yaw_stiffness 80 \\
+        along_damping 8 pitch_damping 8 yaw_damping 8 \\
         //angle_constraint 40 \\
         pitch_constraint $p_min$ $p_max$ \\
         yaw_constraint $y_min$ $y_max$ \\
@@ -119,17 +101,11 @@ $DefineMacro jigg_nekomimi name p_min p_max y_min y_max \\
 
 $DefineMacro jigg_skirt name \\
     $Jigglebone $name$ { is_flexible { \\
-        length 50 \\
-        tip_mass 1 \\
+        length 50 tip_mass 1 \\
         //allow_length_flex \\
-        pitch_friction 0 \\
-        yaw_friction 0 \\
-        along_stiffness 0 \\
-        pitch_stiffness 80 \\
-        yaw_stiffness 80 \\
-        along_damping 10 \\
-        pitch_damping 10 \\
-        yaw_damping 10 \\
+        pitch_friction 0 yaw_friction 0 \\
+        along_stiffness 0 pitch_stiffness 80 yaw_stiffness 80 \\
+        along_damping 10 pitch_damping 10 yaw_damping 10 \\
         angle_constraint 16 \\
     } } \\
 \\
@@ -192,75 +168,6 @@ $DefineMacro jigg_skirt name \\
 //         } \\
 //     } \\
 // \\
-
-
-
-
-// is_flexible
-// If a Jiggle Bone is "flexible", a simulated mass is placed at the end of the bone, and the bone acts like a springy, flexible rod. This spring creates rotational motion only, with the center of rotation at the base of the Jiggle Bone.
-
-// yaw_stiffness
-// How stiff the spring is in the local yaw rotational axis.
-// yaw_damping
-// Damping along the local yaw rotational axis.
-// pitch_stiffness
-// How stiff the spring is in the local pitch rotational axis.
-// pitch_damping
-// Damping along the local pitch rotational axis.
-// along_stiffness
-// How stiff the spring is along the axis of the spring. This is only used if "allow_length_flex" is specified for this bone.
-// along_damping
-// Damping along the axis of the spring. This is only used if "allow_length_flex" is specified for this bone.
-// allow_length_flex
-// Normally, jiggle bones keep their length rigid. Specifying this allows that length to flex as well.
-// length
-// How far the "tip" mass is from the base in inches. Short lengths result in dramatic jiggling. Longer lengths result in more subtle motions.
-// tip_mass
-// How much the tip is affected by gravity. Zero disables gravity effects, whereas 1000 would be a heavy mass.
-
-// is_rigid
-// If a Jiggle Bone is "rigid", a simulated mass is placed at the end of the bone, and the bone acts like a rigid stick. This spring creates rotational motion only, with the center of rotation at the base of the Jiggle Bone.
-
-// length
-// How far the "tip" mass is from the base in inches. Short lengths result in dramatic jiggling. Longer lengths result in more subtle motions.
-// tip_mass
-// How much the tip is affected by gravity. Zero disables gravity effects, whereas 1000 would be a heavy mass.
-
-// Angular constraints
-// The following parameters can be used within either is_rigid (rigid) or is_flexible (flexible) parameter groups. Note that none or all of these constraints can be used, and that each constraint incurs nontrivial computations.
-
-// angle_constraint
-// Specify the maximum angular deflection allowed, creating a conical boundary the jiggle bone cannot penetrate.
-// yaw_constraint (min max)
-// Specify the minimum and maximum angular deflection allowed along the local yaw rotational axis. Angular values should not exceed +/- 90 degrees.
-// yaw_friction
-// Nonzero values create frictional forces when the jiggle bone is sliding against the plane defined by the yaw limit. Friction should not exceed 20 units.
-// pitch_constraint
-// Specify the minimum and maximum angular deflection allowed along the local pitch rotational axis. Angular values should not exceed +/- 90 degrees.
-// pitch_friction
-// Nonzero values create frictional forces when the jiggle bone is sliding against the plane defined by the pitch limit. Friction should not exceed 20 units.
-
-// has_base_spring
-// If a Jiggle Bone has a "base spring", a simulated mass is placed on the base of the bone. This spring creates translational motion only, moving the whole Jiggle Bone in X, Y, and Z.
-
-// stiffness
-// How stiff the base spring is.
-// damping
-// The damping of the base spring.
-// left_constraint
-// The maximum amount the bone is allowed to move along the local X axis.
-// left_friction
-// The amount of friction applied in the up/forward plane when the spring is rubbing against the left constraint.
-// up_constraint
-// The maximum amount the bone is allowed to move along the local Y axis.
-// up_friction
-// The amount of friction applied in the left/forward plane when the spring is rubbing against the up constraint.
-// forward_constraint
-// The maximum amount the bone is allowed to move along the local Z axis.
-// forward_friction
-// The amount of friction applied in the left/up plane when the spring is rubbing against the forward constraint.
-// base_mass
-// How much the base spring is affected by gravity.
 
 $Hierarchy "ValveBiped.Bip01_Pelvis" ""
 $UnlockDefineBones

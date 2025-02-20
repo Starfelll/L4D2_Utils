@@ -3,6 +3,7 @@
 $ModelName "survivors/survivor_biker_light.mdl" // Francis
 
 $DefineVariable survivor biker_light
+$DefineVariable survivor_name Francis_light
 
 $DefineMacro attathements \\
     $att_eyes \\

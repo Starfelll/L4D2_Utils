@@ -1,6 +1,6 @@
-#l4d2pak.py version 1.1
+#l4d2pak.py version 1.2
 from types import ModuleType
-import srctools.vpk as vpk
+from srctools_starfelll.src.srctools import vpk
 import argparse
 import os.path
 import pathlib as p

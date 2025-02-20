@@ -3,6 +3,7 @@
 $ModelName "survivors/survivor_manager.mdl" //Louis
 
 $DefineVariable survivor manager
+$DefineVariable survivor_name Louis
 
 $DefineMacro attathements \\
 	$att_eyes \\

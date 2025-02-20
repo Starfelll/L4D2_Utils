@@ -1,4 +1,4 @@
-set param=-quiet -outdir "%~dp0" -parsecompletion -Darms_name
+set param=-quiet -outdir "%~dp0" -parsecompletion -Drelease 1 -Darms_name
 @echo off
 
 cd ../Compiling Files

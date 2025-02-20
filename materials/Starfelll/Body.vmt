@@ -1,15 +1,15 @@
 "Patch"
 {
-    "include"           "materials\Starfelll\Survivor.Mamehinata\Base.vmt"
+    "include"           "materials\Starfelll\ppp\Base.vmt"
     "insert"
     {
-        "$basetexture"              "Starfelll\Survivor.Mamehinata\Body"
-        // "$EmissiveBlendBaseTexture"     "Starfelll\Survivor.Mamehinata\Body"
+        "$basetexture"              "Starfelll\ppp\Body"
+        // "$EmissiveBlendBaseTexture"     "Starfelll\ppp\Body"
         // $nocull 1
         // $alphatest 1
         // $alphatestreference 0.5
         // $allowalphatocoverage 1
         // $translucent 1
-        //"$lightwarptexture"         "models/survivors/coach/coach_head_wrp"
+        "$lightwarptexture"         "Starfelll\ppp\lr_body"
     }
 }
