@@ -4,13 +4,16 @@
 $PushD "Export"
 // $DefineVariable spb_scale 0.70 //0.40 0.50 0.60 0.70
 $DefineVariable ref_survivor teenangst //使用的人物动画，auto,namvet,coach,mechanic,biker,manager,gambler,producer,teenangst 
-$DefineVariable dance 1
+$IFDef l4n_survivor
+$ModelName l4n/survivors/starfelll_xxxxx/survivor_$survivor$.mdl
+$EndIF
 $DefineVariable usqc_idle_anim 01 //ragdoll动画，可选范围01~03 
 $DefineVariable foot_ik_fix 0
 $DefineVariable calf_ik_fix 0
 $DefineVariable pps_z_delta 0
+//$DefineVariable dance 1
 $DefineVariable custom_model "../../Body.glb"
-$DefineVariable custom_model_name "name"
+//$DefineVariable custom_model_name "name"
 $CDMaterials "Starfelll\Sur_"
 
 //$Include "QCIs/mmd_flex_mapping.qci"
@@ -20,6 +23,7 @@ $CDMaterials "Starfelll\Sur_"
 // }
 $BodyGroup "Body" {
     studio $custom_model$
+    //blank
 }
 
 $Include "QCIs/DeclareSequences/pps.qci"
@@ -252,10 +256,12 @@ $EndIF
 
 $KeyValues
 {
+$IFDef custom_model_name
     "purple_mood" {
         name $custom_model_name$($survivor_name$)
     }
-    usqc "3.3"
+$EndIF
+    usqc "3.4"
 }
 
 /*
