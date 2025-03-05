@@ -1,0 +1,4 @@
+$PushD "Export/"
+$CDMaterials Starfelll\Survivor.
+//$DefineVariable custom_model_name "you_model_name"
+//$DefineVariable l4n_survivor_dir "youname_youmodelname"

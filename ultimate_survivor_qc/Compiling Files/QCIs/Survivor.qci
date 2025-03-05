@@ -1,20 +1,14 @@
 // by Starfelll https://github.com/Starfelll/L4D2_Utils/tree/master/ultimate_survivor_qc
 // Must be used with nekomdl(https://steamcommunity.com/sharedfiles/filedetails/?id=3142607978)
-
-$PushD "Export"
+$Include "QCIs/Shared.qci"
 // $DefineVariable spb_scale 0.70 //0.40 0.50 0.60 0.70
 $DefineVariable ref_survivor teenangst //使用的人物动画，auto,namvet,coach,mechanic,biker,manager,gambler,producer,teenangst 
-$IFDef l4n_survivor
-$ModelName l4n/survivors/starfelll_xxxxx/survivor_$survivor$.mdl
-$EndIF
 $DefineVariable usqc_idle_anim 01 //ragdoll动画，可选范围01~03 
 $DefineVariable foot_ik_fix 0
 $DefineVariable calf_ik_fix 0
 $DefineVariable pps_z_delta 0
 //$DefineVariable dance 1
 $DefineVariable custom_model "../../Body.glb"
-//$DefineVariable custom_model_name "name"
-$CDMaterials "Starfelll\Sur_"
 
 //$Include "QCIs/mmd_flex_mapping.qci"
 // $NekoModel "Face" {
@@ -195,7 +189,7 @@ $IKChain "ikclip" "ValveBiped.weapon_bone_Clip" knee 0.707 -0.707 0
 $IKAutoPlayLock "rfoot" 0 0.1 
 $IKAutoPlayLock "lfoot" 0 0.1
 
-// $AmbientBoost
+$AmbientBoost
 $SurfaceProp "flesh" 
 $IllumPosition -2.397 0.123 38.156
 
@@ -261,8 +255,19 @@ $IFDef custom_model_name
         name $custom_model_name$($survivor_name$)
     }
 $EndIF
-    usqc "3.4"
+    usqc "3.5"
 }
+
+$IFDef l4n_survivor
+    $ModelName l4n/survivors/$l4n_survivor_dir$/survivor_$survivor$.mdl
+$EndIF
+
+// $IFDef release
+//     $IFDef main_mdl
+//         $ModelName l4n/survivors/$l4n_survivor_dir$/3.mdl
+//     $EndIf
+//     $InternalName l4n/survivors/$l4n_survivor_dir$/3.mdl
+// $EndIF
 
 /*
     Nick	  gambler     1.0

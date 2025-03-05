@@ -1,22 +1,14 @@
 // by Starfelll
 
-//$DefineVariable custom_model_name "you_model_name"
+$Include "QCIs/Shared.qci"
 $DefineVariable custom_model "v_arms.glb"
-$CDMaterials Starfelll\Survivor.
 
 // nekomdl.exe -Darms_name zoey v_arms.qc
 $IFDef arms_name
 $Else
     $DefineVariable arms_name bill // bill,coach_new,mechanic_new,francis,louis,gambler_new,producer_new,zoey
 $EndIF
-$IFDef l4n_survivor
-    $ModelName l4n\survivors\starfelll_xxxxx\v_arms_$arms_name$.mdl
-$Else
-    $ModelName weapons\arms\v_arms_$arms_name$.mdl
-$EndIF
 
-
-$PushD "Export/"
 $BodyGroup "arms" {
     studio $custom_model$
 }
@@ -27,6 +19,7 @@ $Contents "solid"
 $IllumPosition 0 0 -31
 $CBox 0 0 0 0 0 0
 $MostlyOpaque //$Opaque // 
+$AmbientBoost
 // blender
 $JiggleBoneRealign -90 0 0
 $ReverseJiggleBoneRotation pitch yaw
@@ -282,5 +275,18 @@ $IFDef custom_model_name
         name $custom_model_name$($name$_arms)
     }
 $EndIF
-    usqc "3.2"
+    usqc "3.5"
 }
+
+$IFDef l4n_survivor
+    $ModelName l4n\survivors\$l4n_survivor_dir$\v_arms_$arms_name$.mdl
+$Else
+    $ModelName weapons\arms\v_arms_$arms_name$.mdl
+$EndIF
+
+// $IFDef release
+//     $IFDef main_mdl
+//         $ModelName l4n/survivors/$l4n_survivor_dir$/1.mdl
+//     $EndIF
+//     $InternalName l4n/survivors/$l4n_survivor_dir$/1.mdl
+// $EndIF

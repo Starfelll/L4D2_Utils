@@ -1,4 +1,4 @@
-# config template version 3
+# config template version 4
 vpk_basename = "Mashu"
 version = "1"
 
@@ -60,7 +60,7 @@ file_types = {"vmt", "vtf", "mdl", "phy", "vtx", "vvd", "ani", "wav", "pcf", "tx
 # string, tuple("src", "dst")
 variants = {
     "models": ["models/**"],
-    "materials": ["materials/**"],
+    "materials": ["materials/**", "models/l4n/**"],
     "bill": [
         ("shared/s_panel.vtf", "materials/vgui/s_panel_namvet.vtf"),
         ("shared/incap.vtf", "materials/vgui/s_panel_namvet_incap.vtf"),

@@ -3,6 +3,9 @@ set param=-quiet -outdir "%~dp0" -parsecompletion -Drelease 1
 
 cd ../Compiling Files
 
+@REM nekomdl %param% -Dmain_mdl 1 Bill_namvet.qc
+@REM IF %ERRORLEVEL% NEQ 0 ( goto CompileFailed )
+
 nekomdl %param% Bill_namvet.qc
 IF %ERRORLEVEL% NEQ 0 ( goto CompileFailed )
 
