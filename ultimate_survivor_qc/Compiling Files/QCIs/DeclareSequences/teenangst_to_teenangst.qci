@@ -1,7 +1,7 @@
-// update time: 2025-01-19
+// update time: 2025-03-05
 $IncludeModel $include_model_root$/anim_TeenAngst.mdl
 $IncludeModel $include_model_root$/gestures_TeenAngst.mdl
-// [0]
+// [0]   0
 $seq_survivor $survivor$
 // [1] ACT_DIERAGDOLL 1
 $seq_ragdoll
@@ -737,7 +737,7 @@ $DeclareSequence "NamVet_AimMatrix_Pistol_Incap"
 $DeclareSequence "NamVet_AimMatrix_Elites_Incap"
 // [367]
 $DeclareSequence "NamVet_AimMatrix_Ladder_Climb"
-// [368]
+// [368]   0
 $DeclareSequence "DummyAim"
 // [369]
 $DeclareSequence "presubtract_TeenAngst_AimMatrix_Rifle_Standing_Calm"
@@ -771,7 +771,7 @@ $DeclareSequence "Gren_Prep_Delta"
 $DeclareSequence "Gren_Throw_Delta"
 // [384]
 $DeclareSequence "Gren_Pull_Back_Delta"
-// [385]
+// [385]   0
 $DeclareSequence "Gren_Pull_Back_layer"
 // [386] ACT_PRIMARYATTACK_GREN1_IDLE 1
 $DeclareSequence "Shoot_Standing_Grenade1"
@@ -781,15 +781,15 @@ $DeclareSequence "Shoot_Standing_Grenade2"
 $DeclareSequence "Shoot_Running_Grenade1"
 // [389] ACT_PRIMARYATTACK_GREN2_RUN 1
 $DeclareSequence "Shoot_Running_Grenade2"
-// [390]
+// [390]   0
 $DeclareSequence "gasCan_Running_Subtract"
-// [391]
+// [391]   0
 $DeclareSequence "gasCan_Prep_Delta"
-// [392]
+// [392]   0
 $DeclareSequence "gasCan_Throw_Delta"
 // [393]
 $DeclareSequence "gascan_pull_back_delta"
-// [394]
+// [394]   0
 $DeclareSequence "gasCan_pull_back_layer"
 // [395] ACT_PRIMARYATTACK_GASCAN1_IDLE 1
 $DeclareSequence "shoot_standing_gascan1"
@@ -801,15 +801,15 @@ $DeclareSequence "shoot_running_gascan1"
 $DeclareSequence "shoot_running_gascan2"
 // [399] ACT_IDLE_GASCAN_PULL_BACK 1
 $DeclareSequence "idle_gasCan_ready"
-// [400]
+// [400]   0
 $DeclareSequence "o2_Running_Subtract"
-// [401]
+// [401]   0
 $DeclareSequence "o2_Prep_Delta"
-// [402]
+// [402]   0
 $DeclareSequence "o2_Throw_Delta"
 // [403]
 $DeclareSequence "o2_pull_back_delta"
-// [404]
+// [404]   0
 $DeclareSequence "o2_pull_back_layer"
 // [405] ACT_PRIMARYATTACK_o21_IDLE 1
 $DeclareSequence "shoot_standing_o21"
@@ -993,13 +993,13 @@ $DeclareSequence "Jump_Rifle_02"
 $DeclareSequence "Jump_Shotgun_01"
 // [495] ACT_JUMP_SHOTGUN -1
 $DeclareSequence "Jump_Shotgun_02"
-// [496]
+// [496]   0
 $DeclareSequence "jump_gas_layer"
 // [497] ACT_JUMP_GASCAN -1
 $DeclareSequence "Jump_GasCan_01"
 // [498] ACT_JUMP_GASCAN -1
 $DeclareSequence "Jump_GasCan_02"
-// [499]
+// [499]   0
 $DeclareSequence "jump_o2_layer"
 // [500] ACT_JUMP_o2 -1
 $DeclareSequence "Jump_o2_01"
@@ -1121,7 +1121,7 @@ $DeclareSequence "deathpose_back"
 $DeclareSequence "deathpose_right"
 // [559] ACT_DIE_LEFTSIDE -1
 $DeclareSequence "deathpose_left"
-// [560]
+// [560]   0
 $DeclareSequence "deathpose_incap"
 // [561] ACT_TERROR_FLINCH 1
 $DeclareSequence "Flinch_01"
@@ -1187,7 +1187,7 @@ $DeclareSequence "Run_Fry_Pan"
 $DeclareSequence "LimpWalk_Fry_Pan"
 // [592] ACT_RUN_INJURED_FRYINGPAN -1
 $DeclareSequence "LimpRun_Fry_Pan"
-// [593]
+// [593]   0
 $DeclareSequence "jump_Frying_Pan_layer"
 // [594] ACT_JUMP_FRYINGPAN 1
 $DeclareSequence "Jump_Frying_Pan_01"
@@ -1317,7 +1317,7 @@ $DeclareSequence "Run_bat"
 $DeclareSequence "LimpWalk_Bat"
 // [657] ACT_RUN_INJURED_BAT -1
 $DeclareSequence "LimpRun_Bat"
-// [658]
+// [658]   0
 $DeclareSequence "jump_bat_layer"
 // [659] ACT_JUMP_BAT -1
 $DeclareSequence "Jump_bat_01"
@@ -1345,7 +1345,7 @@ $DeclareSequence "AimMatrix_axe_Standing"
 $DeclareSequence "AimMatrix_axe_Crouching"
 // [671]
 $DeclareSequence "AimMatrix_axe_Injured"
-// [672]
+// [672]   0
 $DeclareSequence "idle_axe_anim_mdl"
 // [673] ACT_IDLE_AXE 1
 $DeclareSequence "Idle_Standing_axe"
@@ -1377,7 +1377,7 @@ $DeclareSequence "Run_Axe"
 $DeclareSequence "LimpWalk_Axe"
 // [687] ACT_RUN_INJURED_AXE -1
 $DeclareSequence "LimpRun_Axe"
-// [688]
+// [688]   0
 $DeclareSequence "jump_axe_layer"
 // [689] ACT_JUMP_AXE 1
 $DeclareSequence "Jump_axe_01"
@@ -1403,7 +1403,7 @@ $DeclareSequence "katana_swing_e2w_idle"
 $DeclareSequence "katana_swing_w2e_layer"
 // [700] ACT_SHOOT_W2E_IDLE_KATANA 1
 $DeclareSequence "katana_swing_w2e_idle"
-// [701]
+// [701]   0
 $DeclareSequence "Reload_Standing_grenade_launcher_raw"
 // [702]
 $DeclareSequence "Reload_Standing_grenade_launcher_layer"
@@ -1459,7 +1459,7 @@ $DeclareSequence "LimpWalk_CHAINSAW"
 $DeclareSequence "LimpRun_chainsaw"
 // [728] ACT_IDLE_ATTACK_CHAINSAW -1
 $DeclareSequence "Idle_Attack_Chainsaw"
-// [729]
+// [729]   0
 $DeclareSequence "jump_chainsaw_layer"
 // [730] ACT_JUMP_CHAINSAW 1
 $DeclareSequence "Jump_chainsaw_01"
@@ -1515,7 +1515,7 @@ $DeclareSequence "Run_GUITAR"
 $DeclareSequence "LimpWalk_GUITAR"
 // [756] ACT_RUN_INJURED_GUITAR -1
 $DeclareSequence "LimpRun_GUITAR"
-// [757]
+// [757]   0
 $DeclareSequence "jump_GUITAR_layer"
 // [758] ACT_JUMP_GUITAR 1
 $DeclareSequence "Jump_GUITAR_01"
@@ -1531,9 +1531,9 @@ $DeclareSequence "guitar_primary_attack02"
 $DeclareSequence "guitar_secondary_attack_LAYER"
 // [764] ACT_SHOOT_SECONDARY_GUITAR 1
 $DeclareSequence "guitar_secondary_attack"
-// [765]
+// [765]   0
 $DeclareSequence "AimMatrix_gnome_standing_raw"
-// [766]
+// [766]   0
 $DeclareSequence "AimMatrix_gnome_Crouching_raw"
 // [767]
 $DeclareSequence "AimMatrix_gnome_Injured_raw"
@@ -1585,11 +1585,11 @@ $DeclareSequence "CalmRun_gnome"
 $DeclareSequence "LimpWalk_gnome"
 // [791] ACT_RUN_INJURED_GNOME 1
 $DeclareSequence "LimpRun_gnome"
-// [792]
+// [792]   0
 $DeclareSequence "jump_gnome_layer"
-// [793]
+// [793]   0
 $DeclareSequence "jump_gnome_gesture"
-// [794]
+// [794]   0
 $DeclareSequence "jump_gnome_gesture_aim"
 // [795] ACT_JUMP_GNOME -1
 $DeclareSequence "Jump_gnome_01"
@@ -1651,11 +1651,11 @@ $DeclareSequence "Charger_Carried"
 $DeclareSequence "Charger_Slammed_Wall"
 // [824] ACT_TERROR_SLAMMED_GROUND 1
 $DeclareSequence "Charger_Slammed_Ground"
-// [825]
+// [825]   0
 $DeclareSequence "survivor_ridden_upper"
 // [826] ACT_TERROR_JOCKEY_RIDDEN -1
 $DeclareSequence "survivor_ridden_lower_walk"
-// [827]
+// [827]   0
 $DeclareSequence "dlc1_finaleintro_zoey_idle"
 // [828] ACT_DLCFI_ZOEY_01 -1
 $DeclareSequence "dlc1_finaleintro_zoey_snap"
@@ -1691,7 +1691,7 @@ $DeclareSequence "dlc1_finaleintro_zoey_CarGuys"
 $DeclareSequence "dlc1_finaleintro_zoey_weightshift"
 // [844] ACT_DLCFI_ZOEY_10MR -1
 $DeclareSequence "dlc1_finaleintro_zoey_Im_gonna_go_throw_up"
-// [845]
+// [845]   0
 $DeclareSequence "dlc1_outro_zoey"
 // [846]
 $DeclareSequence "TeenAngst_gesture_overhereinDelta"
