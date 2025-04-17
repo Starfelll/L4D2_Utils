@@ -1,4 +1,4 @@
-# config template version 4
+# config template version 5
 vpk_basename = "Mashu"
 version = "1"
 
@@ -8,7 +8,9 @@ import datetime
 def init(sel_variants: list[str]):
     global vpk_basename
     vpk_basename += f"_v{version}"
-    if sel_variants[0] != "all_survivors":
+    if sel_variants[0] == "l4n_survivor":
+        vpk_basename = "[l4n_survivor] " + vpk_basename
+    elif sel_variants[0] != "all_survivors":
         vpk_basename = vpk_basename + f' ({sel_variants[0]})'
     # vpk_basename += f' ({sel_variants[0]}'
     # for v in sel_variants[1:]:
@@ -60,7 +62,8 @@ file_types = {"vmt", "vtf", "mdl", "phy", "vtx", "vvd", "ani", "wav", "pcf", "tx
 # string, tuple("src", "dst")
 variants = {
     "models": ["models/**"],
-    "materials": ["materials/**", "models/l4n/**"],
+    "l4n_survivor": ["models/l4n/s/**"],
+    "materials": ["materials/**", "models/l4n/s/*/1.*", "models/l4n/s/*/3.*"],
     "bill": [
         ("shared/s_panel.vtf", "materials/vgui/s_panel_namvet.vtf"),
         ("shared/incap.vtf", "materials/vgui/s_panel_namvet_incap.vtf"),
