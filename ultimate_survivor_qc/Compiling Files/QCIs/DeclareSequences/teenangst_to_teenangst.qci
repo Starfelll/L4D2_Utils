@@ -1897,7 +1897,7 @@ $DeclareSequence "Fidget_Stretch_Back"
 $DeclareSequence "Fidget_Roll_Head"
 
 $IFDef dance
-//$DeclareSequence "****dance"
+//1071
 $Else
 
 $EndIF
