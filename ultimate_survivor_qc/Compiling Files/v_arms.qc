@@ -11,6 +11,7 @@ $EndIF
 
 $BodyGroup "arms" {
     studio $custom_model$
+    //blank
 }
 $Sequence "idle" $custom_model$ Pick "BindPose" frame 0 0
 
@@ -250,43 +251,46 @@ $BoneMerge "ValveBiped.Camera"
 $BoneMerge "ValveBiped.attach_camera"
 
 $IF arms_name == "bill"
-    $DefineVariable name "Bill"
+    $DefineVariable name_suffix "Bill"
 $ELIF arms_name == "coach_new"
-    $DefineVariable name "Coach"
+    $DefineVariable name_suffix "Coach"
 $ELIF arms_name == "mechanic_new"
-    $DefineVariable name "Ellis"
+    $DefineVariable name_suffix "Ellis"
 $ELIF arms_name == "francis"
-    $DefineVariable name "Francis"
+    $DefineVariable name_suffix "Francis"
 $ELIF arms_name == "louis"
-    $DefineVariable name "Louis"
+    $DefineVariable name_suffix "Louis"
 $ELIF arms_name == "gambler_new"
-    $DefineVariable name "Nick"
+    $DefineVariable name_suffix "Nick"
 $ELIF arms_name == "producer_new"
-    $DefineVariable name "Rochelle"
+    $DefineVariable name_suffix "Rochelle"
 $ELIF arms_name == "zoey"
-    $DefineVariable name "Zoey"
+    $DefineVariable name_suffix "Zoey"
 $Else
-    $DefineVariable name "-"
+    $DefineVariable name_suffix ""
 $EndIF
 
 $KeyValues {
 $IFDef custom_model_name
     "purple_mood" {
-        name $custom_model_name$($name$_arms)
+        "name" $custom_model_name$_arms
+        "name_suffix" $name_suffix$
     }
 $EndIF
     usqc "3.5"
 }
 
 $IFDef l4n_survivor
-    $ModelName l4n\survivors\$l4n_survivor_dir$\v_arms_$arms_name$.mdl
+    $ModelName l4n\s\$l4n_survivor_dir$\v_arms_$arms_name$.mdl
 $Else
     $ModelName weapons\arms\v_arms_$arms_name$.mdl
 $EndIF
 
 // $IFDef release
 //     $IFDef main_mdl
-//         $ModelName l4n/survivors/$l4n_survivor_dir$/1.mdl
+//         $ModelName l4n/s/$l4n_survivor_dir$/1.mdl
 //     $EndIF
-//     $InternalName l4n/survivors/$l4n_survivor_dir$/1.mdl
+//     $InternalName l4n/s/$l4n_survivor_dir$/1.mdl
 // $EndIF
+
+//r_flushlod

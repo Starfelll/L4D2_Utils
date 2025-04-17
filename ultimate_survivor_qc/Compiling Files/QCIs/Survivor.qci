@@ -252,21 +252,27 @@ $KeyValues
 {
 $IFDef custom_model_name
     "purple_mood" {
-        name $custom_model_name$($survivor_name$)
+        "name" $custom_model_name$
+        "name_suffix" $survivor_name$
+        // "player_foot" {
+        //     "body_group" "鞋子"
+        //     "0" "0.0,0.0"
+        //     "1" "-2.2,0.0"
+        // }
     }
 $EndIF
-    usqc "3.5"
+    usqc "3.6"
 }
 
 $IFDef l4n_survivor
-    $ModelName l4n/survivors/$l4n_survivor_dir$/survivor_$survivor$.mdl
+    $ModelName l4n/s/$l4n_survivor_dir$/survivor_$survivor$.mdl
 $EndIF
 
 // $IFDef release
 //     $IFDef main_mdl
-//         $ModelName l4n/survivors/$l4n_survivor_dir$/3.mdl
+//         $ModelName l4n/s/$l4n_survivor_dir$/3.mdl
 //     $EndIf
-//     $InternalName l4n/survivors/$l4n_survivor_dir$/3.mdl
+//     $InternalName l4n/s/$l4n_survivor_dir$/3.mdl
 // $EndIF
 
 /*

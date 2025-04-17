@@ -121,27 +121,22 @@ $DefineMacro jigg_skirt name \\
 //     }
 // }
 
-// $JiggleBone "jigg_nemofira"
+// $JiggleBone "ring"
 // {
 // 	is_flexible {
-// 		yaw_stiffness 1
-// 		along_stiffness 1
-// 		pitch_stiffness 1
-// 		yaw_damping 10
-// 		pitch_damping 10
-// 		along_damping 10
+// 		yaw_stiffness 1 along_stiffness 1 pitch_stiffness 1
+// 		yaw_damping 10 pitch_damping 10 along_damping 10
 // 		length 5
-// 		yaw_constraint -5 5
-// 		pitch_constraint -5 5
+// 		yaw_constraint -5 5 pitch_constraint -5 5
 // 		allow_length_flex
 // 		tip_mass 0
 // 	}
 // 	has_base_spring {
 // 		stiffness 40
 // 		damping 9
-// 		left_constraint -16 16
-// 		up_constraint -16 16
-// 		forward_constraint -16 3
+// 		left_constraint -1 1
+// 		up_constraint -1 1
+// 		forward_constraint -1 2
 // 	}
 // }
 

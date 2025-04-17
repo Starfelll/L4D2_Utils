@@ -5,7 +5,7 @@
 	"$NoDecal"							"1"
 
 	// Emissive
-	"$EmissiveBlendEnabled"				"1"
+	"$EmissiveBlendEnabled"				"0"
 	"$EmissiveBlendStrength"			"0.01"
 	"$EmissiveBlendTexture"				"vgui/white"
 	"$EmissiveBlendFlowTexture"			"vgui/white"
