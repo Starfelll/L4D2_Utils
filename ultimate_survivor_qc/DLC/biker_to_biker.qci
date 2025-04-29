@@ -1,7 +1,7 @@
-// update time: 2025-01-19
+// update time: 2025-04-29
 $IncludeModel $include_model_root$/anim_Biker.mdl
 $IncludeModel $include_model_root$/gestures_biker.mdl
-// [0]
+// [0]   0
 $seq_survivor $survivor$
 // [1]
 $DeclareSequence "animHack"
@@ -693,7 +693,7 @@ $DeclareSequence "Shoot_Standing_SMG"
 $DeclareSequence "Shoot_Standing_M3S90"
 // [345] ACT_PRIMARYATTACK_PUMPSHOTGUN -1
 $DeclareSequence "Shoot_Standing_PumpShotgun"
-// [346]
+// [346]   0
 $DeclareSequence "Gren_Running_Subtract"
 // [347]
 $DeclareSequence "Gren_Prep_Delta"
@@ -701,7 +701,7 @@ $DeclareSequence "Gren_Prep_Delta"
 $DeclareSequence "Gren_Throw_Delta"
 // [349]
 $DeclareSequence "Gren_Pull_Back_Delta"
-// [350]
+// [350]   0
 $DeclareSequence "Gren_Pull_Back_layer"
 // [351] ACT_PRIMARYATTACK_GREN1_IDLE -1
 $DeclareSequence "Shoot_Standing_Grenade1"
@@ -715,7 +715,7 @@ $DeclareSequence "Shoot_Running_Grenade2"
 $DeclareSequence "gasCan_Running_Subtract"
 // [356]
 $DeclareSequence "gasCan_Prep_Delta"
-// [357]
+// [357]   0
 $DeclareSequence "gasCan_Throw_Delta"
 // [358]
 $DeclareSequence "gascan_pull_back_delta"
@@ -739,7 +739,7 @@ $DeclareSequence "o2_Prep_Delta"
 $DeclareSequence "o2_Throw_Delta"
 // [368]
 $DeclareSequence "o2_pull_back_delta"
-// [369]
+// [369]   0
 $DeclareSequence "o2_pull_back_layer"
 // [370] ACT_PRIMARYATTACK_o21_IDLE 1
 $DeclareSequence "shoot_standing_o21"
@@ -991,21 +991,21 @@ $DeclareSequence "Jump_Rifle_02"
 $DeclareSequence "Jump_Shotgun_01"
 // [494] ACT_JUMP_SHOTGUN -1
 $DeclareSequence "Jump_Shotgun_02"
-// [495]
+// [495]   0
 $DeclareSequence "jump_gas_layer"
-// [496]
+// [496]   0
 $DeclareSequence "jump_gas_gesture"
-// [497]
+// [497]   0
 $DeclareSequence "jump_gas_gesture_aim"
 // [498] ACT_JUMP_GASCAN -1
 $DeclareSequence "Jump_GasCan_01"
 // [499] ACT_JUMP_GASCAN -1
 $DeclareSequence "Jump_GasCan_02"
-// [500]
+// [500]   0
 $DeclareSequence "jump_o2_layer"
-// [501]
+// [501]   0
 $DeclareSequence "jump_o2_gesture"
-// [502]
+// [502]   0
 $DeclareSequence "jump_o2_gesture_aim"
 // [503] ACT_JUMP_o2 -1
 $DeclareSequence "Jump_o2_01"
@@ -1211,7 +1211,7 @@ $DeclareSequence "biker_AimMatrix_bat_Standing"
 $DeclareSequence "biker_AimMatrix_bat_Crouching"
 // [604]
 $DeclareSequence "biker_AimMatrix_bat_Injured_Standing"
-// [605]
+// [605]   0
 $DeclareSequence "jump_bat_layer"
 // [606] ACT_JUMP_BAT -1
 $DeclareSequence "Jump_bat_01"
@@ -1253,7 +1253,7 @@ $DeclareSequence "biker_AimMatrix_axe_Standing"
 $DeclareSequence "biker_AimMatrix_axe_Crouching"
 // [625]
 $DeclareSequence "biker_AimMatrix_axe_Injured_Standing"
-// [626]
+// [626]   0
 $DeclareSequence "jump_axe_layer"
 // [627] ACT_JUMP_AXE 1
 $DeclareSequence "Jump_axe_01"
@@ -1349,19 +1349,19 @@ $DeclareSequence "pour_gascan"
 $DeclareSequence "Reload_Standing_grenade_launcher_layer"
 // [673] ACT_RELOAD_grenade_launcher -1
 $DeclareSequence "Reload_Standing_grendade_launcher"
-// [674]
+// [674]   0
 $DeclareSequence "jump_Frying_Pan_layer"
 // [675] ACT_JUMP_FRYINGPAN 1
 $DeclareSequence "Jump_Frying_Pan_01"
-// [676]
+// [676]   0
 $DeclareSequence "c4m1_intro_coach"
-// [677]
+// [677]   0
 $DeclareSequence "c2m1_intro_coach"
-// [678]
+// [678]   0
 $DeclareSequence "c5m1_intro_coach"
-// [679]
+// [679]   0
 $DeclareSequence "c1m1_intro_coach"
-// [680]
+// [680]   0
 $DeclareSequence "dlc1_intro_male_idle"
 // [681] ACT_DLCINTRO_01 -1
 $DeclareSequence "dlc1_intro_male_leanup"
@@ -1371,7 +1371,7 @@ $DeclareSequence "dlc1_intro_male_leanleft"
 $DeclareSequence "dlc1_intro_male_headnod"
 // [684] ACT_DLCINTRO_04 -1
 $DeclareSequence "dlc1_intro_male_handflipR"
-// [685]
+// [685]   0
 $DeclareSequence "dlc1_finaleintro_francis_idle"
 // [686] ACT_DLCFI_FRANCIS_HLD -1
 $DeclareSequence "dlc1_finaleintro_francis_weight_shift_hold"
@@ -1465,7 +1465,7 @@ $DeclareSequence "dlc1_finaleintro_francis_TacoDogX2Wav"
 $DeclareSequence "dlc1_finaleintro_francis_Lean"
 // [731] ACT_DLCFI_FRANCIS_13nm -1
 $DeclareSequence "dlc1_finaleintro_francis_salute"
-// [732]
+// [732]   0
 $DeclareSequence "dlc1_finaleintro_louis_idle"
 // [733] ACT_DLCFI_LOUIS_01 -1
 $DeclareSequence "dlc1_finaleintro_louis_wave"
@@ -1509,9 +1509,9 @@ $DeclareSequence "dlc1_finaleintro_louis_where_you_heading"
 $DeclareSequence "dlc1_finaleintro_louis_nah_better_not"
 // [753] ACT_DLCFI_LOUIS_14MR -1
 $DeclareSequence "dlc1_finaleintro_louis_take_care_of_the_rest"
-// [754]
+// [754]   0
 $DeclareSequence "dlc1_outro_francis"
-// [755]
+// [755]   0
 $DeclareSequence "dlc1_outro_louis"
 // [756] ACT_TERROR_IDLE_FALL_FROM_CHARGERHIT -1
 $DeclareSequence "Idle_Fall_From_charger"
@@ -1537,7 +1537,7 @@ $DeclareSequence "Charger_Carried"
 $DeclareSequence "Charger_Slammed_Wall"
 // [767] ACT_TERROR_SLAMMED_GROUND 1
 $DeclareSequence "Charger_Slammed_Ground"
-// [768]
+// [768]   0
 $DeclareSequence "survivor_ridden_upper"
 // [769] ACT_TERROR_JOCKEY_RIDDEN -1
 $DeclareSequence "survivor_ridden_lower_walk"
@@ -1605,7 +1605,7 @@ $DeclareSequence "coach_AimMatrix_chainsaw_Crouching"
 $DeclareSequence "coach_AimMatrix_chainsaw_Injured_Standing"
 // [801] ACT_IDLE_ATTACK_CHAINSAW -1
 $DeclareSequence "Idle_Attack_Chainsaw"
-// [802]
+// [802]   0
 $DeclareSequence "jump_chainsaw_layer"
 // [803] ACT_JUMP_CHAINSAW 1
 $DeclareSequence "Jump_chainsaw_01"
@@ -1651,7 +1651,7 @@ $DeclareSequence "coach_AimMatrix_GUITAR_Standing"
 $DeclareSequence "coach_AimMatrix_GUITAR_Crouching"
 // [824]
 $DeclareSequence "coach_AimMatrix_GUITAR_Injured_Standing"
-// [825]
+// [825]   0
 $DeclareSequence "jump_GUITAR_layer"
 // [826] ACT_JUMP_GUITAR 1
 $DeclareSequence "Jump_GUITAR_01"
@@ -1703,11 +1703,11 @@ $DeclareSequence "Coach_AimMatrix_gnome_Standing"
 $DeclareSequence "Coach_AimMatrix_gnome_Crouching"
 // [850]
 $DeclareSequence "Coach_AimMatrix_gnome_Injured"
-// [851]
+// [851]   0
 $DeclareSequence "jump_gnome_layer"
-// [852]
+// [852]   0
 $DeclareSequence "jump_gnome_gesture"
-// [853]
+// [853]   0
 $DeclareSequence "jump_gnome_gesture_aim"
 // [854] ACT_JUMP_GNOME -1
 $DeclareSequence "Jump_gnome_01"

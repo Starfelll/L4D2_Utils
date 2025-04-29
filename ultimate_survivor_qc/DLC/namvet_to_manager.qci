@@ -1,10 +1,7 @@
-// update time: 2025-01-19
+// update time: 2025-04-29
 $IncludeModel $include_model_root$/anim_NamVet.mdl
 $IncludeModel $include_model_root$/gestures_namvet.mdl
-// $IncludeModel $include_model_root$/anim_mechanic.mdl
-// $IncludeModel $include_model_root$/anim_TeenAngst.mdl
-// $IncludeModel $include_model_root$/gestures_TeenAngst.mdl
-// [0]
+// [0]   0
 $seq_survivor $survivor$
 // [1] ACT_TERROR_HEAL_SELF 1
 $DeclareSequence "Heal_Self_Standing_06"
@@ -690,7 +687,7 @@ $DeclareSequence "Shoot_Standing_SMG"
 $DeclareSequence "Shoot_Standing_M3S90"
 // [342] ACT_PRIMARYATTACK_PUMPSHOTGUN -1
 $DeclareSequence "Shoot_Standing_PumpShotgun"
-// [343]
+// [343]   0
 $DeclareSequence "Gren_Running_Subtract"
 // [344]
 $DeclareSequence "Gren_Prep_Delta"
@@ -698,7 +695,7 @@ $DeclareSequence "Gren_Prep_Delta"
 $DeclareSequence "Gren_Throw_Delta"
 // [346]
 $DeclareSequence "Gren_Pull_Back_Delta"
-// [347]
+// [347]   0
 $DeclareSequence "Gren_Pull_Back_layer"
 // [348] ACT_PRIMARYATTACK_GREN1_IDLE -1
 $DeclareSequence "Shoot_Standing_Grenade1"
@@ -712,7 +709,7 @@ $DeclareSequence "Shoot_Running_Grenade2"
 $DeclareSequence "gasCan_Running_Subtract"
 // [353]
 $DeclareSequence "gasCan_Prep_Delta"
-// [354]
+// [354]   0
 $DeclareSequence "gasCan_Throw_Delta"
 // [355]
 $DeclareSequence "gascan_pull_back_delta"
@@ -736,7 +733,7 @@ $DeclareSequence "o2_Prep_Delta"
 $DeclareSequence "o2_Throw_Delta"
 // [365]
 $DeclareSequence "o2_pull_back_delta"
-// [366]
+// [366]   0
 $DeclareSequence "o2_pull_back_layer"
 // [367] ACT_PRIMARYATTACK_o21_IDLE 1
 $DeclareSequence "shoot_standing_o21"
@@ -988,21 +985,21 @@ $DeclareSequence "Jump_Rifle_02"
 $DeclareSequence "Jump_Shotgun_01"
 // [491] ACT_JUMP_SHOTGUN -1
 $DeclareSequence "Jump_Shotgun_02"
-// [492]
+// [492]   0
 $DeclareSequence "jump_gas_layer"
-// [493]
+// [493]   0
 $DeclareSequence "jump_gas_gesture"
-// [494]
+// [494]   0
 $DeclareSequence "jump_gas_gesture_aim"
 // [495] ACT_JUMP_GASCAN -1
 $DeclareSequence "Jump_GasCan_01"
 // [496] ACT_JUMP_GASCAN -1
 $DeclareSequence "Jump_GasCan_02"
-// [497]
+// [497]   0
 $DeclareSequence "jump_o2_layer"
-// [498]
+// [498]   0
 $DeclareSequence "jump_o2_gesture"
-// [499]
+// [499]   0
 $DeclareSequence "jump_o2_gesture_aim"
 // [500] ACT_JUMP_o2 -1
 $DeclareSequence "Jump_o2_01"
@@ -1208,7 +1205,7 @@ $DeclareSequence "biker_AimMatrix_bat_Standing"
 $DeclareSequence "biker_AimMatrix_bat_Crouching"
 // [601]
 $DeclareSequence "biker_AimMatrix_bat_Injured_Standing"
-// [602]
+// [602]   0
 $DeclareSequence "jump_bat_layer"
 // [603] ACT_JUMP_BAT -1
 $DeclareSequence "Jump_bat_01"
@@ -1250,7 +1247,7 @@ $DeclareSequence "biker_AimMatrix_axe_Standing"
 $DeclareSequence "biker_AimMatrix_axe_Crouching"
 // [622]
 $DeclareSequence "biker_AimMatrix_axe_Injured_Standing"
-// [623]
+// [623]   0
 $DeclareSequence "jump_axe_layer"
 // [624] ACT_JUMP_AXE 1
 $DeclareSequence "Jump_axe_01"
@@ -1346,19 +1343,19 @@ $DeclareSequence "pour_gascan"
 $DeclareSequence "Reload_Standing_grenade_launcher_layer"
 // [670] ACT_RELOAD_grenade_launcher -1
 $DeclareSequence "Reload_Standing_grendade_launcher"
-// [671]
+// [671]   0
 $DeclareSequence "jump_Frying_Pan_layer"
 // [672] ACT_JUMP_FRYINGPAN 1
 $DeclareSequence "Jump_Frying_Pan_01"
-// [673]
+// [673]   0
 $DeclareSequence "c4m1_intro_coach"
-// [674]
+// [674]   0
 $DeclareSequence "c2m1_intro_coach"
-// [675]
+// [675]   0
 $DeclareSequence "c5m1_intro_coach"
-// [676]
+// [676]   0
 $DeclareSequence "c1m1_intro_coach"
-// [677]
+// [677]   0
 $DeclareSequence "dlc1_intro_male_idle"
 // [678] ACT_DLCINTRO_01 -1
 $DeclareSequence "dlc1_intro_male_leanup"
@@ -1368,7 +1365,7 @@ $DeclareSequence "dlc1_intro_male_leanleft"
 $DeclareSequence "dlc1_intro_male_headnod"
 // [681] ACT_DLCINTRO_04 -1
 $DeclareSequence "dlc1_intro_male_handflipR"
-// [682]
+// [682]   0
 $DeclareSequence "dlc1_finaleintro_francis_idle"
 // [683] ACT_DLCFI_FRANCIS_HLD -1
 $DeclareSequence "dlc1_finaleintro_francis_weight_shift_hold"
@@ -1462,7 +1459,7 @@ $DeclareSequence "dlc1_finaleintro_francis_TacoDogX2Wav"
 $DeclareSequence "dlc1_finaleintro_francis_Lean"
 // [728] ACT_DLCFI_FRANCIS_13nm -1
 $DeclareSequence "dlc1_finaleintro_francis_salute"
-// [729]
+// [729]   0
 $DeclareSequence "dlc1_finaleintro_louis_idle"
 // [730] ACT_DLCFI_LOUIS_01 -1
 $DeclareSequence "dlc1_finaleintro_louis_wave"
@@ -1506,9 +1503,9 @@ $DeclareSequence "dlc1_finaleintro_louis_where_you_heading"
 $DeclareSequence "dlc1_finaleintro_louis_nah_better_not"
 // [750] ACT_DLCFI_LOUIS_14MR -1
 $DeclareSequence "dlc1_finaleintro_louis_take_care_of_the_rest"
-// [751]
+// [751]   0
 $DeclareSequence "dlc1_outro_francis"
-// [752]
+// [752]   0
 $DeclareSequence "dlc1_outro_louis"
 // [753] ACT_TERROR_IDLE_FALL_FROM_CHARGERHIT -1
 $DeclareSequence "Idle_Fall_From_charger"
@@ -1534,7 +1531,7 @@ $DeclareSequence "Charger_Carried"
 $DeclareSequence "Charger_Slammed_Wall"
 // [764] ACT_TERROR_SLAMMED_GROUND 1
 $DeclareSequence "Charger_Slammed_Ground"
-// [765]
+// [765]   0
 $DeclareSequence "survivor_ridden_upper"
 // [766] ACT_TERROR_JOCKEY_RIDDEN -1
 $DeclareSequence "survivor_ridden_lower_walk"
@@ -1602,7 +1599,7 @@ $DeclareSequence "coach_AimMatrix_chainsaw_Crouching"
 $DeclareSequence "coach_AimMatrix_chainsaw_Injured_Standing"
 // [798] ACT_IDLE_ATTACK_CHAINSAW -1
 $DeclareSequence "Idle_Attack_Chainsaw"
-// [799]
+// [799]   0
 $DeclareSequence "jump_chainsaw_layer"
 // [800] ACT_JUMP_CHAINSAW 1
 $DeclareSequence "Jump_chainsaw_01"
@@ -1648,7 +1645,7 @@ $DeclareSequence "coach_AimMatrix_GUITAR_Standing"
 $DeclareSequence "coach_AimMatrix_GUITAR_Crouching"
 // [821]
 $DeclareSequence "coach_AimMatrix_GUITAR_Injured_Standing"
-// [822]
+// [822]   0
 $DeclareSequence "jump_GUITAR_layer"
 // [823] ACT_JUMP_GUITAR 1
 $DeclareSequence "Jump_GUITAR_01"
@@ -1700,11 +1697,11 @@ $DeclareSequence "Coach_AimMatrix_gnome_Standing"
 $DeclareSequence "Coach_AimMatrix_gnome_Crouching"
 // [847]
 $DeclareSequence "Coach_AimMatrix_gnome_Injured"
-// [848]
+// [848]   0
 $DeclareSequence "jump_gnome_layer"
-// [849]
+// [849]   0
 $DeclareSequence "jump_gnome_gesture"
-// [850]
+// [850]   0
 $DeclareSequence "jump_gnome_gesture_aim"
 // [851] ACT_JUMP_GNOME -1
 $DeclareSequence "Jump_gnome_01"
