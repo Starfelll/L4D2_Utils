@@ -277,7 +277,7 @@ $IFDef custom_model_name
         "name_suffix" $name_suffix$
     }
 $EndIF
-    usqc "3.5"
+    usqc "3.6"
 }
 
 $IFDef l4n_survivor

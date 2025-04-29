@@ -7,3 +7,13 @@
 **/usqcRel/*
 
 *.glb
+
+output
+output1
+*_anims
+Survivors.blend
+*.mdl
+*.vtx
+*.vvd
+*.ani
+*.phy

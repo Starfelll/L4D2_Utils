@@ -22,3 +22,5 @@ $RenameMorph "ワ" "AU27Z"
 
 $RenameMorph "にこり" "AU1AU2"
 $RenameMorph "怒り" "AU2AU4"
+
+//$DiscardVertexAnimationNormals

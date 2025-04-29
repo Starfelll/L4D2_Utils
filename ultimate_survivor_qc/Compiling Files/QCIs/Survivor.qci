@@ -7,7 +7,6 @@ $DefineVariable usqc_idle_anim 01 //ragdoll动画，可选范围01~03
 $DefineVariable foot_ik_fix 0
 $DefineVariable calf_ik_fix 0
 $DefineVariable pps_z_delta 0
-//$DefineVariable dance 1
 $DefineVariable custom_model "../../Body.glb"
 
 //$Include "QCIs/mmd_flex_mapping.qci"
@@ -222,6 +221,7 @@ $SkipBoneInBBox
 
 $CBox 0 0 0 0 0 0 $BBox -13 -13 0 13 13 72
 
+$DefineVariable dance 1
 $Include QCIs/DeclareSequences/$declare_sequences_qci$
 // $Sequence Reference "a_reference"
 $Sequence "Proportions" {
@@ -259,6 +259,7 @@ $IFDef custom_model_name
         //     "0" "0.0,0.0"
         //     "1" "-2.2,0.0"
         // }
+        //"scale" "0.5"
     }
 $EndIF
     usqc "3.6"
