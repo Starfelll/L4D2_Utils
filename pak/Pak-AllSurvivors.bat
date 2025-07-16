@@ -1,3 +1,4 @@
+chcp 65001
 call l4d2pak bill
 call l4d2pak coach
 call l4d2pak ellis
