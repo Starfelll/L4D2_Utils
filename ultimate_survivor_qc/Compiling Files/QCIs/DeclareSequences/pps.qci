@@ -162,6 +162,9 @@ $DefineMacro reference_pos_namvet \\
 $Animation "a_reference" $custom_model$ Pick BindPose {
     frame 0 0
     scale $scale_fix$
+	// The root bone needs to swap x and y.
+	// \$DefineBone "(.*)" ".*" (.*?) (.*?) (.*?) .*
+	// forceboneposrot "$1" pos $2 $3 $4
 	$IF ref_survivor == namvet
 		$DefineVariable ref_scale 1.00
 		$DefineVariable ref_base namvet

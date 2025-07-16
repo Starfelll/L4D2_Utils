@@ -25,18 +25,16 @@ $AmbientBoost
 $JiggleBoneRealign -90 0 0
 $ReverseJiggleBoneRotation pitch yaw
 
-$DefineMacro jigg_hairf name p_min p_max y_min y_max \\
+$DefineMacro jigg_sleeve_end name \\
     $Jigglebone $name$ { is_flexible { \\
-        length 5 \\
-        tip_mass 0 \\
-        pitch_friction 0 \\
-        yaw_friction 0 \\
-        pitch_stiffness 70 \\
-        yaw_stiffness 70 \\
-        pitch_damping 10 \\
-        yaw_damping 10 \\
-        pitch_constraint $p_min$ $p_max$ \\
-        yaw_constraint $y_min$ $y_max$ \\
+        length 50 tip_mass 0 \\
+        //allow_length_flex \\
+        pitch_friction 0 yaw_friction 0 \\
+        along_stiffness 80 pitch_stiffness 80 yaw_stiffness 80 \\
+        along_damping 8 pitch_damping 8 yaw_damping 8 \\
+        //angle_constraint 30 \\
+        pitch_constraint -20 40 \\
+        yaw_constraint -20 20 \\
     } } \\
 \\
 
@@ -49,8 +47,8 @@ $UnlockDefineBones
 //$DefineBone "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_Spine1" 3.698235 0.000027 -0.000004 0.000018 -0.907115 -0.000001 0 0 0 0 0 0
 //$DefineBone "ValveBiped.Bip01_Spine4" "ValveBiped.Bip01_Spine2" 5.700886 0.00005 -0.000004 0.000146 28.371773 0.00002 0 0 0 0 0 0
 //$DefineBone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4" 4.065372 1.458972 1.500008 -63.875219 -147.034329 50.276377 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_Clavicle" "" 4.065372 1.458972 1.500008 -63.875219 -147.034329 50.276377 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_L_UpperArm" "ValveBiped.Bip01_L_Clavicle" 5.507339 0.000038 0.000022 -19.730806 -44.166028 -79.348404 0 0 0 0 0 0
+//$DefineBone "ValveBiped.Bip01_L_Clavicle" "" 4.065372 1.458972 1.500008 -63.875219 -147.034329 50.276377 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_L_UpperArm" "" 5.507339 0.000038 0.000022 -19.730806 -44.166028 -79.348404 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_L_UpperArm" 10.907394 0.000059 0.000004 0.00005 -7.202311 0.000427 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_L_Forearm" 10.424324 0.000023 -0.000031 6.506825 7.123165 78.669839 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_L_Finger4" "ValveBiped.Bip01_L_Hand" 2.997284 0.005386 -1.477459 8.212622 -12.991228 11.742554 0 0 0 0 0 0
@@ -80,9 +78,9 @@ $DefineBone "ValveBiped.Bip01_L_Forearm_driven" "ValveBiped.Bip01_L_Forearm" 3.3
 // $DefineBone "ValveBiped.hlp_ulna02_L" "ValveBiped.Bip01_L_Forearm" 9.179501 0.000054 -0.000008 0.000014 0.000001 -0.000575 0 0 0 0 0 0
 // $DefineBone "ValveBiped.hlp_ulna01_L" "ValveBiped.Bip01_L_Forearm" 6.694328 0.000039 -0.000004 0.000022 0.000431 -0.000575 0 0 0 0 0 0
 
-$DefineBone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 4.065372 1.458974 -1.499992 63.875417 -147.034015 -54.581862 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_Clavicle" "" 4.065372 1.458974 -1.499992 63.875417 -147.034015 -54.581862 0 0 0 0 0 0
-$DefineBone "ValveBiped.Bip01_R_UpperArm" "ValveBiped.Bip01_R_Clavicle" 5.50736 -0.000061 -0.000051 22.698385 -42.95425 82.693735 0 0 0 0 0 0
+//$DefineBone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 4.065372 1.458974 -1.499992 63.875417 -147.034015 -54.581862 0 0 0 0 0 0
+//$DefineBone "ValveBiped.Bip01_R_Clavicle" "" 4.065372 1.458974 -1.499992 63.875417 -147.034015 -54.581862 0 0 0 0 0 0
+$DefineBone "ValveBiped.Bip01_R_UpperArm" "" 5.50736 -0.000061 -0.000051 22.698385 -42.95425 82.693735 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_UpperArm" 10.907402 -0.000063 -0.000008 0.000077 -7.202604 0.001001 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_R_Forearm" 10.424301 -0.000052 0.000015 -6.507143 7.123105 -78.877108 0 0 0 0 0 0
 $DefineBone "ValveBiped.Bip01_R_Finger4" "ValveBiped.Bip01_R_Hand" 2.997309 0.000042 1.477449 -8.213016 -12.990226 -11.535308 0 0 0 0 0 0
