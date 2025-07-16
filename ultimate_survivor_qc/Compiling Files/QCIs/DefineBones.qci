@@ -2,14 +2,12 @@
 
 // vscode “ctrl+/”
 
-// $NekoDriverBone "ValveBiped.Bip01_R_Thigh" {
-//     pose "anims/Procedural.dmx"
+// $NekoDriverBone "V_Thigh_R" {
+//     pose $custom_model$ Pick "ProceduralPose"
 //     trigger 95 0
 //     trigger 95 10
-//     trigger 95 20
-//     trigger 95 30
-//     qun_g10_R
-//     qun_g0_R
+//     Skirt_1_R
+//     Skirt_2_R
 // }
 
 // blender

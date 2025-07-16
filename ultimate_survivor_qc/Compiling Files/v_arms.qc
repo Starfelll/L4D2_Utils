@@ -1,13 +1,10 @@
 // by Starfelll
 
 $Include "QCIs/Shared.qci"
-$DefineVariable custom_model "v_arms.glb"
+$DefineVariable custom_model "../../v_arms.glb"
 
 // nekomdl.exe -Darms_name zoey v_arms.qc
-$IFDef arms_name
-$Else
-    $DefineVariable arms_name bill // bill,coach_new,mechanic_new,francis,louis,gambler_new,producer_new,zoey
-$EndIF
+$ModelName weapons\arms\v_arms_bill.mdl
 
 $BodyGroup "arms" {
     studio $custom_model$
@@ -281,7 +278,9 @@ $EndIF
 $IFDef l4n_survivor
     $ModelName l4n\s\$l4n_survivor_dir$\v_arms_$arms_name$.mdl
 $Else
-    $ModelName weapons\arms\v_arms_$arms_name$.mdl
+    $IFDef arms_name
+        $ModelName weapons\arms\v_arms_$arms_name$.mdl
+    $EndIF
 $EndIF
 
 // $IFDef release

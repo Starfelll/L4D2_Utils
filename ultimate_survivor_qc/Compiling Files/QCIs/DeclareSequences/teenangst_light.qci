@@ -1,6 +1,6 @@
 // by Starfelll
 
-$Animation "corrective_animation" "usqc_anims\light_model_amims.dmx" {
+$Animation "corrective_animation" "light_model_amims.dmx" {
 	NoBoneRealign
 	frame 0 0
 }
@@ -12,7 +12,7 @@ $seq_survivor "TeenAngst"
 $seq_ragdoll
 
 $Sequence "dlc1_intro_zoey_idle" {
-	"usqc_anims\light_model_amims.dmx" frame 2 102
+	"light_model_amims.dmx" frame 2 102
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -27,7 +27,7 @@ $Sequence "dlc1_intro_zoey_idle" {
 }
 
 $Sequence "dlc1_intro_zoey_shrgu" {
-	"usqc_anims\light_model_amims.dmx" frame 102 132
+	"light_model_amims.dmx" frame 102 132
 	activity "ACT_DLCINTRO_ZOEY_01" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -41,7 +41,7 @@ $Sequence "dlc1_intro_zoey_shrgu" {
 }
 
 $Sequence "dlc1_intro_zoey_shout" {
-	"usqc_anims\light_model_amims.dmx" frame 132 177
+	"light_model_amims.dmx" frame 132 177
 	activity "ACT_DLCINTRO_ZOEY_02" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -55,7 +55,7 @@ $Sequence "dlc1_intro_zoey_shout" {
 }
 
 $Sequence "dlc1_intro_zoey_headshake" {
-	"usqc_anims\light_model_amims.dmx" frame 177 221
+	"light_model_amims.dmx" frame 177 221
 	activity "ACT_DLCINTRO_ZOEY_03" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -69,7 +69,7 @@ $Sequence "dlc1_intro_zoey_headshake" {
 }
 
 $Sequence "dlc1_intro_zoey_handflipR" {
-	"usqc_anims\light_model_amims.dmx" frame 221 261
+	"light_model_amims.dmx" frame 221 261
 	activity "ACT_DLCINTRO_ZOEY_04" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -83,7 +83,7 @@ $Sequence "dlc1_intro_zoey_handflipR" {
 }
 
 $Sequence "dlc1_intro_zoey_head_gesture" {
-	"usqc_anims\light_model_amims.dmx" frame 261 305
+	"light_model_amims.dmx" frame 261 305
 	activity "ACT_DLCINTRO_ZOEY_05" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -97,7 +97,7 @@ $Sequence "dlc1_intro_zoey_head_gesture" {
 }
 
 $Sequence "dlc1_intro_zoey_generator_point" {
-	"usqc_anims\light_model_amims.dmx" frame 305 349
+	"light_model_amims.dmx" frame 305 349
 	activity "ACT_DLCINTRO_ZOEY_06" -1
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
