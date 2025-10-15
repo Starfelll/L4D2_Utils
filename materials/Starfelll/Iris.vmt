@@ -1,0 +1,14 @@
+"Patch"
+{
+    "include"           "materials/Starfelll/ppp/Head.vmt"
+    "insert"
+    {
+        "$emission"                         "1"
+        "$emissiontint"                     "[ 0.006 0.006 0.006 ]"
+        "$emissionflashlighttint"           "[ 0.09 0.09 0.09 ]"
+    }
+    "replace"
+    {
+        "$outline"          "0"
+    }
+}

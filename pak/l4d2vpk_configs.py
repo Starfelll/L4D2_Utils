@@ -21,7 +21,7 @@ def init(sel_variants: list[str]):
 def gen_addon_info_text() -> str:
     return str(KV("AddonInfo", [
         KV("addontitle", f'{vpk_basename}'),
-        KV("addonauthor", "Starfelll"),
+       # KV("addonauthor", "Starfelll"),
         KV("addonversion", version),
 
         KV("addonDescription", 
@@ -42,9 +42,9 @@ def gen_addon_info_text() -> str:
 
         KV("addonSteamAppID", "550"),
         # Keyvalue("addonTagline", ???),
-        KV("addonAuthorSteamID", "76561198859761739"),
+        #KV("addonAuthorSteamID", "76561198859761739"),
         # KV("addonSteamGroupName", ???),
-        KV("addonURL0", "https://steamcommunity.com/profiles/76561198859761739/myworkshopfiles/?appid=550"),
+        #KV("addonURL0", "https://steamcommunity.com/profiles/76561198859761739/myworkshopfiles/?appid=550"),
 
         # KV("addonContent_Survival", "1")
         # KV("addonContent_Versus", "1")

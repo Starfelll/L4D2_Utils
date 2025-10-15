@@ -6,36 +6,16 @@
 
 	// Emissive
 	"$EmissiveBlendEnabled"				"0"
-	"$EmissiveBlendStrength"			"0.01"
+	"$EmissiveBlendStrength"			"0.002"
+	// "$EmissiveBlendStrength"			"0.005"
+	// $emissiontint "[ 0.006 0.006 0.006 ]"
 	"$EmissiveBlendTexture"				"vgui/white"
 	"$EmissiveBlendFlowTexture"			"vgui/white"
 	"$EmissiveBlendTint"				" [ 1 1 1 ] "
 	"$EmissiveBlendScrollVector"		" [ 0 0 ] "
 	//"$EmissiveBlendBaseTexture"		"$BaseTexture"
 
-	// $detail   "texture"
-	// $detailscale 1
-	// $detailblendmode 5
-	// $detailblendfactor 0.01
-
-	// $selfillum 1
-	// $selfillummaskscale 1
-	// $selfillummask "vgui/white"
-	// $selfillumtint "[1 1 1]"
-	// $selfIllumfresnel 1
-
-	// Phong
-	// "$halflambert" 						"1"
-	// "$phong"							"0"
-	// // "$PhongDisableHalfLambert"			"0"
-	// // "$BumpMap"							"dev/bump_normal"
-	// // //"$Phongexponent"					"1"
-	// // "$PhongExponentTexture"				"models/extras/speech_info_exp"
-	// // "$PhongAlbedoTint"					"1"
-	// // "$PhongBoost"						"13"
-	// // "$PhongFresnelRanges"				"[0.008 0.008 0.35]"
-	// // //"$phongtint"                    "[Rrimlight color]"
-
+	$bumpmap "dev/flat_normal"
 	"$halflambert" 						1
 	"$phong"							1
 	"$PhongDisableHalfLambert"			0
@@ -47,6 +27,7 @@
 	"$PhongFresnelRanges"				"[0.0008 0.0008 0.26]"
 	"$phongtint" "[0.98 0.89 0.9]"
 
+	// https://physicallybased.info/tools/
 	// RimLight
 	// "$RimLight"						"1"
 	// "$RimLightExponent"				"1"
@@ -66,4 +47,12 @@
 	// $translucent 1
 
 	// $no_draw 1
+
+	// nekotoon
+	$lightingrange 0.5
+	$outlinethickness "0.05"
+	$outlinecolor "[ 0.43 0.32 0.26 ]"
+	$outline 1
+
+	// 自发光 lr 贴图
 }

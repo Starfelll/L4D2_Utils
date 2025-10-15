@@ -1,15 +1,15 @@
 "Patch"
 {
-    "include"           "materials\Starfelll\ppp\Base.vmt"
+    "include"           "materials/Starfelll/ppp/Base.vmt"
     "insert"
     {
-        "$basetexture"              "Starfelll\ppp\Body"
-        // "$EmissiveBlendBaseTexture"     "Starfelll\ppp\Body"
+        "$basetexture"              "Starfelll/ppp/Body"
+        // "$EmissiveBlendBaseTexture"     "Starfelll/ppp/Body"
         // $nocull 1
         // $alphatest 1
         // $alphatestreference 0.5
         // $allowalphatocoverage 1
         // $translucent 1
-        "$lightwarptexture"         "Starfelll\ppp\lr_body"
+        "$lightwarptexture"         "Starfelll/ppp/lr_body"
     }
 }

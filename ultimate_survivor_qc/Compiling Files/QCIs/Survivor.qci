@@ -7,14 +7,15 @@ $DefineVariable usqc_idle_anim 01 //ragdoll动画，可选范围01~03
 $DefineVariable foot_ik_fix 0
 $DefineVariable calf_ik_fix 0
 $DefineVariable pps_z_delta 0
+$DefineVariable custom_weapon_attachment 0
 $DefineVariable custom_model "../../Body.glb"
 
 //$Include "QCIs/mmd_flex_mapping.qci"
-// $NekoModel "Face" {
-//     studio "Face.glb"
+// $NekoModel "Head" {
+//     studio "../../Head.glb"
 //     $Include "QCIs/survivors_flexrules.qci"
 // }
-$BodyGroup "Body" {
+$BodyGroup "⭐Body" {
     studio $custom_model$
     //blank
 }
@@ -53,48 +54,53 @@ $DefineMacro att_mouth \\
 $Attachment "mouth" "ValveBiped.Bip01_Head1" 0.84 -6.09 -0.16 rotate 0 -80 -90 \\
 \\
 
+$IF custom_weapon_attachment == 1
+
 $DefineMacro att_molotov \\
-$Attachment "molotov" "ValveBiped.Bip01_Spine" -3.43 -2.62 7.54 rotate -63.44 -74.67 -101.41 \\
+$Attachment "Molotov"	"Molotov_attachment" 0 0 0 rigid rotate 0 0 0 \\
 
 $DefineMacro att_pills \\
-$Attachment "pills" "ValveBiped.Bip01_Spine" -4.48 3.86 -7.36 rotate -39.75 -103.16 -81.96 \\
+$Attachment "pills"	"pills_attachment"	0 0 0 rigid rotate 0 0 0 \\
 
 $DefineMacro att_grenade \\
-$Attachment "grenade" "ValveBiped.Bip01_Spine" -0.73 1.26 8.48 rotate -90 -175.23 0 \\
+$Attachment "grenade"	"grenade_attachment" 0 0 0 rigid rotate 0 0 0 \\
 
 $DefineMacro att_pistol \\
-$Attachment "pistol" "ValveBiped.Bip01_R_Thigh" -3.16 1.95 -5.18 rotate -3.66 -0.47 88.48 \\
+$Attachment "pistol"	"pistol_attachment" 0 0 0 rigid rotate 0 0 0 \\
 
 $DefineMacro att_primary \\
-$Attachment "primary" "ValveBiped.Bip01_Spine4" 2.92 -4.69 -2.5 rotate -13.7 170.19 174.29 \\
+$Attachment "primary"	"primary_attachment" 0 0 0 rigid rotate 0 0 0 \\
 
 $DefineMacro att_medkit \\
-$Attachment "medkit" "ValveBiped.Bip01_Spine4" -1.22 -5.31 -1.25 rotate 5.03 77.16 0 \\
+$Attachment "medkit"	"medkit_attachment"	0 0 0 rigid rotate 0 0 0 \\
 
 $DefineMacro att_melee \\
-$Attachment "melee" "ValveBiped.Bip01_Spine4" 2.61 -5.06 4.98 rotate 24.08 175.37 97.14 \\
+$Attachment "melee" 	"melee_attachment" 0 0 0 rigid rotate 0 0 0 \\
 
+$Else
 
-// $DefineMacro att_molotov \\
-// $Attachment "Molotov"	"Molotov_attachment"	0 0 0 rotate 0 0 0 \\
+$DefineMacro att_molotov \\
+$Attachment "Molotov" "ValveBiped.Bip01_Spine" -1.82 -4.79 6.88 rotate -52.01 -84.76 -82.93 \\
 
-// $DefineMacro att_pills \\
-// $Attachment "pills"	"pills_attachment"	0 0 0 rotate 0 0 0 \\
+$DefineMacro att_pills \\
+$Attachment "pills" "ValveBiped.Bip01_Spine" -4.97 -1.04 -8.67 rotate -79.92 -172.96 0 \\
 
-// $DefineMacro att_grenade \\
-// $Attachment "grenade"	"grenade_attachment"	0 0 0 rotate 0 0 0 \\
+$DefineMacro att_grenade \\
+$Attachment "grenade" "ValveBiped.Bip01_Spine" -3.93 0.12 8.28 rotate -56.48 90.43 95.83 \\
 
-// $DefineMacro att_pistol \\
-// $Attachment "pistol"	"pistol_attachment" 	0 0 0 rotate 0 0 0 \\
+$DefineMacro att_pistol \\
+$Attachment "pistol" "ValveBiped.Bip01_R_Thigh" 0.81 -1.01 -6.28 rotate -6.68 -1.5 81.84 \\
 
-// $DefineMacro att_primary \\
-// $Attachment "primary"	"primary_attachment"	0 0 0 rotate 0 0 0 \\
+$DefineMacro att_primary \\
+$Attachment "primary" "ValveBiped.Bip01_Spine4" 8.74 -6.6 -2.48 rotate -18.08 -175.16 176.62 \\
 
-// $DefineMacro att_medkit \\
-// $Attachment "medkit"	"medkit_attachment"	0 0 0 rotate 0 0 0 \\
+$DefineMacro att_medkit \\
+$Attachment "medkit" "ValveBiped.Bip01_Spine4" 2.97 -8.03 -0.06 rotate 5.06 94.1 0 \\
 
-// $DefineMacro att_melee \\
-// $Attachment "melee" 	"melee_attachment"	0 0 0 rotate 0 0 0 \\
+$DefineMacro att_melee \\
+$Attachment "melee" "ValveBiped.Bip01_Spine4" 6.19 -7.05 5.02 rotate 20.87 175.04 93.07 \\
+
+$EndIF
 
 
 $DefineMacro att_weapon_bone \\
@@ -262,7 +268,7 @@ $IFDef custom_model_name
         //"scale" "0.5"
     }
 $EndIF
-    usqc "3.6"
+    usqc "3.7"
 }
 
 $IFDef l4n_survivor

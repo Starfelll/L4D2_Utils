@@ -1,0 +1,107 @@
+// v1.3
+"VertexLitGeneric"
+{
+	"$alpha"							"0"
+	"$ebs"								"0.002"
+
+	// "$itemid" "0" MODIFY THIS
+
+
+	"$Model"							"1"
+	"$NoDecal"							"1"
+	// Emissive
+	"$EmissiveBlendEnabled"				"1"
+	"$EmissiveBlendStrength"			"0.002"
+	"$EmissiveBlendTexture"				"vgui/white"
+	"$EmissiveBlendFlowTexture"			"vgui/white"
+	"$EmissiveBlendTint"				" [ 1 1 1 ] "
+	"$EmissiveBlendScrollVector"		" [ 0 0 ] "
+	// "$EmissiveBlendBaseTexture"		"$BaseTexture"
+	// Phong
+	"$halflambert"						"1"
+	"$phong"							"1"
+	"$PhongDisableHalfLambert"			"0"
+	"$BumpMap"							"dev/bump_normal"
+	// "$Phongexponent"					"1"
+	"$PhongExponentTexture"				"models/extras/speech_info_exp"
+	"$PhongAlbedoTint"					"1"
+	"$PhongBoost"						"13"
+	"$PhongFresnelRanges"				"[0.008 0.008 0.35]"
+	// "$phongtint"                    "[Rrimlight color]"
+	// RrimLight
+	"$RRrimLight"						"0"
+	"$RrimLightExponent"				"1"
+	"$RrimLightBoost"					"1"
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	// REAL RNG : MODEL (2016) edited
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	"$alpha"							"1"
+	"$objnumber"						"2.99"	// MODIFY ONLY THIS IN THIS VMT (count - 0.01)
+	"$objlimit"							"2.49"	// MODIFY ONLY THIS IN THIS VMT
+	"$selected"							"1000"
+	"$rand"								"1000"
+	"$one"								"1"
+	"$zero"								"0"
+	"$pf"								"0.5"
+	"$itemtocheck"						"0"
+	"$itemtocheckr"						"0"
+	"$inject"							"0"
+	"Proxies"
+	{
+		// entity rng
+		"EntityRandom"
+		{
+			"scale"			"$objnumber"
+			"resultVar"		"$rand"
+		}
+		// // map rng
+		// "UniformNoise"  
+		// {
+		// 	"minVal" "0"
+		// 	"maxVal" "$objnumber"
+		// 	"resultVar" "$rand"
+		// }
+
+		"LessOrEqual"
+		{
+			"LessEqualVar"		"$rand"
+			"greaterVar"		"$zero"
+			"srcVar1"			"$rand"
+			"srcVar2"			"$objlimit"
+			"resultVar"			"$selected"
+		}
+		"Subtract"
+		{
+			"srcVar1"		"$selected"
+			"srcVar2"		"$itemid"
+			"resultVar"		"$itemtocheck"
+		}
+		"Abs"
+		{
+			"srcVar1"		"$itemtocheck"
+			"resultVar"		"$itemtocheckr"
+		}
+		"LessOrEqual"
+		{
+			"LessEqualVar"		"$one"
+			"greaterVar"		"$zero"
+			"srcVar1"			"$itemtocheckr"
+			"srcVar2"			"$pf"
+			"resultVar"			"$inject"
+		}
+		"LessOrEqual"
+		{
+			"LessEqualVar"		"$alpha"
+			"greaterVar"		"$inject"
+			"srcVar1"			"$rand"
+			"srcVar2"			"$zero"
+			"resultVar"			"$alpha"
+		}
+		"Multiply"
+		{
+			"srcVar1"		"$alpha"
+			"srcVar2"		"$ebs"
+			"resultVar"		"$EmissiveBlendStrength"
+		}
+	}
+}
